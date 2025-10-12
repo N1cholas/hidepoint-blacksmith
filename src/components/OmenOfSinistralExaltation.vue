@@ -8,16 +8,16 @@ defineProps<{
 
 const omenState = useOmenState()
 
-const toggleOmenOfHomogenisingExaltaion = () => {
-  omenState.omenConfig.homogenisingExaltaion = !omenState.omenConfig.homogenisingExaltaion
+const toggleOmenOfSinistralExaltation = () => {
+  omenState.omenConfig.sinistralExaltation = !omenState.omenConfig.sinistralExaltation
 }
 </script>
 <template>
   <div>
     <span
       class="omen"
-      :class="{ selected: omenState.omenConfig.homogenisingExaltaion }"
-      @click="toggleOmenOfHomogenisingExaltaion"
+      :class="{ selected: omenState.omenConfig.sinistralExaltation }"
+      @click="toggleOmenOfSinistralExaltation"
       >{{ name }}
     </span>
   </div>

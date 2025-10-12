@@ -35,4 +35,5 @@ export enum MOD_GENERATION_TYPE {
 
 export type OmenConfig = {
   homogenisingExaltaion: boolean
+  sinistralExaltation: boolean
 }

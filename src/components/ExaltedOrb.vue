@@ -4,6 +4,7 @@ import {
   modFamilyWeightedRandom,
   getModifier,
   filterModsFamilyByTags,
+  onlyGeneratePrefixModsFamily,
 } from '../utils/utils'
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
@@ -27,6 +28,10 @@ const addModifier = (minimumLevel: number) => {
 
   if (omenState.omenConfig.homogenisingExaltaion) {
     _modsFamily = filterModsFamilyByTags(_modsFamily, itemState.modsFamily)
+  }
+
+  if (omenState.omenConfig.sinistralExaltation) {
+    _modsFamily = onlyGeneratePrefixModsFamily(_modsFamily)
   }
 
   if (_modsFamily.length) {

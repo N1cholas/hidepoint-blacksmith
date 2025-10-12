@@ -5,6 +5,7 @@ import { ref } from 'vue'
 export const useOmenState = defineStore('OmenState', () => {
   const omenConfig = ref<OmenConfig>({
     homogenisingExaltaion: false,
+    sinistralExaltation: false,
   })
 
   return { omenConfig }

@@ -115,3 +115,11 @@ export const filterModsFamilyByTags = (
 
   return result
 }
+
+export const onlyGeneratePrefixModsFamily = (
+  modsFamily: WeightWrapper<Modifier[]>[],
+): WeightWrapper<Modifier[]>[] => {
+  return modsFamily.filter(
+    (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
+  )
+}
