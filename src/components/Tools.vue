@@ -6,8 +6,7 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
-import OmenOfHomogenisingExaltation from '@/components/OmenOfHomogenisingExaltation.vue'
-import OmenOfSinistralExaltation from '@/components/OmenOfSinistralExaltation.vue'
+import Omen from '@/components/Omen.vue'
 </script>
 
 <template>
@@ -32,8 +31,8 @@ import OmenOfSinistralExaltation from '@/components/OmenOfSinistralExaltation.vu
 
     <!-- todo: 启动 和 作用对象 -->
     <div class="tools">
-      <OmenOfHomogenisingExaltation name="同质化崇高预兆" />
-      <OmenOfSinistralExaltation name="左旋崇高预兆" />
+      <Omen name="同质化崇高预兆" omenConfigKey="homogenisingExaltaion" />
+      <Omen name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
       <button class="tools">右旋崇高预兆</button>
       <button class="tools">催化崇高预兆</button>
       <button class="tools">强效崇高预兆</button>
