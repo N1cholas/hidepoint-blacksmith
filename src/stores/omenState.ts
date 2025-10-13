@@ -8,6 +8,7 @@ export const useOmenState = defineStore('OmenState', () => {
     sinistralExaltation: false,
     dextralExaltation: false,
     greaterExaltation: false,
+    homogenisingCoronation: false,
   }
 
   const omenConfig = ref<OmenConfig>(initConfig)

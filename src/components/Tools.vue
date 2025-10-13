@@ -7,6 +7,7 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import Omen from '@/components/Omen.vue'
+import RegalOrb from './RegalOrb.vue'
 </script>
 
 <template>
@@ -20,9 +21,9 @@ import Omen from '@/components/Omen.vue'
       <ExaltedOrb name="崇高石" :minimumLevel="0" />
       <ExaltedOrb name="高级崇高石" :minimumLevel="35" />
       <ExaltedOrb name="完美崇高石" :minimumLevel="50" />
-      <span>富豪石</span>
-      <span>高级富豪石</span>
-      <span>完美富豪石</span>
+      <RegalOrb name="富豪石" :minimumLevel="0" />
+      <RegalOrb name="高级富豪石" :minimumLevel="35" />
+      <RegalOrb name="完美富豪石" :minimumLevel="50" />
       <span>混沌石</span>
       <span>高级混沌石</span>
       <span>完美混沌石</span>
@@ -46,7 +47,7 @@ import Omen from '@/components/Omen.vue'
       <Omen name="强效崇高预兆" omenConfigKey="greaterExaltation" />
       <button class="tools">催化崇高预兆</button>
       <!-- 富豪石 -->
-      <button class="tools">同质化加冕预兆</button>
+      <Omen name="同质化加冕预兆" omenConfigKey="homogenisingCoronation" />
       <!-- 混沌石 -->
       <button class="tools">消减预兆</button>
       <button class="tools">左旋抹除预兆</button>

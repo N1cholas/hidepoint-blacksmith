@@ -34,8 +34,11 @@ export enum MOD_GENERATION_TYPE {
 }
 
 export type OmenConfig = {
+  // 崇高
   homogenisingExaltaion: boolean
   sinistralExaltation: boolean
   dextralExaltation: boolean
   greaterExaltation: boolean
+  // 富豪
+  homogenisingCoronation: boolean
 }
