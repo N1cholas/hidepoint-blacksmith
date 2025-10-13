@@ -37,4 +37,5 @@ export type OmenConfig = {
   homogenisingExaltaion: boolean
   sinistralExaltation: boolean
   dextralExaltation: boolean
+  greaterExaltation: boolean
 }

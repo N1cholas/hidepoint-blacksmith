@@ -34,8 +34,8 @@ import Omen from '@/components/Omen.vue'
       <Omen name="同质化崇高预兆" omenConfigKey="homogenisingExaltaion" />
       <Omen name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
       <Omen name="右旋崇高预兆" omenConfigKey="dextralExaltation" />
+      <Omen name="强效崇高预兆" omenConfigKey="greaterExaltation" />
       <button class="tools">催化崇高预兆</button>
-      <button class="tools">强效崇高预兆</button>
       <button class="tools">同质化加冕预兆</button>
     </div>
   </ToolWrapper>

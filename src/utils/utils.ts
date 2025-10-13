@@ -116,7 +116,7 @@ export const filterModsFamilyByTags = (
   return result
 }
 
-export const onlyGeneratePrefixModsFamily = (
+export const onlyPrefixModsFamily = (
   modsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
   return modsFamily.filter(
@@ -124,7 +124,7 @@ export const onlyGeneratePrefixModsFamily = (
   )
 }
 
-export const onlyGenerateSuffixModsFamily = (
+export const onlySuffixModsFamily = (
   modsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
   return modsFamily.filter(
