@@ -9,8 +9,6 @@ defineProps<{
 }>()
 
 const itemState = useItemState()
-
-// 高阶e 完美e
 </script>
 <template>
   <div class="greetings">
