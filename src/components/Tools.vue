@@ -33,7 +33,7 @@ import Omen from '@/components/Omen.vue'
     <div class="tools">
       <Omen name="同质化崇高预兆" omenConfigKey="homogenisingExaltaion" />
       <Omen name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
-      <button class="tools">右旋崇高预兆</button>
+      <Omen name="右旋崇高预兆" omenConfigKey="dextralExaltation" />
       <button class="tools">催化崇高预兆</button>
       <button class="tools">强效崇高预兆</button>
       <button class="tools">同质化加冕预兆</button>
@@ -89,6 +89,6 @@ import Omen from '@/components/Omen.vue'
 .tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 10px;
 }
 </style>

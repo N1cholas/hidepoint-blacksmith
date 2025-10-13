@@ -123,3 +123,11 @@ export const onlyGeneratePrefixModsFamily = (
     (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
   )
 }
+
+export const onlyGenerateSuffixModsFamily = (
+  modsFamily: WeightWrapper<Modifier[]>[],
+): WeightWrapper<Modifier[]>[] => {
+  return modsFamily.filter(
+    (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
+  )
+}

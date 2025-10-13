@@ -30,11 +30,12 @@ input {
 .omen {
   cursor: pointer;
   user-select: none;
-  outline: 1px solid transparent;
+  outline: 2px solid transparent;
   border-radius: 2px;
+  padding: 1px 6px;
 }
 
 .selected {
-  outline-color: rgb(183, 3, 3);
+  outline-color: hsla(160, 100%, 37%, 1);
 }
 </style>

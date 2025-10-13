@@ -5,6 +5,7 @@ import {
   getModifier,
   filterModsFamilyByTags,
   onlyGeneratePrefixModsFamily,
+  onlyGenerateSuffixModsFamily,
 } from '../utils/utils'
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
@@ -32,6 +33,10 @@ const addModifier = (minimumLevel: number) => {
 
   if (omenState.omenConfig.sinistralExaltation) {
     _modsFamily = onlyGeneratePrefixModsFamily(_modsFamily)
+  }
+
+  if (omenState.omenConfig.dextralExaltation) {
+    _modsFamily = onlyGenerateSuffixModsFamily(_modsFamily)
   }
 
   if (_modsFamily.length) {
