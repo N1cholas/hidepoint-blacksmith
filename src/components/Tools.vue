@@ -8,6 +8,7 @@ import SupportIcon from './icons/IconSupport.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import Omen from '@/components/Omen.vue'
 import RegalOrb from './RegalOrb.vue'
+import ChaosOrb from './ChaosOrb.vue'
 </script>
 
 <template>
@@ -24,7 +25,9 @@ import RegalOrb from './RegalOrb.vue'
       <RegalOrb name="富豪石" :minimumLevel="0" />
       <RegalOrb name="高级富豪石" :minimumLevel="35" />
       <RegalOrb name="完美富豪石" :minimumLevel="50" />
-      <span>混沌石</span>
+      <!-- todo 3词条的稀有物品通过剥离石后仍然为稀有物品 -->
+      <!-- todo 测试原始数据，例如：词条只能是前缀或后缀 -->
+      <ChaosOrb name="混沌石" :minimumLevel="0" />
       <span>高级混沌石</span>
       <span>完美混沌石</span>
       <span>剥离石</span>

@@ -5,7 +5,6 @@ import {
   getModifier,
   filterModsFamilyByTags,
 } from '../utils/utils'
-import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import type { Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
