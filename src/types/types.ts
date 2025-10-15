@@ -17,7 +17,7 @@ export type Modifier = {
   mod_no: string[]
   mod_fossil_item: []
   hover: string
-  powerLevel?: number
+  powerLevel: number
 }
 
 export type BowNormalModData = {

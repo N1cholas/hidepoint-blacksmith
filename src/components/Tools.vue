@@ -26,10 +26,10 @@ import ChaosOrb from './ChaosOrb.vue'
       <RegalOrb name="高级富豪石" :minimumLevel="35" />
       <RegalOrb name="完美富豪石" :minimumLevel="50" />
       <!-- todo 3词条的稀有物品通过剥离石后仍然为稀有物品 -->
-      <!-- todo 测试原始数据，例如：词条只能是前缀或后缀 -->
+      <!-- todo 测试原始数据，例如：词条只能是前缀或后缀、ModFamilyList只有一个 -->
       <ChaosOrb name="混沌石" :minimumLevel="0" />
-      <span>高级混沌石</span>
-      <span>完美混沌石</span>
+      <ChaosOrb name="高级混沌石" :minimumLevel="35" />
+      <ChaosOrb name="完美混沌石" :minimumLevel="50" />
       <span>剥离石</span>
       <span>破溃宝珠</span>
       <span>辛格拉的发辫</span>

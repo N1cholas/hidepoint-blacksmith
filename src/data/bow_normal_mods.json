@@ -14,7 +14,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity1"
+          "hover": "?s=Data%5CMods%2FDexterity1",
+          "powerLevel": 8
         },
         {
           "Name": "山猫之",
@@ -28,7 +29,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity2"
+          "hover": "?s=Data%5CMods%2FDexterity2",
+          "powerLevel": 7
         },
         {
           "Name": "狐狸之",
@@ -42,7 +44,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity3"
+          "hover": "?s=Data%5CMods%2FDexterity3",
+          "powerLevel": 6
         },
         {
           "Name": "猎鹰之",
@@ -56,7 +59,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity4"
+          "hover": "?s=Data%5CMods%2FDexterity4",
+          "powerLevel": 5
         },
         {
           "Name": "豹之",
@@ -70,7 +74,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity5"
+          "hover": "?s=Data%5CMods%2FDexterity5",
+          "powerLevel": 4
         },
         {
           "Name": "花豹之",
@@ -84,7 +89,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity6"
+          "hover": "?s=Data%5CMods%2FDexterity6",
+          "powerLevel": 3
         },
         {
           "Name": "美洲豹之",
@@ -98,7 +104,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity7"
+          "hover": "?s=Data%5CMods%2FDexterity7",
+          "powerLevel": 2
         },
         {
           "Name": "幻影之",
@@ -112,7 +119,8 @@
             "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FDexterity8"
+          "hover": "?s=Data%5CMods%2FDexterity8",
+          "powerLevel": 1
         }
       ],
       "weight": 8000,
@@ -132,7 +140,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements1"
+          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements1",
+          "powerLevel": 5
         },
         {
           "Name": "容易之",
@@ -144,7 +153,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements2"
+          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements2",
+          "powerLevel": 4
         },
         {
           "Name": "才华之",
@@ -156,7 +166,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements3"
+          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements3",
+          "powerLevel": 3
         },
         {
           "Name": "娴熟之",
@@ -168,7 +179,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements4"
+          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements4",
+          "powerLevel": 2
         },
         {
           "Name": "精通之",
@@ -180,7 +192,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements5"
+          "hover": "?s=Data%5CMods%2FReducedLocalAttributeRequirements5",
+          "powerLevel": 1
         }
       ],
       "weight": 5000,
@@ -204,7 +217,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage1"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage1",
+          "powerLevel": 9
         },
         {
           "Name": "磨光的",
@@ -220,7 +234,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage2"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage2",
+          "powerLevel": 8
         },
         {
           "Name": "抛光的",
@@ -236,7 +251,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage3"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage3",
+          "powerLevel": 7
         },
         {
           "Name": "砥砺的",
@@ -252,7 +268,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage4"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage4",
+          "powerLevel": 6
         },
         {
           "Name": "熠熠的",
@@ -268,7 +285,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage5"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage5",
+          "powerLevel": 5
         },
         {
           "Name": "韧炼的",
@@ -284,7 +302,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage6"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage6",
+          "powerLevel": 4
         },
         {
           "Name": "锋利的",
@@ -300,7 +319,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage7"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage7",
+          "powerLevel": 3
         },
         {
           "Name": "锻炼的",
@@ -316,7 +336,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage8"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage8",
+          "powerLevel": 2
         },
         {
           "Name": "迸出的",
@@ -332,7 +353,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage9"
+          "hover": "?s=Data%5CMods%2FLocalAddedPhysicalDamage9",
+          "powerLevel": 1
         }
       ],
       "weight": 6300,
@@ -357,7 +379,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage1"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage1",
+          "powerLevel": 10
         },
         {
           "Name": "闷烧的",
@@ -374,7 +397,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage2"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage2",
+          "powerLevel": 9
         },
         {
           "Name": "冒烟的",
@@ -391,7 +415,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage3"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage3",
+          "powerLevel": 8
         },
         {
           "Name": "燃烧的",
@@ -408,7 +433,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage4"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage4",
+          "powerLevel": 7
         },
         {
           "Name": "火焰的",
@@ -425,7 +451,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage5"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage5",
+          "powerLevel": 6
         },
         {
           "Name": "酷热的",
@@ -442,7 +469,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage6"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage6",
+          "powerLevel": 5
         },
         {
           "Name": "焚烧的",
@@ -459,7 +487,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage7"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage7",
+          "powerLevel": 4
         },
         {
           "Name": "爆破的",
@@ -476,7 +505,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage8"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage8",
+          "powerLevel": 3
         },
         {
           "Name": "火化的",
@@ -493,7 +523,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage9"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage9",
+          "powerLevel": 2
         },
         {
           "Name": "焦化的",
@@ -510,7 +541,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage10_"
+          "hover": "?s=Data%5CMods%2FLocalAddedFireDamage10_",
+          "powerLevel": 1
         }
       ],
       "weight": 5880,
@@ -535,7 +567,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage1"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage1",
+          "powerLevel": 10
         },
         {
           "Name": "冷冻的",
@@ -552,7 +585,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage2"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage2",
+          "powerLevel": 9
         },
         {
           "Name": "结冰的",
@@ -569,7 +603,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage3"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage3",
+          "powerLevel": 8
         },
         {
           "Name": "寒风的",
@@ -586,7 +621,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage4"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage4",
+          "powerLevel": 7
         },
         {
           "Name": "急冻的",
@@ -603,7 +639,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage5"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage5",
+          "powerLevel": 6
         },
         {
           "Name": "冻结的",
@@ -620,7 +657,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage6"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage6",
+          "powerLevel": 5
         },
         {
           "Name": "冰河的",
@@ -637,7 +675,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage7"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage7",
+          "powerLevel": 4
         },
         {
           "Name": "极地的",
@@ -654,7 +693,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage8"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage8",
+          "powerLevel": 3
         },
         {
           "Name": "埋葬的",
@@ -671,7 +711,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage9"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage9",
+          "powerLevel": 2
         },
         {
           "Name": "晶化的",
@@ -688,7 +729,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage10__"
+          "hover": "?s=Data%5CMods%2FLocalAddedColdDamage10__",
+          "powerLevel": 1
         }
       ],
       "weight": 5880,
@@ -713,7 +755,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage1"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage1",
+          "powerLevel": 10
         },
         {
           "Name": "嗡嗡的",
@@ -730,7 +773,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage2"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage2",
+          "powerLevel": 9
         },
         {
           "Name": "捕捉的",
@@ -747,7 +791,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage3"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage3",
+          "powerLevel": 8
         },
         {
           "Name": "劈哩啪啦的",
@@ -764,7 +809,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage4"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage4",
+          "powerLevel": 7
         },
         {
           "Name": "火花的",
@@ -781,7 +827,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage5"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage5",
+          "powerLevel": 6
         },
         {
           "Name": "电弧的",
@@ -798,7 +845,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage6"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage6",
+          "powerLevel": 5
         },
         {
           "Name": "电震的",
@@ -815,7 +863,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage7"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage7",
+          "powerLevel": 4
         },
         {
           "Name": "放电的",
@@ -832,7 +881,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage8"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage8",
+          "powerLevel": 3
         },
         {
           "Name": "电极的",
@@ -849,7 +899,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage9"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage9",
+          "powerLevel": 2
         },
         {
           "Name": "汽化的",
@@ -866,7 +917,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage10"
+          "hover": "?s=Data%5CMods%2FLocalAddedLightningDamage10",
+          "powerLevel": 1
         }
       ],
       "weight": 8820,
@@ -890,7 +942,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent1"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent1",
+          "powerLevel": 8
         },
         {
           "Name": "锯齿的",
@@ -906,7 +959,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent2"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent2",
+          "powerLevel": 7
         },
         {
           "Name": "邪恶的",
@@ -922,7 +976,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent3"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent3",
+          "powerLevel": 6
         },
         {
           "Name": "狠毒的",
@@ -938,7 +993,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent4"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent4",
+          "powerLevel": 5
         },
         {
           "Name": "嗜血的",
@@ -954,7 +1010,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent5"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent5",
+          "powerLevel": 4
         },
         {
           "Name": "残酷的",
@@ -970,7 +1027,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent6"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent6",
+          "powerLevel": 3
         },
         {
           "Name": "强横的",
@@ -986,7 +1044,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent7"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent7",
+          "powerLevel": 2
         },
         {
           "Name": "无情的",
@@ -1002,7 +1061,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent8"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercent8",
+          "powerLevel": 1
         }
       ],
       "weight": 3775,
@@ -1026,7 +1086,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating1"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating1",
+          "powerLevel": 8
         },
         {
           "Name": "旅人的",
@@ -1042,7 +1103,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating2"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating2",
+          "powerLevel": 7
         },
         {
           "Name": "掠夺者的",
@@ -1058,7 +1120,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating3"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating3",
+          "powerLevel": 6
         },
         {
           "Name": "佣兵的",
@@ -1074,7 +1137,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating4"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating4",
+          "powerLevel": 5
         },
         {
           "Name": "冠军的",
@@ -1090,7 +1154,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating5"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating5",
+          "powerLevel": 4
         },
         {
           "Name": "征服者的",
@@ -1106,7 +1171,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating6"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating6",
+          "powerLevel": 3
         },
         {
           "Name": "帝王的",
@@ -1122,7 +1188,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating7"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating7",
+          "powerLevel": 2
         },
         {
           "Name": "独裁者的",
@@ -1138,7 +1205,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating8"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedPhysicalDamagePercentAndAccuracyRating8",
+          "powerLevel": 1
         }
       ],
       "weight": 5300,
@@ -1158,7 +1226,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon1"
+          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon1",
+          "powerLevel": 5
         },
         {
           "Name": "制箭之",
@@ -1170,7 +1239,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon2"
+          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon2",
+          "powerLevel": 4
         },
         {
           "Name": "锐眼之",
@@ -1182,7 +1252,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon3"
+          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon3",
+          "powerLevel": 3
         },
         {
           "Name": "神箭手之",
@@ -1194,7 +1265,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon4"
+          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon4",
+          "powerLevel": 2
         },
         {
           "Name": "狙击手之",
@@ -1206,7 +1278,8 @@
           "fossil_no": [],
           "mod_no": [],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon5"
+          "hover": "?s=Data%5CMods%2FGlobalProjectileSkillGemLevelWeapon5",
+          "powerLevel": 1
         }
       ],
       "weight": 2600,
@@ -1230,7 +1303,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeLeechLocal1"
+          "hover": "?s=Data%5CMods%2FLifeLeechLocal1",
+          "powerLevel": 4
         },
         {
           "Name": "蝗虫之",
@@ -1246,7 +1320,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeLeechLocal2"
+          "hover": "?s=Data%5CMods%2FLifeLeechLocal2",
+          "powerLevel": 3
         },
         {
           "Name": "鲫鱼之",
@@ -1262,7 +1337,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeLeechLocal3"
+          "hover": "?s=Data%5CMods%2FLifeLeechLocal3",
+          "powerLevel": 2
         },
         {
           "Name": "七鳃鳗之",
@@ -1278,7 +1354,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeLeechLocal4"
+          "hover": "?s=Data%5CMods%2FLifeLeechLocal4",
+          "powerLevel": 1
         }
       ],
       "weight": 4000,
@@ -1302,7 +1379,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaLeechLocal1"
+          "hover": "?s=Data%5CMods%2FManaLeechLocal1",
+          "powerLevel": 4
         },
         {
           "Name": "干渴之",
@@ -1318,7 +1396,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaLeechLocal2"
+          "hover": "?s=Data%5CMods%2FManaLeechLocal2",
+          "powerLevel": 3
         },
         {
           "Name": "干旱之",
@@ -1334,7 +1413,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaLeechLocal3"
+          "hover": "?s=Data%5CMods%2FManaLeechLocal3",
+          "powerLevel": 2
         },
         {
           "Name": "枯旱之",
@@ -1350,7 +1430,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaLeechLocal4"
+          "hover": "?s=Data%5CMods%2FManaLeechLocal4",
+          "powerLevel": 1
         }
       ],
       "weight": 4000,
@@ -1370,7 +1451,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath1"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath1",
+          "powerLevel": 8
         },
         {
           "Name": "胜利之",
@@ -1382,7 +1464,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath2"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath2",
+          "powerLevel": 7
         },
         {
           "Name": "凯旋之",
@@ -1394,7 +1477,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath3"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath3",
+          "powerLevel": 6
         },
         {
           "Name": "征服之",
@@ -1406,7 +1490,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath4"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath4",
+          "powerLevel": 5
         },
         {
           "Name": "称霸之",
@@ -1418,7 +1503,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath5"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath5",
+          "powerLevel": 4
         },
         {
           "Name": "勇气之",
@@ -1430,7 +1516,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath6"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath6",
+          "powerLevel": 3
         },
         {
           "Name": "荣耀之",
@@ -1442,7 +1529,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath7"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath7",
+          "powerLevel": 2
         },
         {
           "Name": "传说之",
@@ -1454,7 +1542,8 @@
           "fossil_no": ["resource", "life"],
           "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath8"
+          "hover": "?s=Data%5CMods%2FLifeGainedFromEnemyDeath8",
+          "powerLevel": 1
         }
       ],
       "weight": 6000,
@@ -1474,7 +1563,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath1"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath1",
+          "powerLevel": 8
         },
         {
           "Name": "逆渗透之",
@@ -1486,7 +1576,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath2"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath2",
+          "powerLevel": 7
         },
         {
           "Name": "灌输之",
@@ -1498,7 +1589,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath3"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath3",
+          "powerLevel": 6
         },
         {
           "Name": "裹挟之",
@@ -1510,7 +1602,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath4"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath4",
+          "powerLevel": 5
         },
         {
           "Name": "消耗之",
@@ -1522,7 +1615,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath5"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath5",
+          "powerLevel": 4
         },
         {
           "Name": "虹吸之",
@@ -1534,7 +1628,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath6"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath6",
+          "powerLevel": 3
         },
         {
           "Name": "吞噬之",
@@ -1546,7 +1641,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath7"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath7",
+          "powerLevel": 2
         },
         {
           "Name": "同化之",
@@ -1558,7 +1654,8 @@
           "fossil_no": ["resource", "mana"],
           "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath8"
+          "hover": "?s=Data%5CMods%2FManaGainedFromEnemyDeath8",
+          "powerLevel": 1
         }
       ],
       "weight": 6000,
@@ -1581,7 +1678,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal1"
+          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal1",
+          "powerLevel": 4
         },
         {
           "Name": "恢复之",
@@ -1596,7 +1694,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal2"
+          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal2",
+          "powerLevel": 3
         },
         {
           "Name": "再生之",
@@ -1611,7 +1710,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal3"
+          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal3",
+          "powerLevel": 2
         },
         {
           "Name": "营养之",
@@ -1626,7 +1726,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal4"
+          "hover": "?s=Data%5CMods%2FLifeGainPerTargetLocal4",
+          "powerLevel": 1
         }
       ],
       "weight": 4000,
@@ -1649,7 +1750,8 @@
             "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed1"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed1",
+          "powerLevel": 5
         },
         {
           "Name": "轻松之",
@@ -1664,7 +1766,8 @@
             "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed2"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed2",
+          "powerLevel": 4
         },
         {
           "Name": "成熟之",
@@ -1679,7 +1782,8 @@
             "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed3"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed3",
+          "powerLevel": 3
         },
         {
           "Name": "声望之",
@@ -1694,7 +1798,8 @@
             "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed4"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed4",
+          "powerLevel": 2
         },
         {
           "Name": "喝采之",
@@ -1709,7 +1814,8 @@
             "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed5"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAttackSpeed5",
+          "powerLevel": 1
         }
       ],
       "weight": 3900,
@@ -1729,7 +1835,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy1"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy1",
+          "powerLevel": 10
         },
         {
           "Name": "可靠的",
@@ -1741,7 +1848,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy2"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy2",
+          "powerLevel": 9
         },
         {
           "Name": "专注的",
@@ -1753,7 +1861,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy3"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy3",
+          "powerLevel": 8
         },
         {
           "Name": "从容的",
@@ -1765,7 +1874,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy4"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy4",
+          "powerLevel": 7
         },
         {
           "Name": "如一的",
@@ -1777,7 +1887,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy5"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy5",
+          "powerLevel": 6
         },
         {
           "Name": "稳健的",
@@ -1789,7 +1900,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy6"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy6",
+          "powerLevel": 5
         },
         {
           "Name": "狩猎者的",
@@ -1801,7 +1913,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy7"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy7",
+          "powerLevel": 4
         },
         {
           "Name": "游侠的",
@@ -1813,7 +1926,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy8"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy8",
+          "powerLevel": 3
         },
         {
           "Name": "亚马逊的",
@@ -1825,7 +1939,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy9_"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy9_",
+          "powerLevel": 2
         },
         {
           "Name": "女武神的",
@@ -1837,7 +1952,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy10"
+          "hover": "?s=Data%5CMods%2FLocalIncreasedAccuracy10",
+          "powerLevel": 1
         }
       ],
       "weight": 5800,
@@ -1860,7 +1976,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance1"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance1",
+          "powerLevel": 6
         },
         {
           "Name": "浩劫之",
@@ -1875,7 +1992,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance2"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance2",
+          "powerLevel": 5
         },
         {
           "Name": "灾害之",
@@ -1890,7 +2008,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance3"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance3",
+          "powerLevel": 4
         },
         {
           "Name": "灾难之",
@@ -1905,7 +2024,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance4"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance4",
+          "powerLevel": 3
         },
         {
           "Name": "灭绝之",
@@ -1920,7 +2040,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance5"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance5",
+          "powerLevel": 2
         },
         {
           "Name": "解构之",
@@ -1935,7 +2056,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance6"
+          "hover": "?s=Data%5CMods%2FLocalCriticalStrikeChance6",
+          "powerLevel": 1
         }
       ],
       "weight": 3875,
@@ -1959,7 +2081,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier1"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier1",
+          "powerLevel": 6
         },
         {
           "Name": "愤怒之",
@@ -1975,7 +2098,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier2"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier2",
+          "powerLevel": 5
         },
         {
           "Name": "震怒之",
@@ -1991,7 +2115,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier3"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier3",
+          "powerLevel": 4
         },
         {
           "Name": "狂暴之",
@@ -2007,7 +2132,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier4"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier4",
+          "powerLevel": 3
         },
         {
           "Name": "凶暴之",
@@ -2023,7 +2149,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier5"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier5",
+          "powerLevel": 2
         },
         {
           "Name": "毁灭之",
@@ -2039,7 +2166,8 @@
             "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier6"
+          "hover": "?s=Data%5CMods%2FLocalCriticalMultiplier6",
+          "powerLevel": 1
         }
       ],
       "weight": 3875,
@@ -2059,7 +2187,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy1"
+          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy1",
+          "powerLevel": 3
         },
         {
           "Name": "光明之",
@@ -2071,7 +2200,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy2"
+          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy2",
+          "powerLevel": 2
         },
         {
           "Name": "光辉之",
@@ -2083,7 +2213,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy3"
+          "hover": "?s=Data%5CMods%2FLocalLightRadiusAndAccuracy3",
+          "powerLevel": 1
         }
       ],
       "weight": 3000,
@@ -2103,7 +2234,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FAdditionalArrow1"
+          "hover": "?s=Data%5CMods%2FAdditionalArrow1",
+          "powerLevel": 2
         },
         {
           "Name": "繁多之",
@@ -2115,7 +2247,8 @@
           "fossil_no": ["attack"],
           "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FAdditionalArrow2"
+          "hover": "?s=Data%5CMods%2FAdditionalArrow2",
+          "powerLevel": 1
         }
       ],
       "weight": 375,
@@ -2139,7 +2272,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage1"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage1",
+          "powerLevel": 6
         },
         {
           "Name": "注入的",
@@ -2155,7 +2289,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage2"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage2",
+          "powerLevel": 5
         },
         {
           "Name": "赋能的",
@@ -2171,7 +2306,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage3"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage3",
+          "powerLevel": 4
         },
         {
           "Name": "释放的",
@@ -2187,7 +2323,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage4"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage4",
+          "powerLevel": 3
         },
         {
           "Name": "威压的",
@@ -2203,7 +2340,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage5"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage5",
+          "powerLevel": 2
         },
         {
           "Name": "毁灭的",
@@ -2219,7 +2357,8 @@
             "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
           ],
           "mod_fossil_item": [],
-          "hover": "?s=Data%5CMods%2FWeaponElementalDamage6_"
+          "hover": "?s=Data%5CMods%2FWeaponElementalDamage6_",
+          "powerLevel": 1
         }
       ],
       "weight": 3000,

@@ -30,10 +30,7 @@ const addModifier = (minimumLevel: number) => {
 
       itemState.modsFamily.push(hitModsFamily)
 
-      itemState.mods.push({
-        ...hitMod,
-        powerLevel: hitModsFamily.items.length - hitModsFamily.items.indexOf(hitMod),
-      })
+      itemState.mods.push(hitMod)
     }
   }
 }

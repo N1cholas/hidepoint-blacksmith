@@ -29,7 +29,10 @@ async function processMods() {
 
     const fileContent = {
       normal: Object.entries(groupedModsObj).map(([id, mods]) => ({
-        items: mods,
+        items: mods.map((mod) => ({
+          ...mod,
+          powerLevel: mods.length - mods.indexOf(mod),
+        })),
         weight: mods.reduce((sum, mod) => sum + mod.DropChance, 0),
         id,
         modGenerationTypeID: mods[0].ModGenerationTypeID,
