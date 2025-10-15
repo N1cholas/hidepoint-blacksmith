@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  generateModsFamily,
-  modFamilyWeightedRandom,
-  getModifier,
-  filterModsFamilyByTags,
-  onlyPrefixModsFamily,
-  onlySuffixModsFamily,
-} from '../utils/utils'
+import { modFamilyWeightedRandom, getModifier, processModsFamily } from '../utils/utils'
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import type { Modifier } from '@/types/types'
@@ -24,21 +17,11 @@ const omenState = useOmenState()
 
 const addModifier = (minimumLevel: number) => {
   for (let i = 0; i < (omenState.omenConfig.greaterExaltation ? 2 : 1); i++) {
-    let _modsFamily = normalMods.normalModsFamily
-
-    _modsFamily = generateModsFamily(_modsFamily, itemState.modsFamily)
-
-    if (omenState.omenConfig.homogenisingExaltaion) {
-      _modsFamily = filterModsFamilyByTags(_modsFamily, itemState.modsFamily)
-    }
-
-    if (omenState.omenConfig.sinistralExaltation) {
-      _modsFamily = onlyPrefixModsFamily(_modsFamily)
-    }
-
-    if (omenState.omenConfig.dextralExaltation) {
-      _modsFamily = onlySuffixModsFamily(_modsFamily)
-    }
+    const _modsFamily = processModsFamily(normalMods.normalModsFamily, itemState.modsFamily, {
+      homogenisingExaltaion: omenState.omenConfig.homogenisingExaltaion,
+      sinistralExaltation: omenState.omenConfig.sinistralExaltation,
+      dextralExaltation: omenState.omenConfig.dextralExaltation,
+    })
 
     if (_modsFamily.length) {
       const hitModsFamily = modFamilyWeightedRandom<Modifier[]>(_modsFamily)

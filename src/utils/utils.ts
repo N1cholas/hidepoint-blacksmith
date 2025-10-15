@@ -146,3 +146,24 @@ export const onlySuffixModsFamily = (
     (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
   )
 }
+
+export const processModsFamily = (
+  modsFamily: WeightWrapper<Modifier[]>[],
+  curModsFamily: WeightWrapper<Modifier[]>[],
+  omen: {
+    homogenisingExaltaion?: boolean
+    sinistralExaltation?: boolean
+    dextralExaltation?: boolean
+  },
+): WeightWrapper<Modifier[]>[] => {
+  const steps: ((mods: WeightWrapper<Modifier[]>[]) => WeightWrapper<Modifier[]>[])[] = [
+    (mods) => generateModsFamily(mods, curModsFamily),
+    ...(omen.homogenisingExaltaion
+      ? [(mods: WeightWrapper<Modifier[]>[]) => filterModsFamilyByTags(mods, curModsFamily)]
+      : []),
+    ...(omen.sinistralExaltation ? [onlyPrefixModsFamily] : []),
+    ...(omen.dextralExaltation ? [onlySuffixModsFamily] : []),
+  ]
+
+  return steps.reduce((result, step) => step(result), modsFamily)
+}
