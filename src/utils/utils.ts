@@ -80,53 +80,18 @@ export const getModifier = (mods: Modifier[], minimumLevel: number): Modifier =>
 }
 
 // limit rules 前3 后3 总6
-// export const generateModsFamily = (
-//   modsFamily: WeightWrapper<Modifier[]>[],
-//   curModsFamily: WeightWrapper<Modifier[]>[],
-//   config: GenerateModsFamilyConfig = {
-//     prefixNum: 3,
-//     suffixNum: 3,
-//   },
-// ): WeightWrapper<Modifier[]>[] => {
-//   if (curModsFamily.length >= 6) return []
-
-//   let result = modsFamily
-
-//   const curPreModsFamily = curModsFamily.filter(
-//     (modsFamily) => modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
-//   )
-//   if (curPreModsFamily.length < config.prefixNum) {
-//     result = _.xorWith(result, curPreModsFamily, (res, cur) => res.id === cur.id)
-//   } else {
-//     result = result.filter((res) => res.modGenerationTypeID !== MOD_GENERATION_TYPE.PREFIX)
-//   }
-
-//   const curSufModsFamily = curModsFamily.filter(
-//     (modsFamily) => modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
-//   )
-//   if (curSufModsFamily.length < config.suffixNum) {
-//     result = _.xorWith(result, curSufModsFamily, (res, cur) => res.id === cur.id)
-//   } else {
-//     result = result.filter((res) => res.modGenerationTypeID !== MOD_GENERATION_TYPE.SUFFIX)
-//   }
-
-//   return result
-// }
 export const generateModsFamily = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
   config: GenerateModsFamilyConfig = { prefixNum: 3, suffixNum: 3 },
 ): WeightWrapper<Modifier[]>[] => {
-  // 快速失败：容量已满时直接返回
   if (curModsFamily.length >= config.prefixNum + config.suffixNum) return []
 
-  // 预处理：一次性分离前缀/后缀
   const [curPrefix, curSuffix] = _.partition(
     curModsFamily,
     (mod) => mod.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
   )
 
-  // 使用Set优化查重性能
   const curIds = new Set(curModsFamily.map((mod) => mod.id))
 
   // 惰性计算：仅当需要时才过滤结果
@@ -146,44 +111,23 @@ export const generateModsFamily = (
   })
 }
 
-// export const filterModsFamilyByTags = (
-//   modsFamily: WeightWrapper<Modifier[]>[],
-//   curModsFamily: WeightWrapper<Modifier[]>[],
-// ): WeightWrapper<Modifier[]>[] => {
-//   if (curModsFamily.length >= 6) return []
-
-//   let result = modsFamily
-
-//   const curTags = Array.from(
-//     new Set(curModsFamily.map((cur) => cur.tags).reduce((res, cur) => res.concat(cur), [])),
-//   )
-
-//   result = modsFamily.filter((_modsFamily) => _.intersection(_modsFamily.tags, curTags).length > 0)
-
-//   // 处理没有找到符合tag的词条的情况，例如词条的tag为空、弓的敏捷词条等
-//   if (!result.length) return modsFamily
-
-//   return result
-// }
 export const filterModsFamilyByTags = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
-  // 快速失败条件
   if (curModsFamily.length >= 6) return []
 
-  // 优化1：使用Set提升tag检索效率
   const curTagSet = new Set<string>()
   curModsFamily.forEach((mod) => {
     if (mod.tags) mod.tags.forEach((tag) => curTagSet.add(tag))
   })
 
-  // 优化2：提前处理空结果情况
+  // 处理词条的tag为空的情况
   if (curTagSet.size === 0) return modsFamily
 
-  // 优化3：单次遍历完成过滤
   const filtered = modsFamily.filter((mod) => mod.tags?.some((tag) => curTagSet.has(tag)))
 
+  // 处理没有找到符合tag的词条的情况，例如弓的敏捷词条等
   return filtered.length ? filtered : modsFamily
 }
 
