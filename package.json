@@ -16,6 +16,7 @@
     "format": "prettier --write src/",
     "build-data-file": "node streamProcessor.js"
   },
+  "packageManager": "pnpm@10.15.1",
   "dependencies": {
     "jsonfile": "^6.2.0",
     "lodash": "^4.17.21",

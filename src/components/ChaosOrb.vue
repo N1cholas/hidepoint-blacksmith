@@ -18,7 +18,6 @@ defineProps<{
 
 const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
-const omenState = useOmenState()
 
 const disable = computed(() => itemState.mods.length < 3)
 
