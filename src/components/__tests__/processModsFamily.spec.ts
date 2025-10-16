@@ -203,7 +203,7 @@ describe('processModsFamily', () => {
     ])
   })
 
-  it('shoule return suffixb n modsFamily and filter by tags', () => {
+  it('shoule return suffix modsFamily and filter by tags', () => {
     const _mockCurModsFamily = [
       {
         items: [],
