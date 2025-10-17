@@ -19,7 +19,7 @@ const addModifier = (minimumLevel: number) => {
   for (let i = 0; i < (omenState.omenConfig.greaterExaltation ? 2 : 1); i++) {
     const _modsFamily = generateExaltedOrbAffixPool(
       normalMods.normalModsFamily,
-      itemState.modsFamily,
+      itemState.affixFamilies,
       {
         filterByTags: omenState.omenConfig.homogenisingExaltaion,
         onlyPrefix: omenState.omenConfig.sinistralExaltation,
@@ -32,7 +32,7 @@ const addModifier = (minimumLevel: number) => {
 
       const hitMod = getModifier(hitModsFamily.items, minimumLevel)
 
-      itemState.addMods(hitModsFamily, hitMod)
+      itemState.addAffix(hitModsFamily, hitMod)
     }
   }
 }

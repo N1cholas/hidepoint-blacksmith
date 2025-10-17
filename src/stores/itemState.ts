@@ -3,39 +3,46 @@ import type { Modifier, WeightWrapper } from '@/types/types'
 import { ref } from 'vue'
 
 export const useItemState = defineStore('itemState', () => {
-  const modsFamily = ref<WeightWrapper<Modifier[]>[]>([])
-  const mods = ref<Modifier[]>([])
+  const affixFamilies = ref<WeightWrapper<Modifier[]>[]>([])
+  const affixes = ref<Modifier[]>([])
 
   const $reset = () => {
-    modsFamily.value = []
-    mods.value = []
+    affixFamilies.value = []
+    affixes.value = []
   }
 
-  const addMods = (newModsFamily: WeightWrapper<Modifier[]>, newMods: Modifier) => {
-    if (!newModsFamily || !newMods)
+  const addAffix = (newAffixFamily: WeightWrapper<Modifier[]>, newAffix: Modifier) => {
+    if (!newAffixFamily || !newAffix)
       return console.error('addMods: newModsFamily or newMods is null')
 
-    modsFamily.value.push(newModsFamily)
-    mods.value.push(newMods)
+    affixFamilies.value.push(newAffixFamily)
+    affixes.value.push(newAffix)
   }
 
   const findIndexById = (id: string): [modsFamilyIndex: number, modsIndex: number] => [
-    modsFamily.value.findIndex((item) => item.id === id),
-    mods.value.findIndex((mod) => mod.ModFamilyList[0] === id),
+    affixFamilies.value.findIndex((item) => item.id === id),
+    affixes.value.findIndex((mod) => mod.ModFamilyList[0] === id),
   ]
 
-  const replaceMods = (
-    newModsFamily: WeightWrapper<Modifier[]>,
-    replaceModsFamilyIndex: number,
-    newMods: Modifier,
-    replaceModsIndex: number,
+  const replaceAffix = (
+    newAffixFamily: WeightWrapper<Modifier[]>,
+    affixFamilyIndex: number,
+    newAffix: Modifier,
+    affixIndex: number,
   ) => {
-    if (!newModsFamily || !newMods)
+    if (!newAffixFamily || !newAffix)
       return console.error('replaceMods: newModsFamily or newMods is null')
 
-    modsFamily.value[replaceModsFamilyIndex] = newModsFamily
-    mods.value[replaceModsIndex] = newMods
+    affixFamilies.value[affixFamilyIndex] = newAffixFamily
+    affixes.value[affixIndex] = newAffix
   }
 
-  return { modsFamily, mods, $reset, addMods, findIndexById, replaceMods }
+  return {
+    affixFamilies,
+    affixes,
+    $reset,
+    addAffix,
+    findIndexById,
+    replaceAffix,
+  }
 })
