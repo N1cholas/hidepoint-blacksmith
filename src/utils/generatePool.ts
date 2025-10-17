@@ -1,43 +1,20 @@
 import {
   type WeightWrapper,
-  type GenerateModsFamilyConfig,
   MOD_GENERATION_TYPE,
   type Modifier,
+  type GeneratePoolConfig,
 } from '@/types/types'
 import _ from 'lodash'
 
-// limit rules 前3 后3 总6
-export const generateAffixFamilies = (
-  modsFamily: WeightWrapper<Modifier[]>[],
-  curModsFamily: WeightWrapper<Modifier[]>[],
-  config: GenerateModsFamilyConfig = { prefixNum: 3, suffixNum: 3 },
-): WeightWrapper<Modifier[]>[] => {
-  if (curModsFamily.length >= config.prefixNum + config.suffixNum) return []
-
-  const [curPrefix, curSuffix] = _.partition(
-    curModsFamily,
-    (mod) => mod.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
-  )
-
-  const curIds = new Set(curModsFamily.map((mod) => mod.id))
-
-  const shouldIncludePrefix = curPrefix.length < config.prefixNum
-  const shouldIncludeSuffix = curSuffix.length < config.suffixNum
-
-  return modsFamily.filter((mod) => {
-    const isPrefix = mod.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX
-    const isSuffix = mod.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX
-
-    return (
-      !curIds.has(mod.id) && // 去重检查
-      ((shouldIncludePrefix && isPrefix) ||
-        (shouldIncludeSuffix && isSuffix) ||
-        (!isPrefix && !isSuffix)) // 保留非前后缀类型
-    )
-  })
+export const deduplicationAffixFamilies = (
+  affixFamiliesPool: WeightWrapper<Modifier[]>[],
+  curAffixFamilies: WeightWrapper<Modifier[]>[],
+) => {
+  const curIDs = new Set(curAffixFamilies.map((affixFamily) => affixFamily.id))
+  return affixFamiliesPool.filter((affixFamily) => !curIDs.has(affixFamily.id))
 }
 
-export const filterModsFamilyByTags = (
+export const filterAffixFamiliesByTags = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
@@ -57,7 +34,7 @@ export const filterModsFamilyByTags = (
   return filtered.length ? filtered : modsFamily
 }
 
-export const onlyPrefixModsFamily = (
+export const onlyPrefixAffixFamilies = (
   modsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
   return modsFamily.filter(
@@ -65,7 +42,7 @@ export const onlyPrefixModsFamily = (
   )
 }
 
-export const onlySuffixModsFamily = (
+export const onlySuffixAffixFamilies = (
   modsFamily: WeightWrapper<Modifier[]>[],
 ): WeightWrapper<Modifier[]>[] => {
   return modsFamily.filter(
@@ -73,23 +50,30 @@ export const onlySuffixModsFamily = (
   )
 }
 
-export const generateAddAffixFamiliesPool = (
-  modsFamily: WeightWrapper<Modifier[]>[],
-  curModsFamily: WeightWrapper<Modifier[]>[],
-  config: {
-    filterByTags?: boolean
-    onlyPrefix?: boolean
-    onlySuffix?: boolean
-  },
+export const generateAffixFamiliesPool = (
+  rawAffixFamiliesPool: WeightWrapper<Modifier[]>[],
+  curAffixFamilies: WeightWrapper<Modifier[]>[],
+  options: GeneratePoolConfig,
 ): WeightWrapper<Modifier[]>[] => {
-  const steps: ((mods: WeightWrapper<Modifier[]>[]) => WeightWrapper<Modifier[]>[])[] = [
-    (mods) => generateAffixFamilies(mods, curModsFamily),
-    ...(config.filterByTags
-      ? [(mods: WeightWrapper<Modifier[]>[]) => filterModsFamilyByTags(mods, curModsFamily)]
-      : []),
-    ...(config.onlyPrefix ? [onlyPrefixModsFamily] : []),
-    ...(config.onlySuffix ? [onlySuffixModsFamily] : []),
-  ]
+  const { deduplication, filterByTags, onlyPrefix, onlySuffix } = options
 
-  return steps.reduce((result, step) => step(result), modsFamily)
+  let affixFamiliesPool = rawAffixFamiliesPool
+
+  if (deduplication) {
+    affixFamiliesPool = deduplicationAffixFamilies(affixFamiliesPool, curAffixFamilies)
+  }
+
+  if (filterByTags) {
+    affixFamiliesPool = filterAffixFamiliesByTags(affixFamiliesPool, curAffixFamilies)
+  }
+
+  if (onlyPrefix) {
+    affixFamiliesPool = onlyPrefixAffixFamilies(affixFamiliesPool)
+  }
+
+  if (onlySuffix) {
+    affixFamiliesPool = onlySuffixAffixFamilies(affixFamiliesPool)
+  }
+
+  return affixFamiliesPool
 }

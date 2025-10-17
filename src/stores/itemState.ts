@@ -1,10 +1,14 @@
 import { defineStore } from 'pinia'
-import type { Modifier, WeightWrapper } from '@/types/types'
+import type { ItemConfig, Modifier, WeightWrapper } from '@/types/types'
 import { ref } from 'vue'
 
 export const useItemState = defineStore('itemState', () => {
   const affixFamilies = ref<WeightWrapper<Modifier[]>[]>([])
   const affixes = ref<Modifier[]>([])
+  const config = ref<ItemConfig>({
+    prefixNum: 3,
+    suffixNum: 3,
+  })
 
   const $reset = () => {
     affixFamilies.value = []

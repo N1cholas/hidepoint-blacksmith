@@ -7,7 +7,7 @@ import {
   randomlyObtainAffixFamily,
   randomlyObtainAffix,
 } from '@/utils/randomlyObtain'
-import { generateAddAffixFamiliesPool } from '@/utils/generatePool'
+import { generateAffixFamiliesPool } from '@/utils/generatePool'
 import { computed } from 'vue'
 
 defineProps<{
@@ -20,6 +20,8 @@ const itemState = useItemState()
 
 const disable = computed(() => itemState.affixes.length < 3)
 
+// 混沌石替换的词条可以是前缀或者后缀
+// 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
 const changeModifier = (minimumLevel: number) => {
   const shouldRemoveModsFamily = reverseRandomlyObtainAffixFamily<Modifier[]>(
     itemState.affixFamilies,
@@ -32,13 +34,11 @@ const changeModifier = (minimumLevel: number) => {
   const is6Mods = itemState.affixFamilies.length === 6
   const shouldRemoveModsFamilyType = shouldRemoveModsFamily.modGenerationTypeID
 
-  const newModsFamily = generateAddAffixFamiliesPool(
+  const newModsFamily = generateAffixFamiliesPool(
     normalMods.normalModsFamily,
     itemState.affixFamilies,
     {
-      // 混沌石替换的词条可以是前缀或者后缀
-      // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
-      // bug: 满词缀不能c
+      deduplication: true,
       onlyPrefix: is6Mods && shouldRemoveModsFamilyType === MOD_GENERATION_TYPE.PREFIX,
       onlySuffix: is6Mods && shouldRemoveModsFamilyType === MOD_GENERATION_TYPE.SUFFIX,
     },

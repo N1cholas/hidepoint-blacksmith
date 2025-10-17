@@ -1,4 +1,5 @@
 export type WeightWrapper<T> = {
+  value: any
   items: T
   weight: number
   id: string
@@ -24,10 +25,11 @@ export type BowNormalModData = {
   normal: WeightWrapper<Modifier>[]
 }
 
-export type GenerateModsFamilyConfig = {
+export type ItemConfig = {
   prefixNum: number
   suffixNum: number
 }
+
 export enum MOD_GENERATION_TYPE {
   PREFIX = 1,
   SUFFIX = 2,
@@ -41,4 +43,11 @@ export type OmenConfig = {
   greaterExaltation: boolean
   // 富豪
   homogenisingCoronation: boolean
+}
+
+export type GeneratePoolConfig = {
+  deduplication?: boolean
+  filterByTags?: boolean
+  onlyPrefix?: boolean
+  onlySuffix?: boolean
 }
