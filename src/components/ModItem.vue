@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { processHtmlString } from '@/utils/utils'
+import { processHTMLString } from '@/utils/processString'
 import { type Modifier } from '@/types/types'
 defineProps<{
   mod: Modifier
@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <li :class="`${type}-mods`">
     <span v-if="showModType" class="prefix">{{ type === 'prefix' ? '前缀' : '后缀' }}</span>
-    {{ processHtmlString(mod.str) }}
+    {{ processHTMLString(mod.str) }}
     <span class="suffix" v-if="mod.powerLevel">T{{ mod.powerLevel }}</span>
   </li>
 </template>

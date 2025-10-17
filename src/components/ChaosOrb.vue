@@ -3,11 +3,11 @@ import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { useItemState } from '@/stores/itemState'
 import { type Modifier, MOD_GENERATION_TYPE } from '@/types/types'
 import {
-  reverseModsFamilyWeightedRandom,
-  generateExaltedOrbAffixPool,
-  modFamilyWeightedRandom,
-  getModifier,
-} from '@/utils/utils'
+  reverseRandomlyObtainAffixFamily,
+  randomlyObtainAffixFamily,
+  randomlyObtainAffix,
+} from '@/utils/randomlyObtain'
+import { generateAddAffixFamiliesPool } from '@/utils/generatePool'
 import { computed } from 'vue'
 
 defineProps<{
@@ -21,7 +21,7 @@ const itemState = useItemState()
 const disable = computed(() => itemState.affixes.length < 3)
 
 const changeModifier = (minimumLevel: number) => {
-  const shouldRemoveModsFamily = reverseModsFamilyWeightedRandom<Modifier[]>(
+  const shouldRemoveModsFamily = reverseRandomlyObtainAffixFamily<Modifier[]>(
     itemState.affixFamilies,
   )
 
@@ -32,7 +32,7 @@ const changeModifier = (minimumLevel: number) => {
   const is6Mods = itemState.affixFamilies.length === 6
   const shouldRemoveModsFamilyType = shouldRemoveModsFamily.modGenerationTypeID
 
-  const newModsFamily = generateExaltedOrbAffixPool(
+  const newModsFamily = generateAddAffixFamiliesPool(
     normalMods.normalModsFamily,
     itemState.affixFamilies,
     {
@@ -45,9 +45,9 @@ const changeModifier = (minimumLevel: number) => {
   )
 
   if (newModsFamily.length) {
-    const hitModsFamily = modFamilyWeightedRandom<Modifier[]>(newModsFamily)
+    const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(newModsFamily)
 
-    const hitMod = getModifier(hitModsFamily.items, minimumLevel)
+    const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 
     if (hitMod) {
       itemState.replaceAffix(

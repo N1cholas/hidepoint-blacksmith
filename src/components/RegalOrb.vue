@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import {
-  generateAffixFamilies,
-  modFamilyWeightedRandom,
-  getModifier,
-  filterModsFamilyByTags,
-} from '../utils/utils'
+import { generateAffixFamilies, filterModsFamilyByTags } from '../utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import type { Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { computed } from 'vue'
+import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 
 defineProps<{
   name: string
@@ -34,9 +30,9 @@ const addModifier = (minimumLevel: number) => {
   }
 
   if (_modsFamily.length) {
-    const hitModsFamily = modFamilyWeightedRandom<Modifier[]>(_modsFamily)
+    const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(_modsFamily)
 
-    const hitMod = getModifier(hitModsFamily.items, minimumLevel)
+    const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 
     itemState.addAffix(hitModsFamily, hitMod)
   }

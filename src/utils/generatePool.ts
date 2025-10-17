@@ -6,79 +6,6 @@ import {
 } from '@/types/types'
 import _ from 'lodash'
 
-export const processHtmlString = (htmlString: string) => {
-  const tempDiv = document.createElement('div')
-  tempDiv.innerHTML = htmlString
-
-  const spans = tempDiv.querySelectorAll('span')
-  spans.forEach((span) => {
-    span.replaceWith(...span.childNodes)
-  })
-
-  const links = tempDiv.querySelectorAll('a')
-  links.forEach((link) => {
-    const text = document.createTextNode(link.textContent || '')
-    link.replaceWith(text)
-  })
-
-  const str = tempDiv.innerHTML
-
-  return str
-}
-
-// todo:性能优化
-export const modFamilyWeightedRandom = <T>(weightedItems: WeightWrapper<T>[]): WeightWrapper<T> => {
-  const total = weightedItems.reduce((sum, i) => sum + i.weight, 0)
-  const random = Math.random() * total
-
-  let cumulativeWeight = 0
-
-  for (const weightedItem of weightedItems) {
-    cumulativeWeight += weightedItem.weight
-    if (random <= cumulativeWeight) {
-      return weightedItem
-    }
-  }
-
-  return weightedItems[weightedItems.length - 1]
-}
-
-export const reverseModsFamilyWeightedRandom = <T>(
-  weightedItems: WeightWrapper<T>[],
-): WeightWrapper<T> => {
-  const totalInverseWeight = weightedItems.reduce(
-    (sum, item) => sum + 1 / Math.max(item.weight, 0.0001),
-    0,
-  )
-  let random = Math.random() * totalInverseWeight
-
-  for (const item of weightedItems) {
-    const inverseWeight = 1 / Math.max(item.weight, 0.0001)
-    if (random < inverseWeight) return item
-    random -= inverseWeight
-  }
-
-  return weightedItems[weightedItems.length - 1]
-}
-
-export const getModifier = (mods: Modifier[], minimumLevel: number): Modifier => {
-  const total = mods.reduce((sum, i) => sum + i.DropChance, 0)
-  const random = Math.random() * total
-
-  let cumulativeWeight = 0
-
-  const filteredMods = mods.filter((mod) => mod.Level >= minimumLevel)
-
-  for (const mod of filteredMods) {
-    cumulativeWeight += mod.DropChance
-    if (random <= cumulativeWeight) {
-      return mod
-    }
-  }
-
-  return mods[mods.length - 1]
-}
-
 // limit rules 前3 后3 总6
 export const generateAffixFamilies = (
   modsFamily: WeightWrapper<Modifier[]>[],
@@ -146,7 +73,7 @@ export const onlySuffixModsFamily = (
   )
 }
 
-export const generateExaltedOrbAffixPool = (
+export const generateAddAffixFamiliesPool = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
   config: {

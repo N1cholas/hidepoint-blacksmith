@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { modFamilyWeightedRandom, getModifier, generateExaltedOrbAffixPool } from '../utils/utils'
+import { generateAddAffixFamiliesPool } from '../utils/generatePool'
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import type { Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
+import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 
 defineProps<{
   name: string
@@ -17,7 +18,7 @@ const omenState = useOmenState()
 
 const addModifier = (minimumLevel: number) => {
   for (let i = 0; i < (omenState.omenConfig.greaterExaltation ? 2 : 1); i++) {
-    const _modsFamily = generateExaltedOrbAffixPool(
+    const _modsFamily = generateAddAffixFamiliesPool(
       normalMods.normalModsFamily,
       itemState.affixFamilies,
       {
@@ -28,9 +29,9 @@ const addModifier = (minimumLevel: number) => {
     )
 
     if (_modsFamily.length) {
-      const hitModsFamily = modFamilyWeightedRandom<Modifier[]>(_modsFamily)
+      const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(_modsFamily)
 
-      const hitMod = getModifier(hitModsFamily.items, minimumLevel)
+      const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 
       itemState.addAffix(hitModsFamily, hitMod)
     }
