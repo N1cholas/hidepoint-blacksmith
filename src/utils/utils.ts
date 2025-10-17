@@ -94,7 +94,6 @@ export const generateModsFamily = (
 
   const curIds = new Set(curModsFamily.map((mod) => mod.id))
 
-  // 惰性计算：仅当需要时才过滤结果
   const shouldIncludePrefix = curPrefix.length < config.prefixNum
   const shouldIncludeSuffix = curSuffix.length < config.suffixNum
 
@@ -147,22 +146,22 @@ export const onlySuffixModsFamily = (
   )
 }
 
-export const processModsFamily = (
+export const generateExaltedOrbAffixPool = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
-  omen: {
-    homogenisingExaltaion?: boolean
-    sinistralExaltation?: boolean
-    dextralExaltation?: boolean
+  config: {
+    filterByTags?: boolean
+    onlyPrefix?: boolean
+    onlySuffix?: boolean
   },
 ): WeightWrapper<Modifier[]>[] => {
   const steps: ((mods: WeightWrapper<Modifier[]>[]) => WeightWrapper<Modifier[]>[])[] = [
     (mods) => generateModsFamily(mods, curModsFamily),
-    ...(omen.homogenisingExaltaion
+    ...(config.filterByTags
       ? [(mods: WeightWrapper<Modifier[]>[]) => filterModsFamilyByTags(mods, curModsFamily)]
       : []),
-    ...(omen.sinistralExaltation ? [onlyPrefixModsFamily] : []),
-    ...(omen.dextralExaltation ? [onlySuffixModsFamily] : []),
+    ...(config.onlyPrefix ? [onlyPrefixModsFamily] : []),
+    ...(config.onlySuffix ? [onlySuffixModsFamily] : []),
   ]
 
   return steps.reduce((result, step) => step(result), modsFamily)
