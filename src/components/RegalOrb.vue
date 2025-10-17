@@ -21,7 +21,7 @@ const disable = computed(() => {
 })
 
 const addModifier = (minimumLevel: number) => {
-  const _modsFamily = generateAffixFamiliesPool(
+  const newAffixFamily = generateAffixFamiliesPool(
     normalMods.normalModsFamily,
     itemState.affixFamilies,
     {
@@ -30,8 +30,8 @@ const addModifier = (minimumLevel: number) => {
     },
   )
 
-  if (_modsFamily.length) {
-    const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(_modsFamily)
+  if (newAffixFamily.length) {
+    const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)
 
     const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 

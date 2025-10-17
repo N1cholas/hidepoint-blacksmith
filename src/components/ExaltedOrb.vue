@@ -23,34 +23,45 @@ const disable = computed(() => {
 
 // 添加词缀规则：去重 前3 后3 共6
 const addModifier = (minimumLevel: number) => {
-  for (let i = 0; i < (omenState.omenConfig.greaterExaltation ? 2 : 1); i++) {
-    const _modsFamily = generateAffixFamiliesPool(
+  const iterations = omenState.omenConfig.greaterExaltation ? 2 : 1
+
+  for (let i = 0; i < iterations; i++) {
+    const newAffixFamily = generateAffixFamiliesPool(
       normalMods.normalModsFamily,
       itemState.affixFamilies,
       {
         deduplication: true,
         filterByTags: omenState.omenConfig.homogenisingExaltaion,
-        onlyPrefix:
-          omenState.omenConfig.sinistralExaltation ||
-          itemState.affixes.filter(
-            (affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
-          ).length >= 3,
-        onlySuffix:
-          omenState.omenConfig.dextralExaltation ||
-          itemState.affixes.filter(
-            (affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
-          ).length >= 3,
+        onlyPrefix: shouldOnlyPrefix(),
+        onlySuffix: shouldOnlySuffix(),
       },
     )
 
-    if (_modsFamily.length) {
-      const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(_modsFamily)
+    if (newAffixFamily.length) {
+      const hitAffixFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)
+      const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
 
-      const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
-
-      itemState.addAffix(hitModsFamily, hitMod)
+      if (hitAffix) {
+        itemState.addAffix(hitAffixFamily, hitAffix)
+      }
     }
   }
+}
+
+const shouldOnlyPrefix = (): boolean => {
+  return (
+    omenState.omenConfig.sinistralExaltation ||
+    itemState.affixes.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX)
+      .length >= itemState.config.suffixNum
+  )
+}
+
+const shouldOnlySuffix = (): boolean => {
+  return (
+    omenState.omenConfig.dextralExaltation ||
+    itemState.affixes.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.PREFIX)
+      .length >= itemState.config.prefixNum
+  )
 }
 </script>
 <template>

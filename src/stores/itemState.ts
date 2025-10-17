@@ -48,5 +48,6 @@ export const useItemState = defineStore('itemState', () => {
     addAffix,
     findIndexById,
     replaceAffix,
+    config,
   }
 })
