@@ -10,7 +10,7 @@ const itemState = useItemState()
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3 class="item-type"><span class="green">双生之弓</span>:</h3>
-    <ModsList :mods="itemState.mods" />
+    <ModsList :mods="itemState.affixes" />
     <button @click="itemState.$reset">重置</button>
   </div>
 </template>

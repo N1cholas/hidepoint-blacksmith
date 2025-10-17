@@ -1,6 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import type { Modifier, WeightWrapper } from '@/types/types'
-import { processModsFamily } from '@/utils/utils'
+import { generateExaltedOrbAffixPool } from '@/utils/utils'
 
 // Mock 数据
 const mockModsFamily: WeightWrapper<Modifier[]>[] = [
@@ -124,24 +124,24 @@ const mockCurModsFamily: WeightWrapper<Modifier[]>[] = [
 describe('processModsFamily', () => {
   it('should return [] when sinistralExaltation and dextralExaltation all true', () => {
     const omen = {
-      homogenisingExaltaion: true,
-      sinistralExaltation: true,
-      dextralExaltation: true,
+      filterByTags: true,
+      onlyPrefix: true,
+      onlySuffix: true,
     }
 
-    const result = processModsFamily(mockModsFamily, mockCurModsFamily, omen)
+    const result = generateExaltedOrbAffixPool(mockModsFamily, mockCurModsFamily, omen)
 
     expect(result).toEqual([])
   })
 
   it('should return [] when current mods length >= 6', () => {
     const omen = {
-      homogenisingExaltaion: true,
-      sinistralExaltation: true,
-      dextralExaltation: false,
+      filterByTags: true,
+      onlyPrefix: true,
+      onlySuffix: false,
     }
 
-    const result = processModsFamily(mockModsFamily, mockCurModsFamily, omen)
+    const result = generateExaltedOrbAffixPool(mockModsFamily, mockCurModsFamily, omen)
 
     expect(result).toEqual([])
   })
@@ -150,12 +150,12 @@ describe('processModsFamily', () => {
     const _mockCurModsFamily = mockCurModsFamily.slice().splice(-1)
 
     const omen = {
-      homogenisingExaltaion: true,
-      sinistralExaltation: true,
-      dextralExaltation: false,
+      filterByTags: true,
+      onlyPrefix: true,
+      onlySuffix: false,
     }
 
-    const result = processModsFamily(mockModsFamily, _mockCurModsFamily, omen)
+    const result = generateExaltedOrbAffixPool(mockModsFamily, _mockCurModsFamily, omen)
 
     expect(result).toEqual([
       {
@@ -243,12 +243,12 @@ describe('processModsFamily', () => {
     ]
 
     const omen = {
-      homogenisingExaltaion: true,
-      sinistralExaltation: false,
-      dextralExaltation: true,
+      filterByTags: true,
+      onlyPrefix: false,
+      onlySuffix: true,
     }
 
-    const result = processModsFamily(mockModsFamily, _mockCurModsFamily, omen)
+    const result = generateExaltedOrbAffixPool(mockModsFamily, _mockCurModsFamily, omen)
 
     expect(result).toEqual([
       {

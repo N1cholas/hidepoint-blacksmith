@@ -80,7 +80,7 @@ export const getModifier = (mods: Modifier[], minimumLevel: number): Modifier =>
 }
 
 // limit rules 前3 后3 总6
-export const generateModsFamily = (
+export const generateAffixFamilies = (
   modsFamily: WeightWrapper<Modifier[]>[],
   curModsFamily: WeightWrapper<Modifier[]>[],
   config: GenerateModsFamilyConfig = { prefixNum: 3, suffixNum: 3 },
@@ -156,7 +156,7 @@ export const generateExaltedOrbAffixPool = (
   },
 ): WeightWrapper<Modifier[]>[] => {
   const steps: ((mods: WeightWrapper<Modifier[]>[]) => WeightWrapper<Modifier[]>[])[] = [
-    (mods) => generateModsFamily(mods, curModsFamily),
+    (mods) => generateAffixFamilies(mods, curModsFamily),
     ...(config.filterByTags
       ? [(mods: WeightWrapper<Modifier[]>[]) => filterModsFamilyByTags(mods, curModsFamily)]
       : []),

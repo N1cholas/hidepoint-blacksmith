@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {
-  generateModsFamily,
+  generateAffixFamilies,
   modFamilyWeightedRandom,
   getModifier,
   filterModsFamilyByTags,
@@ -21,16 +21,16 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(() => {
-  return itemState.mods.length !== 2
+  return itemState.affixes.length !== 2
 })
 
 const addModifier = (minimumLevel: number) => {
   let _modsFamily = normalMods.normalModsFamily
 
-  _modsFamily = generateModsFamily(_modsFamily, itemState.modsFamily)
+  _modsFamily = generateAffixFamilies(_modsFamily, itemState.affixFamilies)
 
   if (omenState.omenConfig.homogenisingCoronation) {
-    _modsFamily = filterModsFamilyByTags(_modsFamily, itemState.modsFamily)
+    _modsFamily = filterModsFamilyByTags(_modsFamily, itemState.affixFamilies)
   }
 
   if (_modsFamily.length) {
@@ -38,12 +38,7 @@ const addModifier = (minimumLevel: number) => {
 
     const hitMod = getModifier(hitModsFamily.items, minimumLevel)
 
-    itemState.modsFamily.push(hitModsFamily)
-
-    itemState.mods.push({
-      ...hitMod,
-      powerLevel: hitModsFamily.items.length - hitModsFamily.items.indexOf(hitMod),
-    })
+    itemState.addAffix(hitModsFamily, hitMod)
   }
 }
 </script>

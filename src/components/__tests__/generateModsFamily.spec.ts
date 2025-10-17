@@ -1,5 +1,5 @@
 import type { Modifier, WeightWrapper } from '@/types/types'
-import { generateModsFamily } from '@/utils/utils'
+import { generateAffixFamilies } from '@/utils/utils'
 import { describe, expect, it } from 'vitest'
 
 describe('generateModsFamily test', () => {
@@ -68,7 +68,9 @@ describe('generateModsFamily test', () => {
   }
 
   it('should up to 3 prefix modifiers', () => {
-    expect(generateModsFamily(bowModsFamily, [], config).map((family) => family.id)).toStrictEqual([
+    expect(
+      generateAffixFamilies(bowModsFamily, [], config).map((family) => family.id),
+    ).toStrictEqual([
       'IncreaseSocketedGemLevel',
       'LifeLeech',
       'Dexterity',
@@ -80,7 +82,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -104,7 +106,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -134,7 +136,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -170,7 +172,9 @@ describe('generateModsFamily test', () => {
   })
 
   it('should up to 3 suffix modifiers', () => {
-    expect(generateModsFamily(bowModsFamily, [], config).map((family) => family.id)).toStrictEqual([
+    expect(
+      generateAffixFamilies(bowModsFamily, [], config).map((family) => family.id),
+    ).toStrictEqual([
       'IncreaseSocketedGemLevel',
       'LifeLeech',
       'Dexterity',
@@ -182,7 +186,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -206,7 +210,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -236,7 +240,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -273,7 +277,7 @@ describe('generateModsFamily test', () => {
 
   it('should up to 6 modifiers', () => {
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -303,7 +307,7 @@ describe('generateModsFamily test', () => {
     ])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -340,7 +344,7 @@ describe('generateModsFamily test', () => {
     ).toStrictEqual(['FireDamage', 'LightningDamage', 'LocalPhysicalDamagePercent'])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
@@ -377,7 +381,7 @@ describe('generateModsFamily test', () => {
     ).toStrictEqual(['IncreaseSocketedGemLevel', 'LifeLeech', 'Dexterity'])
 
     expect(
-      generateModsFamily(
+      generateAffixFamilies(
         bowModsFamily,
         [
           {
