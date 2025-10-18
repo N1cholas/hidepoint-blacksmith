@@ -52,9 +52,9 @@ import ChaosOrb from './ChaosOrb.vue'
       <!-- 富豪石 -->
       <Omen name="同质化加冕预兆" omenConfigKey="homogenisingCoronation" />
       <!-- 混沌石 -->
-      <button class="tools">消减预兆</button>
-      <button class="tools">左旋抹除预兆</button>
-      <button class="tools">右旋抹除预兆</button>
+      <Omen name="消减预兆" omenConfigKey="whittling" />
+      <Omen name="左旋消抹预兆" omenConfigKey="sinistralErasure" />
+      <Omen name="右旋消抹预兆" omenConfigKey="dextralErasure" />
       <!-- 剥离石 -->
       <button class="tools">左旋剥离预兆</button>
       <button class="tools">右旋剥离预兆</button>

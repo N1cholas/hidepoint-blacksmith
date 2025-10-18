@@ -14,6 +14,12 @@ export const useOmenState = defineStore('OmenState', () => {
     greaterExaltation: false,
     // 富豪同质化
     homogenisingCoronation: false,
+    // 消减
+    whittling: false,
+    // 左旋消抹
+    sinistralErasure: false,
+    // 右旋消抹
+    dextralErasure: false,
   }
 
   const omenConfig = ref<OmenConfig>(initConfig)

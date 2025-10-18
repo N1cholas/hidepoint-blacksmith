@@ -43,11 +43,21 @@ export type OmenConfig = {
   greaterExaltation: boolean
   // 富豪
   homogenisingCoronation: boolean
+  // 混沌
+  whittling: boolean
+  sinistralErasure: boolean
+  dextralErasure: boolean
 }
 
-export type GeneratePoolConfig = {
+export type GeneratePoolOptions = {
   deduplication?: boolean
   filterByTags?: boolean
+  onlyPrefix?: boolean
+  onlySuffix?: boolean
+}
+
+export type SelectAffixFamilyOptions = {
+  lowestValue?: boolean
   onlyPrefix?: boolean
   onlySuffix?: boolean
 }

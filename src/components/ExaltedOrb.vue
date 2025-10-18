@@ -5,7 +5,7 @@ import { MOD_GENERATION_TYPE, type Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
-import { generateAffixFamiliesPool } from '@/utils/generatePool'
+import { generateAddPool } from '@/utils/generatePool'
 import { computed } from 'vue'
 
 defineProps<{
@@ -26,16 +26,12 @@ const addModifier = (minimumLevel: number) => {
   const iterations = omenState.omenConfig.greaterExaltation ? 2 : 1
 
   for (let i = 0; i < iterations; i++) {
-    const newAffixFamily = generateAffixFamiliesPool(
-      normalMods.normalModsFamily,
-      itemState.affixFamilies,
-      {
-        deduplication: true,
-        filterByTags: omenState.omenConfig.homogenisingExaltaion,
-        onlyPrefix: shouldOnlyPrefix(),
-        onlySuffix: shouldOnlySuffix(),
-      },
-    )
+    const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+      deduplication: true,
+      filterByTags: omenState.omenConfig.homogenisingExaltaion,
+      onlyPrefix: shouldOnlyPrefix(),
+      onlySuffix: shouldOnlySuffix(),
+    })
 
     if (newAffixFamily.length) {
       const hitAffixFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)

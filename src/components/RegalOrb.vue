@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { generateAffixFamiliesPool } from '@/utils/generatePool'
+import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import type { Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
@@ -21,14 +21,10 @@ const disable = computed(() => {
 })
 
 const addModifier = (minimumLevel: number) => {
-  const newAffixFamily = generateAffixFamiliesPool(
-    normalMods.normalModsFamily,
-    itemState.affixFamilies,
-    {
-      deduplication: true,
-      filterByTags: omenState.omenConfig.homogenisingCoronation,
-    },
-  )
+  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+    deduplication: true,
+    filterByTags: omenState.omenConfig.homogenisingCoronation,
+  })
 
   if (newAffixFamily.length) {
     const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)

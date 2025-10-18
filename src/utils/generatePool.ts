@@ -2,7 +2,8 @@ import {
   type WeightWrapper,
   MOD_GENERATION_TYPE,
   type Modifier,
-  type GeneratePoolConfig,
+  type GeneratePoolOptions,
+  type SelectAffixFamilyOptions,
 } from '@/types/types'
 import _ from 'lodash'
 
@@ -50,10 +51,10 @@ export const onlySuffixAffixFamilies = (
   )
 }
 
-export const generateAffixFamiliesPool = (
+export const generateAddPool = (
   rawAffixFamiliesPool: WeightWrapper<Modifier[]>[],
   curAffixFamilies: WeightWrapper<Modifier[]>[],
-  options: GeneratePoolConfig,
+  options: GeneratePoolOptions,
 ): WeightWrapper<Modifier[]>[] => {
   const { deduplication, filterByTags, onlyPrefix, onlySuffix } = options
 
@@ -73,6 +74,41 @@ export const generateAffixFamiliesPool = (
 
   if (onlySuffix) {
     affixFamiliesPool = onlySuffixAffixFamilies(affixFamiliesPool)
+  }
+
+  return affixFamiliesPool
+}
+
+export const generateSelectPool = (
+  curAffixFamilies: WeightWrapper<Modifier[]>[],
+  curAffixes: Modifier[],
+  options: SelectAffixFamilyOptions,
+): WeightWrapper<Modifier[]>[] => {
+  const { lowestValue, onlyPrefix, onlySuffix } = options
+
+  let affixFamiliesPool = curAffixFamilies
+
+  const allValuesAreSame = curAffixes.every(
+    (affix) => affix.powerLevel === curAffixes[0].powerLevel,
+  )
+
+  if (lowestValue && !allValuesAreSame) {
+    const selectedAffix = curAffixes.sort((a, b) => b.powerLevel - a.powerLevel).slice(0, 1)[0]
+    return curAffixFamilies.filter(
+      (affixFamily) => affixFamily.id === selectedAffix.ModFamilyList[0],
+    )
+  }
+
+  if (onlyPrefix) {
+    affixFamiliesPool = affixFamiliesPool.filter(
+      (affixFamily) => affixFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
+    )
+  }
+
+  if (onlySuffix) {
+    affixFamiliesPool = affixFamiliesPool.filter(
+      (affixFamily) => affixFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
+    )
   }
 
   return affixFamiliesPool

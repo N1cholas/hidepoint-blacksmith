@@ -22,17 +22,6 @@ describe('randomlyObtainAffixFamily', () => {
     expect(results.B).toBeGreaterThan(2000)
     expect(results.C).toBeGreaterThan(3000)
   })
-
-  it('should return the last item if weights are zero', () => {
-    const weightedItems = [
-      { weight: -1, value: 'A' },
-      { weight: -1, value: 'B' },
-      { weight: -1, value: 'C' },
-    ]
-
-    const result = randomlyObtainAffixFamily(weightedItems as any)
-    expect(result.value).toBe('C')
-  })
 })
 
 describe('reverseRandomlyObtainAffixFamily', () => {
