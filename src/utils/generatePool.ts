@@ -88,11 +88,11 @@ export const generateSelectPool = (
 
   let affixFamiliesPool = curAffixFamilies
 
-  const allValuesAreSame = curAffixes.every(
+  const allPowerLevelAreSame = curAffixes.every(
     (affix) => affix.powerLevel === curAffixes[0].powerLevel,
   )
 
-  if (lowestValue && !allValuesAreSame) {
+  if (lowestValue && !allPowerLevelAreSame) {
     const selectedAffix = curAffixes.sort((a, b) => b.powerLevel - a.powerLevel).slice(0, 1)[0]
     return curAffixFamilies.filter(
       (affixFamily) => affixFamily.id === selectedAffix.ModFamilyList[0],
