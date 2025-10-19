@@ -47,17 +47,26 @@ export type OmenConfig = {
   whittling: boolean
   sinistralErasure: boolean
   dextralErasure: boolean
+  // 剥离
+  sinistralAnnulment: boolean
+  dextralAnnulment: boolean
 }
 
-export type GeneratePoolOptions = {
+export type GenerateAddPoolOptions = {
   deduplication?: boolean
   filterByTags?: boolean
   onlyPrefix?: boolean
   onlySuffix?: boolean
 }
 
-export type SelectAffixFamilyOptions = {
+export type GenerateReplacePoolOptions = {
   lowestValue?: boolean
+  onlyPrefix?: boolean
+  onlySuffix?: boolean
+}
+
+export type GenerateRemovePoolOptions = {
+  onlyAbyssal?: boolean
   onlyPrefix?: boolean
   onlySuffix?: boolean
 }

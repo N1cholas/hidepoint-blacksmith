@@ -20,6 +20,10 @@ export const useOmenState = defineStore('OmenState', () => {
     sinistralErasure: false,
     // 右旋消抹
     dextralErasure: false,
+    // 左旋剥离
+    sinistralAnnulment: false,
+    // 右旋剥离
+    dextralAnnulment: false,
   }
 
   const omenConfig = ref<OmenConfig>(initConfig)

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { generateAddPool, generateSelectPool } from '@/utils/generatePool'
+import { generateAddPool, generateRemovePool, generateReplacePool } from '@/utils/generatePool'
 import { MOD_GENERATION_TYPE, type Modifier, type WeightWrapper } from '@/types/types'
 
 describe('generateAddPool', () => {
@@ -112,13 +112,13 @@ describe('generateSelectPool', () => {
 
   it('should return the full pool if no options are provided', () => {
     const options = {}
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
     expect(result).toEqual(mockAffixFamilies)
   })
 
   it('should filter by lowestValue when not all power level are the same', () => {
     const options = { lowestValue: true }
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
     expect(result).toEqual([{ id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX }])
   })
 
@@ -129,13 +129,13 @@ describe('generateSelectPool', () => {
       { ModFamilyList: ['2'], powerLevel: 10 },
       { ModFamilyList: ['3'], powerLevel: 10 },
     ] as Modifier[]
-    const result = generateSelectPool(mockAffixFamilies, affixesWithSamePowerLevel, options)
+    const result = generateReplacePool(mockAffixFamilies, affixesWithSamePowerLevel, options)
     expect(result).toEqual(mockAffixFamilies)
   })
 
   it('should filter by onlyPrefix', () => {
     const options = { onlyPrefix: true }
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
     expect(result).toEqual([
       { id: '1', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
       { id: '3', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
@@ -144,7 +144,7 @@ describe('generateSelectPool', () => {
 
   it('should filter by onlySuffix', () => {
     const options = { onlySuffix: true }
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
     expect(result).toEqual([
       { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
       { id: '4', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
@@ -153,13 +153,58 @@ describe('generateSelectPool', () => {
 
   it('should handle combined options', () => {
     const options = { onlyPrefix: true, lowestValue: true }
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
     expect(result).toEqual([{ id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX }])
   })
 
   it('should return the empty pool if onlyPrefix and onlySuffix are true', () => {
     const options = { onlyPrefix: true, onlySuffix: true }
-    const result = generateSelectPool(mockAffixFamilies, mockAffixes, options)
+    const result = generateReplacePool(mockAffixFamilies, mockAffixes, options)
+    expect(result).toEqual([])
+  })
+})
+
+describe('generateRemovePool', () => {
+  const mockAffixFamilies = [
+    { id: '1', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
+    { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
+    { id: '3', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
+    { id: '4', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
+  ] as WeightWrapper<Modifier[]>[]
+
+  it('should return the full pool if no options are provided', () => {
+    const options = {}
+    const result = generateRemovePool(mockAffixFamilies, options)
+    expect(result).toEqual(mockAffixFamilies)
+  })
+
+  // it('should filter by onlyAbyssal', () => {
+  //   const options = { onlyAbyssal: true }
+  //   const result = generateRemovePool(mockAffixFamilies, options)
+  //   expect(result).toEqual([])
+  // })
+
+  it('should filter by onlyPrefix', () => {
+    const options = { onlyPrefix: true }
+    const result = generateRemovePool(mockAffixFamilies, options)
+    expect(result).toEqual([
+      { id: '1', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
+      { id: '3', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
+    ])
+  })
+
+  it('should filter by onlySuffix', () => {
+    const options = { onlySuffix: true }
+    const result = generateRemovePool(mockAffixFamilies, options)
+    expect(result).toEqual([
+      { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
+      { id: '4', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
+    ])
+  })
+
+  it('should return the empty pool if onlyPrefix and onlySuffix are true', () => {
+    const options = { onlyPrefix: true, onlySuffix: true }
+    const result = generateRemovePool(mockAffixFamilies, options)
     expect(result).toEqual([])
   })
 })

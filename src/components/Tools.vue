@@ -9,6 +9,7 @@ import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import Omen from '@/components/Omen.vue'
 import RegalOrb from './RegalOrb.vue'
 import ChaosOrb from './ChaosOrb.vue'
+import AnnulmentOrb from './AnnulmentOrb.vue'
 </script>
 
 <template>
@@ -30,7 +31,7 @@ import ChaosOrb from './ChaosOrb.vue'
       <ChaosOrb name="混沌石" :minimumLevel="0" />
       <ChaosOrb name="高级混沌石" :minimumLevel="35" />
       <ChaosOrb name="完美混沌石" :minimumLevel="50" />
-      <span>剥离石</span>
+      <AnnulmentOrb name="剥离石" />
       <span>破溃宝珠</span>
       <span>辛格拉的发辫</span>
     </div>
@@ -56,8 +57,8 @@ import ChaosOrb from './ChaosOrb.vue'
       <Omen name="左旋消抹预兆" omenConfigKey="sinistralErasure" />
       <Omen name="右旋消抹预兆" omenConfigKey="dextralErasure" />
       <!-- 剥离石 -->
-      <button class="tools">左旋剥离预兆</button>
-      <button class="tools">右旋剥离预兆</button>
+      <Omen name="左旋剥离预兆" omenConfigKey="sinistralAnnulment" />
+      <Omen name="右旋剥离预兆" omenConfigKey="dextralAnnulment" />
     </div>
   </ToolWrapper>
 

@@ -41,6 +41,11 @@ export const useItemState = defineStore('itemState', () => {
     affixes.value[affixIndex] = newAffix
   }
 
+  const removeAffix = (affixIndex: number, affixFamilyIndex: number) => {
+    affixes.value.splice(affixIndex, 1)
+    affixFamilies.value.splice(affixFamilyIndex, 1)
+  }
+
   return {
     affixFamilies,
     affixes,
@@ -49,5 +54,6 @@ export const useItemState = defineStore('itemState', () => {
     findIndexById,
     replaceAffix,
     config,
+    removeAffix,
   }
 })
