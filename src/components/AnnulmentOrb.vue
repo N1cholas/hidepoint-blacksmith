@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useItemState } from '@/stores/itemState'
-import { ITEM_TYPE, type Modifier } from '@/types/types'
+import { type Modifier } from '@/types/types'
 import { reverseRandomlyObtainAffixFamily } from '@/utils/randomlyObtain'
 import { generateRemovePool } from '@/utils/generatePool'
 import { computed } from 'vue'
@@ -13,9 +13,7 @@ defineProps<{
 const itemState = useItemState()
 const omenState = useOmenState()
 
-const disable = computed(
-  () => itemState.affixes.length === 0,
-)
+const disable = computed(() => itemState.affixes.length === 0)
 
 // 剥离石 不会影响物品类型，例如：原本物品是3词条稀有物品，使用剥离石后仍然是2词条稀有物品而不是2词条魔法物品。
 const removeAffix = () => {

@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HidePointBlackMmith from './views/HidePointBlackMmith.vue'
+import GamingEquipment from './views/GamingEquipment.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <HidePointBlackMmith msg="藏身处铁匠" />
-
+      <GamingEquipment />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>

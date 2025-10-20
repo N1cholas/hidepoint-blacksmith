@@ -26,5 +26,6 @@ defineProps<{ mods: Modifier[] }>()
   height: 150px;
   text-align: center;
   padding: 0;
+  margin: 20px 0;
 }
 </style>

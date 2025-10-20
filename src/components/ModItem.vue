@@ -16,7 +16,7 @@ defineProps<{
 </template>
 <style scoped>
 li {
-  min-width: 320px;
+  min-width: 330px;
   list-style: none;
   position: relative;
   padding-top: 2px;

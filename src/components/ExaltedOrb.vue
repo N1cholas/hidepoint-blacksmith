@@ -18,7 +18,7 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(() => {
-  return !(itemState.affixes.length <= 6 && itemState.itemType === ITEM_TYPE.RARE)
+  return !(itemState.affixes.length < 6 && itemState.itemType === ITEM_TYPE.RARE)
 })
 
 // 添加词缀规则：去重 前3 后3 共6
