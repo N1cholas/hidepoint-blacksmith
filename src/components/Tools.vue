@@ -10,6 +10,9 @@ import Omen from '@/components/Omen.vue'
 import RegalOrb from './RegalOrb.vue'
 import ChaosOrb from './ChaosOrb.vue'
 import AnnulmentOrb from './AnnulmentOrb.vue'
+import TransmutationOrb from './TransmutationOrb.vue'
+import { min } from 'lodash'
+import AugmentationOrb from './AugmentationOrb.vue'
 </script>
 
 <template>
@@ -20,12 +23,18 @@ import AnnulmentOrb from './AnnulmentOrb.vue'
     <template #heading>通货</template>
 
     <div class="tools">
-      <ExaltedOrb name="崇高石" :minimumLevel="0" />
-      <ExaltedOrb name="高级崇高石" :minimumLevel="35" />
-      <ExaltedOrb name="完美崇高石" :minimumLevel="50" />
+      <TransmutationOrb name="蜕变石" :minimumLevel="0" />
+      <TransmutationOrb name="高级蜕变石" :minimumLevel="55" />
+      <TransmutationOrb name="完美蜕变石" :minimumLevel="70" />
+      <AugmentationOrb name="增幅石" :minimumLevel="0" />
+      <AugmentationOrb name="高级增幅石" :minimumLevel="55" />
+      <AugmentationOrb name="完美增幅石" :minimumLevel="70" />
       <RegalOrb name="富豪石" :minimumLevel="0" />
       <RegalOrb name="高级富豪石" :minimumLevel="35" />
       <RegalOrb name="完美富豪石" :minimumLevel="50" />
+      <ExaltedOrb name="崇高石" :minimumLevel="0" />
+      <ExaltedOrb name="高级崇高石" :minimumLevel="35" />
+      <ExaltedOrb name="完美崇高石" :minimumLevel="50" />
       <!-- todo 3词条的稀有物品通过剥离石后仍然为稀有物品 -->
       <!-- todo 测试原始数据，例如：词条只能是前缀或后缀、ModFamilyList只有一个 -->
       <ChaosOrb name="混沌石" :minimumLevel="0" />

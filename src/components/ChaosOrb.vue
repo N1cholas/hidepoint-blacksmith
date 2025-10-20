@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { useItemState } from '@/stores/itemState'
-import { type Modifier, MOD_GENERATION_TYPE } from '@/types/types'
+import { type Modifier, ITEM_TYPE, MOD_GENERATION_TYPE } from '@/types/types'
 import {
   reverseRandomlyObtainAffixFamily,
   randomlyObtainAffixFamily,
@@ -20,7 +20,7 @@ const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
 const omenState = useOmenState()
 
-const disable = computed(() => itemState.affixes.length < 3)
+const disable = computed(() => !(itemState.itemType === ITEM_TYPE.RARE))
 
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。

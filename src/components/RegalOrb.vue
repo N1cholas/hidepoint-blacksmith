@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import type { Modifier } from '@/types/types'
+import { ITEM_TYPE, type Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { computed } from 'vue'
@@ -17,7 +17,11 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(() => {
-  return itemState.affixes.length !== 2
+  return !(
+    itemState.itemType === ITEM_TYPE.MAGIC &&
+    itemState.propsHistory.augmentationOrb &&
+    !itemState.propsHistory.regalOrb
+  )
 })
 
 const addModifier = (minimumLevel: number) => {
@@ -32,6 +36,10 @@ const addModifier = (minimumLevel: number) => {
     const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 
     itemState.addAffix(hitModsFamily, hitMod)
+
+    itemState.setItemType(ITEM_TYPE.RARE)
+
+    itemState.setPropsHistory({ regalOrb: true })
   }
 }
 </script>

@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { useItemState } from '@/stores/itemState'
-import { type Modifier, MOD_GENERATION_TYPE } from '@/types/types'
-import {
-  reverseRandomlyObtainAffixFamily,
-  randomlyObtainAffixFamily,
-  randomlyObtainAffix,
-} from '@/utils/randomlyObtain'
-import { generateAddPool, generateRemovePool, generateReplacePool } from '@/utils/generatePool'
+import { ITEM_TYPE, type Modifier } from '@/types/types'
+import { reverseRandomlyObtainAffixFamily } from '@/utils/randomlyObtain'
+import { generateRemovePool } from '@/utils/generatePool'
 import { computed } from 'vue'
 import { useOmenState } from '@/stores/omenState'
 
@@ -18,8 +13,11 @@ defineProps<{
 const itemState = useItemState()
 const omenState = useOmenState()
 
-const disable = computed(() => itemState.affixes.length < 2)
+const disable = computed(
+  () => itemState.affixes.length === 0,
+)
 
+// 剥离石 不会影响物品类型，例如：原本物品是3词条稀有物品，使用剥离石后仍然是2词条稀有物品而不是2词条魔法物品。
 const removeAffix = () => {
   const removeAffixFamiliesPool = generateRemovePool(itemState.affixFamilies, {
     onlyPrefix: omenState.omenConfig.sinistralAnnulment,

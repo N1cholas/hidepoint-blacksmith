@@ -1,18 +1,43 @@
 import { defineStore } from 'pinia'
-import type { ItemConfig, Modifier, WeightWrapper } from '@/types/types'
+import {
+  ITEM_TYPE,
+  type ItemConfig,
+  type Modifier,
+  type PropsUseHistory,
+  type WeightWrapper,
+} from '@/types/types'
 import { ref } from 'vue'
 
 export const useItemState = defineStore('itemState', () => {
-  const affixFamilies = ref<WeightWrapper<Modifier[]>[]>([])
-  const affixes = ref<Modifier[]>([])
+  const itemType = ref<ITEM_TYPE>(ITEM_TYPE.NORMAL)
+  const setItemType = (newType: ITEM_TYPE) => {
+    itemType.value = newType
+  }
+
+  const initPropsHistory = {
+    transmutationOrb: false,
+    augmentationOrb: false,
+    regalOrb: false,
+    exaltedOrb: false,
+  }
+  const propsHistory = ref<PropsUseHistory>(initPropsHistory)
+  const setPropsHistory = (newPropsHistory: Partial<PropsUseHistory>) => {
+    propsHistory.value = { ...propsHistory.value, ...newPropsHistory }
+  }
+
   const config = ref<ItemConfig>({
     prefixNum: 3,
     suffixNum: 3,
   })
 
+  const affixFamilies = ref<WeightWrapper<Modifier[]>[]>([])
+  const affixes = ref<Modifier[]>([])
+
   const $reset = () => {
     affixFamilies.value = []
     affixes.value = []
+    itemType.value = ITEM_TYPE.NORMAL
+    propsHistory.value = initPropsHistory
   }
 
   const addAffix = (newAffixFamily: WeightWrapper<Modifier[]>, newAffix: Modifier) => {
@@ -47,13 +72,17 @@ export const useItemState = defineStore('itemState', () => {
   }
 
   return {
+    itemType,
+    setItemType,
+    propsHistory,
+    setPropsHistory,
     affixFamilies,
     affixes,
     $reset,
     addAffix,
     findIndexById,
     replaceAffix,
-    config,
     removeAffix,
+    config,
   }
 })

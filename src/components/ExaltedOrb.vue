@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { MOD_GENERATION_TYPE, type Modifier } from '@/types/types'
+import { ITEM_TYPE, MOD_GENERATION_TYPE, type Modifier } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
@@ -18,7 +18,7 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(() => {
-  return itemState.affixes.length >= 6
+  return !(itemState.affixes.length <= 6 && itemState.itemType === ITEM_TYPE.RARE)
 })
 
 // 添加词缀规则：去重 前3 后3 共6
@@ -39,6 +39,10 @@ const addModifier = (minimumLevel: number) => {
 
       if (hitAffix) {
         itemState.addAffix(hitAffixFamily, hitAffix)
+
+        itemState.setItemType(ITEM_TYPE.RARE)
+
+        itemState.setPropsHistory({ exaltedOrb: true })
       }
     }
   }

@@ -70,3 +70,16 @@ export type GenerateRemovePoolOptions = {
   onlyPrefix?: boolean
   onlySuffix?: boolean
 }
+
+export enum ITEM_TYPE {
+  NORMAL = 'NORMAL',
+  MAGIC = 'MAGIC',
+  RARE = 'RARE',
+}
+
+export type PropsUseHistory = {
+  transmutationOrb: boolean
+  augmentationOrb: boolean
+  regalOrb: boolean
+  exaltedOrb: boolean
+}
