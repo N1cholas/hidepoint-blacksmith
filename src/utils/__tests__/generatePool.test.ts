@@ -1,6 +1,6 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { generateAddPool, generateRemovePool, generateReplacePool } from '@/utils/generatePool'
-import { MOD_GENERATION_TYPE, type Modifier, type WeightWrapper } from '@/types/types'
+import { MOD_GENERATION_TYPE, type Affix, type AffixFamily } from '@/types/types'
 
 describe('generateAddPool', () => {
   const rawAffixFamiliesPool = [
@@ -102,13 +102,13 @@ describe('generateSelectPool', () => {
     { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
     { id: '3', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
     { id: '4', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
-  ] as WeightWrapper<Modifier[]>[]
+  ] as AffixFamily[]
 
   const mockAffixes = [
     { ModFamilyList: ['1'], powerLevel: 10 },
     { ModFamilyList: ['2'], powerLevel: 20 },
     { ModFamilyList: ['3'], powerLevel: 10 },
-  ] as Modifier[]
+  ] as Affix[]
 
   it('should return the full pool if no options are provided', () => {
     const options = {}
@@ -128,7 +128,7 @@ describe('generateSelectPool', () => {
       { ModFamilyList: ['1'], powerLevel: 10 },
       { ModFamilyList: ['2'], powerLevel: 10 },
       { ModFamilyList: ['3'], powerLevel: 10 },
-    ] as Modifier[]
+    ] as Affix[]
     const result = generateReplacePool(mockAffixFamilies, affixesWithSamePowerLevel, options)
     expect(result).toEqual(mockAffixFamilies)
   })
@@ -170,7 +170,7 @@ describe('generateRemovePool', () => {
     { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
     { id: '3', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
     { id: '4', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },
-  ] as WeightWrapper<Modifier[]>[]
+  ] as AffixFamily[]
 
   it('should return the full pool if no options are provided', () => {
     const options = {}

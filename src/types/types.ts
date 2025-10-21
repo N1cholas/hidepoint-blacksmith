@@ -21,11 +21,7 @@ export type Affix = {
   powerLevel: number
 }
 
-export type AffixFamily = WeightWrapper<Affix>
-
-export type BowNormalModData = {
-  normal: WeightWrapper<Affix>[]
-}
+export type AffixFamily = WeightWrapper<Affix[]>
 
 export type ItemConfig = {
   prefixNum: number

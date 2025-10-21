@@ -4,7 +4,7 @@ import {
   type ItemConfig,
   type Affix,
   type PropsUseHistory,
-  type WeightWrapper,
+  type AffixFamily,
 } from '@/types/types'
 import { ref } from 'vue'
 
@@ -30,7 +30,7 @@ export const useItemState = defineStore('itemState', () => {
     suffixNum: 3,
   })
 
-  const affixFamilies = ref<WeightWrapper<Affix[]>[]>([])
+  const affixFamilies = ref<AffixFamily[]>([])
   const affixes = ref<Affix[]>([])
 
   const $reset = () => {
@@ -40,7 +40,7 @@ export const useItemState = defineStore('itemState', () => {
     propsHistory.value = initPropsHistory
   }
 
-  const addAffix = (newAffixFamily: WeightWrapper<Affix[]>, newAffix: Affix) => {
+  const addAffix = (newAffixFamily: AffixFamily, newAffix: Affix) => {
     if (!newAffixFamily || !newAffix)
       return console.error('addMods: newModsFamily or newMods is null')
 
@@ -54,7 +54,7 @@ export const useItemState = defineStore('itemState', () => {
   ]
 
   const replaceAffix = (
-    newAffixFamily: WeightWrapper<Affix[]>,
+    newAffixFamily: AffixFamily,
     affixFamilyIndex: number,
     newAffix: Affix,
     affixIndex: number,
