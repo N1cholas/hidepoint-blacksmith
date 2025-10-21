@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, MOD_GENERATION_TYPE, type Modifier } from '@/types/types'
+import { ITEM_TYPE, MOD_GENERATION_TYPE, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
@@ -34,7 +34,7 @@ const addModifier = (minimumLevel: number) => {
     })
 
     if (newAffixFamily.length) {
-      const hitAffixFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)
+      const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
       const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
 
       if (hitAffix) {

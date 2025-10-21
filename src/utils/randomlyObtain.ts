@@ -1,4 +1,4 @@
-import type { WeightWrapper, Modifier } from '@/types/types'
+import type { WeightWrapper, Affix } from '@/types/types'
 
 // todo:性能优化
 export const randomlyObtainAffixFamily = <T>(
@@ -37,7 +37,7 @@ export const reverseRandomlyObtainAffixFamily = <T>(
   return weightedItems[weightedItems.length - 1]
 }
 
-export const randomlyObtainAffix = (mods: Modifier[], minimumLevel: number): Modifier => {
+export const randomlyObtainAffix = (mods: Affix[], minimumLevel: number): Affix => {
   const total = mods.reduce((sum, i) => sum + i.DropChance, 0)
   const random = Math.random() * total
 

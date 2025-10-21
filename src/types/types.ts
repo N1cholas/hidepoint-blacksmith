@@ -7,7 +7,7 @@ export type WeightWrapper<T> = {
   tags: string[]
 }
 
-export type Modifier = {
+export type Affix = {
   Name: string
   Level: number
   ModGenerationTypeID: number
@@ -21,8 +21,10 @@ export type Modifier = {
   powerLevel: number
 }
 
+export type AffixFamily = WeightWrapper<Affix>
+
 export type BowNormalModData = {
-  normal: WeightWrapper<Modifier>[]
+  normal: WeightWrapper<Affix>[]
 }
 
 export type ItemConfig = {

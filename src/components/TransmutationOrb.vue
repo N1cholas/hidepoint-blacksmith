@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, type Modifier } from '@/types/types'
+import { ITEM_TYPE, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import { computed } from 'vue'
@@ -20,7 +20,7 @@ const disable = computed(() => {
 
 // 蜕变石
 const addModifier = (minimumLevel: number) => {
-  const hitAffixFamily = randomlyObtainAffixFamily<Modifier[]>(normalMods.normalModsFamily)
+  const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(normalMods.normalModsFamily)
   const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
 
   if (hitAffix) {

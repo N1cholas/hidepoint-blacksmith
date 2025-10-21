@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import {
   ITEM_TYPE,
   type ItemConfig,
-  type Modifier,
+  type Affix,
   type PropsUseHistory,
   type WeightWrapper,
 } from '@/types/types'
@@ -30,8 +30,8 @@ export const useItemState = defineStore('itemState', () => {
     suffixNum: 3,
   })
 
-  const affixFamilies = ref<WeightWrapper<Modifier[]>[]>([])
-  const affixes = ref<Modifier[]>([])
+  const affixFamilies = ref<WeightWrapper<Affix[]>[]>([])
+  const affixes = ref<Affix[]>([])
 
   const $reset = () => {
     affixFamilies.value = []
@@ -40,7 +40,7 @@ export const useItemState = defineStore('itemState', () => {
     propsHistory.value = initPropsHistory
   }
 
-  const addAffix = (newAffixFamily: WeightWrapper<Modifier[]>, newAffix: Modifier) => {
+  const addAffix = (newAffixFamily: WeightWrapper<Affix[]>, newAffix: Affix) => {
     if (!newAffixFamily || !newAffix)
       return console.error('addMods: newModsFamily or newMods is null')
 
@@ -54,9 +54,9 @@ export const useItemState = defineStore('itemState', () => {
   ]
 
   const replaceAffix = (
-    newAffixFamily: WeightWrapper<Modifier[]>,
+    newAffixFamily: WeightWrapper<Affix[]>,
     affixFamilyIndex: number,
-    newAffix: Modifier,
+    newAffix: Affix,
     affixIndex: number,
   ) => {
     if (!newAffixFamily || !newAffix)

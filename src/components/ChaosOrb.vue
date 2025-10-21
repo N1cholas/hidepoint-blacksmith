@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { useItemState } from '@/stores/itemState'
-import { type Modifier, ITEM_TYPE, MOD_GENERATION_TYPE } from '@/types/types'
+import { type Affix, ITEM_TYPE, MOD_GENERATION_TYPE } from '@/types/types'
 import {
   reverseRandomlyObtainAffixFamily,
   randomlyObtainAffixFamily,
@@ -36,7 +36,7 @@ const changeModifier = (minimumLevel: number) => {
   if (!selectAffixFamilyPool.length) return
 
   const shouldRemoveAffixFamily =
-    reverseRandomlyObtainAffixFamily<Modifier[]>(selectAffixFamilyPool)
+    reverseRandomlyObtainAffixFamily<Affix[]>(selectAffixFamilyPool)
 
   const [shouldRemoveAffixFamilyIndex, shouldRemoveAffixIndex] = itemState.findIndexById(
     shouldRemoveAffixFamily.id,
@@ -52,7 +52,7 @@ const changeModifier = (minimumLevel: number) => {
   })
 
   if (newAffixFamily.length) {
-    const hitAffixFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)
+    const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
 
     const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
 

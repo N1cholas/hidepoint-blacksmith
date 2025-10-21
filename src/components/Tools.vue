@@ -13,6 +13,7 @@ import AnnulmentOrb from './AnnulmentOrb.vue'
 import TransmutationOrb from './TransmutationOrb.vue'
 import { min } from 'lodash'
 import AugmentationOrb from './AugmentationOrb.vue'
+import FracturingOrb from './FracturingOrb.vue'
 </script>
 
 <template>
@@ -35,12 +36,12 @@ import AugmentationOrb from './AugmentationOrb.vue'
       <ExaltedOrb name="崇高石" :minimumLevel="0" />
       <ExaltedOrb name="高级崇高石" :minimumLevel="35" />
       <ExaltedOrb name="完美崇高石" :minimumLevel="50" />
-      <!-- todo 3词条的稀有物品通过剥离石后仍然为稀有物品 -->
       <!-- todo 测试原始数据，例如：词条只能是前缀或后缀、ModFamilyList只有一个 -->
       <ChaosOrb name="混沌石" :minimumLevel="0" />
       <ChaosOrb name="高级混沌石" :minimumLevel="35" />
       <ChaosOrb name="完美混沌石" :minimumLevel="50" />
       <AnnulmentOrb name="剥离石" />
+      <FracturingOrb name="破溃宝珠" />
       <span>破溃宝珠</span>
       <span>辛格拉的发辫</span>
     </div>

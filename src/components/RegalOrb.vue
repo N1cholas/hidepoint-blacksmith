@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, type Modifier } from '@/types/types'
+import { ITEM_TYPE, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { computed } from 'vue'
@@ -31,7 +31,7 @@ const addModifier = (minimumLevel: number) => {
   })
 
   if (newAffixFamily.length) {
-    const hitModsFamily = randomlyObtainAffixFamily<Modifier[]>(newAffixFamily)
+    const hitModsFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
 
     const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { processHTMLString } from '@/utils/processString'
-import { type Modifier } from '@/types/types'
+import { type Affix } from '@/types/types'
 defineProps<{
-  mod: Modifier
+  mod: Affix
   type: 'prefix' | 'suffix'
   showModType: boolean
 }>()

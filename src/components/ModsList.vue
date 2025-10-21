@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ModItem from './ModItem.vue'
-import { MOD_GENERATION_TYPE, type Modifier } from '@/types/types'
-defineProps<{ mods: Modifier[] }>()
+import { MOD_GENERATION_TYPE, type Affix } from '@/types/types'
+defineProps<{ mods: Affix[] }>()
 </script>
 <template>
   <ul class="mods-wrapper">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useItemState } from '@/stores/itemState'
-import { type Modifier } from '@/types/types'
+import { type Affix } from '@/types/types'
 import { reverseRandomlyObtainAffixFamily } from '@/utils/randomlyObtain'
 import { generateRemovePool } from '@/utils/generatePool'
 import { computed } from 'vue'
@@ -23,7 +23,7 @@ const removeAffix = () => {
   })
 
   const shouldRemoveAffixFamily =
-    reverseRandomlyObtainAffixFamily<Modifier[]>(removeAffixFamiliesPool)
+    reverseRandomlyObtainAffixFamily<Affix[]>(removeAffixFamiliesPool)
 
   const [shouldRemoveAffixFamilyIndex, shouldRemoveAffixIndex] = itemState.findIndexById(
     shouldRemoveAffixFamily.id,
