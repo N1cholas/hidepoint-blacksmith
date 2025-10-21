@@ -5,12 +5,13 @@ defineProps<{
   mod: Affix
   type: 'prefix' | 'suffix'
   showModType: boolean
+  locked?: boolean
 }>()
 </script>
 <template>
   <li :class="`${type}-mods`">
     <span v-if="showModType" class="prefix">{{ type === 'prefix' ? '前缀' : '后缀' }}</span>
-    {{ processHTMLString(mod.str) }}
+    <span :class="{locked}">{{ processHTMLString(mod.str) }}</span>
     <span class="suffix" v-if="mod.powerLevel">T{{ mod.powerLevel }}</span>
   </li>
 </template>
@@ -28,5 +29,8 @@ li {
 .suffix {
   position: absolute;
   right: -40px;
+}
+.locked {
+  color: #f39c12;
 }
 </style>

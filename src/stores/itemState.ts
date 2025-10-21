@@ -6,7 +6,7 @@ import {
   type PropsUseHistory,
   type AffixFamily,
 } from '@/types/types'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export const useItemState = defineStore('itemState', () => {
   const itemType = ref<ITEM_TYPE>(ITEM_TYPE.NORMAL)
@@ -33,11 +33,23 @@ export const useItemState = defineStore('itemState', () => {
   const affixFamilies = ref<AffixFamily[]>([])
   const affixes = ref<Affix[]>([])
 
+  const lockedAffixId = ref<string>('')
+  const setLockedAffixId = (id: string) => {
+    lockedAffixId.value = id
+  }
+  const affixWithoutLocked = computed(() => {
+    return affixes.value.filter((affix) => affix.ModFamilyList[0] !== lockedAffixId.value)
+  })
+  const affixFamilyWithoutLocked = computed(() => {
+    return affixFamilies.value.filter((affixFamily) => affixFamily.id !== lockedAffixId.value)
+  })
+
   const $reset = () => {
     affixFamilies.value = []
     affixes.value = []
     itemType.value = ITEM_TYPE.NORMAL
     propsHistory.value = initPropsHistory
+    lockedAffixId.value = ''
   }
 
   const addAffix = (newAffixFamily: AffixFamily, newAffix: Affix) => {
@@ -84,5 +96,9 @@ export const useItemState = defineStore('itemState', () => {
     replaceAffix,
     removeAffix,
     config,
+    lockedAffixId,
+    setLockedAffixId,
+    affixWithoutLocked,
+    affixFamilyWithoutLocked,
   }
 })

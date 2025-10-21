@@ -13,11 +13,11 @@ defineProps<{
 const itemState = useItemState()
 const omenState = useOmenState()
 
-const disable = computed(() => itemState.affixes.length === 0)
+const disable = computed(() => itemState.affixFamilyWithoutLocked.length === 0)
 
 // 剥离石 不会影响物品类型，例如：原本物品是3词条稀有物品，使用剥离石后仍然是2词条稀有物品而不是2词条魔法物品。
 const removeAffix = () => {
-  const removeAffixFamiliesPool = generateRemovePool(itemState.affixFamilies, {
+  const removeAffixFamiliesPool = generateRemovePool(itemState.affixFamilyWithoutLocked, {
     onlyPrefix: omenState.omenConfig.sinistralAnnulment,
     onlySuffix: omenState.omenConfig.dextralAnnulment,
   })

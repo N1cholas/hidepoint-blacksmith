@@ -21,13 +21,13 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(
-  () => !(itemState.itemType === ITEM_TYPE.RARE && itemState.affixes.length > 0),
+  () => !(itemState.itemType === ITEM_TYPE.RARE && itemState.affixWithoutLocked.length > 0),
 )
 
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
 const changeModifier = (minimumLevel: number) => {
-  const selectAffixFamilyPool = generateReplacePool(itemState.affixFamilies, itemState.affixes, {
+  const selectAffixFamilyPool = generateReplacePool(itemState.affixFamilyWithoutLocked, itemState.affixWithoutLocked, {
     lowestValue: omenState.omenConfig.whittling,
     onlyPrefix: omenState.omenConfig.sinistralErasure,
     onlySuffix: omenState.omenConfig.dextralErasure,

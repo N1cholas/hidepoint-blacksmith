@@ -42,7 +42,6 @@ import FracturingOrb from './FracturingOrb.vue'
       <ChaosOrb name="完美混沌石" :minimumLevel="50" />
       <AnnulmentOrb name="剥离石" />
       <FracturingOrb name="破溃宝珠" />
-      <span>破溃宝珠</span>
       <span>辛格拉的发辫</span>
     </div>
   </ToolWrapper>
