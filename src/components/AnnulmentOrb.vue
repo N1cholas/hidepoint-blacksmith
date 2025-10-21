@@ -22,8 +22,7 @@ const removeAffix = () => {
     onlySuffix: omenState.omenConfig.dextralAnnulment,
   })
 
-  const shouldRemoveAffixFamily =
-    reverseRandomlyObtainAffixFamily<Affix[]>(removeAffixFamiliesPool)
+  const shouldRemoveAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(removeAffixFamiliesPool)
 
   const [shouldRemoveAffixFamilyIndex, shouldRemoveAffixIndex] = itemState.findIndexById(
     shouldRemoveAffixFamily.id,

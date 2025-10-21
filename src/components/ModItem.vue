@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <li :class="`${type}-mods`">
     <span v-if="showModType" class="prefix">{{ type === 'prefix' ? '前缀' : '后缀' }}</span>
-    <span :class="{locked}">{{ processHTMLString(mod.str) }}</span>
+    <span :class="{ locked }">{{ processHTMLString(mod.str) }}</span>
     <span class="suffix" v-if="mod.powerLevel">T{{ mod.powerLevel }}</span>
   </li>
 </template>

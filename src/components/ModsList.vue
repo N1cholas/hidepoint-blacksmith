@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useItemState } from '@/stores/itemState';
+import { useItemState } from '@/stores/itemState'
 import ModItem from './ModItem.vue'
 import { MOD_GENERATION_TYPE, type Affix } from '@/types/types'
 

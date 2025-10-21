@@ -36,17 +36,13 @@ export const filterAffixFamiliesByTags = (
   return filtered.length ? filtered : modsFamily
 }
 
-export const onlyPrefixAffixFamilies = (
-  modsFamily: AffixFamily[],
-): AffixFamily[] => {
+export const onlyPrefixAffixFamilies = (modsFamily: AffixFamily[]): AffixFamily[] => {
   return modsFamily.filter(
     (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
   )
 }
 
-export const onlySuffixAffixFamilies = (
-  modsFamily: AffixFamily[],
-): AffixFamily[] => {
+export const onlySuffixAffixFamilies = (modsFamily: AffixFamily[]): AffixFamily[] => {
   return modsFamily.filter(
     (_modsFamily) => _modsFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
   )

@@ -27,16 +27,19 @@ const disable = computed(
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
 const changeModifier = (minimumLevel: number) => {
-  const selectAffixFamilyPool = generateReplacePool(itemState.affixFamilyWithoutLocked, itemState.affixWithoutLocked, {
-    lowestValue: omenState.omenConfig.whittling,
-    onlyPrefix: omenState.omenConfig.sinistralErasure,
-    onlySuffix: omenState.omenConfig.dextralErasure,
-  })
+  const selectAffixFamilyPool = generateReplacePool(
+    itemState.affixFamilyWithoutLocked,
+    itemState.affixWithoutLocked,
+    {
+      lowestValue: omenState.omenConfig.whittling,
+      onlyPrefix: omenState.omenConfig.sinistralErasure,
+      onlySuffix: omenState.omenConfig.dextralErasure,
+    },
+  )
 
   if (!selectAffixFamilyPool.length) return
 
-  const shouldRemoveAffixFamily =
-    reverseRandomlyObtainAffixFamily<Affix[]>(selectAffixFamilyPool)
+  const shouldRemoveAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(selectAffixFamilyPool)
 
   const [shouldRemoveAffixFamilyIndex, shouldRemoveAffixIndex] = itemState.findIndexById(
     shouldRemoveAffixFamily.id,

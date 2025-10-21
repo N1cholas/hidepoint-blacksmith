@@ -19,9 +19,7 @@ const disable = computed(() => {
 // 锁定一个随机词缀，使其在下一次改造时不会被移除。
 // 影响剥离石、混沌石
 const lockModifier = () => {
-  const shouldLockAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(
-    itemState.affixFamilies,
-  )
+  const shouldLockAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(itemState.affixFamilies)
 
   if (shouldLockAffixFamily) {
     itemState.setLockedAffixId(shouldLockAffixFamily.id)
