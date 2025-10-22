@@ -50,8 +50,12 @@ const changeModifier = (minimumLevel: number) => {
 
   const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
     deduplication: true,
-    onlyPrefix: is6Mods && shouldRemoveAffixFamilyType === MOD_GENERATION_TYPE.PREFIX,
-    onlySuffix: is6Mods && shouldRemoveAffixFamilyType === MOD_GENERATION_TYPE.SUFFIX,
+    onlyPrefix:
+      (!is6Mods && itemState.suffixCounts === 3) ||
+      (is6Mods && shouldRemoveAffixFamilyType === MOD_GENERATION_TYPE.PREFIX),
+    onlySuffix:
+      (!is6Mods && itemState.prefixCounts === 3) ||
+      (is6Mods && shouldRemoveAffixFamilyType === MOD_GENERATION_TYPE.SUFFIX),
   })
 
   if (newAffixFamily.length) {

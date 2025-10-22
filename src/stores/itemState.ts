@@ -5,6 +5,7 @@ import {
   type Affix,
   type PropsUseHistory,
   type AffixFamily,
+  MOD_GENERATION_TYPE,
 } from '@/types/types'
 import { computed, ref } from 'vue'
 
@@ -42,6 +43,15 @@ export const useItemState = defineStore('itemState', () => {
   })
   const affixFamilyWithoutLocked = computed(() => {
     return affixFamilies.value.filter((affixFamily) => affixFamily.id !== lockedAffixId.value)
+  })
+
+  const prefixCounts = computed(() => {
+    return affixes.value.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.PREFIX)
+      .length
+  })
+  const suffixCounts = computed(() => {
+    return affixes.value.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX)
+      .length
   })
 
   const $reset = () => {
@@ -100,5 +110,7 @@ export const useItemState = defineStore('itemState', () => {
     setLockedAffixId,
     affixWithoutLocked,
     affixFamilyWithoutLocked,
+    prefixCounts,
+    suffixCounts,
   }
 })
