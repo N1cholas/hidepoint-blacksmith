@@ -6,22 +6,23 @@ import { useItemState } from '@/stores/itemState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import { computed } from 'vue'
 
-defineProps<{
+const { minimumLevel, maximumLevel } = defineProps<{
   name: string
   minimumLevel: number
+  maximumLevel: number
 }>()
 
 const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
 
 const disable = computed(() => {
-  return !(itemState.itemType === ITEM_TYPE.NORMAL)
+  return !(itemState.itemType === ITEM_TYPE.NORMAL && maximumLevel >= minimumLevel)
 })
 
 // 蜕变石
-const addModifier = (minimumLevel: number) => {
+const addModifier = () => {
   const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(normalMods.normalModsFamily)
-  const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
+  const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
   if (hitAffix) {
     itemState.addAffix(hitAffixFamily, hitAffix)
@@ -33,7 +34,7 @@ const addModifier = (minimumLevel: number) => {
 }
 </script>
 <template>
-  <button @click="addModifier(minimumLevel)" :disabled="disable">{{ name }}</button>
+  <button @click="addModifier()" :disabled="disable">{{ name }}</button>
 </template>
 
 <style scoped></style>

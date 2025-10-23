@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, MOD_GENERATION_TYPE, type Affix } from '@/types/types'
+import { ITEM_TYPE, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
-import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import { generateAddPool } from '@/utils/generatePool'
 import { computed } from 'vue'
@@ -11,6 +10,7 @@ import { computed } from 'vue'
 defineProps<{
   name: string
   minimumLevel: number
+  maximumLevel: number
 }>()
 
 const normalMods = useBowNormalModsFamily()
@@ -25,12 +25,12 @@ const disable = computed(() => {
 })
 
 // 增幅石
-const addModifier = (minimumLevel: number) => {
+const addModifier = (minimumLevel: number, maximumLevel: number) => {
   const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {})
 
   if (newAffixFamily.length) {
     const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
-    const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
+    const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
     if (hitAffix) {
       itemState.addAffix(hitAffixFamily, hitAffix)
@@ -43,7 +43,7 @@ const addModifier = (minimumLevel: number) => {
 }
 </script>
 <template>
-  <button @click="addModifier(minimumLevel)" :disabled="disable">{{ name }}</button>
+  <button @click="addModifier(minimumLevel, maximumLevel)" :disabled="disable">{{ name }}</button>
 </template>
 
 <style scoped></style>

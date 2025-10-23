@@ -10,6 +10,7 @@ import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomly
 defineProps<{
   name: string
   minimumLevel: number
+  maximumLevel: number
 }>()
 
 const normalMods = useBowNormalModsFamily()
@@ -24,7 +25,7 @@ const disable = computed(() => {
   )
 })
 
-const addModifier = (minimumLevel: number) => {
+const addModifier = (minimumLevel: number, maximumLevel: number) => {
   const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
     deduplication: true,
     filterByTags: omenState.omenConfig.homogenisingCoronation,
@@ -33,7 +34,7 @@ const addModifier = (minimumLevel: number) => {
   if (newAffixFamily.length) {
     const hitModsFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
 
-    const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel)
+    const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel, maximumLevel)
 
     itemState.addAffix(hitModsFamily, hitMod)
 
@@ -44,7 +45,7 @@ const addModifier = (minimumLevel: number) => {
 }
 </script>
 <template>
-  <button :class="{ disable }" @click="addModifier(minimumLevel)" :disabled="disable">
+  <button :class="{ disable }" @click="addModifier(minimumLevel, maximumLevel)" :disabled="disable">
     {{ name }}
   </button>
 </template>

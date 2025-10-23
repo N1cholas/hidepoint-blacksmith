@@ -14,6 +14,7 @@ import { useOmenState } from '@/stores/omenState'
 defineProps<{
   name: string
   minimumLevel: number
+  maximumLevel: number
 }>()
 
 const normalMods = useBowNormalModsFamily()
@@ -26,7 +27,7 @@ const disable = computed(
 
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
-const changeModifier = (minimumLevel: number) => {
+const changeModifier = (minimumLevel: number, maximumLevel: number) => {
   const selectAffixFamilyPool = generateReplacePool(
     itemState.affixFamilyWithoutLocked,
     itemState.affixWithoutLocked,
@@ -61,7 +62,7 @@ const changeModifier = (minimumLevel: number) => {
   if (newAffixFamily.length) {
     const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
 
-    const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel)
+    const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
     if (hitAffix) {
       itemState.replaceAffix(
@@ -76,7 +77,9 @@ const changeModifier = (minimumLevel: number) => {
 </script>
 
 <template>
-  <button @click="changeModifier(minimumLevel)" :disabled="disable">{{ name }}</button>
+  <button @click="changeModifier(minimumLevel, maximumLevel)" :disabled="disable">
+    {{ name }}
+  </button>
 </template>
 
 <style scoped></style>

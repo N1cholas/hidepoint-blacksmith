@@ -3,6 +3,7 @@ import { useItemState } from '@/stores/itemState'
 import ModsList from '@/components/ModsList.vue'
 import { ITEM_TYPE } from '@/types/types'
 import { showItemTypeMsg } from '@/utils/processString'
+import { ITEM_CONFIG } from '@/config/itemConfig'
 
 const itemState = useItemState()
 </script>
@@ -15,8 +16,13 @@ const itemState = useItemState()
           magic: itemState.itemType === ITEM_TYPE.MAGIC,
           rare: itemState.itemType === ITEM_TYPE.RARE,
         }"
-        >({{ showItemTypeMsg(itemState.itemType) }})双生之弓</span
-      >:
+        ><input
+          type="text"
+          v-model.number.trim="itemState.itemLevel"
+          :max="ITEM_CONFIG.MAXIMUM_LEVEL"
+        />
+        ({{ showItemTypeMsg(itemState.itemType) }}) 双生之弓</span
+      >
     </h3>
     <ModsList :mods="itemState.affixes" />
     <button @click="itemState.$reset">重置</button>
@@ -48,5 +54,12 @@ h3 {
 }
 .rare {
   color: rgb(231, 199, 16);
+}
+input {
+  width: 25px;
+  font-size: inherit;
+  border: none;
+  line-height: inherit;
+  color: inherit;
 }
 </style>

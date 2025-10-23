@@ -11,9 +11,11 @@ import RegalOrb from './RegalOrb.vue'
 import ChaosOrb from './ChaosOrb.vue'
 import AnnulmentOrb from './AnnulmentOrb.vue'
 import TransmutationOrb from './TransmutationOrb.vue'
-import { min } from 'lodash'
 import AugmentationOrb from './AugmentationOrb.vue'
 import FracturingOrb from './FracturingOrb.vue'
+import { useItemState } from '@/stores/itemState'
+
+const itemState = useItemState()
 </script>
 
 <template>
@@ -24,24 +26,25 @@ import FracturingOrb from './FracturingOrb.vue'
     <template #heading>通货</template>
 
     <div class="tools">
-      <TransmutationOrb name="蜕变石" :minimumLevel="0" />
-      <TransmutationOrb name="高级蜕变石" :minimumLevel="55" />
-      <TransmutationOrb name="完美蜕变石" :minimumLevel="70" />
-      <AugmentationOrb name="增幅石" :minimumLevel="0" />
-      <AugmentationOrb name="高级增幅石" :minimumLevel="55" />
-      <AugmentationOrb name="完美增幅石" :minimumLevel="70" />
-      <RegalOrb name="富豪石" :minimumLevel="0" />
-      <RegalOrb name="高级富豪石" :minimumLevel="35" />
-      <RegalOrb name="完美富豪石" :minimumLevel="50" />
-      <ExaltedOrb name="崇高石" :minimumLevel="0" />
-      <ExaltedOrb name="高级崇高石" :minimumLevel="35" />
-      <ExaltedOrb name="完美崇高石" :minimumLevel="50" />
+      <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <TransmutationOrb name="高级蜕变石" :minimumLevel="55" :maximumLevel="itemState.itemLevel" />
+      <TransmutationOrb name="完美蜕变石" :minimumLevel="70" :maximumLevel="itemState.itemLevel" />
+      <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <AugmentationOrb name="高级增幅石" :minimumLevel="55" :maximumLevel="itemState.itemLevel" />
+      <AugmentationOrb name="完美增幅石" :minimumLevel="70" :maximumLevel="itemState.itemLevel" />
+      <RegalOrb name="富豪石" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <RegalOrb name="高级富豪石" :minimumLevel="35" :maximumLevel="itemState.itemLevel" />
+      <RegalOrb name="完美富豪石" :minimumLevel="50" :maximumLevel="itemState.itemLevel" />
+      <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <ExaltedOrb name="高级崇高石" :minimumLevel="35" :maximumLevel="itemState.itemLevel" />
+      <ExaltedOrb name="完美崇高石" :minimumLevel="50" :maximumLevel="itemState.itemLevel" />
       <!-- todo 测试原始数据，例如：词条只能是前缀或后缀、ModFamilyList只有一个 -->
-      <ChaosOrb name="混沌石" :minimumLevel="0" />
-      <ChaosOrb name="高级混沌石" :minimumLevel="35" />
-      <ChaosOrb name="完美混沌石" :minimumLevel="50" />
+      <ChaosOrb name="混沌石" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="itemState.itemLevel" />
+      <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="itemState.itemLevel" />
       <AnnulmentOrb name="剥离石" />
       <FracturingOrb name="破溃宝珠" />
+      <!-- 这个通货需要最后完成 -->
       <span>辛格拉的发辫</span>
     </div>
   </ToolWrapper>
@@ -79,8 +82,14 @@ import FracturingOrb from './FracturingOrb.vue'
 
     <div class="tools">
       <button class="tools">啃噬颚骨</button>
+      <button class="tools">远古颚骨</button>
+      <button class="tools">遗存颚骨</button>
       <button class="tools">啃噬肋骨</button>
+      <button class="tools">远古肋骨</button>
+      <button class="tools">遗存肋骨</button>
       <button class="tools">啃噬锁骨</button>
+      <button class="tools">远古锁骨</button>
+      <button class="tools">遗存锁骨</button>
       <button class="tools">遗存头骨</button>
       <button class="tools">深渊回响预兆</button>
       <button class="tools">至高预兆</button>

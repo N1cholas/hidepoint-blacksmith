@@ -1,0 +1,6 @@
+export const ITEM_CONFIG = {
+  PREFIX: 3,
+  SUFFIX: 3,
+  MINIMUM_LEVEL: 0,
+  MAXIMUM_LEVEL: 82,
+}

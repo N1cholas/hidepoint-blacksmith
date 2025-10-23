@@ -1,15 +1,16 @@
 import { defineStore } from 'pinia'
 import {
   ITEM_TYPE,
-  type ItemConfig,
   type Affix,
   type PropsUseHistory,
   type AffixFamily,
   MOD_GENERATION_TYPE,
 } from '@/types/types'
 import { computed, ref } from 'vue'
+import { ITEM_CONFIG } from '@/config/itemConfig'
 
 export const useItemState = defineStore('itemState', () => {
+  const itemLevel = ref(ITEM_CONFIG.MAXIMUM_LEVEL)
   const itemType = ref<ITEM_TYPE>(ITEM_TYPE.NORMAL)
   const setItemType = (newType: ITEM_TYPE) => {
     itemType.value = newType
@@ -25,11 +26,6 @@ export const useItemState = defineStore('itemState', () => {
   const setPropsHistory = (newPropsHistory: Partial<PropsUseHistory>) => {
     propsHistory.value = { ...propsHistory.value, ...newPropsHistory }
   }
-
-  const config = ref<ItemConfig>({
-    prefixNum: 3,
-    suffixNum: 3,
-  })
 
   const affixFamilies = ref<AffixFamily[]>([])
   const affixes = ref<Affix[]>([])
@@ -105,12 +101,12 @@ export const useItemState = defineStore('itemState', () => {
     findIndexById,
     replaceAffix,
     removeAffix,
-    config,
     lockedAffixId,
     setLockedAffixId,
     affixWithoutLocked,
     affixFamilyWithoutLocked,
     prefixCounts,
     suffixCounts,
+    itemLevel,
   }
 })
