@@ -29,7 +29,7 @@ const itemState = useItemState()
 </template>
 <style scoped>
 .mods-wrapper {
-  height: 150px;
+  min-height: 200px;
   text-align: center;
   padding: 0;
   margin: 20px 0;

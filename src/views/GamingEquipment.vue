@@ -8,7 +8,7 @@ import { ITEM_CONFIG } from '@/config/itemConfig'
 const itemState = useItemState()
 </script>
 <template>
-  <div class="greetings">
+  <div class="equipment">
     <h3 class="item-type">
       <span
         :class="{
@@ -41,8 +41,8 @@ h3 {
   font-size: 1.2rem;
 }
 
-.greetings h1,
-.greetings h3 {
+.equipment h1,
+.equipment h3 {
   text-align: center;
 }
 
@@ -61,5 +61,6 @@ input {
   border: none;
   line-height: inherit;
   color: inherit;
+  background: inherit;
 }
 </style>

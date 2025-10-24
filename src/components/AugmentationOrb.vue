@@ -26,7 +26,9 @@ const disable = computed(() => {
 
 // 增幅石
 const addModifier = (minimumLevel: number, maximumLevel: number) => {
-  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {})
+  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+    deduplication: true,
+  })
 
   if (newAffixFamily.length) {
     const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
