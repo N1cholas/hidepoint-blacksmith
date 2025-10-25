@@ -1,24 +1,34 @@
+export type RawNormalAffix = {
+  Name: string
+  Level: string
+  ModGenerationTypeID: string
+  ModFamilyList: string[]
+  DropChance: string
+  str: string
+  fossil_no: string[]
+  mod_no: string[]
+  mod_fossil_item: string[]
+  hover: string
+}
+export type Affix = Omit<RawNormalAffix, 'Level' | 'ModGenerationTypeID' | 'DropChance'> & {
+  // change type from string to number
+  Level: number
+  ModGenerationTypeID: number
+  DropChance: number
+  // add new type
+  powerLevel: number
+}
+
+export type FileContent = {
+  normal: AffixFamily[]
+}
+
 export type WeightWrapper<T> = {
-  value: any
   items: T
   weight: number
   id: string
   modGenerationTypeID: number
   tags: string[]
-}
-
-export type Affix = {
-  Name: string
-  Level: number
-  ModGenerationTypeID: number
-  ModFamilyList: string[]
-  DropChance: number
-  str: string
-  fossil_no: string[]
-  mod_no: string[]
-  mod_fossil_item: []
-  hover: string
-  powerLevel: number
 }
 
 export type AffixFamily = WeightWrapper<Affix[]>
