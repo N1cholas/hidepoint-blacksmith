@@ -56,6 +56,7 @@ export const useItemState = defineStore('itemState', () => {
     itemType.value = ITEM_TYPE.NORMAL
     propsHistory.value = initPropsHistory
     lockedAffixId.value = ''
+    itemLevel.value = ITEM_CONFIG.MAXIMUM_LEVEL
   }
 
   const addAffix = (newAffixFamily: AffixFamily, newAffix: Affix) => {

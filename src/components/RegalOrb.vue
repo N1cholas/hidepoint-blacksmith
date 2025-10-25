@@ -7,7 +7,7 @@ import { useOmenState } from '@/stores/omenState'
 import { computed } from 'vue'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 
-defineProps<{
+const { maximumLevel, minimumLevel } = defineProps<{
   name: string
   minimumLevel: number
   maximumLevel: number
@@ -21,11 +21,13 @@ const disable = computed(() => {
   return !(
     itemState.itemType === ITEM_TYPE.MAGIC &&
     itemState.propsHistory.augmentationOrb &&
-    !itemState.propsHistory.regalOrb
+    !itemState.propsHistory.regalOrb &&
+    maximumLevel >= minimumLevel
   )
 })
 
-const addModifier = (minimumLevel: number, maximumLevel: number) => {
+// 富豪石
+const addModifier = () => {
   const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
     deduplication: true,
     filterByTags: omenState.omenConfig.homogenisingCoronation,
@@ -45,7 +47,7 @@ const addModifier = (minimumLevel: number, maximumLevel: number) => {
 }
 </script>
 <template>
-  <button :class="{ disable }" @click="addModifier(minimumLevel, maximumLevel)" :disabled="disable">
+  <button :class="{ disable }" @click="addModifier()" :disabled="disable">
     {{ name }}
   </button>
 </template>

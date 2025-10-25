@@ -7,7 +7,7 @@ import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomly
 import { generateAddPool } from '@/utils/generatePool'
 import { computed } from 'vue'
 
-defineProps<{
+const { maximumLevel, minimumLevel } = defineProps<{
   name: string
   minimumLevel: number
   maximumLevel: number
@@ -20,12 +20,13 @@ const disable = computed(() => {
   return !(
     itemState.itemType === ITEM_TYPE.MAGIC &&
     itemState.propsHistory.transmutationOrb &&
-    !itemState.propsHistory.augmentationOrb
+    !itemState.propsHistory.augmentationOrb &&
+    maximumLevel >= minimumLevel
   )
 })
 
 // 增幅石
-const addModifier = (minimumLevel: number, maximumLevel: number) => {
+const addModifier = () => {
   const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
     deduplication: true,
   })
@@ -45,7 +46,7 @@ const addModifier = (minimumLevel: number, maximumLevel: number) => {
 }
 </script>
 <template>
-  <button @click="addModifier(minimumLevel, maximumLevel)" :disabled="disable">{{ name }}</button>
+  <button @click="addModifier()" :disabled="disable">{{ name }}</button>
 </template>
 
 <style scoped></style>

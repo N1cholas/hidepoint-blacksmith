@@ -9,7 +9,7 @@ import { generateAddPool } from '@/utils/generatePool'
 import { computed } from 'vue'
 import { ITEM_CONFIG } from '@/config/itemConfig'
 
-defineProps<{
+const { maximumLevel, minimumLevel } = defineProps<{
   name: string
   minimumLevel: number
   maximumLevel: number
@@ -20,11 +20,15 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(() => {
-  return !(itemState.affixes.length < 6 && itemState.itemType === ITEM_TYPE.RARE)
+  return !(
+    itemState.affixes.length < 6 &&
+    itemState.itemType === ITEM_TYPE.RARE &&
+    maximumLevel >= minimumLevel
+  )
 })
 
 // 添加词缀规则：去重 前3 后3 共6
-const addModifier = (minimumLevel: number, maximumLevel: number) => {
+const addModifier = () => {
   const iterations = omenState.omenConfig.greaterExaltation ? 2 : 1
 
   for (let i = 0; i < iterations; i++) {
@@ -67,7 +71,7 @@ const shouldOnlySuffix = (): boolean => {
 }
 </script>
 <template>
-  <button @click="addModifier(minimumLevel, maximumLevel)" :disabled="disable">{{ name }}</button>
+  <button @click="addModifier()" :disabled="disable">{{ name }}</button>
 </template>
 
 <style scoped></style>

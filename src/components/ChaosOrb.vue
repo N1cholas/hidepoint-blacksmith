@@ -11,7 +11,7 @@ import { generateAddPool, generateReplacePool } from '@/utils/generatePool'
 import { computed } from 'vue'
 import { useOmenState } from '@/stores/omenState'
 
-defineProps<{
+const { maximumLevel, minimumLevel } = defineProps<{
   name: string
   minimumLevel: number
   maximumLevel: number
@@ -22,12 +22,17 @@ const itemState = useItemState()
 const omenState = useOmenState()
 
 const disable = computed(
-  () => !(itemState.itemType === ITEM_TYPE.RARE && itemState.affixWithoutLocked.length > 0),
+  () =>
+    !(
+      itemState.itemType === ITEM_TYPE.RARE &&
+      itemState.affixWithoutLocked.length > 0 &&
+      maximumLevel >= minimumLevel
+    ),
 )
 
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
-const changeModifier = (minimumLevel: number, maximumLevel: number) => {
+const changeModifier = () => {
   const selectAffixFamilyPool = generateReplacePool(
     itemState.affixFamilyWithoutLocked,
     itemState.affixWithoutLocked,
@@ -77,7 +82,7 @@ const changeModifier = (minimumLevel: number, maximumLevel: number) => {
 </script>
 
 <template>
-  <button @click="changeModifier(minimumLevel, maximumLevel)" :disabled="disable">
+  <button @click="changeModifier()" :disabled="disable">
     {{ name }}
   </button>
 </template>
