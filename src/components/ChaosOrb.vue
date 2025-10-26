@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { useItemState } from '@/stores/itemState'
-import { type Affix, ITEM_TYPE, MOD_GENERATION_TYPE } from '@/types/types'
+import { type Affix, ITEM_RARITY, MOD_GENERATION_TYPE } from '@/types/types'
 import {
   reverseRandomlyObtainAffixFamily,
   randomlyObtainAffixFamily,
@@ -24,7 +24,7 @@ const omenState = useOmenState()
 const disable = computed(
   () =>
     !(
-      itemState.itemType === ITEM_TYPE.RARE &&
+      itemState.itemRarity === ITEM_RARITY.RARE &&
       itemState.affixWithoutLocked.length > 0 &&
       maximumLevel >= minimumLevel
     ),

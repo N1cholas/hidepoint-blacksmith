@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, type Affix } from '@/types/types'
+import { ITEM_RARITY, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import { generateAddPool } from '@/utils/generatePool'
@@ -18,7 +18,7 @@ const itemState = useItemState()
 
 const disable = computed(() => {
   return !(
-    itemState.itemType === ITEM_TYPE.MAGIC &&
+    itemState.itemRarity === ITEM_RARITY.MAGIC &&
     itemState.propsHistory.transmutationOrb &&
     !itemState.propsHistory.augmentationOrb &&
     maximumLevel >= minimumLevel
@@ -38,7 +38,7 @@ const addModifier = () => {
     if (hitAffix) {
       itemState.addAffix(hitAffixFamily, hitAffix)
 
-      itemState.setItemType(ITEM_TYPE.MAGIC)
+      itemState.setItemRarity(ITEM_RARITY.MAGIC)
 
       itemState.setPropsHistory({ augmentationOrb: true })
     }

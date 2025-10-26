@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import {
-  ITEM_TYPE,
+  ITEM_RARITY,
   type Affix,
   type PropsUseHistory,
   type AffixFamily,
@@ -11,9 +11,9 @@ import { ITEM_CONFIG } from '@/config/itemConfig'
 
 export const useItemState = defineStore('itemState', () => {
   const itemLevel = ref(ITEM_CONFIG.MAXIMUM_LEVEL)
-  const itemType = ref<ITEM_TYPE>(ITEM_TYPE.NORMAL)
-  const setItemType = (newType: ITEM_TYPE) => {
-    itemType.value = newType
+  const itemRarity = ref<ITEM_RARITY>(ITEM_RARITY.NORMAL)
+  const setItemRarity = (newRarity: ITEM_RARITY) => {
+    itemRarity.value = newRarity
   }
 
   const initPropsHistory = {
@@ -53,7 +53,7 @@ export const useItemState = defineStore('itemState', () => {
   const $reset = () => {
     affixFamilies.value = []
     affixes.value = []
-    itemType.value = ITEM_TYPE.NORMAL
+    itemRarity.value = ITEM_RARITY.NORMAL
     propsHistory.value = initPropsHistory
     lockedAffixId.value = ''
     itemLevel.value = ITEM_CONFIG.MAXIMUM_LEVEL
@@ -91,8 +91,8 @@ export const useItemState = defineStore('itemState', () => {
   }
 
   return {
-    itemType,
-    setItemType,
+    itemRarity,
+    setItemRarity,
     propsHistory,
     setPropsHistory,
     affixFamilies,

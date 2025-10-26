@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, type Affix } from '@/types/types'
+import { ITEM_RARITY, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { computed } from 'vue'
@@ -19,7 +19,7 @@ const omenState = useOmenState()
 
 const disable = computed(() => {
   return !(
-    itemState.itemType === ITEM_TYPE.MAGIC &&
+    itemState.itemRarity === ITEM_RARITY.MAGIC &&
     itemState.propsHistory.augmentationOrb &&
     !itemState.propsHistory.regalOrb &&
     maximumLevel >= minimumLevel
@@ -40,7 +40,7 @@ const addModifier = () => {
 
     itemState.addAffix(hitModsFamily, hitMod)
 
-    itemState.setItemType(ITEM_TYPE.RARE)
+    itemState.setItemRarity(ITEM_RARITY.RARE)
 
     itemState.setPropsHistory({ regalOrb: true })
   }

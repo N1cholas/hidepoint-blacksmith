@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, MOD_GENERATION_TYPE, type Affix } from '@/types/types'
+import { ITEM_RARITY, MOD_GENERATION_TYPE, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
@@ -22,7 +22,7 @@ const omenState = useOmenState()
 const disable = computed(() => {
   return !(
     itemState.affixes.length < 6 &&
-    itemState.itemType === ITEM_TYPE.RARE &&
+    itemState.itemRarity === ITEM_RARITY.RARE &&
     maximumLevel >= minimumLevel
   )
 })
@@ -46,7 +46,7 @@ const addModifier = () => {
       if (hitAffix) {
         itemState.addAffix(hitAffixFamily, hitAffix)
 
-        itemState.setItemType(ITEM_TYPE.RARE)
+        itemState.setItemRarity(ITEM_RARITY.RARE)
 
         itemState.setPropsHistory({ exaltedOrb: true })
       }

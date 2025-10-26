@@ -78,7 +78,7 @@ const itemState = useItemState()
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>深渊（赛季特有）</template>
+    <template #heading>亵渎（第三赛季特有）</template>
 
     <div class="tools">
       <button class="tools">啃噬颚骨</button>

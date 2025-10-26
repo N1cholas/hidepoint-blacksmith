@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_TYPE, type Affix } from '@/types/types'
+import { ITEM_RARITY, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import { computed } from 'vue'
@@ -16,7 +16,7 @@ const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
 
 const disable = computed(() => {
-  return !(itemState.itemType === ITEM_TYPE.NORMAL && maximumLevel >= minimumLevel)
+  return !(itemState.itemRarity === ITEM_RARITY.NORMAL && maximumLevel >= minimumLevel)
 })
 
 // 蜕变石
@@ -27,7 +27,7 @@ const addModifier = () => {
   if (hitAffix) {
     itemState.addAffix(hitAffixFamily, hitAffix)
 
-    itemState.setItemType(ITEM_TYPE.MAGIC)
+    itemState.setItemRarity(ITEM_RARITY.MAGIC)
 
     itemState.setPropsHistory({ transmutationOrb: true })
   }

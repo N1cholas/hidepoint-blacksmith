@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useItemState } from '@/stores/itemState'
 import ModsList from '@/components/ModsList.vue'
-import { ITEM_TYPE } from '@/types/types'
-import { showItemTypeMsg } from '@/utils/processString'
+import { ITEM_RARITY } from '@/types/types'
+import { showItemRarityMsg } from '@/utils/processString'
 import { ITEM_CONFIG } from '@/config/itemConfig'
 
 const itemState = useItemState()
@@ -12,16 +12,16 @@ const itemState = useItemState()
     <h3 class="item-type">
       <span
         :class="{
-          normal: itemState.itemType === ITEM_TYPE.NORMAL,
-          magic: itemState.itemType === ITEM_TYPE.MAGIC,
-          rare: itemState.itemType === ITEM_TYPE.RARE,
+          normal: itemState.itemRarity === ITEM_RARITY.NORMAL,
+          magic: itemState.itemRarity === ITEM_RARITY.MAGIC,
+          rare: itemState.itemRarity === ITEM_RARITY.RARE,
         }"
         ><input
           type="text"
           v-model.number.trim="itemState.itemLevel"
           :max="ITEM_CONFIG.MAXIMUM_LEVEL"
-        />
-        ({{ showItemTypeMsg(itemState.itemType) }}) 双生之弓</span
+        />级
+        ({{ showItemRarityMsg(itemState.itemRarity) }}) 双生之弓</span
       >
     </h3>
     <ModsList :mods="itemState.affixes" />

@@ -79,7 +79,7 @@ export type GenerateRemovePoolOptions = {
   onlySuffix?: boolean
 }
 
-export enum ITEM_TYPE {
+export enum ITEM_RARITY {
   NORMAL = 'NORMAL',
   MAGIC = 'MAGIC',
   RARE = 'RARE',

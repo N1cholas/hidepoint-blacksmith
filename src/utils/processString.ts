@@ -1,4 +1,4 @@
-import { ITEM_TYPE } from '@/types/types'
+import { ITEM_RARITY } from '@/types/types'
 
 export const processHTMLString = (htmlString: string) => {
   const tempDiv = document.createElement('div')
@@ -20,13 +20,13 @@ export const processHTMLString = (htmlString: string) => {
   return str
 }
 
-export const showItemTypeMsg = (itemType: ITEM_TYPE) => {
-  switch (itemType) {
-    case ITEM_TYPE.NORMAL:
+export const showItemRarityMsg = (itemRarity: ITEM_RARITY) => {
+  switch (itemRarity) {
+    case ITEM_RARITY.NORMAL:
       return '普通物品'
-    case ITEM_TYPE.MAGIC:
+    case ITEM_RARITY.MAGIC:
       return '魔法物品'
-    case ITEM_TYPE.RARE:
+    case ITEM_RARITY.RARE:
       return '稀有物品'
     default:
       return ''
