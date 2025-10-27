@@ -4,6 +4,7 @@ import { useItemState } from '@/stores/itemState'
 import { computed } from 'vue'
 import type { Affix } from '@/types/types'
 import { reverseRandomlyObtainAffixFamily } from '@/utils/randomlyObtain'
+import { SESSION3_CONFIG } from '@/config/session3Config'
 
 defineProps<{
   name: string
@@ -19,7 +20,10 @@ const disable = computed(() => {
 // 锁定一个随机词缀，使其在下一次改造时不会被移除。
 // 影响剥离石、混沌石
 const lockModifier = () => {
-  const shouldLockAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(itemState.affixFamilies)
+  const shouldLockAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(
+    // session3: 不能锁定亵渎词缀
+    itemState.affixFamilies.filter((af) => af.id !== SESSION3_CONFIG.PLACEHOLDER_ID),
+  )
 
   if (shouldLockAffixFamily) {
     itemState.setLockedAffixId(shouldLockAffixFamily.id)

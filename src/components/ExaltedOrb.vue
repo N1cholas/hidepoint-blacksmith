@@ -21,7 +21,7 @@ const omenState = useOmenState()
 
 const disable = computed(() => {
   return !(
-    itemState.affixes.length < 6 &&
+    itemState.affixes.length < ITEM_CONFIG.PREFIX + ITEM_CONFIG.SUFFIX &&
     itemState.itemRarity === ITEM_RARITY.RARE &&
     maximumLevel >= minimumLevel
   )
@@ -55,19 +55,11 @@ const addModifier = () => {
 }
 
 const shouldOnlyPrefix = (): boolean => {
-  return (
-    omenState.omenConfig.sinistralExaltation ||
-    itemState.affixes.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX)
-      .length >= ITEM_CONFIG.PREFIX
-  )
+  return omenState.omenConfig.sinistralExaltation || itemState.suffixCounts >= ITEM_CONFIG.SUFFIX
 }
 
 const shouldOnlySuffix = (): boolean => {
-  return (
-    omenState.omenConfig.dextralExaltation ||
-    itemState.affixes.filter((affix) => affix.ModGenerationTypeID === MOD_GENERATION_TYPE.PREFIX)
-      .length >= ITEM_CONFIG.SUFFIX
-  )
+  return omenState.omenConfig.dextralExaltation || itemState.prefixCounts >= ITEM_CONFIG.PREFIX
 }
 </script>
 <template>

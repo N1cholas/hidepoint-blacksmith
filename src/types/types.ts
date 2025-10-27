@@ -13,7 +13,7 @@ export type RawNormalAffix = {
 export type Affix = Omit<RawNormalAffix, 'Level' | 'ModGenerationTypeID' | 'DropChance'> & {
   // change type from string to number
   Level: number
-  ModGenerationTypeID: number
+  ModGenerationTypeID: MOD_GENERATION_TYPE
   DropChance: number
   // add new type
   powerLevel: number
@@ -90,4 +90,8 @@ export type PropsUseHistory = {
   augmentationOrb: boolean
   regalOrb: boolean
   exaltedOrb: boolean
+}
+
+export enum ITEM_TYPE {
+  BOW = 'BOW',
 }

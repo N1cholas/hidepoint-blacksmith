@@ -6,16 +6,16 @@
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
-"scripts": {
-  "dev": "pnpm run format && vite",
-  "build": "run-p type-check \"build-only {@}\" --",
-  "preview": "vite preview",
-  "test:unit": "vitest",
-  "build-only": "vite build",
-  "type-check": "vue-tsc --build",
-  "format": "prettier --write src/",
-  "build:normal-affixes": "tsx src/scripts/normalAffixesProcessor.ts"
-},
+  "scripts": {
+    "dev": "pnpm run format && vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "format": "prettier --write src/",
+    "build:normal-affixes": "tsx src/scripts/normalAffixesProcessor.ts"
+  },
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
     "jsonfile": "^6.2.0",

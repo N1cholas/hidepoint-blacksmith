@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<GlitchPixelTextProps>(), {
   fontWeight: 400 as FontWeight,
   colors: () => ['#375a00', '#233705', '#558705', '#73aa05', '#91cd00', '#c3eb05'],
   pixelScale: 0.5,
-  glitchSliceCount: 48,
+  glitchSliceCount: 28,
   glitchMaxSliceH: 2,
   glitchMaxOffset: 2,
   chipProbability: 0.05,

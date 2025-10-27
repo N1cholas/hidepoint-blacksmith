@@ -20,8 +20,7 @@ const itemState = useItemState()
           type="text"
           v-model.number.trim="itemState.itemLevel"
           :max="ITEM_CONFIG.MAXIMUM_LEVEL"
-        />级
-        ({{ showItemRarityMsg(itemState.itemRarity) }}) 双生之弓</span
+        />级 ({{ showItemRarityMsg(itemState.itemRarity) }}) 双生之弓</span
       >
     </h3>
     <ModsList :mods="itemState.affixes" />

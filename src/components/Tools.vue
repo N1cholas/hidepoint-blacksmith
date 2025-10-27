@@ -14,6 +14,7 @@ import TransmutationOrb from './TransmutationOrb.vue'
 import AugmentationOrb from './AugmentationOrb.vue'
 import FracturingOrb from './FracturingOrb.vue'
 import { useItemState } from '@/stores/itemState'
+import Jawbone from './session3/Jawbone.vue'
 
 const itemState = useItemState()
 </script>
@@ -81,16 +82,15 @@ const itemState = useItemState()
     <template #heading>亵渎（第三赛季特有）</template>
 
     <div class="tools">
-      <button class="tools">啃噬颚骨</button>
-      <button class="tools">远古颚骨</button>
-      <button class="tools">遗存颚骨</button>
+      <Jawbone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
+      <Jawbone name="远古颚骨" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <Jawbone name="遗存颚骨" :minimumLevel="40" :maximumLevel="itemState.itemLevel" />
       <button class="tools">啃噬肋骨</button>
       <button class="tools">远古肋骨</button>
       <button class="tools">遗存肋骨</button>
       <button class="tools">啃噬锁骨</button>
       <button class="tools">远古锁骨</button>
       <button class="tools">遗存锁骨</button>
-      <button class="tools">遗存头骨</button>
       <button class="tools">深渊回响预兆</button>
       <button class="tools">至高预兆</button>
       <button class="tools">领主预兆</button>

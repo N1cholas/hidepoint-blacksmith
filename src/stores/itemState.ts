@@ -5,18 +5,20 @@ import {
   type PropsUseHistory,
   type AffixFamily,
   MOD_GENERATION_TYPE,
+  ITEM_TYPE,
 } from '@/types/types'
 import { computed, ref } from 'vue'
 import { ITEM_CONFIG } from '@/config/itemConfig'
 
 export const useItemState = defineStore('itemState', () => {
-  const itemLevel = ref(ITEM_CONFIG.MAXIMUM_LEVEL)
+  const itemType = ref<ITEM_TYPE>(ITEM_TYPE.BOW)
+  const itemLevel = ref<number>(ITEM_CONFIG.MAXIMUM_LEVEL)
   const itemRarity = ref<ITEM_RARITY>(ITEM_RARITY.NORMAL)
   const setItemRarity = (newRarity: ITEM_RARITY) => {
     itemRarity.value = newRarity
   }
 
-  const initPropsHistory = {
+  const initPropsHistory: PropsUseHistory = {
     transmutationOrb: false,
     augmentationOrb: false,
     regalOrb: false,
@@ -91,6 +93,7 @@ export const useItemState = defineStore('itemState', () => {
   }
 
   return {
+    itemType,
     itemRarity,
     setItemRarity,
     propsHistory,
