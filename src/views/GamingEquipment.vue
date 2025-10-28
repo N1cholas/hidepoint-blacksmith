@@ -4,6 +4,7 @@ import ModsList from '@/components/ModsList.vue'
 import { ITEM_RARITY } from '@/types/types'
 import { showItemRarityMsg } from '@/utils/processString'
 import { ITEM_CONFIG } from '@/config/itemConfig'
+import ListDemo from '@/components/ListDemo.vue'
 
 const itemState = useItemState()
 </script>

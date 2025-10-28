@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import Modal from '@/components/Modal.vue'
-import ModsList from '@/components/ModsList.vue'
 import { useItemState } from '@/stores/itemState'
 import { computed, ref } from 'vue'
 import { useSession3State } from '@/stores/session3State'
@@ -53,57 +52,21 @@ const decryptAffix = () => {
   }
 }
 
-const open = ref(false)
-const msg = ref('')
-const modalRef = ref<InstanceType<typeof Modal> | null>(null)
-
-const openByApi = () => {
-  modalRef.value?.open()
-}
-
-const onOpen = () => {
-  // 打开时触发
-}
-const onClose = () => {
-  // 关闭时触发
-}
-const onConfirm = () => {
-  console.log('confirm:', msg.value)
-}
-const onCancel = () => {
-  // 取消时触发
-}
+const showModal = ref(false)
 </script>
 <template>
-  <button @click="open = true" :disabled="disable">{{ name }}</button>
-  <Modal
-    v-model="open"
-    ref="modalRef"
-    :width="520"
-    :z-index="1100"
-    append-to="body"
-    :close-on-esc="true"
-    :close-on-backdrop="true"
-    :lock-scroll="true"
-    aria-label="解密亵渎词缀"
-    @open="onOpen"
-    @close="onClose"
-    @confirm="onConfirm"
-    @cancel="onCancel"
-  >
-    <template #header>
-      <h3 class="modal-title">亵渎词缀解密</h3>
-    </template>
+  <button id="show-modal" @click="showModal = true" :disabled="disable">{{ name }}</button>
 
-    <div>
-      <ModsList :mods="itemState.affixes" />
-    </div>
-
-    <template #footer>
-      <button class="btn btn-secondary" @click="modalRef?.cancel()">取消</button>
-      <button class="btn btn-primary" @click="modalRef?.confirm()">确定</button>
-    </template>
-  </Modal>
+  <Teleport to="body">
+    <Modal :show="showModal" @close="showModal = false">
+      <template #header>
+        <h3>Custom Header</h3>
+      </template>
+      <template #body>
+        <h3>Custom body</h3>
+      </template>
+    </Modal>
+  </Teleport>
 </template>
 
 <style scoped></style>
