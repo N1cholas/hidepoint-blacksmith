@@ -22,13 +22,11 @@ const disable = computed(() => {
     itemState.itemRarity === ITEM_RARITY.RARE &&
     maximumLevel >= minimumLevel &&
     itemState.affixes.length < ITEM_CONFIG.PREFIX + ITEM_CONFIG.SUFFIX &&
-    !session3State.desecrated
+    !session3State.placeholder
   )
 })
 
 // 颚骨，为武器或弓添加亵渎占位符
-// 解决混沌石、剥离石会一直移除占位符的问题
-// 解决破溃宝珠锁定占位符
 const addPlaceholder = () => {
   const hitAffix = createAffix({
     Name: '亵渎占位符',
@@ -48,6 +46,8 @@ const addPlaceholder = () => {
     itemState.addAffix(hitAffixFamily, hitAffix)
 
     itemState.setItemRarity(ITEM_RARITY.RARE)
+
+    session3State.setAffixLevelRange([minimumLevel, maximumLevel])
   }
 }
 

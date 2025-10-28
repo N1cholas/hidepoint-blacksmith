@@ -24,7 +24,6 @@ const itemState = useItemState()
       >
     </h3>
     <ModsList :mods="itemState.affixes" />
-    <button @click="itemState.$reset">重置</button>
   </div>
 </template>
 

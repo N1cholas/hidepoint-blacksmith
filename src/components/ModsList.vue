@@ -3,10 +3,13 @@ import { useItemState } from '@/stores/itemState'
 import ModItem from './ModItem.vue'
 import { MOD_GENERATION_TYPE, type Affix } from '@/types/types'
 import { SESSION3_CONFIG } from '@/config/session3Config'
+import { useSession3State } from '@/stores/session3State'
 
 defineProps<{ mods: Affix[] }>()
 
 const itemState = useItemState()
+// session3
+const session3State = useSession3State()
 </script>
 <template>
   <ul class="mods-wrapper">
@@ -17,7 +20,7 @@ const itemState = useItemState()
       :type="'prefix'"
       :showModType="i === 0"
       :locked="mod.ModFamilyList[0] === itemState.lockedAffixId"
-      :showPlaceholder="mod.ModFamilyList[0] === SESSION3_CONFIG.PLACEHOLDER_ID"
+      :showPlaceholder="!!session3State.placeholder"
     />
     <ModItem
       v-for="(mod, i) in mods.filter((m) => m.ModGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX)"
@@ -26,7 +29,7 @@ const itemState = useItemState()
       :type="'suffix'"
       :showModType="i === 0"
       :locked="mod.ModFamilyList[0] === itemState.lockedAffixId"
-      :showPlaceholder="mod.ModFamilyList[0] === SESSION3_CONFIG.PLACEHOLDER_ID"
+      :showPlaceholder="!!session3State.placeholder"
     />
   </ul>
 </template>

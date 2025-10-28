@@ -15,11 +15,23 @@ import AugmentationOrb from './AugmentationOrb.vue'
 import FracturingOrb from './FracturingOrb.vue'
 import { useItemState } from '@/stores/itemState'
 import Jawbone from './session3/Jawbone.vue'
+import DecryptAffix from './session3/DecryptAffix.vue'
 
 const itemState = useItemState()
 </script>
 
 <template>
+  <ToolWrapper>
+    <template #icon>
+      <DocumentationIcon />
+    </template>
+    <template #heading>装备</template>
+
+    <div class="tools">
+      <button @click="itemState.$reset">重置装备</button>
+      <DecryptAffix name="解密亵渎词缀" />
+    </div>
+  </ToolWrapper>
   <ToolWrapper>
     <template #icon>
       <DocumentationIcon />
@@ -83,8 +95,8 @@ const itemState = useItemState()
 
     <div class="tools">
       <Jawbone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
-      <Jawbone name="远古颚骨" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
-      <Jawbone name="遗存颚骨" :minimumLevel="40" :maximumLevel="itemState.itemLevel" />
+      <Jawbone name="遗存颚骨" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
+      <Jawbone name="远古颚骨" :minimumLevel="40" :maximumLevel="itemState.itemLevel" />
       <button class="tools">啃噬肋骨</button>
       <button class="tools">远古肋骨</button>
       <button class="tools">遗存肋骨</button>

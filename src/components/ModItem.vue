@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { processHTMLString } from '@/utils/processString'
 import { type Affix } from '@/types/types'
-import PlaceholderText from './PlaceholderText.vue'
+import PlaceholderText from './session3/PlaceholderText.vue'
 
 defineProps<{
   mod: Affix
