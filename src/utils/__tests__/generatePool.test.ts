@@ -96,7 +96,7 @@ describe('generateAddPool', () => {
   })
 })
 
-describe('generateSelectPool', () => {
+describe('generateReplacePool', () => {
   const mockAffixFamilies = [
     { id: '1', modGenerationTypeID: MOD_GENERATION_TYPE.PREFIX },
     { id: '2', modGenerationTypeID: MOD_GENERATION_TYPE.SUFFIX },

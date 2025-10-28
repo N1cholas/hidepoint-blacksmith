@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_RARITY, MOD_GENERATION_TYPE, type Affix } from '@/types/types'
+import { ITEM_RARITY, type Affix } from '@/types/types'
 import { useItemState } from '@/stores/itemState'
 import { useOmenState } from '@/stores/omenState'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'

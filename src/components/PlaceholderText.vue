@@ -1,4 +1,3 @@
-<!-- Vue -->
 <template>
   <div class="canvas-wrapper">
     <canvas ref="canvasEl" class="glitch-pixel-text" aria-hidden="true"></canvas>
