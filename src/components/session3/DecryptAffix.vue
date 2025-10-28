@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import _ from 'lodash'
+import Modal from '@/components/Modal.vue'
+import ModsList from '@/components/ModsList.vue'
 import { useItemState } from '@/stores/itemState'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useSession3State } from '@/stores/session3State'
 import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
@@ -50,9 +52,58 @@ const decryptAffix = () => {
     }
   }
 }
+
+const open = ref(false)
+const msg = ref('')
+const modalRef = ref<InstanceType<typeof Modal> | null>(null)
+
+const openByApi = () => {
+  modalRef.value?.open()
+}
+
+const onOpen = () => {
+  // 打开时触发
+}
+const onClose = () => {
+  // 关闭时触发
+}
+const onConfirm = () => {
+  console.log('confirm:', msg.value)
+}
+const onCancel = () => {
+  // 取消时触发
+}
 </script>
 <template>
-  <button @click="decryptAffix()" :disabled="disable">{{ name }}</button>
+  <button @click="open = true" :disabled="disable">{{ name }}</button>
+  <Modal
+    v-model="open"
+    ref="modalRef"
+    :width="520"
+    :z-index="1100"
+    append-to="body"
+    :close-on-esc="true"
+    :close-on-backdrop="true"
+    :lock-scroll="true"
+    aria-label="解密亵渎词缀"
+    @open="onOpen"
+    @close="onClose"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+  >
+    <template #header>
+      <h3 class="modal-title">亵渎词缀解密</h3>
+    </template>
+
+    <div>
+      <ModsList :mods="itemState.affixes" />
+    </div>
+
+    <template #footer>
+      <button class="btn btn-secondary" @click="modalRef?.cancel()">取消</button>
+      <button class="btn btn-primary" @click="modalRef?.confirm()">确定</button>
+    </template>
+  </Modal>
 </template>
 
 <style scoped></style>

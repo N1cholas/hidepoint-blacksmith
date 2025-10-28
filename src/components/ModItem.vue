@@ -26,6 +26,7 @@ li {
   position: relative;
   line-height: 34px;
   flex: 1;
+  display: inline-block;
 }
 .prefix {
   position: absolute;
