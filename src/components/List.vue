@@ -119,15 +119,17 @@ function onItemClick(item: any, index: number) {
 .clist__item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  min-height: 36px;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 360px;
+  min-height: 50px;
   padding: 8px 12px;
   background-color: var(--color-background-soft);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  text-align: center;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;

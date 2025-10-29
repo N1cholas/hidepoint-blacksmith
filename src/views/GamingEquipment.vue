@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useItemState } from '@/stores/itemState'
-import ModsList from '@/components/ModsList.vue'
-import { ITEM_RARITY } from '@/types/types'
+import { ITEM_RARITY, type Affix } from '@/types/types'
 import { showItemRarityMsg } from '@/utils/processString'
 import { ITEM_CONFIG } from '@/config/itemConfig'
-import ListDemo from '@/components/ListDemo.vue'
+import AffixList from '@/components/AffixList.vue'
 
 const itemState = useItemState()
 </script>
@@ -24,7 +23,8 @@ const itemState = useItemState()
         />级 ({{ showItemRarityMsg(itemState.itemRarity) }}) 双生之弓</span
       >
     </h3>
-    <ModsList :mods="itemState.affixes" />
+    <!-- <ModsList :mods="itemState.affixes" /> -->
+    <AffixList />
   </div>
 </template>
 
