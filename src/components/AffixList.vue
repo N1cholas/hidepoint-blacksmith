@@ -46,7 +46,7 @@ const items = computed<Row[]>(() => {
 </script>
 <template>
   <List :items="items" item-key="key" class="affix-list">
-    <template class="item-wrapper" #default="{ item }">
+    <template #default="{ item }">
       <span
         v-if="item.affix.ModGenerationTypeID === MOD_GENERATION_TYPE.PREFIX"
         :class="{ invisible: !item.isFirstPrefix }"
@@ -79,12 +79,40 @@ const items = computed<Row[]>(() => {
 </template>
 
 <style scoped>
-.locked {
-  color: #f39c12;
+.affix-list {
+  min-height: 380px;
 }
 
-.affix-list {
-  min-height: 300px;
+.type-badge {
+  flex: 0 0 auto;
+  padding: 2px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  background: color-mix(in oklab, var(--color-background) 90%, var(--color-text) 10%);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.content {
+  flex: 1 1 auto;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.locked {
+  color: color-mix(in oklab, var(--color-heading) 85%, var(--color-background) 15%);
+  text-shadow: 0 0 0 transparent;
+}
+
+.suffix {
+  flex: 0 0 auto;
+  padding: 2px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  background: color-mix(in oklab, var(--color-background) 92%, var(--color-text) 8%);
+  font-weight: 600;
 }
 
 .invisible {

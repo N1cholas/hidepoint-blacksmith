@@ -6,8 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // todo: 开发环境不需要vueDevTools
-  plugins: [vue(), vueDevTools()],
+  plugins: [vue(), process.env.NODE_ENV === 'development' ? vueDevTools() : undefined],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

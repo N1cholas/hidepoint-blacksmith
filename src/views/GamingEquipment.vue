@@ -23,7 +23,6 @@ const itemState = useItemState()
         />级 ({{ showItemRarityMsg(itemState.itemRarity) }}) 双生之弓</span
       >
     </h3>
-    <!-- <ModsList :mods="itemState.affixes" /> -->
     <AffixList />
   </div>
 </template>

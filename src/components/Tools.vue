@@ -26,7 +26,6 @@ const itemState = useItemState()
       <DocumentationIcon />
     </template>
     <template #heading>装备</template>
-
     <div class="tools">
       <button @click="itemState.$reset">重置装备</button>
       <DecryptAffix name="解密亵渎词缀" />
