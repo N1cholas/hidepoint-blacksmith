@@ -31,19 +31,21 @@
 </template>
 
 <script setup lang="ts" generic="T">
+import { computed, ref } from 'vue'
+
 type Key = string | number
 
 const props = withDefaults(
   defineProps<{
     items: T[]
-    itemKey?: string | ((item: any, index: number) => Key)
+    itemKey?: keyof T | ((item: T, index: number) => Key)
     removable?: boolean
     selection?: 'none' | 'single'
-    selectedKey?: Key | null // v-model:selectedKey
-    modelValue?: Key | null // 兼容 v-model
+    selectedKey?: Key | null
+    modelValue?: Key | null
   }>(),
   {
-    items: () => [],
+    items: () => [] as T[],
     removable: false,
     selection: 'none',
     selectedKey: undefined,
@@ -52,56 +54,52 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'remove', payload: { item: any; index: number }): void
-  (e: 'itemClick', payload: { item: any; index: number }): void
+  (e: 'remove', payload: { item: T; index: number }): void
+  (e: 'itemClick', payload: { item: T; index: number }): void
   (e: 'update:selectedKey', v: Key | null): void
   (e: 'update:modelValue', v: Key | null): void
-  (e: 'select', payload: { key: Key; item: any; index: number }): void
-  (e: 'unselect', payload: { key: Key; item: any; index: number }): void
+  (e: 'select', payload: { key: Key; item: T; index: number }): void
+  (e: 'unselect', payload: { key: Key; item: T; index: number }): void
 }>()
 
-function keyOf(item: any, index: number): Key {
+// 解析行 key：函数 > 字段 > item.key > index
+function keyOf(item: T, index: number): Key {
   const k = props.itemKey
   if (typeof k === 'function') return k(item, index)
-  if (typeof k === 'string' && item && k in item) return (item as any)[k] as Key
+  if (k) return item[k] as unknown as Key
   return index
 }
 
-// 受控/非受控单选
-let innerSelected: Key | null = null
-const isControlled = () => props.selectedKey !== undefined || props.modelValue !== undefined
-const getSelected = (): Key | null =>
-  props.selectedKey !== undefined
-    ? props.selectedKey
-    : props.modelValue !== undefined
-      ? props.modelValue
-      : innerSelected
-const setSelected = (v: Key | null) => {
-  if (props.selectedKey !== undefined) emit('update:selectedKey', v)
-  if (props.modelValue !== undefined) emit('update:modelValue', v)
-  if (!isControlled()) innerSelected = v
-}
+// 单选（受控/非受控统一）
+const innerSelected = ref<Key | null>(null)
+const selectedRef = computed<Key | null>({
+  get() {
+    if (props.selectedKey !== undefined) return props.selectedKey
+    if (props.modelValue !== undefined) return props.modelValue
+    return innerSelected.value
+  },
+  set(v) {
+    if (props.selectedKey !== undefined) emit('update:selectedKey', v)
+    if (props.modelValue !== undefined) emit('update:modelValue', v)
+    if (props.selectedKey === undefined && props.modelValue === undefined) innerSelected.value = v
+  },
+})
 
-function isSelectedKey(k: Key): boolean {
-  return getSelected() === k
-}
+const isSelectedKey = (k: Key) => selectedRef.value === k
 
-function toggleSingle(k: Key, item: any, index: number) {
-  const cur = getSelected()
-  if (cur === k) {
-    setSelected(null)
+function toggleSingle(k: Key, item: T, index: number) {
+  if (selectedRef.value === k) {
+    selectedRef.value = null
     emit('unselect', { key: k, item, index })
   } else {
-    setSelected(k)
+    selectedRef.value = k
     emit('select', { key: k, item, index })
   }
 }
 
-function onItemClick(item: any, index: number) {
+function onItemClick(item: T, index: number) {
   const k = keyOf(item, index)
-  if (props.selection === 'single') {
-    toggleSingle(k, item, index)
-  }
+  if (props.selection === 'single') toggleSingle(k, item, index)
   emit('itemClick', { item, index })
 }
 </script>
@@ -121,7 +119,7 @@ function onItemClick(item: any, index: number) {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-width: 360px;
+  min-width: 380px;
   min-height: 50px;
   padding: 8px 12px;
   background-color: var(--color-background-soft);
