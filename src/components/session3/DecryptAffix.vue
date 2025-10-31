@@ -7,38 +7,93 @@ import { useSession3State } from '@/stores/session3State'
 import { generateAddPool } from '@/utils/generatePool'
 import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
 import { MOD_GENERATION_TYPE, type Affix, type AffixFamily } from '@/types/types'
-import { SESSION3_CONFIG } from '@/config/session3Config'
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import DecryptList from './DecryptList.vue'
+import Button from '../Button.vue'
 
 defineProps<{
   name: string
 }>()
 
+const showModal = ref(false)
 const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
 const session3State = useSession3State()
 
 const disable = computed(() => !session3State.placeholder)
 
-const modGenerationType = session3State.placeholder?.modGenerationTypeID
-
-const newAffixFamilies = ref<AffixFamily[]>([])
+const decryptingAffixFamily = ref<AffixFamily[]>([])
+const decryptingAffixes = ref<Affix[]>([])
 
 // 解密亵渎占位符
 // 展示3条词缀以及重选按钮
 const generateDecryptPool = (counts: number) => {
-  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
-    deduplication: true,
-    onlyPrefix: modGenerationType === MOD_GENERATION_TYPE.PREFIX,
-    onlySuffix: modGenerationType === MOD_GENERATION_TYPE.SUFFIX,
-  })
+  const modGenerationType = session3State.placeholder?.modGenerationTypeID
+  decryptingAffixFamily.value = []
+  decryptingAffixes.value = []
+  for (let i = 0; i < counts; i++) {
+    const newAffixFamily = generateAddPool(
+      normalMods.normalModsFamily,
+      itemState.affixFamilies.concat(decryptingAffixFamily.value),
+      {
+        deduplication: true,
+        onlyPrefix: modGenerationType === MOD_GENERATION_TYPE.PREFIX,
+        onlySuffix: modGenerationType === MOD_GENERATION_TYPE.SUFFIX,
+      },
+    )
+
+    const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
+    const hitAffix = randomlyObtainAffix(
+      hitAffixFamily.items,
+      session3State.affixLevelRange[0],
+      session3State.affixLevelRange[1],
+    )
+
+    decryptingAffixFamily.value.push(hitAffixFamily)
+    decryptingAffixes.value.push(hitAffix)
+  }
 }
 
-const showModal = ref(false)
+const openDecryptModal = () => {
+  showModal.value = true
+  generateDecryptPool(3)
+}
+
+const replaceInfos = ref<{
+  newAffixFamily: AffixFamily
+  affixFamilyIndex: number
+  newAffix: Affix
+  affixIndex: number
+} | null>(null)
+const handleSelect = (payload: { key: string; item: Affix; index: number }) => {
+  if (!session3State.placeholder) return
+
+  const [affixFamilyIndex, affixIndex] = itemState.findIndexById(session3State.placeholder.id)
+
+  const newAffixFamily = decryptingAffixFamily.value[payload.index]
+
+  replaceInfos.value = {
+    newAffixFamily,
+    affixFamilyIndex,
+    newAffix: payload.item,
+    affixIndex,
+  }
+}
+
+const handleConfirm = () => {
+  if (!replaceInfos.value) return
+
+  const { newAffixFamily, affixFamilyIndex, newAffix, affixIndex } = replaceInfos.value
+
+  itemState.replaceAffix(newAffixFamily, affixFamilyIndex, newAffix, affixIndex)
+
+  // 清空占位符
+  replaceInfos.value = null
+  showModal.value = false
+}
 </script>
 <template>
-  <button id="show-modal" @click="showModal = true" :disabled="disable">{{ name }}</button>
+  <Button id="show-modal" @click="openDecryptModal" :disabled="disable">{{ name }}</Button>
 
   <Teleport to="body">
     <Modal :show="showModal" @close="showModal = false">
@@ -46,14 +101,18 @@ const showModal = ref(false)
         <h3>解密亵渎词缀</h3>
       </template>
       <template #body>
-        <DecryptList
-          :affixes="
-            itemState.affixes.filter((a) => a.ModFamilyList[0] !== SESSION3_CONFIG.PLACEHOLDER_ID)
-          "
-        />
+        <DecryptList :onSelect="handleSelect" :affixes="decryptingAffixes" />
+      </template>
+      <template #footer>
+        <Button @click="handleConfirm" :disable="replaceInfos">确定</Button>
+        <Button class="mr-20" @click="generateDecryptPool(3)">重选词缀</Button>
       </template>
     </Modal>
   </Teleport>
 </template>
 
-<style scoped></style>
+<style scoped>
+.mr-20 {
+  margin-right: 20px;
+}
+</style>

@@ -8,7 +8,12 @@ defineProps<{
 }>()
 </script>
 <template>
-  <List :items="affixes" :item-key="(a) => `${a.str}|${a.ModFamilyList[0]}`" class="affix-list">
+  <List
+    selection="single"
+    :items="affixes"
+    :item-key="(a) => `${a.str}|${a.ModFamilyList[0]}`"
+    class="affix-list"
+  >
     <template #default="{ item }">
       <span></span>
       <span class="content" v-html="processHTMLString(item.str)"></span>

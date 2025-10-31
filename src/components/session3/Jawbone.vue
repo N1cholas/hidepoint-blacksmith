@@ -8,7 +8,7 @@ import { createAffix, createAffixFamily } from '@/utils/factory'
 import { SESSION3_CONFIG } from '@/config/session3Config'
 import { useSession3State } from '@/stores/session3State'
 
-const { maximumLevel, minimumLevel } = defineProps<{
+const { minimumLevel, maximumLevel } = defineProps<{
   name: string
   minimumLevel: number
   maximumLevel: number

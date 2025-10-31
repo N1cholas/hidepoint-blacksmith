@@ -16,6 +16,7 @@ import FracturingOrb from './FracturingOrb.vue'
 import { useItemState } from '@/stores/itemState'
 import Jawbone from './session3/Jawbone.vue'
 import DecryptAffix from './session3/DecryptAffix.vue'
+import Button from './Button.vue'
 
 const itemState = useItemState()
 </script>
@@ -27,7 +28,7 @@ const itemState = useItemState()
     </template>
     <template #heading>装备</template>
     <div class="tools">
-      <button @click="itemState.$reset">重置装备</button>
+      <Button @click="itemState.$reset">重置装备</Button>
       <DecryptAffix name="解密亵渎词缀" />
     </div>
   </ToolWrapper>
@@ -73,7 +74,7 @@ const itemState = useItemState()
       <Omen name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
       <Omen name="右旋崇高预兆" omenConfigKey="dextralExaltation" />
       <Omen name="强效崇高预兆" omenConfigKey="greaterExaltation" />
-      <button class="tools">催化崇高预兆</button>
+      <Button class="tools">催化崇高预兆</Button>
       <!-- 富豪石 -->
       <Omen name="同质化加冕预兆" omenConfigKey="homogenisingCoronation" />
       <!-- 混沌石 -->
