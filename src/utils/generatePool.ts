@@ -1,3 +1,4 @@
+import { SESSION3_CONFIG } from '@/config/session3Config'
 import {
   MOD_GENERATION_TYPE,
   type Affix,
@@ -119,9 +120,11 @@ export const generateRemovePool = (
 
   let affixFamiliesPool = curAffixFamilies
 
-  // if (onlyAbyssal) {
-  //   return []
-  // }
+  if (onlyAbyssal) {
+    return affixFamiliesPool.filter(
+      (affixFamily) => affixFamily.desecrated || affixFamily.id === SESSION3_CONFIG.PLACEHOLDER_ID,
+    )
+  }
 
   if (onlyPrefix) {
     affixFamiliesPool = affixFamiliesPool.filter(

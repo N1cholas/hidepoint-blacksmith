@@ -113,6 +113,7 @@ const items = computed<Row[]>(() => {
 }
 
 .suffix {
+  min-width: 35px;
   flex: 0 0 auto;
   padding: 2px 8px;
   border: 1px solid var(--color-border);

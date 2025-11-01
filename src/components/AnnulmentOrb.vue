@@ -20,8 +20,9 @@ const removeAffix = () => {
   const removeAffixFamiliesPool = generateRemovePool(itemState.affixFamilyWithoutLocked, {
     onlyPrefix: omenState.omenConfig.sinistralAnnulment,
     onlySuffix: omenState.omenConfig.dextralAnnulment,
+    onlyAbyssal: omenState.omenConfig.light,
   })
-
+  console.log(removeAffixFamiliesPool, '11')
   const shouldRemoveAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(removeAffixFamiliesPool)
 
   const [shouldRemoveAffixFamilyIndex, shouldRemoveAffixIndex] = itemState.findIndexById(

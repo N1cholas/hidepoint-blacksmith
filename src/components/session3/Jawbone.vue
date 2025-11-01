@@ -7,6 +7,7 @@ import { ITEM_CONFIG } from '@/config/itemConfig'
 import { createAffix, createAffixFamily } from '@/utils/factory'
 import { SESSION3_CONFIG } from '@/config/session3Config'
 import { useSession3State } from '@/stores/session3State'
+import { useOmenState } from '@/stores/omenState'
 
 const { minimumLevel, maximumLevel } = defineProps<{
   name: string
@@ -15,6 +16,7 @@ const { minimumLevel, maximumLevel } = defineProps<{
 }>()
 
 const itemState = useItemState()
+const omenState = useOmenState()
 const session3State = useSession3State()
 
 const disable = computed(() => {
@@ -56,12 +58,12 @@ const getModGenerationType = (): MOD_GENERATION_TYPE => {
   const prefixCounts = itemState.prefixCounts
   const suffixCounts = itemState.suffixCounts
 
-  if (prefixCounts >= ITEM_CONFIG.PREFIX) {
-    return MOD_GENERATION_TYPE.SUFFIX
+  if (suffixCounts >= ITEM_CONFIG.SUFFIX || omenState.omenConfig.sinistralNecromancy) {
+    return MOD_GENERATION_TYPE.PREFIX
   }
 
-  if (suffixCounts >= ITEM_CONFIG.SUFFIX) {
-    return MOD_GENERATION_TYPE.PREFIX
+  if (prefixCounts >= ITEM_CONFIG.PREFIX || omenState.omenConfig.dextralNecromancy) {
+    return MOD_GENERATION_TYPE.SUFFIX
   }
 
   return Math.random() < 0.5 ? MOD_GENERATION_TYPE.PREFIX : MOD_GENERATION_TYPE.SUFFIX

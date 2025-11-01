@@ -83,6 +83,7 @@ export type GenerateReplacePoolOptions = {
 }
 
 export type GenerateRemovePoolOptions = {
+  // session3
   onlyAbyssal?: boolean
   onlyPrefix?: boolean
   onlySuffix?: boolean

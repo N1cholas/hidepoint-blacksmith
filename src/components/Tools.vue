@@ -112,7 +112,6 @@ const itemState = useItemState()
       <button class="tools">至高预兆</button>
       <button class="tools">领主预兆</button>
       <button class="tools">黑血预兆</button>
-      <button class="tools">腐烂预兆</button>
     </div>
   </ToolWrapper>
 
