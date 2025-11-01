@@ -15,7 +15,7 @@ import AugmentationOrb from './AugmentationOrb.vue'
 import FracturingOrb from './FracturingOrb.vue'
 import { useItemState } from '@/stores/itemState'
 import Jawbone from './session3/Jawbone.vue'
-import DecryptAffix from './session3/DecryptAffix.vue'
+import DecryptAffix from './session3/DecryptModal.vue'
 import Button from './Button.vue'
 
 const itemState = useItemState()

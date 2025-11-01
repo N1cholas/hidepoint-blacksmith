@@ -85,9 +85,13 @@ const handleConfirm = () => {
 
   const { newAffixFamily, affixFamilyIndex, newAffix, affixIndex } = replaceInfos.value
 
-  itemState.replaceAffix(newAffixFamily, affixFamilyIndex, newAffix, affixIndex)
+  itemState.replaceAffix(
+    { ...newAffixFamily, desecrated: true },
+    affixFamilyIndex,
+    { ...newAffix, desecrated: true },
+    affixIndex,
+  )
 
-  // 清空占位符
   replaceInfos.value = null
   showModal.value = false
 }

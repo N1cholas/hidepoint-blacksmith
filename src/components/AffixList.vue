@@ -62,7 +62,10 @@ const items = computed<Row[]>(() => {
 
       <template v-if="item.affix.ModFamilyList[0] !== SESSION3_CONFIG.PLACEHOLDER_ID">
         <span
-          :class="{ locked: item.affix.ModFamilyList[0] === itemState.lockedAffixId }"
+          :class="{
+            locked: item.affix.ModFamilyList[0] === itemState.lockedAffixId,
+            desecrated: item.affix.desecrated,
+          }"
           class="content"
           v-html="processHTMLString(item.affix.str)"
         ></span>
@@ -101,8 +104,12 @@ const items = computed<Row[]>(() => {
 }
 
 .locked {
-  color: color-mix(in oklab, var(--color-heading) 85%, var(--color-background) 15%);
+  color: #d2870f;
   text-shadow: 0 0 0 transparent;
+}
+
+.desecrated {
+  color: var(--affix-desecrated-text);
 }
 
 .suffix {

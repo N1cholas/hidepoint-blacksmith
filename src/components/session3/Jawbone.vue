@@ -22,7 +22,8 @@ const disable = computed(() => {
     itemState.itemRarity === ITEM_RARITY.RARE &&
     maximumLevel >= minimumLevel &&
     itemState.affixes.length < ITEM_CONFIG.PREFIX + ITEM_CONFIG.SUFFIX &&
-    !session3State.placeholder
+    !session3State.placeholder &&
+    !session3State.desecrated
   )
 })
 

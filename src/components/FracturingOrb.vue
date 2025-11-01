@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import _ from 'lodash'
-import { useItemState } from '@/stores/itemState'
 import { computed } from 'vue'
-import type { Affix } from '@/types/types'
+import { useItemState } from '@/stores/itemState'
 import { reverseRandomlyObtainAffixFamily } from '@/utils/randomlyObtain'
 import { SESSION3_CONFIG } from '@/config/session3Config'
+import type { Affix } from '@/types/types'
 
 defineProps<{
   name: string
@@ -12,26 +11,35 @@ defineProps<{
 
 const itemState = useItemState()
 
+// 可被锁定：排除占位与亵渎
+const eligibleAffixFamilies = computed(() =>
+  itemState.affixFamilies.filter(
+    (af) => af.id !== SESSION3_CONFIG.PLACEHOLDER_ID && !af.desecrated,
+  ),
+)
+
 const disable = computed(() => {
-  return !(itemState.affixes.length >= 4 && !itemState.lockedAffixId)
+  return !(
+    itemState.affixes.length >= 4 &&
+    !itemState.lockedAffixId &&
+    eligibleAffixFamilies.value.length > 0
+  )
 })
 
-// 破溃宝珠
-// 锁定一个随机词缀，使其在下一次改造时不会被移除。
-// 影响剥离石、混沌石
+// 破溃宝珠：锁定一个随机词缀家族
 const lockModifier = () => {
-  const shouldLockAffixFamily = reverseRandomlyObtainAffixFamily<Affix[]>(
-    // session3: 不能锁定亵渎词缀
-    itemState.affixFamilies.filter((af) => af.id !== SESSION3_CONFIG.PLACEHOLDER_ID),
-  )
+  if (disable.value) return
 
-  if (shouldLockAffixFamily) {
-    itemState.setLockedAffixId(shouldLockAffixFamily.id)
+  const shouldLock = reverseRandomlyObtainAffixFamily<Affix[]>(eligibleAffixFamilies.value as any)
+
+  if (shouldLock?.id) {
+    itemState.setLockedAffixId(shouldLock.id)
   }
 }
 </script>
-<template>
-  <button @click="lockModifier()" :disabled="disable">{{ name }}</button>
-</template>
 
-<style scoped></style>
+<template>
+  <button class="btn btn--secondary" :disabled="disable" @click="lockModifier">
+    {{ name }}
+  </button>
+</template>
