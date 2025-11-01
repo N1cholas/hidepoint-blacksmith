@@ -1,3 +1,0 @@
-export const SESSION3_CONFIG = {
-  PLACEHOLDER_ID: 'PLACEHOLDER_ID',
-}
