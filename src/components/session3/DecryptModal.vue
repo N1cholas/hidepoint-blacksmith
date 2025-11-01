@@ -10,6 +10,7 @@ import { MOD_GENERATION_TYPE, type Affix, type AffixFamily } from '@/types/types
 import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
 import DecryptList from './DecryptList.vue'
 import Button from '../Button.vue'
+import { useOmenState } from '@/stores/omenState'
 
 defineProps<{
   name: string
@@ -19,19 +20,29 @@ const showModal = ref(false)
 const normalMods = useBowNormalModsFamily()
 const itemState = useItemState()
 const session3State = useSession3State()
+const omenState = useOmenState()
+
+const echoesCounts = ref<number>(1)
 
 const disable = computed(() => !session3State.placeholder)
 
 const decryptingAffixFamily = ref<AffixFamily[]>([])
 const decryptingAffixes = ref<Affix[]>([])
 
+const replaceInfos = ref<{
+  newAffixFamily: AffixFamily
+  affixFamilyIndex: number
+  newAffix: Affix
+  affixIndex: number
+} | null>(null)
+
 // 解密亵渎占位符
 // 展示3条词缀以及重选按钮
-const generateDecryptPool = (counts: number) => {
+const generateDecryptAffix = (num: number) => {
   const modGenerationType = session3State.placeholder?.modGenerationTypeID
   decryptingAffixFamily.value = []
   decryptingAffixes.value = []
-  for (let i = 0; i < counts; i++) {
+  for (let i = 0; i < num; i++) {
     const newAffixFamily = generateAddPool(
       normalMods.normalModsFamily,
       itemState.affixFamilies.concat(decryptingAffixFamily.value),
@@ -56,15 +67,10 @@ const generateDecryptPool = (counts: number) => {
 
 const openDecryptModal = () => {
   showModal.value = true
-  generateDecryptPool(3)
+  echoesCounts.value = 1
+  generateDecryptAffix(3)
 }
 
-const replaceInfos = ref<{
-  newAffixFamily: AffixFamily
-  affixFamilyIndex: number
-  newAffix: Affix
-  affixIndex: number
-} | null>(null)
 const handleSelect = (payload: { key: string; item: Affix; index: number }) => {
   if (!session3State.placeholder) return
 
@@ -95,6 +101,11 @@ const handleConfirm = () => {
   replaceInfos.value = null
   showModal.value = false
 }
+
+const handleReselect = () => {
+  echoesCounts.value--
+  generateDecryptAffix(3)
+}
 </script>
 <template>
   <Button id="show-modal" @click="openDecryptModal" :disabled="disable">{{ name }}</Button>
@@ -109,7 +120,13 @@ const handleConfirm = () => {
       </template>
       <template #footer>
         <Button @click="handleConfirm" :disable="replaceInfos">确定</Button>
-        <Button class="mr-20" @click="generateDecryptPool(3)">重选词缀</Button>
+        <Button
+          class="mr-20"
+          @click="handleReselect"
+          :disabled="!(omenState.omenConfig.abyssalEchoes && echoesCounts > 0)"
+        >
+          重选词缀
+        </Button>
       </template>
     </Modal>
   </Teleport>

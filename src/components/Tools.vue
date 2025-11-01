@@ -97,20 +97,22 @@ const itemState = useItemState()
       <Jawbone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
       <Jawbone name="遗存颚骨" :minimumLevel="0" :maximumLevel="itemState.itemLevel" />
       <Jawbone name="远古颚骨" :minimumLevel="40" :maximumLevel="itemState.itemLevel" />
+      <!-- 
       <button class="tools">啃噬肋骨</button>
       <button class="tools">远古肋骨</button>
       <button class="tools">遗存肋骨</button>
       <button class="tools">啃噬锁骨</button>
       <button class="tools">远古锁骨</button>
-      <button class="tools">遗存锁骨</button>
-      <button class="tools">深渊回响预兆</button>
+      <button class="tools">遗存锁骨</button> 
+      -->
+      <Omen name="深渊回响预兆" omenConfigKey="abyssalEchoes" />
+      <Omen name="光明预兆" omenConfigKey="light" />
+      <Omen name="左旋死灵预兆" omenConfigKey="sinistralNecromancy" />
+      <Omen name="右旋死灵预兆" omenConfigKey="dextralNecromancy" />
       <button class="tools">至高预兆</button>
       <button class="tools">领主预兆</button>
       <button class="tools">黑血预兆</button>
       <button class="tools">腐烂预兆</button>
-      <button class="tools">光明预兆</button>
-      <button class="tools">左旋死灵预兆</button>
-      <button class="tools">右旋死灵预兆</button>
     </div>
   </ToolWrapper>
 

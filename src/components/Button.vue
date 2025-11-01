@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <button class="button" @click="$emit('click')"><slot></slot></button>
+  <button class="button"><slot></slot></button>
 </template>
 
 <style scoped>
@@ -29,6 +29,7 @@
   cursor: not-allowed;
   pointer-events: none;
   filter: grayscale(0.06);
+  color: var(--color-text-muted);
 }
 
 .button:disabled:hover,

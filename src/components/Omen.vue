@@ -32,7 +32,11 @@ input {
   user-select: none;
   outline: 2px solid transparent;
   border-radius: 2px;
-  padding: 1px 6px;
+  padding: 2px 6px;
+}
+
+.omen:hover {
+  background: hsla(160, 100%, 37%, 0.1);
 }
 
 .selected {

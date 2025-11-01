@@ -62,6 +62,11 @@ export type OmenConfig = {
   // 剥离
   sinistralAnnulment: boolean
   dextralAnnulment: boolean
+  // session3
+  abyssalEchoes: boolean
+  sinistralNecromancy: boolean
+  dextralNecromancy: boolean
+  light: boolean
 }
 
 export type GenerateAddPoolOptions = {

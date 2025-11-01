@@ -24,6 +24,16 @@ export const useOmenState = defineStore('OmenState', () => {
     sinistralAnnulment: false,
     // 右旋剥离
     dextralAnnulment: false,
+    // session3 ----------------------------------------------------------
+    // 深渊回响
+    abyssalEchoes: false,
+    // 左旋死灵术
+    sinistralNecromancy: false,
+    // 右旋死灵术
+    dextralNecromancy: false,
+    // 光明
+    light: false,
+    // session3 ----------------------------------------------------------
   }
 
   const omenConfig = ref<OmenConfig>(initConfig)
