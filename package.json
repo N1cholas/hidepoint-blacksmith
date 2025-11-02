@@ -18,13 +18,19 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^14.0.0",
+    "lodash": "^4.17.21",
     "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "tdesign-vue-next": "^1.17.2",
     "vue": "^3.5.22",
+    "vue-i18n": "^11.1.12",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@tsconfig/node22": "^22.0.2",
+    "@types/lodash": "^4.17.20",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^22.18.11",
     "@vitejs/plugin-vue": "^6.0.1",
