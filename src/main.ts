@@ -5,7 +5,7 @@ import router from './router'
 import pinia from './stores'
 import i18n from './locales'
 
-// 引入组件库的少量全局样式变量
+import './styles/index.css'
 import 'tdesign-vue-next/es/style/index.css'
 
 const app = createApp(App)

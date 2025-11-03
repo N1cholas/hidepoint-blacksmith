@@ -3,8 +3,6 @@ import { useLocalStorage, usePreferredLanguages } from '@vueuse/core'
 import en_US from './lang/en_US'
 import zh_CN from './lang/zh_CN'
 
-export type Locale = 'en_US' | 'zh_CN'
-
 function resolveLocale(): Locale {
   const saved = useLocalStorage('tdesign-starter-locale', 'zh_CN').value as Locale | null
 
