@@ -1,15 +1,29 @@
 <script setup lang="ts">
+import { t } from '@/locales'
+import useLocale from '@/locales/useLocale'
 import { routes } from '@/router'
 import IconTranslate from '@/styles/icons/IconTranslate.vue'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+const locale = useLocale()
 
 const routePath = ref('/')
+
+const menuRoutes = computed(() =>
+  routes.map((r) => ({
+    ...r,
+    label: t(r.meta?.titleKey as string),
+  })),
+)
 
 watch(routePath, () => {
   router.push(routePath.value)
 })
+
+const toggleLocale = () => {
+  locale.setLocale(locale.locale === 'zh_CN' ? 'en_US' : 'zh_CN')
+}
 </script>
 
 <template>
@@ -19,10 +33,10 @@ watch(routePath, () => {
     </div>
     <div class="nav">
       <t-head-menu v-model="routePath" class="header">
-        <t-menu-item v-for="route in routes" :key="route.path" :value="route.path">
-          <span>{{ route.name }}</span>
+        <t-menu-item v-for="route in menuRoutes" :key="route.path" :value="route.path">
+          <span>{{ route.label }}</span>
         </t-menu-item>
-        <div class="icon-wrapper">
+        <div @click="toggleLocale" class="icon-wrapper">
           <IconTranslate />
         </div>
       </t-head-menu>
@@ -50,6 +64,7 @@ watch(routePath, () => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .icon-wrapper:hover {

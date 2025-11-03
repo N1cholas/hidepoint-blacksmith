@@ -1,11 +1,15 @@
-import HidepointPlace from '@/pages/HidepointPlace.vue'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import HidepointPlace from '@/pages/HidepointPlace.vue'
 
-export const routes = [
-  // i18n
-  { path: '/', component: HomePage, name: 'HomePage' },
-  { path: '/hidepoint-place', component: HidepointPlace, name: 'HidepointPlace' },
+export const routes: RouteRecordRaw[] = [
+  { path: '/', name: 'home', component: HomePage, meta: { titleKey: 'nav.home' } },
+  {
+    path: '/hidepoint-place',
+    name: 'hidepointPlace',
+    component: HidepointPlace,
+    meta: { titleKey: 'nav.hidepointPlace' },
+  },
 ]
 
 const router = createRouter({

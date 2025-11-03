@@ -3,8 +3,10 @@ import { useLocalStorage, usePreferredLanguages } from '@vueuse/core'
 import en_US from './lang/en_US'
 import zh_CN from './lang/zh_CN'
 
-function resolveLocale(): Locale {
-  const saved = useLocalStorage('tdesign-starter-locale', 'zh_CN').value as Locale | null
+export const LOCALE_STORE_KEY = 'tdesign-starter-locale'
+
+const resolveLocale = (): Locale => {
+  const saved = useLocalStorage<Locale>(LOCALE_STORE_KEY, 'zh_CN').value
 
   if (saved) return saved
 
@@ -23,12 +25,6 @@ export const i18n = createI18n({
   },
 })
 
-export function setLocale(locale: Locale) {
-  i18n.global.locale.value = locale
-
-  useLocalStorage('tdesign-starter-locale', 'zh_CN').value = locale
-
-  document.documentElement.lang = locale
-}
+export const { t } = i18n.global
 
 export default i18n

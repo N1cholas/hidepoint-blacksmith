@@ -1,7 +1,9 @@
-~<script setup lang="ts"></script>
+<script setup lang="ts">
+import { t } from '@/locales'
+</script>
 
 <template>
-  <t-typography-title level="h1">H1. Homepage</t-typography-title>
+  <t-typography-title level="h1">{{ t('common.title') }}</t-typography-title>
 </template>
 
 <style scoped></style>
