@@ -1,51 +1,75 @@
-import { useLocalStorage, usePreferredLanguages } from '@vueuse/core'
-import { computed } from 'vue'
-import type { I18nOptions } from 'vue-i18n'
+import { usePreferredLanguages } from '@vueuse/core'
 import { createI18n } from 'vue-i18n'
+import en_US from './lang/en_US'
+import zh_CN from './lang/zh_CN'
 
-// 导入语言文件
-const langModules = import.meta.glob('./lang/*/index.ts', { eager: true })
-
-const langModuleMap = new Map<string, unknown>()
-
-export const langCode: Array<string> = []
+export const langCode: Locale[] = ['zh_CN', 'en_US'] as const
 
 export const localeConfigKey = 'tdesign-starter-locale'
 
-// 获取浏览器默认语言环境
-const languages = usePreferredLanguages()
+const readSavedLocale = (): Locale | null => {
+  const raw = window.localStorage.getItem(localeConfigKey) as Locale
 
-// 生成语言模块列表
-const generateLangModuleMap = () => {
-  const fullPaths = Object.keys(langModules)
-  fullPaths.forEach((fullPath) => {
-    const k = fullPath.replace('./lang', '')
-    const startIndex = 1
-    const lastIndex = k.lastIndexOf('/')
-    const code = k.substring(startIndex, lastIndex)
-    langCode.push(code)
-    langModuleMap.set(code, langModules[fullPath])
-  })
+  return raw && langCode.includes(raw) ? raw : null
 }
 
-// 导出 Message
-const importMessages = computed(() => {
-  generateLangModuleMap()
+const detectSystemLocale = (): Locale => {
+  const langs = usePreferredLanguages().value
 
-  const message: I18nOptions['messages'] = {}
-  langModuleMap.forEach((value: any, key) => {
-    message[key] = value.default
-  })
+  return langs[0]?.startsWith('zh') ? 'zh_CN' : 'en_US'
+}
 
-  return message
-})
+export const setI18nLanguage = (locale: Locale) => {
+  i18n.global.locale.value = locale
+
+  document.documentElement.lang = locale.replace('_', '-')
+
+  const l = document.documentElement.lang
+
+  const rtlPrefixes = ['ar', 'he', 'fa', 'ur']
+
+  document.documentElement.dir = rtlPrefixes.some((p) => l.startsWith(p)) ? 'rtl' : 'ltr'
+}
 
 export const i18n = createI18n({
   legacy: false,
-  locale: useLocalStorage(localeConfigKey, 'zh_CN').value || languages.value[0] || 'zh_CN',
-  fallbackLocale: 'zh_CN',
-  messages: importMessages.value,
-  globalInjection: true,
+  locale: readSavedLocale() || detectSystemLocale(),
+  messages: {
+    en_US,
+    zh_CN,
+  },
+  datetimeFormats: {
+    en_US: {
+      short: { year: 'numeric', month: 'short', day: 'numeric' },
+      long: {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+        hour: '2-digit',
+        minute: '2-digit',
+      },
+    },
+    zh_CN: {
+      short: { year: 'numeric', month: 'numeric', day: 'numeric' },
+      long: {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+        hour: '2-digit',
+        minute: '2-digit',
+      },
+    },
+  },
+  numberFormats: {
+    en_US: {
+      currency: { style: 'currency', currency: 'USD', currencyDisplay: 'symbol' },
+    },
+    zh_CN: {
+      currency: { style: 'currency', currency: 'CNY', currencyDisplay: 'symbol' },
+    },
+  },
 })
 
 export const { t } = i18n.global

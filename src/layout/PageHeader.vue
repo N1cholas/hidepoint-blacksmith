@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { t } from '@/locales'
-import { useLocale } from '@/locales/useLocale'
+import useLocale from '@/locales/useLocale'
 import { routes } from '@/router'
 import IconTranslate from '@/styles/icons/IconTranslate.vue'
 import { computed, ref, watch } from 'vue'
@@ -22,7 +22,7 @@ watch(routePath, () => {
 })
 
 const toggleLocale = () => {
-  locale.changeLocale(locale.locale.value === 'zh_CN' ? 'en_US' : 'zh_CN')
+  locale.setLocale(locale.locale === 'zh_CN' ? 'en_US' : 'zh_CN')
 }
 </script>
 
