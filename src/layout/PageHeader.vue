@@ -5,6 +5,8 @@ import { routes } from '@/router'
 import IconTranslate from '@/styles/icons/IconTranslate.vue'
 import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { SunnyFilledIcon, MoonFilledIcon } from 'tdesign-icons-vue-next'
+
 const router = useRouter()
 const locale = useLocale()
 
@@ -24,6 +26,15 @@ watch(routePath, () => {
 const toggleLocale = () => {
   locale.setLocale(locale.locale === 'zh_CN' ? 'en_US' : 'zh_CN')
 }
+
+const lightTheme = ref(true)
+watch(lightTheme, (isLight) => {
+  if (!isLight) {
+    document.documentElement.setAttribute('theme-mode', 'dark')
+  } else {
+    document.documentElement.removeAttribute('theme-mode')
+  }
+})
 </script>
 
 <template>
@@ -36,9 +47,19 @@ const toggleLocale = () => {
         <t-menu-item v-for="route in menuRoutes" :key="route.path" :value="route.path">
           <span>{{ route.label }}</span>
         </t-menu-item>
-        <div @click="toggleLocale" class="icon-wrapper">
+        <div @click="toggleLocale" class="locale">
           <IconTranslate />
         </div>
+        <t-switch v-model="lightTheme" size="large">
+          <template #label="slotProps">
+            <template v-if="slotProps.value">
+              <sunny-filled-icon />
+            </template>
+            <template v-else>
+              <moon-filled-icon />
+            </template>
+          </template>
+        </t-switch>
       </t-head-menu>
     </div>
   </header>
@@ -54,7 +75,7 @@ const toggleLocale = () => {
   font-weight: 600;
 }
 
-.icon-wrapper {
+.locale {
   display: inline-flex;
   color: var(--td-text-color-primary);
   border-radius: var(--td-radius-default);
@@ -67,7 +88,7 @@ const toggleLocale = () => {
   user-select: none;
 }
 
-.icon-wrapper:hover {
-  background-color: var(--td-gray-color-1);
+.locale:hover {
+  background-color: var(--td-bg-color-secondarycontainer-hover);
 }
 </style>
