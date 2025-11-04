@@ -1,27 +1,28 @@
 import { useLocalStorage } from '@vueuse/core'
-import { defineStore } from 'pinia'
+import type { GlobalConfigProvider } from 'tdesign-vue-next'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { LOCALE_STORE_KEY } from '.'
-import enConfig from 'tdesign-vue-next/es/locale/en_US'
-import zhConfig from 'tdesign-vue-next/es/locale/zh_CN'
 
-const useLocale = defineStore('locale', () => {
-  const i18n = useI18n()
+import { langCode, localeConfigKey } from '@/locales/index'
 
-  const locale = computed(() => i18n.locale.value as Locale)
+export function useLocale() {
+  const { locale, getLocaleMessage } = useI18n({ useScope: 'global' })
+  function changeLocale(lang: string) {
+    if (!langCode.includes(lang)) {
+      lang = 'zh_CN'
+    }
 
-  const setLocale = (locale: Locale) => {
-    i18n.locale.value = locale
-
-    useLocalStorage(LOCALE_STORE_KEY, 'zh_CN').value = locale
+    locale.value = lang
+    useLocalStorage(localeConfigKey, 'zh_CN').value = lang
   }
 
-  const componentLocale = computed(() => {
-    return locale.value === 'zh_CN' ? zhConfig : enConfig
+  const getComponentsLocale = computed(() => {
+    return (getLocaleMessage(locale.value) as any).componentsLocale as GlobalConfigProvider
   })
 
-  return { locale, setLocale, componentLocale }
-})
-
-export default useLocale
+  return {
+    changeLocale,
+    getComponentsLocale,
+    locale,
+  }
+}

@@ -1,28 +1,51 @@
-import { createI18n } from 'vue-i18n'
 import { useLocalStorage, usePreferredLanguages } from '@vueuse/core'
-import en_US from './lang/en_US'
-import zh_CN from './lang/zh_CN'
+import { computed } from 'vue'
+import type { I18nOptions } from 'vue-i18n'
+import { createI18n } from 'vue-i18n'
 
-export const LOCALE_STORE_KEY = 'tdesign-starter-locale'
+// 导入语言文件
+const langModules = import.meta.glob('./lang/*/index.ts', { eager: true })
 
-const resolveLocale = (): Locale => {
-  const saved = useLocalStorage<Locale>(LOCALE_STORE_KEY, 'zh_CN').value
+const langModuleMap = new Map<string, unknown>()
 
-  if (saved) return saved
+export const langCode: Array<string> = []
 
-  const sys = usePreferredLanguages().value[0] || 'zh_CN'
+export const localeConfigKey = 'tdesign-starter-locale'
 
-  return sys.startsWith('zh') ? 'zh_CN' : 'en_US'
+// 获取浏览器默认语言环境
+const languages = usePreferredLanguages()
+
+// 生成语言模块列表
+const generateLangModuleMap = () => {
+  const fullPaths = Object.keys(langModules)
+  fullPaths.forEach((fullPath) => {
+    const k = fullPath.replace('./lang', '')
+    const startIndex = 1
+    const lastIndex = k.lastIndexOf('/')
+    const code = k.substring(startIndex, lastIndex)
+    langCode.push(code)
+    langModuleMap.set(code, langModules[fullPath])
+  })
 }
+
+// 导出 Message
+const importMessages = computed(() => {
+  generateLangModuleMap()
+
+  const message: I18nOptions['messages'] = {}
+  langModuleMap.forEach((value: any, key) => {
+    message[key] = value.default
+  })
+
+  return message
+})
 
 export const i18n = createI18n({
   legacy: false,
-  locale: resolveLocale(),
+  locale: useLocalStorage(localeConfigKey, 'zh_CN').value || languages.value[0] || 'zh_CN',
   fallbackLocale: 'zh_CN',
-  messages: {
-    en_US,
-    zh_CN,
-  },
+  messages: importMessages.value,
+  globalInjection: true,
 })
 
 export const { t } = i18n.global
