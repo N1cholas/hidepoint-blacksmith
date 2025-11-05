@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { t } from '@/locales'
-import useLocale from '@/locales/useLocale'
 import { routes } from '@/router'
-import IconTranslate from '@/styles/icons/IconTranslate.vue'
 import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { SunnyFilledIcon, MoonFilledIcon } from 'tdesign-icons-vue-next'
+import PageThemeToggle from '@/components/PageThemeToggle.vue'
+import PageTranslate from '@/components/PageTranslate.vue'
 
 const router = useRouter()
-const locale = useLocale()
 
 const routePath = ref('/')
 
@@ -22,19 +20,6 @@ const menuRoutes = computed(() =>
 watch(routePath, () => {
   router.push(routePath.value)
 })
-
-const toggleLocale = () => {
-  locale.setLocale(locale.locale === 'zh_CN' ? 'en_US' : 'zh_CN')
-}
-
-const lightTheme = ref(true)
-watch(lightTheme, (isLight) => {
-  if (!isLight) {
-    document.documentElement.setAttribute('theme-mode', 'dark')
-  } else {
-    document.documentElement.removeAttribute('theme-mode')
-  }
-})
 </script>
 
 <template>
@@ -45,21 +30,13 @@ watch(lightTheme, (isLight) => {
     <div class="nav">
       <t-head-menu v-model="routePath" class="header">
         <t-menu-item v-for="route in menuRoutes" :key="route.path" :value="route.path">
-          <span>{{ route.label }}</span>
+          <t-typography-title level="h6">{{ route.label }}</t-typography-title>
         </t-menu-item>
-        <div @click="toggleLocale" class="locale">
-          <IconTranslate />
-        </div>
-        <t-switch v-model="lightTheme" size="large">
-          <template #label="slotProps">
-            <template v-if="slotProps.value">
-              <sunny-filled-icon />
-            </template>
-            <template v-else>
-              <moon-filled-icon />
-            </template>
-          </template>
-        </t-switch>
+        <t-divider layout="vertical" />
+        <page-translate />
+        <t-divider layout="vertical" />
+        <!-- theme持久化 -->
+        <page-theme-toggle />
       </t-head-menu>
     </div>
   </header>

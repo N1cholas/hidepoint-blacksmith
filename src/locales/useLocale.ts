@@ -13,7 +13,7 @@ const useLocale = defineStore('locale', () => {
   const setLocale = (locale: Locale) => {
     setI18nLanguage(locale)
 
-    window.localStorage.setItem(localeConfigKey, locale)
+    localStorage.setItem(localeConfigKey, locale)
   }
 
   const componentLocale = computed(() => {

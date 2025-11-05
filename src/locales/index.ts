@@ -8,7 +8,7 @@ export const langCode: Locale[] = ['zh_CN', 'en_US'] as const
 export const localeConfigKey = 'tdesign-starter-locale'
 
 const readSavedLocale = (): Locale | null => {
-  const raw = window.localStorage.getItem(localeConfigKey) as Locale
+  const raw = localStorage.getItem(localeConfigKey) as Locale
 
   return raw && langCode.includes(raw) ? raw : null
 }
