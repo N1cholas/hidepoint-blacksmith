@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PageHeader from '@/layout/PageHeader.vue'
-import PageFooter from '@/layout/PageFooter.vue'
+import AppHeader from '@/layout/AppHeader.vue'
+import AppFooter from '@/layout/AppFooter.vue'
 import useLocale from './locales/useLocale'
 
 const locale = useLocale()
@@ -10,13 +10,13 @@ const locale = useLocale()
   <t-config-provider :global-config="locale.componentLocale">
     <t-layout class="layout">
       <t-header>
-        <PageHeader />
+        <app-header />
       </t-header>
       <t-content>
         <RouterView />
       </t-content>
       <t-footer>
-        <PageFooter />
+        <app-footer />
       </t-footer>
     </t-layout>
   </t-config-provider>

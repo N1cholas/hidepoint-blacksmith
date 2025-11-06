@@ -71,3 +71,9 @@ pnpm test:e2e --debug
 ```sh
 pnpm lint
 ```
+
+## 徽标与品牌
+
+- 主色：Iron Gray `#111827` / `#374151`
+- 强调色：Ember Orange `#F97316`
+- 徽标：见 `logo.svg`
