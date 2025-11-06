@@ -3,9 +3,9 @@ import { t } from '@/locales'
 import { routes } from '@/router'
 import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import PageThemeToggle from '@/components/PageThemeToggle.vue'
-import PageTranslate from '@/components/PageTranslate.vue'
-import AppLogo from '@/components/AppLogo.vue'
+import AppThemeToggle from '@/layout/AppHeader/AppThemeToggle.vue'
+import AppTranslate from '@/layout/AppHeader/AppTranslate.vue'
+import AppLogo from '@/layout/AppHeader/AppLogo.vue'
 
 const router = useRouter()
 
@@ -32,9 +32,9 @@ watch(routePath, () => {
           <t-typography-title level="h6">{{ route.label }}</t-typography-title>
         </t-menu-item>
         <t-divider layout="vertical" />
-        <page-translate />
+        <app-translate />
         <t-divider layout="vertical" />
-        <page-theme-toggle />
+        <app-theme-toggle />
       </t-head-menu>
     </div>
   </header>

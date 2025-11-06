@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppHeader from '@/layout/AppHeader.vue'
+import AppHeader from '@/layout/AppHeader/AppHeader.vue'
 import AppFooter from '@/layout/AppFooter.vue'
 import useLocale from './locales/useLocale'
 
