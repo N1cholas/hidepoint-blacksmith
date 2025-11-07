@@ -8,14 +8,14 @@ const locale = useLocale()
 
 <template>
   <t-config-provider :global-config="locale.componentLocale">
-    <t-layout class="layout">
+    <t-layout class="app-content-wrapper">
       <t-header>
         <app-header />
       </t-header>
       <t-content>
         <RouterView />
       </t-content>
-      <t-footer>
+      <t-footer class="app-footer">
         <app-footer />
       </t-footer>
     </t-layout>
@@ -23,8 +23,12 @@ const locale = useLocale()
 </template>
 
 <style scoped>
-.layout {
+.app-content-wrapper {
   min-height: 100vh;
-  background: var(--td-bg-color-container);
+}
+
+.app-footer {
+  margin-top: 42px;
+  background-color: #f9f9f9;
 }
 </style>

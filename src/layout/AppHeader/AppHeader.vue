@@ -7,6 +7,7 @@ import AppThemeToggle from '@/layout/AppHeader/AppThemeToggle.vue'
 import AppTranslate from '@/layout/AppHeader/AppTranslate.vue'
 import AppLogo from '@/layout/AppHeader/AppLogo.vue'
 
+// 导航改为routerlink
 const router = useRouter()
 
 const routePath = ref('/')
@@ -18,9 +19,13 @@ const menuRoutes = computed(() =>
   })),
 )
 
-watch(routePath, () => {
-  router.push(routePath.value)
-})
+watch(
+  routePath,
+  () => {
+    router.push(routePath.value)
+  },
+  { immediate: true },
+)
 </script>
 
 <template>
