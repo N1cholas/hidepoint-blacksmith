@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>
+  <main class="container">
     <section class="title-wrapper">
       <h1 class="title" level="h1"><span>最接近</span><br />POE2做装的模拟器</h1>
       <p class="desc">易学易用，方便分享，赛季做装模拟器。</p>
@@ -11,27 +11,24 @@
     </section>
     <section class="highlights">
       <div class="box">
-        <h2>易学易用</h2>
-        <p>参考公式做装套路，BD成型快人一步。</p>
+        <h2>易用易分享</h2>
+        <p>体验公式做装套路，分享做装思路。</p>
       </div>
       <div class="box">
-        <h2>零成本</h2>
+        <h2>积累经验</h2>
         <p>零成本研究做装思路，积累做装经验。</p>
       </div>
       <div class="box">
         <h2>预估成本</h2>
-        <p>记录做装顺序以及成本，预估装备的市场价值。</p>
+        <p>记录做装过程以及成本，判断装备的市场价值。</p>
       </div>
     </section>
   </main>
 </template>
 
 <style scoped>
-main {
-  text-align: center;
-}
-
 .title-wrapper {
+  text-align: center;
   padding: 96px 32px;
 }
 
@@ -65,9 +62,6 @@ main {
 }
 
 .highlights {
-  max-width: 960px;
-  padding: 42px 32px;
-  margin: 0 auto;
   display: flex;
 }
 

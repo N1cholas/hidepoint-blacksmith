@@ -1,16 +1,17 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer>
+  <footer class="container">
     <section>
-      <t-typography-title level="h2">H2. TDesign footer</t-typography-title>
+      <p>确定域名，是否用cdn</p>
+      <p>确定代码开源协议</p>
+      <p>版权声明</p>
     </section>
   </footer>
 </template>
 
 <style scoped>
 section {
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 0 36px;
 }
 </style>
