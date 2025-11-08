@@ -3,11 +3,26 @@
 }
 
 .t-footer {
-  padding: 0; 
+  padding: 0;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 42px 32px;
+}
+
+:root {
+  --tf-brand-color: var(--td-brand-color-5);
+  --tf-text-color-primary: rgb(33, 53, 71);
+  --tf-text-color-secondary: rgba(60, 60, 60, 0.7);
+  --tf-bg-color-primary: #ffffff;
+  --tf-bg-color-secondary: rgb(249, 249, 249);
+}
+
+:root[theme-mode='dark'] {
+  --tf-text-color-primary: rgba(255, 255, 255, 0.87);
+  --tf-text-color-secondary: rgba(235, 235, 235, 0.6);
+  --tf-bg-color-primary: rgb(26, 26, 26);
+  --tf-bg-color-secondary: #242424;
 }

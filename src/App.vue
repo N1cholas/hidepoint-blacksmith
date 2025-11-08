@@ -1,34 +1,11 @@
 <script setup lang="ts">
-import AppHeader from '@/layout/AppHeader/AppHeader.vue'
-import AppFooter from '@/layout/AppFooter.vue'
-import useLocale from './locales/useLocale'
-
-const locale = useLocale()
+import AppLayout from './layout/AppLayout'
 </script>
 
 <template>
-  <t-config-provider :global-config="locale.componentLocale">
-    <t-layout class="app-content-wrapper">
-      <t-header>
-        <app-header />
-      </t-header>
-      <t-content>
-        <RouterView />
-      </t-content>
-      <t-footer class="app-footer">
-        <app-footer />
-      </t-footer>
-    </t-layout>
-  </t-config-provider>
+  <app-layout>
+    <RouterView />
+  </app-layout>
 </template>
 
-<style scoped>
-.app-content-wrapper {
-  min-height: 100vh;
-}
-
-.app-footer {
-  margin-top: 42px;
-  background-color: #f9f9f9;
-}
-</style>
+<style scoped></style>

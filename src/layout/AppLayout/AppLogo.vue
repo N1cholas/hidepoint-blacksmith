@@ -54,8 +54,6 @@ withDefaults(
 <style scoped>
 .app-logo text {
   font-weight: 700;
-  font-variation-settings: 'wght' 700;
-  font-optical-sizing: auto;
   user-select: none;
 }
 </style>

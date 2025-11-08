@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>
 
 <template>
   <main class="container">
@@ -6,13 +10,15 @@
       <h1 class="title" level="h1"><span>最接近</span><br />POE2做装的模拟器</h1>
       <p class="desc">易学易用，方便分享，赛季做装模拟器。</p>
       <div>
-        <t-button class="start-btn">立即模拟做装</t-button>
+        <t-button class="start-btn" @click="() => router.push('/hidepoint-place')">
+          立即模拟做装
+        </t-button>
       </div>
     </section>
     <section class="highlights">
       <div class="box">
         <h2>易用易分享</h2>
-        <p>体验公式做装套路，分享做装思路。</p>
+        <p>做装通货一目了然，体验公式做装套路，分享做装思路。</p>
       </div>
       <div class="box">
         <h2>积累经验</h2>
@@ -39,11 +45,11 @@
   letter-spacing: -1.5px;
   max-width: 960px;
   margin: 0 auto;
-  color: #213547;
+  color: var(--tf-text-color-primary);
 }
 
 .title span {
-  color: var(--td-brand-color-5);
+  color: var(--tf-brand-color);
   font-weight: bold;
 }
 
@@ -53,7 +59,7 @@
   transition: color 0.5s;
   font-size: 22px;
   margin: 24px auto 40px;
-  color: rgba(60, 60, 60, 0.7);
+  color: var(--tf-text-color-secondary);
 }
 
 .start-btn.t-button :deep(.t-button__text) {
@@ -78,10 +84,11 @@
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: bold;
+  color: var(--tf-text-color-primary);
 }
 
 .box p {
   font-size: 15px;
-  color: rgba(60, 60, 60, 0.7);
+  color: var(--tf-text-color-secondary);
 }
 </style>
