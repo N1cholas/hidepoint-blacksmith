@@ -2,15 +2,15 @@
 import { t } from '@/locales'
 import { routes } from '@/router'
 import { computed, ref, watch } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import AppThemeToggle from '@/layout/AppLayout/AppThemeToggle.vue'
 import AppTranslate from '@/layout/AppLayout/AppTranslate.vue'
 import AppLogo from '@/layout/AppLayout/AppLogo.vue'
 
-// 导航改为routerlink
 const router = useRouter()
+const route = useRoute()
 
-const routePath = ref('/')
+const routePath = ref(route.path)
 
 const menuRoutes = computed(() =>
   routes.map((r) => ({
@@ -19,13 +19,9 @@ const menuRoutes = computed(() =>
   })),
 )
 
-watch(
-  routePath,
-  () => {
-    router.push(routePath.value)
-  },
-  { immediate: true },
-)
+watch(routePath, (p) => {
+  if (p !== route.path) router.push(routePath.value)
+})
 </script>
 
 <template>

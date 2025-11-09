@@ -9,6 +9,7 @@
       <p>响应式适配</p>
       <p>原生重写首页，参考vue主题颜色</p>
       <p>后续组件库换shadcn/vue</p>
+      <p>e2e测试</p>
     </section>
   </footer>
 </template>
