@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import HidepointPlaceLayout from '@/layout/HidepointPlaceLayout'
+import InitItem from './hidepointPlace/InitItem.vue'
 
 const current = ref(0)
 
@@ -20,13 +21,7 @@ const onFinish = () => {
       @finish="onFinish"
     >
       <template #step-0>
-        <t-card header="步骤一 · 初始化">
-          <p class="desc">填写初始装备信息。</p>
-          <div class="body">
-            <!-- 这里放你的表单/选择项 -->
-            <t-button size="small" theme="primary">示例按钮</t-button>
-          </div>
-        </t-card>
+        <InitItem />
       </template>
 
       <template #step-1>
