@@ -16,6 +16,6 @@ export const newAffixFamily = (affixes: Affix[]): AffixFamily => {
     id: affixes[0].id,
     isPrefix: affixes[0].isPrefix,
     tags: affixes[0].tags,
-    hitAffix: null,
+    hitAffix: affixes[0],
   }
 }

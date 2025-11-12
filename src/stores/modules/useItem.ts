@@ -4,7 +4,10 @@ import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
 export enum ITEM_TYPE {
-  BOW = 'BOW',
+  Bow = 'Bow',
+  Quiver = 'Quiver',
+  Ring = 'Ring',
+  Amulet = 'Amulet',
 }
 
 export type UsedProps = {
@@ -15,17 +18,21 @@ export type UsedProps = {
 }
 
 export type ItemState = {
-  name: string | null
-  type: ITEM_TYPE | null
+  name: string
+  type: ITEM_TYPE
+  rarity: 'normal' | 'magic' | 'rare'
+  level: number
   usedProps: UsedProps
   affixFamilies: AffixFamily[]
   lockedAffix?: Affix
 }
 
-export const useItemState = defineStore('itemState', () => {
-  const initState = {
-    name: null,
-    type: null,
+export const useItem = defineStore('item', () => {
+  const initState: ItemState = {
+    name: '',
+    type: ITEM_TYPE.Bow,
+    rarity: 'normal',
+    level: 82,
     usedProps: {
       transmutationOrb: false, // 蜕变石
       augmentationOrb: false, // 增幅石
@@ -42,15 +49,6 @@ export const useItemState = defineStore('itemState', () => {
   }
 
   const $reset = () => (state.value = { ...initState })
-
-  const rarity = computed(() => {
-    const { transmutationOrb, augmentationOrb, regalOrb, exaltedOrb } = state.value.usedProps
-    if (exaltedOrb) return 'rare'
-    if (regalOrb) return 'rare'
-    if (augmentationOrb) return 'magic'
-    if (transmutationOrb) return 'magic'
-    return 'normal'
-  })
 
   const counts = computed(() => {
     let prefixCount = 0
@@ -72,5 +70,11 @@ export const useItemState = defineStore('itemState', () => {
     return state.value.affixFamilies.filter((family) => family.id !== state.value.lockedAffix?.id)
   })
 
-  return { state, setState, $reset, rarity, counts, withoutLocked }
+  const hitAffixes = computed(() => {
+    return state.value.affixFamilies
+      .map((family) => family.hitAffix)
+      .filter((affix) => affix !== null)
+  })
+
+  return { state, setState, $reset, counts, withoutLocked, hitAffixes }
 })

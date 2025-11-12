@@ -8,8 +8,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(5&ndash;8)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(5&ndash;8) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -18,8 +19,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(9&ndash;12)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(9&ndash;12) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -28,8 +30,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(13&ndash;16)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(13&ndash;16) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -38,8 +41,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(17&ndash;20)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(17&ndash;20) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -48,8 +52,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(21&ndash;24)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(21&ndash;24) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -58,8 +63,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(25&ndash;27)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(25&ndash;27) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -68,8 +74,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(28&ndash;30)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(28&ndash;30) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -78,8 +85,9 @@
           "isPrefix": false,
           "id": "Dexterity",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(31&ndash;33)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FDexterity\">敏捷</a>",
+          "str": "+(31&ndash;33) 敏捷",
           "tags": ["属性"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -87,7 +95,16 @@
       "id": "Dexterity",
       "isPrefix": false,
       "tags": ["属性"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "猫鼬之",
+        "level": 1,
+        "isPrefix": false,
+        "id": "Dexterity",
+        "dropChance": 1000,
+        "str": "+(5&ndash;8) 敏捷",
+        "tags": ["属性"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -97,8 +114,9 @@
           "isPrefix": false,
           "id": "LocalAttributeRequirements",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Attributes\" href=\"Attributes\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttributes\">属性</a>需求降低 <span class='mod-value'>15</span>%",
+          "str": "属性需求降低 15%",
           "tags": [],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -107,8 +125,9 @@
           "isPrefix": false,
           "id": "LocalAttributeRequirements",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Attributes\" href=\"Attributes\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttributes\">属性</a>需求降低 <span class='mod-value'>20</span>%",
+          "str": "属性需求降低 20%",
           "tags": [],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -117,8 +136,9 @@
           "isPrefix": false,
           "id": "LocalAttributeRequirements",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Attributes\" href=\"Attributes\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttributes\">属性</a>需求降低 <span class='mod-value'>25</span>%",
+          "str": "属性需求降低 25%",
           "tags": [],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -127,8 +147,9 @@
           "isPrefix": false,
           "id": "LocalAttributeRequirements",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Attributes\" href=\"Attributes\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttributes\">属性</a>需求降低 <span class='mod-value'>30</span>%",
+          "str": "属性需求降低 30%",
           "tags": [],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -137,8 +158,9 @@
           "isPrefix": false,
           "id": "LocalAttributeRequirements",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Attributes\" href=\"Attributes\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttributes\">属性</a>需求降低 <span class='mod-value'>35</span>%",
+          "str": "属性需求降低 35%",
           "tags": [],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -146,7 +168,16 @@
       "id": "LocalAttributeRequirements",
       "isPrefix": false,
       "tags": [],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "价值之",
+        "level": 24,
+        "isPrefix": false,
+        "id": "LocalAttributeRequirements",
+        "dropChance": 1000,
+        "str": "属性需求降低 15%",
+        "tags": [],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -156,8 +187,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 1000,
-          "str": "附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(4&ndash;5)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 9
         },
         {
@@ -166,8 +198,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 1000,
-          "str": "附加 <span class='mod-value'>(4&ndash;6)</span> - <span class='mod-value'>(7&ndash;11)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -176,8 +209,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 1000,
-          "str": "附加 <span class='mod-value'>(6&ndash;9)</span> - <span class='mod-value'>(11&ndash;16)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (6&ndash;9) - (11&ndash;16) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -186,8 +220,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 1000,
-          "str": "附加 <span class='mod-value'>(8&ndash;12)</span> - <span class='mod-value'>(14&ndash;21)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (8&ndash;12) - (14&ndash;21) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -196,8 +231,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 1000,
-          "str": "附加 <span class='mod-value'>(10&ndash;15)</span> - <span class='mod-value'>(18&ndash;26)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -206,8 +242,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 600,
-          "str": "附加 <span class='mod-value'>(13&ndash;20)</span> - <span class='mod-value'>(23&ndash;35)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (13&ndash;20) - (23&ndash;35) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -216,8 +253,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 400,
-          "str": "附加 <span class='mod-value'>(16&ndash;24)</span> - <span class='mod-value'>(28&ndash;42)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -226,8 +264,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 200,
-          "str": "附加 <span class='mod-value'>(21&ndash;31)</span> - <span class='mod-value'>(36&ndash;53)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (21&ndash;31) - (36&ndash;53) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -236,8 +275,9 @@
           "isPrefix": true,
           "id": "PhysicalDamage",
           "dropChance": 100,
-          "str": "附加 <span class='mod-value'>(26&ndash;39)</span> - <span class='mod-value'>(44&ndash;66)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害",
+          "str": "附加 (26&ndash;39) - (44&ndash;66) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -245,7 +285,16 @@
       "id": "PhysicalDamage",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "反光的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "PhysicalDamage",
+        "dropChance": 1000,
+        "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
+        "tags": ["伤害", "物理", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -255,8 +304,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(3&ndash;5)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 10
         },
         {
@@ -265,8 +315,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(4&ndash;6)</span> - <span class='mod-value'>(7&ndash;10)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 9
         },
         {
@@ -275,8 +326,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(7&ndash;11)</span> - <span class='mod-value'>(13&ndash;19)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (7&ndash;11) - (13&ndash;19) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -285,8 +337,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(13&ndash;19)</span> - <span class='mod-value'>(21&ndash;29)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (13&ndash;19) - (21&ndash;29) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -295,8 +348,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(20&ndash;24)</span> - <span class='mod-value'>(32&ndash;37)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -305,8 +359,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(25&ndash;33)</span> - <span class='mod-value'>(38&ndash;54)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (25&ndash;33) - (38&ndash;54) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -315,8 +370,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 480,
-          "str": "附加 <span class='mod-value'>(35&ndash;44)</span> - <span class='mod-value'>(56&ndash;71)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -325,8 +381,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 320,
-          "str": "附加 <span class='mod-value'>(47&ndash;59)</span> - <span class='mod-value'>(74&ndash;97)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (47&ndash;59) - (74&ndash;97) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -335,8 +392,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 200,
-          "str": "附加 <span class='mod-value'>(62&ndash;85)</span> - <span class='mod-value'>(101&ndash;129)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (62&ndash;85) - (101&ndash;129) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -345,8 +403,9 @@
           "isPrefix": true,
           "id": "FireDamage",
           "dropChance": 80,
-          "str": "附加 <span class='mod-value'>(88&ndash;101)</span> - <span class='mod-value'>(133&ndash;154)</span> <a data-keyword=\"Fire\" href=\"Fire_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FFire\">火焰</a>伤害",
+          "str": "附加 (88&ndash;101) - (133&ndash;154) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -354,7 +413,16 @@
       "id": "FireDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "火焰", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "加热的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "FireDamage",
+        "dropChance": 800,
+        "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
+        "tags": ["伤害", "元素", "火焰", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -364,8 +432,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(3&ndash;4)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 10
         },
         {
@@ -374,8 +443,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(3&ndash;5)</span> - <span class='mod-value'>(6&ndash;9)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 9
         },
         {
@@ -384,8 +454,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(6&ndash;9)</span> - <span class='mod-value'>(10&ndash;16)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (6&ndash;9) - (10&ndash;16) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -394,8 +465,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(11&ndash;15)</span> - <span class='mod-value'>(17&ndash;24)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (11&ndash;15) - (17&ndash;24) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -404,8 +476,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(17&ndash;20)</span> - <span class='mod-value'>(26&ndash;32)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -414,8 +487,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 800,
-          "str": "附加 <span class='mod-value'>(22&ndash;29)</span> - <span class='mod-value'>(34&ndash;44)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (22&ndash;29) - (34&ndash;44) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -424,8 +498,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 480,
-          "str": "附加 <span class='mod-value'>(31&ndash;38)</span> - <span class='mod-value'>(47&ndash;59)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -434,8 +509,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 320,
-          "str": "附加 <span class='mod-value'>(40&ndash;53)</span> - <span class='mod-value'>(62&ndash;80)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (40&ndash;53) - (62&ndash;80) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -444,8 +520,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 200,
-          "str": "附加 <span class='mod-value'>(55&ndash;69)</span> - <span class='mod-value'>(83&ndash;106)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (55&ndash;69) - (83&ndash;106) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -454,8 +531,9 @@
           "isPrefix": true,
           "id": "ColdDamage",
           "dropChance": 80,
-          "str": "附加 <span class='mod-value'>(72&ndash;81)</span> - <span class='mod-value'>(110&ndash;123)</span> <a data-keyword=\"Cold\" href=\"Cold_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCold\">冰霜</a>伤害",
+          "str": "附加 (72&ndash;81) - (110&ndash;123) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -463,7 +541,16 @@
       "id": "ColdDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "结霜的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "ColdDamage",
+        "dropChance": 800,
+        "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
+        "tags": ["伤害", "元素", "冰霜", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -473,8 +560,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>1</span> - <span class='mod-value'>(4&ndash;6)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 1 - (4&ndash;6) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 10
         },
         {
@@ -483,8 +571,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>1</span> - <span class='mod-value'>(13&ndash;19)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 1 - (13&ndash;19) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 9
         },
         {
@@ -493,8 +582,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(20&ndash;30)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;2) - (20&ndash;30) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -503,8 +593,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(36&ndash;52)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;2) - (36&ndash;52) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -513,8 +604,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>(1&ndash;3)</span> - <span class='mod-value'>(55&ndash;60)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -523,8 +615,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 1200,
-          "str": "附加 <span class='mod-value'>(1&ndash;4)</span> - <span class='mod-value'>(63&ndash;82)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;4) - (63&ndash;82) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -533,8 +626,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 720,
-          "str": "附加 <span class='mod-value'>(1&ndash;6)</span> - <span class='mod-value'>(85&ndash;107)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -543,8 +637,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 480,
-          "str": "附加 <span class='mod-value'>(1&ndash;8)</span> - <span class='mod-value'>(111&ndash;152)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;8) - (111&ndash;152) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -553,8 +648,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 300,
-          "str": "附加 <span class='mod-value'>(1&ndash;10)</span> - <span class='mod-value'>(157&ndash;196)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;10) - (157&ndash;196) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -563,8 +659,9 @@
           "isPrefix": true,
           "id": "LightningDamage",
           "dropChance": 120,
-          "str": "附加 <span class='mod-value'>(1&ndash;12)</span> - <span class='mod-value'>(202&ndash;234)</span> <a data-keyword=\"Lightning\" href=\"Lightning_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightning\">闪电</a>伤害",
+          "str": "附加 (1&ndash;12) - (202&ndash;234) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -572,7 +669,16 @@
       "id": "LightningDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "闪电", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "低鸣的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "LightningDamage",
+        "dropChance": 1200,
+        "str": "附加 1 - (4&ndash;6) 闪电伤害",
+        "tags": ["伤害", "元素", "闪电", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -582,8 +688,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(40&ndash;49)</span>%",
+          "str": "物理伤害提高 (40&ndash;49)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -592,8 +699,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(50&ndash;64)</span>%",
+          "str": "物理伤害提高 (50&ndash;64)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -602,8 +710,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(65&ndash;84)</span>%",
+          "str": "物理伤害提高 (65&ndash;84)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -612,8 +721,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 400,
-          "str": "物理伤害提高 <span class='mod-value'>(85&ndash;109)</span>%",
+          "str": "物理伤害提高 (85&ndash;109)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -622,8 +732,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 200,
-          "str": "物理伤害提高 <span class='mod-value'>(110&ndash;134)</span>%",
+          "str": "物理伤害提高 (110&ndash;134)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -632,8 +743,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 100,
-          "str": "物理伤害提高 <span class='mod-value'>(135&ndash;154)</span>%",
+          "str": "物理伤害提高 (135&ndash;154)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -642,8 +754,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 50,
-          "str": "物理伤害提高 <span class='mod-value'>(155&ndash;169)</span>%",
+          "str": "物理伤害提高 (155&ndash;169)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -652,8 +765,9 @@
           "isPrefix": true,
           "id": "LocalPhysicalDamagePercent",
           "dropChance": 25,
-          "str": "物理伤害提高 <span class='mod-value'>(170&ndash;179)</span>%",
+          "str": "物理伤害提高 (170&ndash;179)%",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -661,7 +775,16 @@
       "id": "LocalPhysicalDamagePercent",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "重量的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "LocalPhysicalDamagePercent",
+        "dropChance": 1000,
+        "str": "物理伤害提高 (40&ndash;49)%",
+        "tags": ["伤害", "物理", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -671,8 +794,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(15&ndash;19)</span>%<br><span class='mod-value'>+(16&ndash;20)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -681,8 +805,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(20&ndash;24)</span>%<br><span class='mod-value'>+(21&ndash;46)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (20&ndash;24)%<br>+(21&ndash;46) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -691,8 +816,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(25&ndash;34)</span>%<br><span class='mod-value'>+(47&ndash;72)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (25&ndash;34)%<br>+(47&ndash;72) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -701,8 +827,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 1000,
-          "str": "物理伤害提高 <span class='mod-value'>(35&ndash;44)</span>%<br><span class='mod-value'>+(73&ndash;97)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (35&ndash;44)%<br>+(73&ndash;97) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -711,8 +838,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 600,
-          "str": "物理伤害提高 <span class='mod-value'>(45&ndash;54)</span>%<br><span class='mod-value'>+(98&ndash;123)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (45&ndash;54)%<br>+(98&ndash;123) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -721,8 +849,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 400,
-          "str": "物理伤害提高 <span class='mod-value'>(55&ndash;64)</span>%<br><span class='mod-value'>+(124&ndash;149)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (55&ndash;64)%<br>+(124&ndash;149) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -731,8 +860,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 200,
-          "str": "物理伤害提高 <span class='mod-value'>(65&ndash;74)</span>%<br><span class='mod-value'>+(150&ndash;174)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (65&ndash;74)%<br>+(150&ndash;174) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -741,8 +871,9 @@
           "isPrefix": true,
           "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
           "dropChance": 100,
-          "str": "物理伤害提高 <span class='mod-value'>(75&ndash;79)</span>%<br><span class='mod-value'>+(175&ndash;200)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "物理伤害提高 (75&ndash;79)%<br>+(175&ndash;200) 命中值",
           "tags": ["伤害", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -750,7 +881,16 @@
       "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "侍从的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+        "dropChance": 1000,
+        "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
+        "tags": ["伤害", "物理", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -760,8 +900,9 @@
           "isPrefix": false,
           "id": "IncreaseSocketedGemLevel",
           "dropChance": 1000,
-          "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FProjectile\">投射物</a>技能等级 <span class='mod-value'>+1</span>",
+          "str": "所有投射物技能等级 +1",
           "tags": [],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -770,8 +911,9 @@
           "isPrefix": false,
           "id": "IncreaseSocketedGemLevel",
           "dropChance": 750,
-          "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FProjectile\">投射物</a>技能等级 <span class='mod-value'>+2</span>",
+          "str": "所有投射物技能等级 +2",
           "tags": [],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -780,8 +922,9 @@
           "isPrefix": false,
           "id": "IncreaseSocketedGemLevel",
           "dropChance": 500,
-          "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FProjectile\">投射物</a>技能等级 <span class='mod-value'>+3</span>",
+          "str": "所有投射物技能等级 +3",
           "tags": [],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -790,8 +933,9 @@
           "isPrefix": false,
           "id": "IncreaseSocketedGemLevel",
           "dropChance": 250,
-          "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FProjectile\">投射物</a>技能等级 <span class='mod-value'>+4</span>",
+          "str": "所有投射物技能等级 +4",
           "tags": [],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -800,8 +944,9 @@
           "isPrefix": false,
           "id": "IncreaseSocketedGemLevel",
           "dropChance": 100,
-          "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FProjectile\">投射物</a>技能等级 <span class='mod-value'>+5</span>",
+          "str": "所有投射物技能等级 +5",
           "tags": [],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -809,7 +954,16 @@
       "id": "IncreaseSocketedGemLevel",
       "isPrefix": false,
       "tags": [],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "射手之",
+        "level": 2,
+        "isPrefix": false,
+        "id": "IncreaseSocketedGemLevel",
+        "dropChance": 1000,
+        "str": "所有投射物技能等级 +1",
+        "tags": [],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -819,8 +973,9 @@
           "isPrefix": false,
           "id": "LifeLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(5&ndash;5.9)</span>% 转化为生命<a data-keyword=\"LifeLeech\" href=\"Life_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLifeLeech\">偷取</a>",
+          "str": "物理伤害的 (5&ndash;5.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -829,8 +984,9 @@
           "isPrefix": false,
           "id": "LifeLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(6&ndash;6.9)</span>% 转化为生命<a data-keyword=\"LifeLeech\" href=\"Life_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLifeLeech\">偷取</a>",
+          "str": "物理伤害的 (6&ndash;6.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -839,8 +995,9 @@
           "isPrefix": false,
           "id": "LifeLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(7&ndash;7.9)</span>% 转化为生命<a data-keyword=\"LifeLeech\" href=\"Life_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLifeLeech\">偷取</a>",
+          "str": "物理伤害的 (7&ndash;7.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -849,8 +1006,9 @@
           "isPrefix": false,
           "id": "LifeLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(8&ndash;8.9)</span>% 转化为生命<a data-keyword=\"LifeLeech\" href=\"Life_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLifeLeech\">偷取</a>",
+          "str": "物理伤害的 (8&ndash;8.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -858,7 +1016,16 @@
       "id": "LifeLeech",
       "isPrefix": false,
       "tags": ["生命", "物理", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "寄生之",
+        "level": 21,
+        "isPrefix": false,
+        "id": "LifeLeech",
+        "dropChance": 1000,
+        "str": "物理伤害的 (5&ndash;5.9)% 转化为生命偷取",
+        "tags": ["生命", "物理", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -868,8 +1035,9 @@
           "isPrefix": false,
           "id": "ManaLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(4&ndash;4.9)</span>% 转化为魔力<a data-keyword=\"ManaLeech\" href=\"Mana_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FManaLeech\">偷取</a>",
+          "str": "物理伤害的 (4&ndash;4.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -878,8 +1046,9 @@
           "isPrefix": false,
           "id": "ManaLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(5&ndash;5.9)</span>% 转化为魔力<a data-keyword=\"ManaLeech\" href=\"Mana_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FManaLeech\">偷取</a>",
+          "str": "物理伤害的 (5&ndash;5.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -888,8 +1057,9 @@
           "isPrefix": false,
           "id": "ManaLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(6&ndash;6.9)</span>% 转化为魔力<a data-keyword=\"ManaLeech\" href=\"Mana_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FManaLeech\">偷取</a>",
+          "str": "物理伤害的 (6&ndash;6.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -898,8 +1068,9 @@
           "isPrefix": false,
           "id": "ManaLeech",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FPhysical\">物理</a>伤害的 <span class='mod-value'>(7&ndash;7.9)</span>% 转化为魔力<a data-keyword=\"ManaLeech\" href=\"Mana_Leech\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FManaLeech\">偷取</a>",
+          "str": "物理伤害的 (7&ndash;7.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -907,7 +1078,16 @@
       "id": "ManaLeech",
       "isPrefix": false,
       "tags": ["魔力", "物理", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "饥渴之",
+        "level": 21,
+        "isPrefix": false,
+        "id": "ManaLeech",
+        "dropChance": 1000,
+        "str": "物理伤害的 (4&ndash;4.9)% 转化为魔力偷取",
+        "tags": ["魔力", "物理", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -917,8 +1097,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(4&ndash;6)</span> 点生命",
+          "str": "每击败一名敌人获得 (4&ndash;6) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -927,8 +1108,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(7&ndash;9)</span> 点生命",
+          "str": "每击败一名敌人获得 (7&ndash;9) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -937,8 +1119,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(10&ndash;18)</span> 点生命",
+          "str": "每击败一名敌人获得 (10&ndash;18) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -947,8 +1130,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(19&ndash;28)</span> 点生命",
+          "str": "每击败一名敌人获得 (19&ndash;28) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -957,8 +1141,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(29&ndash;40)</span> 点生命",
+          "str": "每击败一名敌人获得 (29&ndash;40) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -967,8 +1152,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(41&ndash;53)</span> 点生命",
+          "str": "每击败一名敌人获得 (41&ndash;53) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -977,8 +1163,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(54&ndash;68)</span> 点生命",
+          "str": "每击败一名敌人获得 (54&ndash;68) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -987,8 +1174,9 @@
           "isPrefix": false,
           "id": "LifeGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(69&ndash;84)</span> 点生命",
+          "str": "每击败一名敌人获得 (69&ndash;84) 点生命",
           "tags": ["生命"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -996,7 +1184,16 @@
       "id": "LifeGainedFromEnemyDeath",
       "isPrefix": false,
       "tags": ["生命"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "成功之",
+        "level": 1,
+        "isPrefix": false,
+        "id": "LifeGainedFromEnemyDeath",
+        "dropChance": 750,
+        "str": "每击败一名敌人获得 (4&ndash;6) 点生命",
+        "tags": ["生命"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1006,8 +1203,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(2&ndash;3)</span> 点魔力",
+          "str": "每击败一名敌人获得 (2&ndash;3) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -1016,8 +1214,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(4&ndash;5)</span> 点魔力",
+          "str": "每击败一名敌人获得 (4&ndash;5) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -1026,8 +1225,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(6&ndash;9)</span> 点魔力",
+          "str": "每击败一名敌人获得 (6&ndash;9) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -1036,8 +1236,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(10&ndash;14)</span> 点魔力",
+          "str": "每击败一名敌人获得 (10&ndash;14) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1046,8 +1247,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(15&ndash;20)</span> 点魔力",
+          "str": "每击败一名敌人获得 (15&ndash;20) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1056,8 +1258,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(21&ndash;27)</span> 点魔力",
+          "str": "每击败一名敌人获得 (21&ndash;27) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1066,8 +1269,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(28&ndash;35)</span> 点魔力",
+          "str": "每击败一名敌人获得 (28&ndash;35) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1076,8 +1280,9 @@
           "isPrefix": false,
           "id": "ManaGainedFromEnemyDeath",
           "dropChance": 750,
-          "str": "每击败一名敌人获得 <span class='mod-value'>(36&ndash;45)</span> 点魔力",
+          "str": "每击败一名敌人获得 (36&ndash;45) 点魔力",
           "tags": ["魔力"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1085,7 +1290,16 @@
       "id": "ManaGainedFromEnemyDeath",
       "isPrefix": false,
       "tags": ["魔力"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "吸收之",
+        "level": 1,
+        "isPrefix": false,
+        "id": "ManaGainedFromEnemyDeath",
+        "dropChance": 750,
+        "str": "每击败一名敌人获得 (2&ndash;3) 点魔力",
+        "tags": ["魔力"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1095,8 +1309,9 @@
           "isPrefix": false,
           "id": "LifeGainPerTarget",
           "dropChance": 1000,
-          "str": "每<a data-keyword=\"HitDamage\" href=\"Hit_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FHitDamage\">击中</a>一名敌人获得 <span class='mod-value'>2</span> 点生命",
+          "str": "每击中一名敌人获得 2 点生命",
           "tags": ["生命", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1105,8 +1320,9 @@
           "isPrefix": false,
           "id": "LifeGainPerTarget",
           "dropChance": 1000,
-          "str": "每<a data-keyword=\"HitDamage\" href=\"Hit_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FHitDamage\">击中</a>一名敌人获得 <span class='mod-value'>3</span> 点生命",
+          "str": "每击中一名敌人获得 3 点生命",
           "tags": ["生命", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1115,8 +1331,9 @@
           "isPrefix": false,
           "id": "LifeGainPerTarget",
           "dropChance": 1000,
-          "str": "每<a data-keyword=\"HitDamage\" href=\"Hit_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FHitDamage\">击中</a>一名敌人获得 <span class='mod-value'>4</span> 点生命",
+          "str": "每击中一名敌人获得 4 点生命",
           "tags": ["生命", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1125,8 +1342,9 @@
           "isPrefix": false,
           "id": "LifeGainPerTarget",
           "dropChance": 1000,
-          "str": "每<a data-keyword=\"HitDamage\" href=\"Hit_Damage\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FHitDamage\">击中</a>一名敌人获得 <span class='mod-value'>5</span> 点生命",
+          "str": "每击中一名敌人获得 5 点生命",
           "tags": ["生命", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1134,7 +1352,16 @@
       "id": "LifeGainPerTarget",
       "isPrefix": false,
       "tags": ["生命", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "回春之",
+        "level": 8,
+        "isPrefix": false,
+        "id": "LifeGainPerTarget",
+        "dropChance": 1000,
+        "str": "每击中一名敌人获得 2 点生命",
+        "tags": ["生命", "攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1144,8 +1371,9 @@
           "isPrefix": false,
           "id": "IncreasedAttackSpeed",
           "dropChance": 1000,
-          "str": "攻击速度加快 <span class='mod-value'>(5&ndash;7)</span>%",
+          "str": "攻击速度加快 (5&ndash;7)%",
           "tags": ["攻击", "速度"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1154,8 +1382,9 @@
           "isPrefix": false,
           "id": "IncreasedAttackSpeed",
           "dropChance": 1000,
-          "str": "攻击速度加快 <span class='mod-value'>(8&ndash;10)</span>%",
+          "str": "攻击速度加快 (8&ndash;10)%",
           "tags": ["攻击", "速度"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1164,8 +1393,9 @@
           "isPrefix": false,
           "id": "IncreasedAttackSpeed",
           "dropChance": 1000,
-          "str": "攻击速度加快 <span class='mod-value'>(11&ndash;13)</span>%",
+          "str": "攻击速度加快 (11&ndash;13)%",
           "tags": ["攻击", "速度"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1174,8 +1404,9 @@
           "isPrefix": false,
           "id": "IncreasedAttackSpeed",
           "dropChance": 500,
-          "str": "攻击速度加快 <span class='mod-value'>(14&ndash;16)</span>%",
+          "str": "攻击速度加快 (14&ndash;16)%",
           "tags": ["攻击", "速度"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1184,8 +1415,9 @@
           "isPrefix": false,
           "id": "IncreasedAttackSpeed",
           "dropChance": 400,
-          "str": "攻击速度加快 <span class='mod-value'>(17&ndash;19)</span>%",
+          "str": "攻击速度加快 (17&ndash;19)%",
           "tags": ["攻击", "速度"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1193,7 +1425,16 @@
       "id": "IncreasedAttackSpeed",
       "isPrefix": false,
       "tags": ["攻击", "速度"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "技巧之",
+        "level": 1,
+        "isPrefix": false,
+        "id": "IncreasedAttackSpeed",
+        "dropChance": 1000,
+        "str": "攻击速度加快 (5&ndash;7)%",
+        "tags": ["攻击", "速度"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1203,8 +1444,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 800,
-          "str": "<span class='mod-value'>+(11&ndash;32)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(11&ndash;32) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 10
         },
         {
@@ -1213,8 +1455,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 800,
-          "str": "<span class='mod-value'>+(33&ndash;60)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(33&ndash;60) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 9
         },
         {
@@ -1223,8 +1466,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 800,
-          "str": "<span class='mod-value'>+(61&ndash;84)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(61&ndash;84) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 8
         },
         {
@@ -1233,8 +1477,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 800,
-          "str": "<span class='mod-value'>+(85&ndash;123)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(85&ndash;123) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 7
         },
         {
@@ -1243,8 +1488,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 800,
-          "str": "<span class='mod-value'>+(124&ndash;167)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(124&ndash;167) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -1253,8 +1499,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 600,
-          "str": "<span class='mod-value'>+(168&ndash;236)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(168&ndash;236) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1263,8 +1510,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 600,
-          "str": "<span class='mod-value'>+(237&ndash;346)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(237&ndash;346) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1273,8 +1521,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 300,
-          "str": "<span class='mod-value'>+(347&ndash;450)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(347&ndash;450) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1283,8 +1532,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 200,
-          "str": "<span class='mod-value'>+(451&ndash;550)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(451&ndash;550) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1293,8 +1543,9 @@
           "isPrefix": true,
           "id": "IncreasedAccuracy",
           "dropChance": 100,
-          "str": "<span class='mod-value'>+(551&ndash;650)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值",
+          "str": "+(551&ndash;650) 命中值",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1302,7 +1553,16 @@
       "id": "IncreasedAccuracy",
       "isPrefix": true,
       "tags": ["攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "精确的",
+        "level": 1,
+        "isPrefix": true,
+        "id": "IncreasedAccuracy",
+        "dropChance": 800,
+        "str": "+(11&ndash;32) 命中值",
+        "tags": ["攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1312,8 +1572,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(1.01&ndash;1.5)</span>%",
+          "str": "暴击几率 +(1.01&ndash;1.5)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -1322,8 +1583,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(1.51&ndash;2.1)</span>%",
+          "str": "暴击几率 +(1.51&ndash;2.1)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1332,8 +1594,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 1000,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(2.11&ndash;2.7)</span>%",
+          "str": "暴击几率 +(2.11&ndash;2.7)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1342,8 +1605,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(3.11&ndash;3.8)</span>%",
+          "str": "暴击几率 +(3.11&ndash;3.8)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1352,8 +1616,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 250,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(3.81&ndash;4.4)</span>%",
+          "str": "暴击几率 +(3.81&ndash;4.4)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1362,8 +1627,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeChanceIncrease",
           "dropChance": 125,
-          "str": "<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCritical\">暴击</a>几率 <span class='mod-value'>+(4.41&ndash;5)</span>%",
+          "str": "暴击几率 +(4.41&ndash;5)%",
           "tags": ["攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1371,7 +1637,16 @@
       "id": "CriticalStrikeChanceIncrease",
       "isPrefix": false,
       "tags": ["攻击", "暴击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "威胁之",
+        "level": 1,
+        "isPrefix": false,
+        "id": "CriticalStrikeChanceIncrease",
+        "dropChance": 1000,
+        "str": "暴击几率 +(1.01&ndash;1.5)%",
+        "tags": ["攻击", "暴击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1381,8 +1656,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(10&ndash;11)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(10&ndash;11)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -1391,8 +1667,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(12&ndash;13)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(12&ndash;13)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1401,8 +1678,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(14&ndash;16)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(14&ndash;16)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1411,8 +1689,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 500,
-          "str": "<span class='mod-value'>+(17&ndash;19)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(17&ndash;19)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1421,8 +1700,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 250,
-          "str": "<span class='mod-value'>+(20&ndash;22)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(20&ndash;22)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1431,8 +1711,9 @@
           "isPrefix": false,
           "id": "CriticalStrikeMultiplier",
           "dropChance": 125,
-          "str": "<span class='mod-value'>+(23&ndash;25)</span>% <a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FCriticalDamageBonus\">暴击伤害加成</a>",
+          "str": "+(23&ndash;25)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1440,7 +1721,16 @@
       "id": "CriticalStrikeMultiplier",
       "isPrefix": false,
       "tags": ["伤害", "攻击", "暴击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "怒火之",
+        "level": 8,
+        "isPrefix": false,
+        "id": "CriticalStrikeMultiplier",
+        "dropChance": 1000,
+        "str": "+(10&ndash;11)% 暴击伤害加成",
+        "tags": ["伤害", "攻击", "暴击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1450,8 +1740,9 @@
           "isPrefix": false,
           "id": "LightRadiusAndAccuracy",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(10&ndash;20)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值<br><a data-keyword=\"LightRadius\" href=\"Light_Radius\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightRadius\">照亮范围</a>扩大 <span class='mod-value'>5</span>%",
+          "str": "+(10&ndash;20) 命中值<br>照亮范围扩大 5%",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1460,8 +1751,9 @@
           "isPrefix": false,
           "id": "LightRadiusAndAccuracy",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(21&ndash;40)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值<br><a data-keyword=\"LightRadius\" href=\"Light_Radius\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightRadius\">照亮范围</a>扩大 <span class='mod-value'>10</span>%",
+          "str": "+(21&ndash;40) 命中值<br>照亮范围扩大 10%",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1470,8 +1762,9 @@
           "isPrefix": false,
           "id": "LightRadiusAndAccuracy",
           "dropChance": 1000,
-          "str": "<span class='mod-value'>+(41&ndash;60)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAccuracy\">命中</a>值<br><a data-keyword=\"LightRadius\" href=\"Light_Radius\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FLightRadius\">照亮范围</a>扩大 <span class='mod-value'>15</span>%",
+          "str": "+(41&ndash;60) 命中值<br>照亮范围扩大 15%",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1479,7 +1772,16 @@
       "id": "LightRadiusAndAccuracy",
       "isPrefix": false,
       "tags": ["攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "闪亮之",
+        "level": 8,
+        "isPrefix": false,
+        "id": "LightRadiusAndAccuracy",
+        "dropChance": 1000,
+        "str": "+(10&ndash;20) 命中值<br>照亮范围扩大 5%",
+        "tags": ["攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1491,6 +1793,7 @@
           "dropChance": 250,
           "str": "弓类攻击发射一支额外箭矢",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1499,8 +1802,9 @@
           "isPrefix": false,
           "id": "AdditionalArrows",
           "dropChance": 125,
-          "str": "弓类攻击发射 <span class='mod-value'>2</span> 支额外箭矢",
+          "str": "弓类攻击发射 2 支额外箭矢",
           "tags": ["攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1508,7 +1812,16 @@
       "id": "AdditionalArrows",
       "isPrefix": false,
       "tags": ["攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "碎片之",
+        "level": 55,
+        "isPrefix": false,
+        "id": "AdditionalArrows",
+        "dropChance": 250,
+        "str": "弓类攻击发射一支额外箭矢",
+        "tags": ["攻击"],
+        "tier": -1
+      }
     },
     {
       "items": [
@@ -1518,8 +1831,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(19&ndash;35)</span>%",
+          "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 6
         },
         {
@@ -1528,8 +1842,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(36&ndash;52)</span>%",
+          "str": "攻击技能的元素伤害提高 (36&ndash;52)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 5
         },
         {
@@ -1538,8 +1853,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(53&ndash;62)</span>%",
+          "str": "攻击技能的元素伤害提高 (53&ndash;62)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 4
         },
         {
@@ -1548,8 +1864,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(63&ndash;72)</span>%",
+          "str": "攻击技能的元素伤害提高 (63&ndash;72)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 3
         },
         {
@@ -1558,8 +1875,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(73&ndash;86)</span>%",
+          "str": "攻击技能的元素伤害提高 (73&ndash;86)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 2
         },
         {
@@ -1568,8 +1886,9 @@
           "isPrefix": true,
           "id": "IncreasedWeaponElementalDamagePercent",
           "dropChance": 500,
-          "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FAttack\">攻击</a>技能的<a data-keyword=\"ElementalDamage\" href=\"Elemental_Damage_Types\" class=\"KeywordPopups\" data-hover=\"?s=Data%5CKeywordPopups%2FElementalDamage\">元素</a>伤害提高 <span class='mod-value'>(87&ndash;100)</span>%",
+          "str": "攻击技能的元素伤害提高 (87&ndash;100)%",
           "tags": ["伤害", "元素", "攻击"],
+          "tier": -1,
           "powerLevel": 1
         }
       ],
@@ -1577,7 +1896,16 @@
       "id": "IncreasedWeaponElementalDamagePercent",
       "isPrefix": true,
       "tags": ["伤害", "元素", "攻击"],
-      "hitAffix": null
+      "hitAffix": {
+        "name": "催化的",
+        "level": 4,
+        "isPrefix": true,
+        "id": "IncreasedWeaponElementalDamagePercent",
+        "dropChance": 500,
+        "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
+        "tags": ["伤害", "元素", "攻击"],
+        "tier": -1
+      }
     }
   ]
 }

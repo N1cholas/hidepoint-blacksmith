@@ -1,4 +1,5 @@
-import type { RawNormalAffix } from '@/types/modules/RawDataTypes'
+import type { RawNormalAffix } from '@/scripts/normalAffixesProcessor'
+import { handleHTMLString } from '../string/handleHTMLString'
 
 export type Affix = {
   name: string
@@ -9,7 +10,7 @@ export type Affix = {
   str: string
   tags: string[]
   // add new field
-  powerLevel: number
+  tier: number
   desecrated?: boolean
 }
 
@@ -36,8 +37,8 @@ export const newAffix = (rawAffix: RawNormalAffix): Affix => {
     // todo: 测试数据 -> ModFamilyList 只有一个元素
     id: rawAffix.ModFamilyList[0],
     dropChance: Number(rawAffix.DropChance),
-    str: rawAffix.str,
+    str: handleHTMLString(rawAffix.str),
     tags: rawAffix.mod_no.map((tag) => extractChinese(tag)),
-    powerLevel: -1,
+    tier: -1,
   }
 }
