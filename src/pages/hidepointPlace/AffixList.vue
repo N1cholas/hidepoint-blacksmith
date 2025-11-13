@@ -110,7 +110,7 @@ function keyOf(a: Affix, i: number): Key {
 .affix-fade-enter-from,
 .affix-fade-leave-to {
   opacity: 0;
-  transform: translateX(24px) scale(0.95);
+  transform: translateY(24px) scale(0.9);
 }
 .affix-fade-leave-active {
   position: absolute;

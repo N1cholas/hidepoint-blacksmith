@@ -55,7 +55,7 @@ const tierOptionsMap = computed(() => {
 
 <template>
   <div class="affix-search">
-    <AffixList :items="filteredAffixes" :itemKey="(a) => `${a.id}`">
+    <AffixList :items="filteredAffixes" :itemKey="(a) => `${a.id}-${a.tier}`">
       <template #actions="{ item }">
         <t-select
           class="tier-select"
@@ -69,7 +69,7 @@ const tierOptionsMap = computed(() => {
 
 <style scoped>
 .affix-search {
-  height: 80vh;
+  height: calc(100vh - 300px);
   overflow-y: scroll;
 }
 .tier-select {

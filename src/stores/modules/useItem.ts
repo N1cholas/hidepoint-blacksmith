@@ -3,12 +3,20 @@ import type { AffixFamily } from '@/utils/factory/newAffixFamily'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
-export enum ITEM_TYPE {
-  Bow = 'Bow',
-  Quiver = 'Quiver',
-  Ring = 'Ring',
-  Amulet = 'Amulet',
-}
+export const Item_Type_Options = [
+  { label: '弓', value: 'bow' },
+  { label: '箭袋', value: 'quiver' },
+]
+
+export type ItemType = (typeof Item_Type_Options)[number]['value']
+
+export const Item_Rarity_Options = [
+  { label: '普通', value: 'normal' },
+  { label: '魔法', value: 'magic' },
+  { label: '稀有', value: 'rare' },
+]
+
+export type ItemRarity = (typeof Item_Rarity_Options)[number]['value']
 
 export type UsedProps = {
   transmutationOrb: boolean
@@ -18,9 +26,8 @@ export type UsedProps = {
 }
 
 export type ItemState = {
-  name: string
-  type: ITEM_TYPE
-  rarity: 'normal' | 'magic' | 'rare'
+  type: ItemType
+  rarity: ItemRarity
   level: number
   usedProps: UsedProps
   affixFamilies: AffixFamily[]
@@ -29,8 +36,7 @@ export type ItemState = {
 
 export const useItem = defineStore('item', () => {
   const initState: ItemState = {
-    name: '',
-    type: ITEM_TYPE.Bow,
+    type: 'Bow',
     rarity: 'normal',
     level: 82,
     usedProps: {

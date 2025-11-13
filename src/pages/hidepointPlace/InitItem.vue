@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useItem } from '@/stores/modules/useItem'
+import { Item_Rarity_Options, useItem } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
 import { useData } from '@/stores/modules/useData'
@@ -18,10 +18,8 @@ const data = useData()
               v-model="item.state.type"
               size="small"
               :options="[
-                { label: '弓', value: 'bows' },
-                { label: '箭袋', value: 'quivers' },
-                { label: '戒指', value: 'rings' },
-                { label: '项链', value: 'amulets' },
+                { label: '弓', value: 'Bow' },
+                { label: '箭袋', value: 'Quiver' },
               ]"
               placeholder="选择"
             />
@@ -30,11 +28,7 @@ const data = useData()
             <t-select
               v-model="item.state.rarity"
               size="small"
-              :options="[
-                { label: '普通', value: 'normal' },
-                { label: '魔法', value: 'magic' },
-                { label: '稀有', value: 'rare' },
-              ]"
+              :options="Item_Rarity_Options"
               placeholder="选择"
             />
           </t-form-item>
