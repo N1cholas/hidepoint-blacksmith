@@ -2,9 +2,10 @@
 import { useItem } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
-import type { AffixFamily } from '@/utils/factory/newAffixFamily'
+import { useData } from '@/stores/modules/useData'
 
 const item = useItem()
+const data = useData()
 </script>
 
 <template>
@@ -48,7 +49,7 @@ const item = useItem()
 
         <div class="selected-wrap">
           <div class="selected-title">已选择（{{ item.hitAffixes.length }}）</div>
-          <AffixList :items="item.hitAffixes">
+          <AffixList :items="item.hitAffixes" :itemKey="(a) => `${a.id}-${a.tier}`" showTier>
             <template #actions="{ item }">
               <t-button size="small" theme="danger" @click="() => console.log(item)">移除</t-button>
             </template>
@@ -60,33 +61,7 @@ const item = useItem()
     <!-- 右 -->
     <div class="side right">
       <t-card header="词缀搜索与目录">
-        <AffixSearch
-          :families="
-            [
-              {
-                id: 'phys',
-                isPrefix: true,
-                items: [
-                  { str: '增加 25–35% 物理伤害', tier: 1 },
-                  { str: '增加 20–28% 物理伤害', tier: 2 },
-                ],
-              },
-              {
-                id: 'aspd',
-                isPrefix: false,
-                items: [
-                  { str: '攻击速度 +10–12%', tier: 2 },
-                  { str: '攻击速度 +7–9%', tier: 3 },
-                ],
-              },
-            ] as AffixFamily[]
-          "
-          :removable="false"
-        >
-          <template #actions="{ family, tier }">
-            <t-button size="small" @click="$emit('choose', { id: family.id, tier })">选择</t-button>
-          </template>
-        </AffixSearch>
+        <AffixSearch :affixFamilies="data.bowData"> </AffixSearch>
       </t-card>
     </div>
   </section>
@@ -128,5 +103,8 @@ const item = useItem()
   flex: 1 1 auto;
   min-width: 320px;
   max-width: 100%;
+}
+.slider :deep(.t-slider__button) {
+  background-color: var(--td-brand-color);
 }
 </style>

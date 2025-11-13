@@ -5,18 +5,14 @@ type Key = string | number
 
 export type AffixListProps = {
   items: Affix[]
-  itemKey?: keyof Affix | ((a: Affix, i: number) => Key)
+  itemKey: keyof Affix | ((a: Affix, i: number) => Key)
   showTier?: boolean
 }
 
-const props = withDefaults(defineProps<AffixListProps>(), {
-  items: () => [],
-  itemKey: () => 'id',
-  showTier: true,
-})
+const { items, itemKey, showTier } = defineProps<AffixListProps>()
 
 function keyOf(a: Affix, i: number): Key {
-  const k = props.itemKey
+  const k = itemKey
   return typeof k === 'function' ? k(a, i) : (a[k] as unknown as Key)
 }
 </script>
@@ -30,9 +26,7 @@ function keyOf(a: Affix, i: number): Key {
 
       <span class="text" v-html="a.str"></span>
 
-      <span v-show="showTier" class="tier">
-        {{ a.tier ? `T${a.tier}` : '—' }}
-      </span>
+      <span v-show="showTier" class="tier">T{{ a.tier }} </span>
 
       <div class="ops">
         <slot name="actions" :item="a" :index="i"></slot>

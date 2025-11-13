@@ -11,11 +11,11 @@ export const newAffixFamily = (affixes: Affix[]): AffixFamily => {
   }
 
   return {
-    items: affixes.map((affix, i) => ({ ...affix, powerLevel: affixes.length - i })),
+    items: affixes.map((affix, i): Affix => ({ ...affix, tier: affixes.length - i })),
     weight: affixes.reduce((acc, mod) => acc + mod.dropChance, 0),
     id: affixes[0].id,
     isPrefix: affixes[0].isPrefix,
     tags: affixes[0].tags,
-    hitAffix: affixes[0],
+    hitAffix: null,
   }
 }

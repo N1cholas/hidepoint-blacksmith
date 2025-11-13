@@ -10,8 +10,7 @@
           "dropChance": 1000,
           "str": "+(5&ndash;8) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "山猫之",
@@ -21,8 +20,7 @@
           "dropChance": 1000,
           "str": "+(9&ndash;12) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "狐狸之",
@@ -32,8 +30,7 @@
           "dropChance": 1000,
           "str": "+(13&ndash;16) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "猎鹰之",
@@ -43,8 +40,7 @@
           "dropChance": 1000,
           "str": "+(17&ndash;20) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "豹之",
@@ -54,8 +50,7 @@
           "dropChance": 1000,
           "str": "+(21&ndash;24) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "花豹之",
@@ -65,8 +60,7 @@
           "dropChance": 1000,
           "str": "+(25&ndash;27) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "美洲豹之",
@@ -76,8 +70,7 @@
           "dropChance": 1000,
           "str": "+(28&ndash;30) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "幻影之",
@@ -87,24 +80,14 @@
           "dropChance": 1000,
           "str": "+(31&ndash;33) 敏捷",
           "tags": ["属性"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 8000,
       "id": "Dexterity",
       "isPrefix": false,
       "tags": ["属性"],
-      "hitAffix": {
-        "name": "猫鼬之",
-        "level": 1,
-        "isPrefix": false,
-        "id": "Dexterity",
-        "dropChance": 1000,
-        "str": "+(5&ndash;8) 敏捷",
-        "tags": ["属性"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -116,8 +99,7 @@
           "dropChance": 1000,
           "str": "属性需求降低 15%",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "容易之",
@@ -127,8 +109,7 @@
           "dropChance": 1000,
           "str": "属性需求降低 20%",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "才华之",
@@ -138,8 +119,7 @@
           "dropChance": 1000,
           "str": "属性需求降低 25%",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "娴熟之",
@@ -149,8 +129,7 @@
           "dropChance": 1000,
           "str": "属性需求降低 30%",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "精通之",
@@ -160,24 +139,14 @@
           "dropChance": 1000,
           "str": "属性需求降低 35%",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 5000,
       "id": "LocalAttributeRequirements",
       "isPrefix": false,
       "tags": [],
-      "hitAffix": {
-        "name": "价值之",
-        "level": 24,
-        "isPrefix": false,
-        "id": "LocalAttributeRequirements",
-        "dropChance": 1000,
-        "str": "属性需求降低 15%",
-        "tags": [],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -189,8 +158,7 @@
           "dropChance": 1000,
           "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 9
+          "tier": 9
         },
         {
           "name": "磨光的",
@@ -200,8 +168,7 @@
           "dropChance": 1000,
           "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "抛光的",
@@ -211,8 +178,7 @@
           "dropChance": 1000,
           "str": "附加 (6&ndash;9) - (11&ndash;16) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "砥砺的",
@@ -222,8 +188,7 @@
           "dropChance": 1000,
           "str": "附加 (8&ndash;12) - (14&ndash;21) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "熠熠的",
@@ -233,8 +198,7 @@
           "dropChance": 1000,
           "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "韧炼的",
@@ -244,8 +208,7 @@
           "dropChance": 600,
           "str": "附加 (13&ndash;20) - (23&ndash;35) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "锋利的",
@@ -255,8 +218,7 @@
           "dropChance": 400,
           "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "锻炼的",
@@ -266,8 +228,7 @@
           "dropChance": 200,
           "str": "附加 (21&ndash;31) - (36&ndash;53) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "迸出的",
@@ -277,24 +238,14 @@
           "dropChance": 100,
           "str": "附加 (26&ndash;39) - (44&ndash;66) 物理伤害",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 6300,
       "id": "PhysicalDamage",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": {
-        "name": "反光的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "PhysicalDamage",
-        "dropChance": 1000,
-        "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
-        "tags": ["伤害", "物理", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -306,8 +257,7 @@
           "dropChance": 800,
           "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 10
+          "tier": 10
         },
         {
           "name": "闷烧的",
@@ -317,8 +267,7 @@
           "dropChance": 800,
           "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 9
+          "tier": 9
         },
         {
           "name": "冒烟的",
@@ -328,8 +277,7 @@
           "dropChance": 800,
           "str": "附加 (7&ndash;11) - (13&ndash;19) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "燃烧的",
@@ -339,8 +287,7 @@
           "dropChance": 800,
           "str": "附加 (13&ndash;19) - (21&ndash;29) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "火焰的",
@@ -350,8 +297,7 @@
           "dropChance": 800,
           "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "酷热的",
@@ -361,8 +307,7 @@
           "dropChance": 800,
           "str": "附加 (25&ndash;33) - (38&ndash;54) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "焚烧的",
@@ -372,8 +317,7 @@
           "dropChance": 480,
           "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "爆破的",
@@ -383,8 +327,7 @@
           "dropChance": 320,
           "str": "附加 (47&ndash;59) - (74&ndash;97) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "火化的",
@@ -394,8 +337,7 @@
           "dropChance": 200,
           "str": "附加 (62&ndash;85) - (101&ndash;129) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "焦化的",
@@ -405,24 +347,14 @@
           "dropChance": 80,
           "str": "附加 (88&ndash;101) - (133&ndash;154) 火焰伤害",
           "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 5880,
       "id": "FireDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "火焰", "攻击"],
-      "hitAffix": {
-        "name": "加热的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "FireDamage",
-        "dropChance": 800,
-        "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
-        "tags": ["伤害", "元素", "火焰", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -434,8 +366,7 @@
           "dropChance": 800,
           "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 10
+          "tier": 10
         },
         {
           "name": "冷冻的",
@@ -445,8 +376,7 @@
           "dropChance": 800,
           "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 9
+          "tier": 9
         },
         {
           "name": "结冰的",
@@ -456,8 +386,7 @@
           "dropChance": 800,
           "str": "附加 (6&ndash;9) - (10&ndash;16) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "寒风的",
@@ -467,8 +396,7 @@
           "dropChance": 800,
           "str": "附加 (11&ndash;15) - (17&ndash;24) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "急冻的",
@@ -478,8 +406,7 @@
           "dropChance": 800,
           "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "冻结的",
@@ -489,8 +416,7 @@
           "dropChance": 800,
           "str": "附加 (22&ndash;29) - (34&ndash;44) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "冰河的",
@@ -500,8 +426,7 @@
           "dropChance": 480,
           "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "极地的",
@@ -511,8 +436,7 @@
           "dropChance": 320,
           "str": "附加 (40&ndash;53) - (62&ndash;80) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "埋葬的",
@@ -522,8 +446,7 @@
           "dropChance": 200,
           "str": "附加 (55&ndash;69) - (83&ndash;106) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "晶化的",
@@ -533,24 +456,14 @@
           "dropChance": 80,
           "str": "附加 (72&ndash;81) - (110&ndash;123) 冰霜伤害",
           "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 5880,
       "id": "ColdDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "hitAffix": {
-        "name": "结霜的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "ColdDamage",
-        "dropChance": 800,
-        "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
-        "tags": ["伤害", "元素", "冰霜", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -562,8 +475,7 @@
           "dropChance": 1200,
           "str": "附加 1 - (4&ndash;6) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 10
+          "tier": 10
         },
         {
           "name": "嗡嗡的",
@@ -573,8 +485,7 @@
           "dropChance": 1200,
           "str": "附加 1 - (13&ndash;19) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 9
+          "tier": 9
         },
         {
           "name": "捕捉的",
@@ -584,8 +495,7 @@
           "dropChance": 1200,
           "str": "附加 (1&ndash;2) - (20&ndash;30) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "劈哩啪啦的",
@@ -595,8 +505,7 @@
           "dropChance": 1200,
           "str": "附加 (1&ndash;2) - (36&ndash;52) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "火花的",
@@ -606,8 +515,7 @@
           "dropChance": 1200,
           "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "电弧的",
@@ -617,8 +525,7 @@
           "dropChance": 1200,
           "str": "附加 (1&ndash;4) - (63&ndash;82) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "电震的",
@@ -628,8 +535,7 @@
           "dropChance": 720,
           "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "放电的",
@@ -639,8 +545,7 @@
           "dropChance": 480,
           "str": "附加 (1&ndash;8) - (111&ndash;152) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "电极的",
@@ -650,8 +555,7 @@
           "dropChance": 300,
           "str": "附加 (1&ndash;10) - (157&ndash;196) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "汽化的",
@@ -661,24 +565,14 @@
           "dropChance": 120,
           "str": "附加 (1&ndash;12) - (202&ndash;234) 闪电伤害",
           "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 8820,
       "id": "LightningDamage",
       "isPrefix": true,
       "tags": ["伤害", "元素", "闪电", "攻击"],
-      "hitAffix": {
-        "name": "低鸣的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "LightningDamage",
-        "dropChance": 1200,
-        "str": "附加 1 - (4&ndash;6) 闪电伤害",
-        "tags": ["伤害", "元素", "闪电", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -690,8 +584,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (40&ndash;49)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "锯齿的",
@@ -701,8 +594,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (50&ndash;64)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "邪恶的",
@@ -712,8 +604,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (65&ndash;84)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "狠毒的",
@@ -723,8 +614,7 @@
           "dropChance": 400,
           "str": "物理伤害提高 (85&ndash;109)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "嗜血的",
@@ -734,8 +624,7 @@
           "dropChance": 200,
           "str": "物理伤害提高 (110&ndash;134)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "残酷的",
@@ -745,8 +634,7 @@
           "dropChance": 100,
           "str": "物理伤害提高 (135&ndash;154)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "强横的",
@@ -756,8 +644,7 @@
           "dropChance": 50,
           "str": "物理伤害提高 (155&ndash;169)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "无情的",
@@ -767,24 +654,14 @@
           "dropChance": 25,
           "str": "物理伤害提高 (170&ndash;179)%",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3775,
       "id": "LocalPhysicalDamagePercent",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": {
-        "name": "重量的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "LocalPhysicalDamagePercent",
-        "dropChance": 1000,
-        "str": "物理伤害提高 (40&ndash;49)%",
-        "tags": ["伤害", "物理", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -796,8 +673,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "旅人的",
@@ -807,8 +683,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (20&ndash;24)%<br>+(21&ndash;46) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "掠夺者的",
@@ -818,8 +693,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (25&ndash;34)%<br>+(47&ndash;72) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "佣兵的",
@@ -829,8 +703,7 @@
           "dropChance": 1000,
           "str": "物理伤害提高 (35&ndash;44)%<br>+(73&ndash;97) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "冠军的",
@@ -840,8 +713,7 @@
           "dropChance": 600,
           "str": "物理伤害提高 (45&ndash;54)%<br>+(98&ndash;123) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "征服者的",
@@ -851,8 +723,7 @@
           "dropChance": 400,
           "str": "物理伤害提高 (55&ndash;64)%<br>+(124&ndash;149) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "帝王的",
@@ -862,8 +733,7 @@
           "dropChance": 200,
           "str": "物理伤害提高 (65&ndash;74)%<br>+(150&ndash;174) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "独裁者的",
@@ -873,24 +743,14 @@
           "dropChance": 100,
           "str": "物理伤害提高 (75&ndash;79)%<br>+(175&ndash;200) 命中值",
           "tags": ["伤害", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 5300,
       "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
       "isPrefix": true,
       "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": {
-        "name": "侍从的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-        "dropChance": 1000,
-        "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
-        "tags": ["伤害", "物理", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -902,8 +762,7 @@
           "dropChance": 1000,
           "str": "所有投射物技能等级 +1",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "制箭之",
@@ -913,8 +772,7 @@
           "dropChance": 750,
           "str": "所有投射物技能等级 +2",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "锐眼之",
@@ -924,8 +782,7 @@
           "dropChance": 500,
           "str": "所有投射物技能等级 +3",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "神箭手之",
@@ -935,8 +792,7 @@
           "dropChance": 250,
           "str": "所有投射物技能等级 +4",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "狙击手之",
@@ -946,24 +802,14 @@
           "dropChance": 100,
           "str": "所有投射物技能等级 +5",
           "tags": [],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 2600,
       "id": "IncreaseSocketedGemLevel",
       "isPrefix": false,
       "tags": [],
-      "hitAffix": {
-        "name": "射手之",
-        "level": 2,
-        "isPrefix": false,
-        "id": "IncreaseSocketedGemLevel",
-        "dropChance": 1000,
-        "str": "所有投射物技能等级 +1",
-        "tags": [],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -975,8 +821,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (5&ndash;5.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "蝗虫之",
@@ -986,8 +831,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (6&ndash;6.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "鲫鱼之",
@@ -997,8 +841,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (7&ndash;7.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "七鳃鳗之",
@@ -1008,24 +851,14 @@
           "dropChance": 1000,
           "str": "物理伤害的 (8&ndash;8.9)% 转化为生命偷取",
           "tags": ["生命", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 4000,
       "id": "LifeLeech",
       "isPrefix": false,
       "tags": ["生命", "物理", "攻击"],
-      "hitAffix": {
-        "name": "寄生之",
-        "level": 21,
-        "isPrefix": false,
-        "id": "LifeLeech",
-        "dropChance": 1000,
-        "str": "物理伤害的 (5&ndash;5.9)% 转化为生命偷取",
-        "tags": ["生命", "物理", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1037,8 +870,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (4&ndash;4.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "干渴之",
@@ -1048,8 +880,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (5&ndash;5.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "干旱之",
@@ -1059,8 +890,7 @@
           "dropChance": 1000,
           "str": "物理伤害的 (6&ndash;6.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "枯旱之",
@@ -1070,24 +900,14 @@
           "dropChance": 1000,
           "str": "物理伤害的 (7&ndash;7.9)% 转化为魔力偷取",
           "tags": ["魔力", "物理", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 4000,
       "id": "ManaLeech",
       "isPrefix": false,
       "tags": ["魔力", "物理", "攻击"],
-      "hitAffix": {
-        "name": "饥渴之",
-        "level": 21,
-        "isPrefix": false,
-        "id": "ManaLeech",
-        "dropChance": 1000,
-        "str": "物理伤害的 (4&ndash;4.9)% 转化为魔力偷取",
-        "tags": ["魔力", "物理", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1099,8 +919,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (4&ndash;6) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "胜利之",
@@ -1110,8 +929,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (7&ndash;9) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "凯旋之",
@@ -1121,8 +939,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (10&ndash;18) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "征服之",
@@ -1132,8 +949,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (19&ndash;28) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "称霸之",
@@ -1143,8 +959,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (29&ndash;40) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "勇气之",
@@ -1154,8 +969,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (41&ndash;53) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "荣耀之",
@@ -1165,8 +979,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (54&ndash;68) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "传说之",
@@ -1176,24 +989,14 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (69&ndash;84) 点生命",
           "tags": ["生命"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 6000,
       "id": "LifeGainedFromEnemyDeath",
       "isPrefix": false,
       "tags": ["生命"],
-      "hitAffix": {
-        "name": "成功之",
-        "level": 1,
-        "isPrefix": false,
-        "id": "LifeGainedFromEnemyDeath",
-        "dropChance": 750,
-        "str": "每击败一名敌人获得 (4&ndash;6) 点生命",
-        "tags": ["生命"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1205,8 +1008,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (2&ndash;3) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "逆渗透之",
@@ -1216,8 +1018,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (4&ndash;5) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "灌输之",
@@ -1227,8 +1028,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (6&ndash;9) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "裹挟之",
@@ -1238,8 +1038,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (10&ndash;14) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "消耗之",
@@ -1249,8 +1048,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (15&ndash;20) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "虹吸之",
@@ -1260,8 +1058,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (21&ndash;27) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "吞噬之",
@@ -1271,8 +1068,7 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (28&ndash;35) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "同化之",
@@ -1282,24 +1078,14 @@
           "dropChance": 750,
           "str": "每击败一名敌人获得 (36&ndash;45) 点魔力",
           "tags": ["魔力"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 6000,
       "id": "ManaGainedFromEnemyDeath",
       "isPrefix": false,
       "tags": ["魔力"],
-      "hitAffix": {
-        "name": "吸收之",
-        "level": 1,
-        "isPrefix": false,
-        "id": "ManaGainedFromEnemyDeath",
-        "dropChance": 750,
-        "str": "每击败一名敌人获得 (2&ndash;3) 点魔力",
-        "tags": ["魔力"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1311,8 +1097,7 @@
           "dropChance": 1000,
           "str": "每击中一名敌人获得 2 点生命",
           "tags": ["生命", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "恢复之",
@@ -1322,8 +1107,7 @@
           "dropChance": 1000,
           "str": "每击中一名敌人获得 3 点生命",
           "tags": ["生命", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "再生之",
@@ -1333,8 +1117,7 @@
           "dropChance": 1000,
           "str": "每击中一名敌人获得 4 点生命",
           "tags": ["生命", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "营养之",
@@ -1344,24 +1127,14 @@
           "dropChance": 1000,
           "str": "每击中一名敌人获得 5 点生命",
           "tags": ["生命", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 4000,
       "id": "LifeGainPerTarget",
       "isPrefix": false,
       "tags": ["生命", "攻击"],
-      "hitAffix": {
-        "name": "回春之",
-        "level": 8,
-        "isPrefix": false,
-        "id": "LifeGainPerTarget",
-        "dropChance": 1000,
-        "str": "每击中一名敌人获得 2 点生命",
-        "tags": ["生命", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1373,8 +1146,7 @@
           "dropChance": 1000,
           "str": "攻击速度加快 (5&ndash;7)%",
           "tags": ["攻击", "速度"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "轻松之",
@@ -1384,8 +1156,7 @@
           "dropChance": 1000,
           "str": "攻击速度加快 (8&ndash;10)%",
           "tags": ["攻击", "速度"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "成熟之",
@@ -1395,8 +1166,7 @@
           "dropChance": 1000,
           "str": "攻击速度加快 (11&ndash;13)%",
           "tags": ["攻击", "速度"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "声望之",
@@ -1406,8 +1176,7 @@
           "dropChance": 500,
           "str": "攻击速度加快 (14&ndash;16)%",
           "tags": ["攻击", "速度"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "喝采之",
@@ -1417,24 +1186,14 @@
           "dropChance": 400,
           "str": "攻击速度加快 (17&ndash;19)%",
           "tags": ["攻击", "速度"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3900,
       "id": "IncreasedAttackSpeed",
       "isPrefix": false,
       "tags": ["攻击", "速度"],
-      "hitAffix": {
-        "name": "技巧之",
-        "level": 1,
-        "isPrefix": false,
-        "id": "IncreasedAttackSpeed",
-        "dropChance": 1000,
-        "str": "攻击速度加快 (5&ndash;7)%",
-        "tags": ["攻击", "速度"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1446,8 +1205,7 @@
           "dropChance": 800,
           "str": "+(11&ndash;32) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 10
+          "tier": 10
         },
         {
           "name": "可靠的",
@@ -1457,8 +1215,7 @@
           "dropChance": 800,
           "str": "+(33&ndash;60) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 9
+          "tier": 9
         },
         {
           "name": "专注的",
@@ -1468,8 +1225,7 @@
           "dropChance": 800,
           "str": "+(61&ndash;84) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 8
+          "tier": 8
         },
         {
           "name": "从容的",
@@ -1479,8 +1235,7 @@
           "dropChance": 800,
           "str": "+(85&ndash;123) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 7
+          "tier": 7
         },
         {
           "name": "如一的",
@@ -1490,8 +1245,7 @@
           "dropChance": 800,
           "str": "+(124&ndash;167) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "稳健的",
@@ -1501,8 +1255,7 @@
           "dropChance": 600,
           "str": "+(168&ndash;236) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "狩猎者的",
@@ -1512,8 +1265,7 @@
           "dropChance": 600,
           "str": "+(237&ndash;346) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "游侠的",
@@ -1523,8 +1275,7 @@
           "dropChance": 300,
           "str": "+(347&ndash;450) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "亚马逊的",
@@ -1534,8 +1285,7 @@
           "dropChance": 200,
           "str": "+(451&ndash;550) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "女武神的",
@@ -1545,24 +1295,14 @@
           "dropChance": 100,
           "str": "+(551&ndash;650) 命中值",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 5800,
       "id": "IncreasedAccuracy",
       "isPrefix": true,
       "tags": ["攻击"],
-      "hitAffix": {
-        "name": "精确的",
-        "level": 1,
-        "isPrefix": true,
-        "id": "IncreasedAccuracy",
-        "dropChance": 800,
-        "str": "+(11&ndash;32) 命中值",
-        "tags": ["攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1574,8 +1314,7 @@
           "dropChance": 1000,
           "str": "暴击几率 +(1.01&ndash;1.5)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "浩劫之",
@@ -1585,8 +1324,7 @@
           "dropChance": 1000,
           "str": "暴击几率 +(1.51&ndash;2.1)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "灾害之",
@@ -1596,8 +1334,7 @@
           "dropChance": 1000,
           "str": "暴击几率 +(2.11&ndash;2.7)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "灾难之",
@@ -1607,8 +1344,7 @@
           "dropChance": 500,
           "str": "暴击几率 +(3.11&ndash;3.8)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "灭绝之",
@@ -1618,8 +1354,7 @@
           "dropChance": 250,
           "str": "暴击几率 +(3.81&ndash;4.4)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "解构之",
@@ -1629,24 +1364,14 @@
           "dropChance": 125,
           "str": "暴击几率 +(4.41&ndash;5)%",
           "tags": ["攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3875,
       "id": "CriticalStrikeChanceIncrease",
       "isPrefix": false,
       "tags": ["攻击", "暴击"],
-      "hitAffix": {
-        "name": "威胁之",
-        "level": 1,
-        "isPrefix": false,
-        "id": "CriticalStrikeChanceIncrease",
-        "dropChance": 1000,
-        "str": "暴击几率 +(1.01&ndash;1.5)%",
-        "tags": ["攻击", "暴击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1658,8 +1383,7 @@
           "dropChance": 1000,
           "str": "+(10&ndash;11)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "愤怒之",
@@ -1669,8 +1393,7 @@
           "dropChance": 1000,
           "str": "+(12&ndash;13)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "震怒之",
@@ -1680,8 +1403,7 @@
           "dropChance": 1000,
           "str": "+(14&ndash;16)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "狂暴之",
@@ -1691,8 +1413,7 @@
           "dropChance": 500,
           "str": "+(17&ndash;19)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "凶暴之",
@@ -1702,8 +1423,7 @@
           "dropChance": 250,
           "str": "+(20&ndash;22)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "毁灭之",
@@ -1713,24 +1433,14 @@
           "dropChance": 125,
           "str": "+(23&ndash;25)% 暴击伤害加成",
           "tags": ["伤害", "攻击", "暴击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3875,
       "id": "CriticalStrikeMultiplier",
       "isPrefix": false,
       "tags": ["伤害", "攻击", "暴击"],
-      "hitAffix": {
-        "name": "怒火之",
-        "level": 8,
-        "isPrefix": false,
-        "id": "CriticalStrikeMultiplier",
-        "dropChance": 1000,
-        "str": "+(10&ndash;11)% 暴击伤害加成",
-        "tags": ["伤害", "攻击", "暴击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1742,8 +1452,7 @@
           "dropChance": 1000,
           "str": "+(10&ndash;20) 命中值<br>照亮范围扩大 5%",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "光明之",
@@ -1753,8 +1462,7 @@
           "dropChance": 1000,
           "str": "+(21&ndash;40) 命中值<br>照亮范围扩大 10%",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "光辉之",
@@ -1764,24 +1472,14 @@
           "dropChance": 1000,
           "str": "+(41&ndash;60) 命中值<br>照亮范围扩大 15%",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3000,
       "id": "LightRadiusAndAccuracy",
       "isPrefix": false,
       "tags": ["攻击"],
-      "hitAffix": {
-        "name": "闪亮之",
-        "level": 8,
-        "isPrefix": false,
-        "id": "LightRadiusAndAccuracy",
-        "dropChance": 1000,
-        "str": "+(10&ndash;20) 命中值<br>照亮范围扩大 5%",
-        "tags": ["攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1793,8 +1491,7 @@
           "dropChance": 250,
           "str": "弓类攻击发射一支额外箭矢",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "繁多之",
@@ -1804,24 +1501,14 @@
           "dropChance": 125,
           "str": "弓类攻击发射 2 支额外箭矢",
           "tags": ["攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 375,
       "id": "AdditionalArrows",
       "isPrefix": false,
       "tags": ["攻击"],
-      "hitAffix": {
-        "name": "碎片之",
-        "level": 55,
-        "isPrefix": false,
-        "id": "AdditionalArrows",
-        "dropChance": 250,
-        "str": "弓类攻击发射一支额外箭矢",
-        "tags": ["攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     },
     {
       "items": [
@@ -1833,8 +1520,7 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 6
+          "tier": 6
         },
         {
           "name": "注入的",
@@ -1844,8 +1530,7 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (36&ndash;52)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 5
+          "tier": 5
         },
         {
           "name": "赋能的",
@@ -1855,8 +1540,7 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (53&ndash;62)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 4
+          "tier": 4
         },
         {
           "name": "释放的",
@@ -1866,8 +1550,7 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (63&ndash;72)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 3
+          "tier": 3
         },
         {
           "name": "威压的",
@@ -1877,8 +1560,7 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (73&ndash;86)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 2
+          "tier": 2
         },
         {
           "name": "毁灭的",
@@ -1888,24 +1570,14 @@
           "dropChance": 500,
           "str": "攻击技能的元素伤害提高 (87&ndash;100)%",
           "tags": ["伤害", "元素", "攻击"],
-          "tier": -1,
-          "powerLevel": 1
+          "tier": 1
         }
       ],
       "weight": 3000,
       "id": "IncreasedWeaponElementalDamagePercent",
       "isPrefix": true,
       "tags": ["伤害", "元素", "攻击"],
-      "hitAffix": {
-        "name": "催化的",
-        "level": 4,
-        "isPrefix": true,
-        "id": "IncreasedWeaponElementalDamagePercent",
-        "dropChance": 500,
-        "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
-        "tags": ["伤害", "元素", "攻击"],
-        "tier": -1
-      }
+      "hitAffix": null
     }
   ]
 }
