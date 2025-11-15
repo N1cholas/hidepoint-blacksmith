@@ -5,6 +5,8 @@ import AffixSearch from './AffixSearch.vue'
 import { useData } from '@/stores/modules/useData'
 import type { Affix } from '@/utils/factory/newAffix'
 import { DeleteIcon } from 'tdesign-icons-vue-next'
+import { computed } from 'vue'
+import { generateAddPool } from '@/utils/pool/generateAddPool'
 
 const item = useItem()
 const data = useData()
@@ -14,6 +16,28 @@ const removeAffix = (affix: Affix) => {
     affixFamilies: item.state.affixFamilies.filter((af) => af.id !== affix.id),
   })
 }
+
+const affixFamiliesPool = computed(() => {
+  if (item.state.affixFamilies.length >= 6) return []
+
+  let pool = generateAddPool(data.bowData, item.state.affixFamilies, {
+    deduplication: true,
+    onlyPrefix: item.counts.suffixCount >= 3,
+    onlySuffix: item.counts.prefixCount >= 3,
+  })
+
+  const itemLevel = item.state.level
+
+  pool = pool
+    .map((af) => ({
+      ...af,
+      items: af.items.filter((a) => a.level <= itemLevel).sort((a, b) => a.tier - b.tier),
+    }))
+    // 当af没有符合等级affix的时候，需要清除当前af
+    .filter((af) => af.items.length)
+
+  return pool
+})
 </script>
 
 <template>
@@ -65,7 +89,7 @@ const removeAffix = (affix: Affix) => {
     <!-- 右 -->
     <div class="side right">
       <t-card header="词缀搜索与目录">
-        <AffixSearch :affixFamiliesData="data.bowData"> </AffixSearch>
+        <AffixSearch :affixFamiliesPool="affixFamiliesPool"> </AffixSearch>
       </t-card>
     </div>
   </section>
