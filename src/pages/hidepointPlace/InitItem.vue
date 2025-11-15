@@ -3,9 +3,17 @@ import { Item_Rarity_Options, useItem } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
 import { useData } from '@/stores/modules/useData'
+import type { Affix } from '@/utils/factory/newAffix'
+import { DeleteIcon } from 'tdesign-icons-vue-next'
 
 const item = useItem()
 const data = useData()
+
+const removeAffix = (affix: Affix) => {
+  item.setState({
+    affixFamilies: item.state.affixFamilies.filter((af) => af.id !== affix.id),
+  })
+}
 </script>
 
 <template>
@@ -45,7 +53,9 @@ const data = useData()
           <div class="selected-title">已选择（{{ item.hitAffixes.length }}）</div>
           <AffixList :items="item.hitAffixes" :itemKey="(a) => `${a.id}-${a.tier}`" showTier>
             <template #actions="{ item }">
-              <t-button size="small" theme="danger" @click="() => console.log(item)">移除</t-button>
+              <t-button size="small" theme="danger" @click="() => removeAffix(item)">
+                <delete-icon></delete-icon>
+              </t-button>
             </template>
           </AffixList>
         </div>
@@ -55,7 +65,7 @@ const data = useData()
     <!-- 右 -->
     <div class="side right">
       <t-card header="词缀搜索与目录">
-        <AffixSearch :affixFamilies="data.bowData"> </AffixSearch>
+        <AffixSearch :affixFamiliesData="data.bowData"> </AffixSearch>
       </t-card>
     </div>
   </section>

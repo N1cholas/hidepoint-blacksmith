@@ -42,6 +42,10 @@ function keyOf(a: Affix, i: number): Key {
   padding: 0;
   display: grid;
   gap: 8px;
+
+  --affix-dur: 520ms;
+  --affix-move-dur: 640ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .affix-item {
@@ -52,9 +56,8 @@ function keyOf(a: Affix, i: number): Key {
   background: var(--td-bg-color-container);
   border: 1px solid var(--td-border-level-1-color);
   border-radius: var(--td-radius-medium);
-  transition:
-    background-color 0.18s ease,
-    border-color 0.18s ease;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 .affix-item:hover {
   background: var(--td-bg-color-container-hover);
@@ -103,17 +106,24 @@ function keyOf(a: Affix, i: number): Key {
 }
 
 .affix-fade-enter-active,
-.affix-fade-leave-active,
-.affix-fade-move {
-  transition: all 0.35s cubic-bezier(0.55, 0, 0.1, 1);
+.affix-fade-leave-active {
+  transition:
+    opacity var(--affix-dur) var(--ease-out),
+    transform var(--affix-dur) var(--ease-out);
 }
-.affix-fade-enter-from,
+.affix-fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+}
 .affix-fade-leave-to {
   opacity: 0;
-  transform: translateY(24px) scale(0.9);
+  transform: translateY(-8px) scale(0.98);
 }
 .affix-fade-leave-active {
   position: absolute;
-  width: 100%;
+}
+
+.affix-fade-move {
+  transition: transform var(--affix-move-dur) var(--ease-out);
 }
 </style>

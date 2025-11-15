@@ -3,42 +3,50 @@ import type { AffixFamily } from '@/utils/factory/newAffixFamily'
 import AffixList from './AffixList.vue'
 import { computed, ref, watch } from 'vue'
 import type { Affix } from '@/utils/factory/newAffix'
+import { TaskAdd1Icon } from 'tdesign-icons-vue-next'
+import { useItem } from '@/stores/modules/useItem'
 
 export type AffixSearchProps = {
-  affixFamilies: AffixFamily[]
+  affixFamiliesData: AffixFamily[]
 }
 
-const { affixFamilies } = defineProps<AffixSearchProps>()
+const item = useItem()
 
-const selectedTierMap = ref<Record<string, number>>(
-  affixFamilies
-    .map((af) => ({ [af.id]: af.items[af.items.length - 1]?.tier || -1 }))
-    .reduce((a, b) => ({ ...a, ...b }), {}),
-)
+const { affixFamiliesData } = defineProps<AffixSearchProps>()
+
+const selectedTiers = ref<Record<string, number>>({})
 
 watch(
-  () => affixFamilies,
+  () => affixFamiliesData,
   (affixFamilies) => {
-    const next = { ...selectedTierMap.value }
+    const next = { ...selectedTiers.value }
     for (const af of affixFamilies) {
       if (!af?.items?.length) continue
       if (next[af.id] == null) next[af.id] = af.items[af.items.length - 1]?.tier || -1
     }
-    selectedTierMap.value = next
+    selectedTiers.value = next
   },
-  { immediate: true, deep: true },
+  { deep: true, immediate: true },
 )
 
-const filteredAffixes = computed(() => {
-  return affixFamilies.map((af) => {
-    const t = selectedTierMap.value[af.id]
+const generateAffixesByTier = computed(() => {
+  const addedIDs = item.state.affixFamilies.map((af) => af.id)
+
+  const filteredAF = affixFamiliesData
+    .filter((af) => !addedIDs.includes(af.id))
+    .map((af) => ({ ...af, items: af.items.filter((a) => a.level <= item.state.level) }))
+
+  const filteredA = filteredAF.map((af) => {
+    const t = selectedTiers.value?.[af.id]
     return af.items.find((a) => a.tier === t) ?? af.items[0]
   }) as Affix[]
+
+  return filteredA
 })
 
 const tierOptionsMap = computed(() => {
   const tierOptionsMap = new Map()
-  affixFamilies.forEach((af) => {
+  affixFamiliesData.forEach((af) => {
     tierOptionsMap.set(
       af.id,
       af.items
@@ -51,17 +59,33 @@ const tierOptionsMap = computed(() => {
   })
   return tierOptionsMap
 })
+
+const addAffix = (affix: Affix) => {
+  const hitAffixFamily = affixFamiliesData.find((af) => af.id === affix.id)
+
+  if (!hitAffixFamily) return
+
+  hitAffixFamily.hitAffix = affix
+
+  item.setState({
+    affixFamilies: [...item.state.affixFamilies, hitAffixFamily],
+  })
+}
 </script>
 
 <template>
   <div class="affix-search">
-    <AffixList :items="filteredAffixes" :itemKey="(a) => `${a.id}-${a.tier}`">
+    <AffixList :items="generateAffixesByTier" :itemKey="(a) => `${a.id}-${a.tier}`">
       <template #actions="{ item }">
         <t-select
           class="tier-select"
-          v-model="selectedTierMap[item.id]"
+          size="small"
+          v-model="selectedTiers[item.id]"
           :options="tierOptionsMap.get(item.id)"
         />
+        <t-button size="small" @click="() => addAffix(item)">
+          <task-add-1-icon></task-add-1-icon>
+        </t-button>
       </template>
     </AffixList>
   </div>
