@@ -3,20 +3,20 @@ import type { AffixFamily } from '@/utils/factory/newAffixFamily'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
-export const Item_Type_Options = [
+export const Item_Type_Options: { label: string; value: ItemType }[] = [
   { label: '弓', value: 'bow' },
   { label: '箭袋', value: 'quiver' },
 ]
 
-export type ItemType = (typeof Item_Type_Options)[number]['value']
+export type ItemType = 'bow' | 'quiver'
 
-export const Item_Rarity_Options = [
+export const Item_Rarity_Options: { label: string; value: ItemRarity }[] = [
   { label: '普通', value: 'normal' },
   { label: '魔法', value: 'magic' },
   { label: '稀有', value: 'rare' },
 ]
 
-export type ItemRarity = (typeof Item_Rarity_Options)[number]['value']
+export type ItemRarity = 'normal' | 'magic' | 'rare'
 
 export type UsedProps = {
   transmutationOrb: boolean
@@ -36,7 +36,7 @@ export type ItemState = {
 
 export const useItem = defineStore('item', () => {
   const initState: ItemState = {
-    type: 'Bow',
+    type: 'bow',
     rarity: 'normal',
     level: 82,
     usedProps: {
@@ -76,11 +76,41 @@ export const useItem = defineStore('item', () => {
     return state.value.affixFamilies.filter((family) => family.id !== state.value.lockedAffix?.id)
   })
 
+  const affixDataPool = new Map<ItemType, Promise<any>>([
+    ['bow', import('@/scripts/data/bow.json')],
+    ['quiver', import('@/scripts/data/quiver.json')],
+  ])
+
   const hitAffixes = computed(() => {
     return state.value.affixFamilies
       .map((family) => family.hitAffix)
-      .filter((affix) => affix !== null)
+      .filter((affix): affix is Affix => affix !== null) // 类型守卫
   })
 
-  return { state, setState, $reset, counts, withoutLocked, hitAffixes }
+  const currentAffixFamiliesPool = computed(async () => {
+    const curType = state.value.type
+
+    if (!curType || !affixDataPool.has(curType)) {
+      console.warn(`No data pool found for type: ${curType}`)
+      return null
+    }
+
+    try {
+      const data = await affixDataPool.get(curType)
+      return data.default
+    } catch (error) {
+      console.error(`Failed to load data for type: ${curType}`, error)
+      return null
+    }
+  })
+
+  return {
+    state,
+    setState,
+    $reset,
+    counts,
+    withoutLocked,
+    hitAffixes,
+    currentAffixFamiliesPool,
+  }
 })

@@ -5,6 +5,7 @@ export const deduplicationAffixFamilies = (
   curAffixFamilies: AffixFamily[],
 ) => {
   const curIDs = new Set(curAffixFamilies.map((affixFamily) => affixFamily.id))
+
   return affixFamiliesPool.filter((affixFamily) => !curIDs.has(affixFamily.id))
 }
 

@@ -1,0 +1,2071 @@
+{
+  "baseitem": {
+    "cn": "Quivers",
+    "name": 20,
+    "link_name": "<a class=\"ItemClasses KeywordPopups\" href=\"Quivers\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/f2a8aa1a4a318deb5c799021d31c0eb622ae4fe4568b6609a7e73b286e370d3a\">箭袋</a>",
+    "attr": []
+  },
+  "config": {
+    "normal": {
+      "show_type": "clickable",
+      "icon": "",
+      "title": "",
+      "display_tier": true,
+      "display_chance": true
+    },
+    "shaper": {
+      "type": "shaper",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/shaper-symbol.webp'/>",
+      "title": "The Shaper",
+      "display_chance": true
+    },
+    "elder": {
+      "type": "elder",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/elder-symbol.webp'/>",
+      "title": "The Elder",
+      "display_chance": true
+    },
+    "crusader": {
+      "type": "crusader",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/crusader-symbol.webp'/>",
+      "title": "圣战者",
+      "display_chance": true
+    },
+    "redeemer": {
+      "type": "redeemer",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/redeemer-symbol.webp'/>",
+      "title": "救赎者",
+      "display_chance": true
+    },
+    "hunter": {
+      "type": "hunter",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/hunter-symbol.webp'/>",
+      "title": "狩猎者",
+      "display_chance": true
+    },
+    "warlord": {
+      "type": "warlord",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/warlord-symbol.webp'/>",
+      "title": "督军",
+      "display_chance": true
+    },
+    "delve": {
+      "type": "delve",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/DelveMineralVein.webp\" width=\"39\"/></span>",
+      "title": "地心探索",
+      "display_chance": true
+    },
+    "incursion": {
+      "type": "incursion",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/IncursionCraftingBench.webp\" width=\"39\"/></span>",
+      "title": "穿越",
+      "display_chance": false
+    },
+    "desecrated": {
+      "type": "desecrated",
+      "show_type": "clickable",
+      "icon": "<img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/item/popup2/desecrated-symbol.webp\" width=\"39\"/>",
+      "title": "<a class=\"KeywordPopups\" data-keyword=\"Abyssalify\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/8942f27da260ca6cf6e25975674553caee4fe1c39732ad742d19e6d3958da7b0\" href=\"Desecrated_Modifiers\">渎灵词缀</a>",
+      "display_chance": false
+    },
+    "veiled": {
+      "type": "veiled",
+      "show_type": "clickable",
+      "icon": "<img loading='lazy' src='https://cdn.poe2db.tw/image/item/popup/veiled-symbol.webp'/>",
+      "title": "隐匿",
+      "display_chance": true
+    },
+    "master": {
+      "type": "master",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/CraftingUnlockObject.webp\" width=\"39\"/></span>",
+      "title": "工艺工作台",
+      "display_chance": false
+    },
+    "essence": {
+      "type": "essence",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/Essence.webp\" width=\"39\"/></span>",
+      "title": "精华",
+      "display_chance": false
+    },
+    "bestiary": {
+      "type": "bestiary",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/BestiaryRareMonster.webp\" width=\"39\"/></span>",
+      "title": "猎魔",
+      "display_chance": false
+    },
+    "warbands": {
+      "type": "warbands",
+      "show_type": "clickable",
+      "title": "战团",
+      "display_chance": false
+    },
+    "sentinel": {
+      "type": "sentinel",
+      "show_type": "clickable",
+      "icon": "<img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Sentinel/ArmourRecombinator.webp\" width=\"39\"/>",
+      "title": "重组器",
+      "display_chance": false
+    },
+    "infamous": {
+      "type": "infamous",
+      "show_type": "clickable",
+      "title": "Infamous",
+      "icon": "",
+      "display_chance": false
+    },
+    "haunted": {
+      "type": "haunted",
+      "show_type": "clickable",
+      "icon": "<span >NecropolisCorpse</span>",
+      "title": "Haunted Modifiers",
+      "display_chance": true
+    },
+    "socketable": {
+      "type": "socketable",
+      "show_type": "clickable",
+      "title": "可镶嵌",
+      "display_chance": false
+    },
+    "enchant": {
+      "type": "enchant",
+      "show_type": "clickable",
+      "title": "附魔",
+      "display_chance": false
+    },
+    "corrupted": {
+      "type": "corrupted",
+      "show_type": "clickable",
+      "icon": "<img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyVaal.webp\" width=\"39\"/>",
+      "title": "<a data-keyword=\"Corrupted\" href=\"Corrupted_Items\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/4c6d526a7bebf6fe8365b75ecfd23c8b433373af08313c39aa24780b09d533ef\">已腐化</a>",
+      "display_chance": false
+    },
+    "searing": {
+      "type": "searing",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/CleansingFireAltar.webp\" width=\"39\"/></span>",
+      "title": "The Searing Exarch",
+      "display_chance": false
+    },
+    "eater": {
+      "type": "eater",
+      "show_type": "clickable",
+      "icon": "<span class=\"MinimapIcons\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/TangleAltar.webp\" width=\"39\"/></span>",
+      "title": "The Eater of Worlds",
+      "display_chance": false
+    },
+    "synthesis": {
+      "type": "synthesis",
+      "show_type": "clickable",
+      "icon": "<img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DArt/minimap/player/SynthesisFragmentEntrance.webp\" width=\"39\"/>",
+      "title": "虚空忆境",
+      "display_chance": false
+    },
+    "synthesis_corrupted": {
+      "type": "synthesis_corrupted",
+      "show_type": "clickable",
+      "title": "虚空忆境 <a data-keyword=\"Corrupted\" href=\"Corrupted_Items\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/4c6d526a7bebf6fe8365b75ecfd23c8b433373af08313c39aa24780b09d533ef\">已腐化</a>",
+      "display_chance": false
+    },
+    "scourgeup": {
+      "type": "scourgeup",
+      "show_type": "clickable",
+      "title": "异度天灾 Beneficial",
+      "display_chance": true
+    },
+    "scourgedown": {
+      "type": "scourgedown",
+      "show_type": "clickable",
+      "title": "异度天灾 Detrimental",
+      "display_chance": true
+    }
+  },
+  "gen": {
+    "1": "前缀",
+    "2": "后缀"
+  },
+  "opt": {
+    "ModDomainsID": 1,
+    "ids": [0, 21],
+    "attr": [],
+    "ItemClassesCode": "Quiver",
+    "ItemClassesID": 20,
+    "tags": null
+  },
+  "normal": [
+    {
+      "Name": "猫鼬之",
+      "Level": "1",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(5&ndash;8)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/8ff7917c66357000baf1e2f3c951ca14fdd776540397bb01a150c64c7af53ff7"
+    },
+    {
+      "Name": "山猫之",
+      "Level": "11",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(9&ndash;12)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b91d4c7801aae8d2329966d9cf3a69650602de263d8bf9a520d84a70009c7cc9"
+    },
+    {
+      "Name": "狐狸之",
+      "Level": "22",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(13&ndash;16)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b8a6ae5018307a4589b750b145087b5b2529e81d44998c69c9851d8d2ffa5166"
+    },
+    {
+      "Name": "猎鹰之",
+      "Level": "33",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(17&ndash;20)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/cb8706858cce12b95341d435571b087fc3510b7f29959f318097889e17f936f9"
+    },
+    {
+      "Name": "豹之",
+      "Level": "44",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(21&ndash;24)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/da95aebb02f18a85481070c0a62bd4abf3e89c3287bb81136cd82cf38184f5bb"
+    },
+    {
+      "Name": "花豹之",
+      "Level": "55",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(25&ndash;27)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/1b68bafd862f43c23cea93b97e8f14c5cde34b3c320d362bd8bf5d7def9a0fef"
+    },
+    {
+      "Name": "美洲豹之",
+      "Level": "66",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(28&ndash;30)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/20a218cc5f83b6d24b9e0ecad06a90275c2ca7f4e465833c3357e860453f272e"
+    },
+    {
+      "Name": "幻影之",
+      "Level": "74",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["Dexterity"],
+      "DropChance": "1000",
+      "str": "<span class='mod-value'>+(31&ndash;33)</span> <a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>",
+      "fossil_no": ["attribute"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/4289dfd83f76e0845f0c6910f9a98f499741683f28221435fc713e90b2303c9a"
+    },
+    {
+      "Name": "反光的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>3</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/5a7a110e91ffeec922902e802c4a5e49a2c4eaf57fd8ef1b650eda7f82d44bbf"
+    },
+    {
+      "Name": "磨光的",
+      "Level": "8",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(2&ndash;3)</span> - <span class='mod-value'>(4&ndash;6)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/738d19179fdad0a99e9be183ad45df0a92e8acdcce71adaeff1fb9f31e7059c3"
+    },
+    {
+      "Name": "抛光的",
+      "Level": "16",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(2&ndash;4)</span> - <span class='mod-value'>(5&ndash;8)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ca800d7f984bee00606898f793eb8f18286daa4f8b230151bef5a32bbeffc9c8"
+    },
+    {
+      "Name": "砥砺的",
+      "Level": "33",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(4&ndash;6)</span> - <span class='mod-value'>(8&ndash;11)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/aa8e0b6ae96fcaf142fd73b6f2773c141a237f00ffaf6a45381aaefdc59081ac"
+    },
+    {
+      "Name": "熠熠的",
+      "Level": "46",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(5&ndash;7)</span> - <span class='mod-value'>(9&ndash;13)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/fdd78924e0e9115da1b035232a22ade222875ac3c348df48f42baf6c5f87eaf9"
+    },
+    {
+      "Name": "韧炼的",
+      "Level": "54",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "1000",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(6&ndash;10)</span> - <span class='mod-value'>(12&ndash;17)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/5e500a2ba4db392ada0dbf467296feb5829f3bc542d4f1e809dc2d8ab54f7030"
+    },
+    {
+      "Name": "锋利的",
+      "Level": "60",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "800",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(7&ndash;11)</span> - <span class='mod-value'>(14&ndash;20)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/bebb89839da8c998e5da1fef6696fd6a6a6aa41bad0176463c079578e7cdd96a"
+    },
+    {
+      "Name": "锻炼的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "600",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(10&ndash;15)</span> - <span class='mod-value'>(18&ndash;26)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/77f99b68978188e91d7b9fd62a83afb446fc99769d0e2686f6f3c7df9a35c057"
+    },
+    {
+      "Name": "迸出的",
+      "Level": "75",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["PhysicalDamage"],
+      "DropChance": "400",
+      "str": "<a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>附加 <span class='mod-value'>(12&ndash;19)</span> - <span class='mod-value'>(22&ndash;32)</span> <a data-keyword=\"Physical\" href=\"Physical_Damage\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/184979d79961a0ce1fe00c84f29298d6831b5666f441ab68e05cccccb31ac229\">物理</a>伤害",
+      "fossil_no": ["physical_damage", "damage", "physical", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingphysical' data-tag='physical'>物理</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/eded99c407e16eb965096ef93ad3582251663e448e0b0bf6ba6eab4134d20471"
+    },
+    {
+      "Name": "加热的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>3</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/8bf4738acfcbbed78bcc55fb0c6ba0cba959f7409a186b8488610483a7ff6dd9"
+    },
+    {
+      "Name": "闷烧的",
+      "Level": "8",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(3&ndash;5)</span> - <span class='mod-value'>(6&ndash;9)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/8ba6798f9a0120d7c2c4044d5f48d765dfb45b3d8066039991c180a8a183029e"
+    },
+    {
+      "Name": "冒烟的",
+      "Level": "16",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(6&ndash;8)</span> - <span class='mod-value'>(10&ndash;13)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/1fd519270c4c54a60d15b33eaf259a276838a26797e0ef65b7ffca9a348a7621"
+    },
+    {
+      "Name": "燃烧的",
+      "Level": "33",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(9&ndash;11)</span> - <span class='mod-value'>(14&ndash;17)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/37316bd1d3b958a8341ae4191e705114a7aa7d12785a869bf80c37def421d599"
+    },
+    {
+      "Name": "火焰的",
+      "Level": "46",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(12&ndash;13)</span> - <span class='mod-value'>(18&ndash;20)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/87af9295ed443074c614db15d2a9a342d7ea853c327115df37a01b008991feb7"
+    },
+    {
+      "Name": "酷热的",
+      "Level": "54",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(11&ndash;16)</span> - <span class='mod-value'>(21&ndash;26)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7e0da3b23efee9919997772c9c13b4ce0388c2c21f9eb3bf868452ea53848029"
+    },
+    {
+      "Name": "焚烧的",
+      "Level": "60",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "400",
+      "str": "攻击附加 <span class='mod-value'>(13&ndash;19)</span> - <span class='mod-value'>(27&ndash;32)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/0d3337341f9395b75af0d5d0a6b7a6cbfbaa95b21e0fc009413a5dffeb6b983a"
+    },
+    {
+      "Name": "爆破的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "300",
+      "str": "攻击附加 <span class='mod-value'>(20&ndash;24)</span> - <span class='mod-value'>(33&ndash;36)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/d25dd31785506b93dcf70e89982977b7a00db9314c4178e890012ac2911ace18"
+    },
+    {
+      "Name": "火化的",
+      "Level": "75",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["FireDamage"],
+      "DropChance": "200",
+      "str": "攻击附加 <span class='mod-value'>(25&ndash;29)</span> - <span class='mod-value'>(37&ndash;45)</span> 基础火焰伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "fire", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingfire' data-tag='fire'>火焰</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/c7854346e95a0356b6ba2babf57bb6ae36f4ebd15c95b336c86127cde78ffc31"
+    },
+    {
+      "Name": "结霜的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(2&ndash;3)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/eec259f18da0a56435a48f5eb15404a4499c855a745157fe3c5512f767d6db36"
+    },
+    {
+      "Name": "冷冻的",
+      "Level": "8",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(3&ndash;4)</span> - <span class='mod-value'>(5&ndash;8)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7e96a61c62fa72c0e817398c9b5c0cb61e2fff379d1645aec62369df35919d52"
+    },
+    {
+      "Name": "结冰的",
+      "Level": "16",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(5&ndash;6)</span> - <span class='mod-value'>(9&ndash;11)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/207c93905c2ec7866a4cb03172912b83f71181f004bed6a4cb318b0111975c4b"
+    },
+    {
+      "Name": "寒风的",
+      "Level": "33",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(7&ndash;8)</span> - <span class='mod-value'>(12&ndash;14)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/52d6cf8c3d99bf723cc11624b49e2e48a29c0982244e299dc4a83a691c8956b5"
+    },
+    {
+      "Name": "急冻的",
+      "Level": "46",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(9&ndash;10)</span> - <span class='mod-value'>(15&ndash;17)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/96ed623d17b10897b1e74cee17e59b515349724de320fd09adc5284dee892ebe"
+    },
+    {
+      "Name": "冻结的",
+      "Level": "54",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(11&ndash;13)</span> - <span class='mod-value'>(18&ndash;21)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ff704d7ed0a36441f3c4962813bef77fe69d835e2847b6aba5f4f01ac8faea4d"
+    },
+    {
+      "Name": "冰河的",
+      "Level": "60",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "400",
+      "str": "攻击附加 <span class='mod-value'>(14&ndash;15)</span> - <span class='mod-value'>(22&ndash;24)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7c4fd9b210be133ee719a8f3cdef7610c23b159b72c9da4bb69768695ed37523"
+    },
+    {
+      "Name": "极地的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "300",
+      "str": "攻击附加 <span class='mod-value'>(16&ndash;20)</span> - <span class='mod-value'>(25&ndash;31)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/90e9ad7a54a10230e40ce1b5ad01bec7874ae795618dbfde9fe9093985c42d7e"
+    },
+    {
+      "Name": "埋葬的",
+      "Level": "75",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ColdDamage"],
+      "DropChance": "200",
+      "str": "攻击附加 <span class='mod-value'>(21&ndash;24)</span> - <span class='mod-value'>(32&ndash;37)</span> 基础冰霜伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "cold", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftingcold' data-tag='cold'>冰霜</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b26920d65d455158da75d392d2db3fd60d2a0badb10420ebff10f11a228c3642"
+    },
+    {
+      "Name": "低鸣的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(4&ndash;6)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/36f60dd0c5ea7635cb64584096fca506cd7bed8769f7f98a8deed17fb859e0d2"
+    },
+    {
+      "Name": "嗡嗡的",
+      "Level": "8",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(10&ndash;15)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/add1fc96a492045b9227ad4b74624f9f4ee3f7d05bb8f049048d374347432fb6"
+    },
+    {
+      "Name": "捕捉的",
+      "Level": "16",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(16&ndash;22)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/a453bc9862417a798273013336c5043c51a57d68708a5f515dc868730c0a156b"
+    },
+    {
+      "Name": "劈哩啪啦的",
+      "Level": "33",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(23&ndash;27)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/3493fc769be3202e74ab9e873093cbaf4fc6e278f5b6cdf2caa8b17bfe8b4c6e"
+    },
+    {
+      "Name": "火花的",
+      "Level": "46",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>1</span> - <span class='mod-value'>(28&ndash;32)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/70842be0335f4a6f50362931b4dca43e27f2fc324ced6b1eb275a025d8db3b6f"
+    },
+    {
+      "Name": "电弧的",
+      "Level": "54",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "500",
+      "str": "攻击附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(33&ndash;40)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/1b481440e44b36b1eb316a5ebc313ef1afe10536d75f23a1d5cd0d5157987f00"
+    },
+    {
+      "Name": "电震的",
+      "Level": "60",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "400",
+      "str": "攻击附加 <span class='mod-value'>(1&ndash;2)</span> - <span class='mod-value'>(41&ndash;47)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/bc1c685abdfeb8835a887eddc1ff123808ff3e80a01eb00eb5667806b5dea39b"
+    },
+    {
+      "Name": "放电的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "300",
+      "str": "攻击附加 <span class='mod-value'>(1&ndash;3)</span> - <span class='mod-value'>(48&ndash;59)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/0a3952de183fbc0ada98c6a1155cd6afdeb16bf47aa5c274e7b35e68d78d7f6d"
+    },
+    {
+      "Name": "电极的",
+      "Level": "75",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["LightningDamage"],
+      "DropChance": "200",
+      "str": "攻击附加 <span class='mod-value'>(1&ndash;4)</span> - <span class='mod-value'>(60&ndash;71)</span> 基础闪电伤害",
+      "fossil_no": ["elemental_damage", "damage", "elemental", "lightning", "attack"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingelemental' data-tag='elemental'>元素</span>",
+        "<span class='badge bg-primary craftinglightning' data-tag='lightning'>闪电</span>",
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/fcf904836719e1f60adfc592351fe978d2dcd7add3d7476036a68fed61e7b34f"
+    },
+    {
+      "Name": "射手之",
+      "Level": "5",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreaseSocketedGemLevel"],
+      "DropChance": "500",
+      "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>技能等级 <span class='mod-value'>+1</span>",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7a2f698310ae3b55bdc2b8b9565772941d67f8ecff0a34ad32c9edd6914b62be"
+    },
+    {
+      "Name": "制箭之",
+      "Level": "41",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreaseSocketedGemLevel"],
+      "DropChance": "250",
+      "str": "所有<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>技能等级 <span class='mod-value'>+2</span>",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e32cc96d095f655c81eeee7526a223d1a464278424a20bcc978c43e638110912"
+    },
+    {
+      "Name": "成功之",
+      "Level": "1",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(4&ndash;6)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/5857fca0842c4d8b1faa111a4e59f7ed6a56496e01d66af96d84014c7b409168"
+    },
+    {
+      "Name": "胜利之",
+      "Level": "11",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(7&ndash;9)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f3c24640c392c5f1b7a6863ab199ad21cb919e278baebeaecbc8f372440fb402"
+    },
+    {
+      "Name": "凯旋之",
+      "Level": "22",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(10&ndash;18)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ad202f36fe6856cdd6ae638c93c428d1a206334ff8975072d58a845d20716814"
+    },
+    {
+      "Name": "征服之",
+      "Level": "33",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(19&ndash;28)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/a82d77b2646e96e1e6a86604bcdacbc3145ee38124ef4156057067e0fa87b021"
+    },
+    {
+      "Name": "称霸之",
+      "Level": "44",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(29&ndash;40)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f9c13fb04c02f0f11772c8f657aba6fb3c7107fc9a4992235db2d1d0c9dc82fd"
+    },
+    {
+      "Name": "勇气之",
+      "Level": "55",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(41&ndash;53)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/3332c94d9fc4e64c96114d79de06502fed31fe957c148df60deeacd6cbfe88cf"
+    },
+    {
+      "Name": "吸收之",
+      "Level": "1",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(2&ndash;3)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/a16976d18c550fa504d3199da107ca9ca5adb1a85de1ed17fec4d20e7b3a7fc5"
+    },
+    {
+      "Name": "逆渗透之",
+      "Level": "12",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(4&ndash;5)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/04baa5e523c313fb22f301b1ba76fb10d96cc7234b520abb479cd17a6d1bbc7e"
+    },
+    {
+      "Name": "灌输之",
+      "Level": "23",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(6&ndash;9)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/3df1390196172d72894d43de07144c29f09b9df98daf1dae27d32160afe84228"
+    },
+    {
+      "Name": "裹挟之",
+      "Level": "34",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(10&ndash;14)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/56494737dd50c05f705485e1a982136207134382f52c0e28c88cfa0f8b7157e5"
+    },
+    {
+      "Name": "消耗之",
+      "Level": "45",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(15&ndash;20)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/5392fdf3593d8ebdc3a7d7d74f7868264670714713cbf8a3fc0e11618a1b9c27"
+    },
+    {
+      "Name": "虹吸之",
+      "Level": "56",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "DropChance": "750",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(21&ndash;27)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/aa3697db323ca2d3a2fd30712656bcabfc8e893aca36933049c614fc22495d01"
+    },
+    {
+      "Name": "技巧之",
+      "Level": "1",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreasedAttackSpeed"],
+      "DropChance": "500",
+      "str": "攻击速度加快 <span class='mod-value'>(5&ndash;7)</span>%",
+      "fossil_no": ["attack", "speed"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/9be862dececee76a3b91c4ac3f9db17257a65a278fd37352c1e56dd3047db43e"
+    },
+    {
+      "Name": "轻松之",
+      "Level": "22",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreasedAttackSpeed"],
+      "DropChance": "500",
+      "str": "攻击速度加快 <span class='mod-value'>(8&ndash;10)</span>%",
+      "fossil_no": ["attack", "speed"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e33104dfc3905e113242a568892fc72d0b396a10308c2aceb3d363395d873cac"
+    },
+    {
+      "Name": "成熟之",
+      "Level": "37",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreasedAttackSpeed"],
+      "DropChance": "500",
+      "str": "攻击速度加快 <span class='mod-value'>(11&ndash;13)</span>%",
+      "fossil_no": ["attack", "speed"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/c8bcc7f88fd0b449ce47ad39a52cb6fd7c73c8061a24e82bf5d20d92b3037c82"
+    },
+    {
+      "Name": "声望之",
+      "Level": "60",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["IncreasedAttackSpeed"],
+      "DropChance": "500",
+      "str": "攻击速度加快 <span class='mod-value'>(14&ndash;16)</span>%",
+      "fossil_no": ["attack", "speed"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ebb6f7da5f29ac41c2044147acf291f80dba7473c5954115ca9f79b5afda3768"
+    },
+    {
+      "Name": "精确的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(11&ndash;32)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/5d597b7713da6989c92b19f9dcf641a762cf20a817c5e706147480e1c32b9966"
+    },
+    {
+      "Name": "可靠的",
+      "Level": "11",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(33&ndash;60)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b51b8de7113213a1123769d88655a379cb6bce3acaceac05849236c225380e2b"
+    },
+    {
+      "Name": "专注的",
+      "Level": "18",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(61&ndash;84)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/da63ce545b72743761c03a5cafefe1a0a49ee0471b49b2f1f792cad6753d8a14"
+    },
+    {
+      "Name": "从容的",
+      "Level": "26",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(85&ndash;123)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/028fd895ce734802993660541e3b2c2fb6644dfa9d4b4f93a8c458a412a40e3e"
+    },
+    {
+      "Name": "如一的",
+      "Level": "36",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(124&ndash;167)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/d351fc925f056960c06b00764543bb55dba15dd609e2e1064667e91fb5fb2c1e"
+    },
+    {
+      "Name": "稳健的",
+      "Level": "48",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(168&ndash;236)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/03847a95325dd518fd6ccc1113fb004bfd441a831cf121527eea86199e56112d"
+    },
+    {
+      "Name": "狩猎者的",
+      "Level": "58",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "800",
+      "str": "<span class='mod-value'>+(237&ndash;346)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/c133a77586305c2200e8e65f1f3a90f838074f5c610661a4015329ee36955245"
+    },
+    {
+      "Name": "游侠的",
+      "Level": "67",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "400",
+      "str": "<span class='mod-value'>+(347&ndash;450)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/6cff2f9d9f1cf602a048c7fb3d7b95eae734f4d89e431f26a93b220db358b805"
+    },
+    {
+      "Name": "亚马逊的",
+      "Level": "76",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "DropChance": "200",
+      "str": "<span class='mod-value'>+(451&ndash;550)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/2cf7ab78821ba4e7b4b154de10d8553eaaeda3a7d325a61cf64b629aa013ed9a"
+    },
+    {
+      "Name": "威胁之",
+      "Level": "5",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "1000",
+      "str": "攻击暴击率提高 <span class='mod-value'>(10&ndash;14)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e675d332670c1c94197eb1126f1d0beedfa6dd0d533ad63e2fc863b8200ed339"
+    },
+    {
+      "Name": "浩劫之",
+      "Level": "20",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "1000",
+      "str": "攻击暴击率提高 <span class='mod-value'>(15&ndash;19)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/af1969824e1c5b2728bdb7a0ddf0fd405597d4e44734aef1c76118c6994bcbfb"
+    },
+    {
+      "Name": "灾害之",
+      "Level": "30",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "1000",
+      "str": "攻击暴击率提高 <span class='mod-value'>(20&ndash;24)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/03b3b5caf97fd0d070a7cfd8154473d538321b9343761613d7e1f614e4f9d15a"
+    },
+    {
+      "Name": "灾难之",
+      "Level": "44",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "500",
+      "str": "攻击暴击率提高 <span class='mod-value'>(25&ndash;29)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/870df6ee5c4cf87319821e91fb5fe6efc475cf022b672f1980d49e9c9549b586"
+    },
+    {
+      "Name": "灭绝之",
+      "Level": "58",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "250",
+      "str": "攻击暴击率提高 <span class='mod-value'>(30&ndash;34)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/6e6fecb0dd4a2f1efcdcfd66c0769a1b5fb71ab0530c138ac10ce3c9cbbdc7cf"
+    },
+    {
+      "Name": "解构之",
+      "Level": "72",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "DropChance": "125",
+      "str": "攻击暴击率提高 <span class='mod-value'>(35&ndash;38)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/8affafa17eafbf10dc9595fb1e3b3bbb0a443d702f26f30bde51d5dd202c2486"
+    },
+    {
+      "Name": "怒火之",
+      "Level": "8",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "1000",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(10&ndash;14)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/952f91d68de83b2f0e0a452fe180c665ddc6c60d154b83bcdd7f63a4ad753f05"
+    },
+    {
+      "Name": "愤怒之",
+      "Level": "21",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "1000",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(15&ndash;19)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/29cf0b6ebda4a12758ec9ac31d79f5bdf61c8c0fa66b3fa859e14f3c1ee32628"
+    },
+    {
+      "Name": "震怒之",
+      "Level": "31",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "1000",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(20&ndash;24)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e4588cc78ae51de6442531b9f73fdc69bd32e50704909653d0233e1a6e831081"
+    },
+    {
+      "Name": "狂暴之",
+      "Level": "45",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "500",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(25&ndash;29)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f81222b8694f2d91ba6832ec1be8e79e72510e70daba10e6922abde7924ae1cb"
+    },
+    {
+      "Name": "凶暴之",
+      "Level": "59",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "250",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(30&ndash;34)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b3d091bec0a73df910f51ae7477ca8670a787c0db5c12d54f6d20e31e0596ecd"
+    },
+    {
+      "Name": "毁灭之",
+      "Level": "74",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "DropChance": "125",
+      "str": "攻击伤害的暴击伤害加成 <span class='mod-value'>+(35&ndash;39)</span>%",
+      "fossil_no": ["attack", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e28cd94f17827463673611728dc3def9dfd563bc3fba1f5d385cc6da881849f0"
+    },
+    {
+      "Name": "刺穿之",
+      "Level": "11",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ChanceToPierce"],
+      "DropChance": "500",
+      "str": "<span class='mod-value'>(12&ndash;14)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/085b6a49417e1e8102bdf9f519830dc8634f12a2c17253f1e0c20a7da62258f2"
+    },
+    {
+      "Name": "钻取之",
+      "Level": "26",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ChanceToPierce"],
+      "DropChance": "500",
+      "str": "<span class='mod-value'>(15&ndash;17)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/394745ff97176bec5f037dc856ea08ae933cc512535bcd2c34fc41a07e4097ed"
+    },
+    {
+      "Name": "穿孔之",
+      "Level": "44",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ChanceToPierce"],
+      "DropChance": "500",
+      "str": "<span class='mod-value'>(18&ndash;20)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f48ef684f99b11ec6d62717f1d011be172b10b4bf1fdf02d0defa57529023767"
+    },
+    {
+      "Name": "穿钩之",
+      "Level": "61",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ChanceToPierce"],
+      "DropChance": "500",
+      "str": "<span class='mod-value'>(21&ndash;23)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/d831c5f1260d3dfba75e4bbad265963b862b24575f23b2ceee367303aaaf332c"
+    },
+    {
+      "Name": "穿透之",
+      "Level": "77",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ChanceToPierce"],
+      "DropChance": "500",
+      "str": "<span class='mod-value'>(24&ndash;26)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/0c4d27e11aa41beca6e88982725899d507fcda399e7dceeb2154b6b495b66559"
+    },
+    {
+      "Name": "疾速的",
+      "Level": "14",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileSpeed"],
+      "DropChance": "1000",
+      "str": "投射物速度加快 <span class='mod-value'>(10&ndash;17)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f5eb0f1950d6a857c3bfdf22596c69fa57dc37d8c2a4e8455c1971fd2cc43d1c"
+    },
+    {
+      "Name": "轻快的",
+      "Level": "27",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileSpeed"],
+      "DropChance": "1000",
+      "str": "投射物速度加快 <span class='mod-value'>(18&ndash;25)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/3cf0094d5e00e42f92adbd6107e9e076b05774b406e345574ac719d7b5bb50e9"
+    },
+    {
+      "Name": "快速的",
+      "Level": "41",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileSpeed"],
+      "DropChance": "1000",
+      "str": "投射物速度加快 <span class='mod-value'>(26&ndash;33)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/cd4fa0018c5b34818e0b84cb3d7b33138ea754c6d36c5837b917be3939842050"
+    },
+    {
+      "Name": "急速的",
+      "Level": "55",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileSpeed"],
+      "DropChance": "1000",
+      "str": "投射物速度加快 <span class='mod-value'>(34&ndash;41)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/b3c292b2d1aebf1498bb5570e2f19252f12841a4a8ea2017eb45826f0a754a3f"
+    },
+    {
+      "Name": "灵敏的",
+      "Level": "82",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileSpeed"],
+      "DropChance": "1000",
+      "str": "投射物速度加快 <span class='mod-value'>(42&ndash;46)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/46ddc1afb9b4072831a8062e228980e9960eed9e0ed9eaeb5ba88c1bce762d2f"
+    },
+    {
+      "Name": "敏锐的",
+      "Level": "1",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(11&ndash;20)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7ac7ae0392521d617d821d60d73b1e281c9298f2401f10a6c8e88bb9d2d38f88"
+    },
+    {
+      "Name": "尖刻的",
+      "Level": "16",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(21&ndash;30)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/c784dd303679359d71c52947174edc83066412447f375b5a7fd261db0224f418"
+    },
+    {
+      "Name": "凿击的",
+      "Level": "33",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(31&ndash;36)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/d4c2c040fca8d4efa58d1441c6d63c642540b24753c4613c4b15d8abfee675b8"
+    },
+    {
+      "Name": "锋尖的",
+      "Level": "46",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(37&ndash;42)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/0e8c4a0bab0a972a7b73e2c6c35b85f3b2d8139717de9e1dc51701dce30c3c01"
+    },
+    {
+      "Name": "破空的",
+      "Level": "60",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(43&ndash;50)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/2305032c085dc09550fe71f5f14a0ad9fc6154dbf79aba4635f88202e0d76cec"
+    },
+    {
+      "Name": "穿刺的",
+      "Level": "81",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "DropChance": "500",
+      "str": "弓类技能伤害提高 <span class='mod-value'>(51&ndash;59)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/eb28d020b8ab28a46456e019dafced019249e7c72f6ce94a2db4e6555ce4662b"
+    }
+  ],
+  "corrupted": [
+    {
+      "ModFamilyList": ["IncreasedMana"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "<span class='mod-value'>+(20&ndash;25)</span> 最大魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "Name": "CorruptionIncreasedMana1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/f11a5bed2ad1a54c30b1415f0f108543b6aa62513e4af78204d2d4078a59ba15"
+    },
+    {
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "<span class='mod-value'>+(50&ndash;100)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值",
+      "fossil_no": ["attack"],
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "Name": "CorruptionIncreasedAccuracy1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/39d588c040a6f90587e37dd69d5228efa783981cfe850f38db28a6971abb230a"
+    },
+    {
+      "ModFamilyList": ["AllDamage"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "伤害提高 <span class='mod-value'>(20&ndash;30)</span>%",
+      "fossil_no": ["damage"],
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "Name": "CorruptionAllDamage1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/cad1cc2e6a5c2fb2f522635c32184fe5abb88b84da0ca4ff0402690051d5f1a4"
+    },
+    {
+      "ModFamilyList": ["IncreasedSpeed"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "<a data-keyword=\"SkillSpeed\" href=\"Skill_Speed\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/6a854cdc4ab45987f55109d0c5393e9cd9be87eda06578fbb5ef0caf997bade1\">技能速度</a>加快 <span class='mod-value'>(4&ndash;6)</span>%",
+      "fossil_no": ["speed"],
+      "mod_no": ["<span class='badge bg-primary craftingspeed' data-tag='speed'>速度</span>"],
+      "Name": "CorruptionIncreasedSkillSpeed1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ca9eaeaf5f239d2bc14f808cece3c4f83e411e35cca8b3d902f2b57574220867"
+    },
+    {
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "暴击伤害加成提高 <span class='mod-value'>(15&ndash;20)</span>%",
+      "fossil_no": ["damage", "critical"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>",
+        "<span class='badge bg-primary craftingcritical' data-tag='critical'>暴击</span>"
+      ],
+      "Name": "CorruptionCriticalStrikeMultiplier1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/d6bc77010e7ef7762e0240c6a76e60bf6e88b6e274b44d26396b3f3a059e5786"
+    },
+    {
+      "ModFamilyList": ["LifeGainedFromEnemyDeath"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(20&ndash;25)</span> 点生命",
+      "fossil_no": ["resource", "life"],
+      "mod_no": ["<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"],
+      "Name": "CorruptionLifeGainedFromEnemyDeath1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/1bfeebf53596704d90998fb5ca37722d533c758fcaa308134c04120ca46b444c"
+    },
+    {
+      "ModFamilyList": ["ManaGainedFromEnemyDeath"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "每击败一名敌人获得 <span class='mod-value'>(10&ndash;15)</span> 点魔力",
+      "fossil_no": ["resource", "mana"],
+      "mod_no": ["<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"],
+      "Name": "CorruptionManaGainedFromEnemyDeath1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/7a799a253fa2bdbd50692f1965259c2a6e84b71e5bf48c4edecf289f4cf35f60"
+    },
+    {
+      "ModFamilyList": ["ChanceToPierce"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "<span class='mod-value'>(20&ndash;30)</span>% 的几率<a data-keyword=\"Pierce\" href=\"Pierce\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/813a93517c8bf8758e83d9a5058f2b2d6c4c8294abae299071f59bb8ec0bba78\">穿透</a>一个敌人",
+      "fossil_no": [],
+      "mod_no": [],
+      "Name": "CorruptionChanceToPierce1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/e150281becf9561f8feff2c71359dc4d3aeac966a8624cf7585036a35ad43a2c"
+    },
+    {
+      "ModFamilyList": ["ChainFromTerrain"],
+      "ModGenerationTypeID": "5",
+      "Level": "1",
+      "DropChance": "1",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>击中地形时有 <span class='mod-value'>(10&ndash;20)</span>% 的几率额外<a data-keyword=\"Chain\" href=\"Chain\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/befda285969122a5f8ad0621b1b9bc1cf6b06caa9f62d9636fcdca010cbb65b2\">连锁</a>一次",
+      "fossil_no": [],
+      "mod_no": [],
+      "Name": "CorruptionChainFromTerrain1",
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/8c33061ff11968e0fed006826f9b3053c662fd329d15dee5c4d472a2af6dccad"
+    }
+  ],
+  "desecrated": [
+    {
+      "Name": "阿曼娜姆的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileDamage"],
+      "type": "Desecrated",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>对 2 米内的敌人造成的击中伤害提高 <span class='mod-value'>(20&ndash;30)</span>%",
+      "fossil_no": ["unveiled_mod", "amanamu_mod", "damage"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingamanamu_mod' data-tag='amanamu_mod'><i>amanamu</i></span>",
+        "<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/43f36d55ce71396a7118804f3e27983de129c13567f59f332137873d4a33bd16"
+    },
+    {
+      "Name": "古加尔的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileDamage"],
+      "type": "Desecrated",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>对 6 米外的敌人造成的击中伤害提高 <span class='mod-value'>(20&ndash;30)</span>%",
+      "fossil_no": ["unveiled_mod", "kurgal_mod"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingkurgal_mod' data-tag='kurgal_mod'><i>kurgal</i></span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/1ab76684d89432766b82be6ae4966ed2ebd2db09728cb130fa7b3093cc0dca73"
+    },
+    {
+      "Name": "阿曼娜姆之",
+      "Level": "65",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeMultiplier"],
+      "type": "Desecrated",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>对 2 米内的敌人的<a data-keyword=\"CriticalDamageBonus\" href=\"Critical_Damage_Bonus\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/c209abbbb13b5fd9b6d2a46051c0e60e7025f7dbf92a6c4d6f74c94f84ccb8d2\">暴击伤害加成</a>提高 <span class='mod-value'>(18&ndash;26)</span>%",
+      "fossil_no": ["unveiled_mod", "amanamu_mod"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingamanamu_mod' data-tag='amanamu_mod'><i>amanamu</i></span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/894005ee4801e0e4b28a83ef17756f78ca9b487ba62207d0a864c6cadb7b0080"
+    },
+    {
+      "Name": "古加尔之",
+      "Level": "65",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["ManaCostEfficiency"],
+      "type": "Desecrated",
+      "str": "魔力消耗<a data-keyword=\"Efficiency\" href=\"Efficiency\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/1d2cb4701ad3aaa88767420251b00e5613ef154fb5526c8ec2fd2d4493cf9a04\">效能</a>提高 <span class='mod-value'>(6&ndash;10)</span>%",
+      "fossil_no": ["resource", "unveiled_mod", "kurgal_mod", "mana"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingkurgal_mod' data-tag='kurgal_mod'><i>kurgal</i></span>",
+        "<span class='badge bg-primary craftingmana' data-tag='mana'>魔力</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/26bdc3bc2a9321fdfe236dbad1ed484b44eea6fd402c2f9c1e6f80d097a56c34"
+    },
+    {
+      "Name": "古加尔之",
+      "Level": "65",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["CriticalStrikeChanceIncrease"],
+      "type": "Desecrated",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>对 6 米外的敌人的<a data-keyword=\"Critical\" href=\"Critical_Hits\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9c738c878a00d8e0aa45dc89f43e7a1dd798bf55c584b3e128b608b81e25032f\">暴击</a>几率提高 <span class='mod-value'>(18&ndash;26)</span>%",
+      "fossil_no": ["unveiled_mod", "kurgal_mod"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingkurgal_mod' data-tag='kurgal_mod'><i>kurgal</i></span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/67247132fb8f53e31c9577098ccabf831168a1ef80e1968ff98d1055931f4494"
+    },
+    {
+      "Name": "乌拉曼之",
+      "Level": "65",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["LifeCost"],
+      "type": "Desecrated",
+      "str": "技能的魔力消耗的 <span class='mod-value'>(10&ndash;14)</span>% <a data-keyword=\"StatConversion\" href=\"Stat_Conversion\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc141519074284db21af0b3b5dfc358029d9d9b39436ff8887dd7b828c826215\">转化</a>为生命消耗",
+      "fossil_no": ["resource", "unveiled_mod", "ulaman_mod", "life"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingulaman_mod' data-tag='ulaman_mod'><i>ulaman</i></span>",
+        "<span class='badge bg-primary craftinglife' data-tag='life'>生命</span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/19f95daa0c794713ae17f52a46c38fe1b9b129d69f3385ffa09be7a64f215f7b"
+    },
+    {
+      "Name": "乌拉曼之",
+      "Level": "65",
+      "ModGenerationTypeID": "2",
+      "ModFamilyList": ["AdditionalProjectiles"],
+      "type": "Desecrated",
+      "str": "移动时，<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a><a data-keyword=\"Attack\" href=\"Attacks\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/9e8d9fa70cee8379fd965a429015fda6888f45cb896be649d4f56f75a1dfff9b\">攻击</a>有 <span class='mod-value'>(8&ndash;12)</span>% 的几率额外发射两个<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>",
+      "fossil_no": ["unveiled_mod", "ulaman_mod"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingulaman_mod' data-tag='ulaman_mod'><i>ulaman</i></span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/04229bedd47bc69f1ce26a8adebdb1ef043c07d7f7349553a670c36dfb8e078f"
+    },
+    {
+      "Name": "乌拉曼的",
+      "Level": "65",
+      "ModGenerationTypeID": "1",
+      "ModFamilyList": ["ProjectileDamage"],
+      "type": "Desecrated",
+      "str": "<a data-keyword=\"Projectile\" href=\"Projectile\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/5c8ab2252182b7b1fc54663d8eb4d9adc24cdcba436a5efc57838c9417c0ae28\">投射物</a>速度的增幅和减益也会作用于<a data-keyword=\"Bow\" href=\"Bows\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/3a65915ac98d0541cfde8712e5d87c1f6242b98a441e749adc7e6ec36f997321\">弓类</a>伤害",
+      "fossil_no": ["unveiled_mod", "ulaman_mod"],
+      "mod_no": [
+        "<span class='badge bg-primary craftingulaman_mod' data-tag='ulaman_mod'><i>ulaman</i></span>"
+      ],
+      "mod_fossil_item": [],
+      "hover": "/cache2/cn/Poe_Data_Mods_hover/ee9f96c14481712a4ff5ce7ec541761ed511b2e5ea0cd555893ac8fd7e180420"
+    }
+  ],
+  "master": [],
+  "essence": [
+    {
+      "type": "essence",
+      "Level": "11",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/f32ad93898467ca4cadcc6bc40c10c14457e1b4524793a5a18c1f8d121e35056\" href=\"Lesser_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssenceLesser.webp\" height=\"16\"/>次级永恒精华</a>",
+      "Code": "Strength2",
+      "ModFamilyList": ["Strength"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(9&ndash;12)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "11",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/f32ad93898467ca4cadcc6bc40c10c14457e1b4524793a5a18c1f8d121e35056\" href=\"Lesser_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssenceLesser.webp\" height=\"16\"/>次级永恒精华</a>",
+      "Code": "Dexterity2",
+      "ModFamilyList": ["Dexterity"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(9&ndash;12)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "11",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/f32ad93898467ca4cadcc6bc40c10c14457e1b4524793a5a18c1f8d121e35056\" href=\"Lesser_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssenceLesser.webp\" height=\"16\"/>次级永恒精华</a>",
+      "Code": "Intelligence2",
+      "ModFamilyList": ["Intelligence"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(9&ndash;12)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "33",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/27a22077dea8d4fda20bb95c76d19366875a7744663443e199725f596059361f\" href=\"Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssence.webp\" height=\"16\"/>永恒精华</a>",
+      "Code": "Strength4",
+      "ModFamilyList": ["Strength"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(17&ndash;20)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "33",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/27a22077dea8d4fda20bb95c76d19366875a7744663443e199725f596059361f\" href=\"Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssence.webp\" height=\"16\"/>永恒精华</a>",
+      "Code": "Dexterity4",
+      "ModFamilyList": ["Dexterity"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(17&ndash;20)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "33",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/27a22077dea8d4fda20bb95c76d19366875a7744663443e199725f596059361f\" href=\"Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssence.webp\" height=\"16\"/>永恒精华</a>",
+      "Code": "Intelligence4",
+      "ModFamilyList": ["Intelligence"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(17&ndash;20)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "58",
+      "DropChance": 0,
+      "ModGenerationTypeID": "1",
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "fossil_no": ["attack"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/1a5d924861d4bd7e93a58a09d4302c687b10ef5600575b1d08d17464d2411c87\" href=\"Greater_Essence_of_Battle\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttackEssence.webp\" height=\"16\"/>强效激战精华</a>",
+      "Code": "LocalIncreasedAccuracy7",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "str": "<span class='mod-value'>+(237&ndash;346)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值"
+    },
+    {
+      "type": "essence",
+      "Level": "58",
+      "DropChance": 0,
+      "ModGenerationTypeID": "1",
+      "mod_no": ["<span class='badge bg-primary craftingattack' data-tag='attack'>攻击</span>"],
+      "fossil_no": ["attack"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/1a5d924861d4bd7e93a58a09d4302c687b10ef5600575b1d08d17464d2411c87\" href=\"Greater_Essence_of_Battle\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttackEssence.webp\" height=\"16\"/>强效激战精华</a>",
+      "Code": "IncreasedAccuracy7",
+      "ModFamilyList": ["IncreasedAccuracy"],
+      "str": "<span class='mod-value'>+(237&ndash;346)</span> <a data-keyword=\"Accuracy\" href=\"Accuracy\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/d8934528f8f467c618fe6dbc2937bc955cd4ea8702d824f99c5294084348fefd\">命中</a>值"
+    },
+    {
+      "type": "essence",
+      "Level": "55",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/8a4e25432df17c8ef61bbc03b66fb27a6fa50f2014bf631b30a11b9cde296840\" href=\"Greater_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttributeEssence.webp\" height=\"16\"/>强效永恒精华</a>",
+      "Code": "Strength6",
+      "ModFamilyList": ["Strength"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(25&ndash;27)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "55",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/8a4e25432df17c8ef61bbc03b66fb27a6fa50f2014bf631b30a11b9cde296840\" href=\"Greater_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttributeEssence.webp\" height=\"16\"/>强效永恒精华</a>",
+      "Code": "Dexterity6",
+      "ModFamilyList": ["Dexterity"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(25&ndash;27)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "55",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [
+        "<span class='badge bg-primary craftingattribute' data-tag='attribute'>属性</span>"
+      ],
+      "fossil_no": ["attribute"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/8a4e25432df17c8ef61bbc03b66fb27a6fa50f2014bf631b30a11b9cde296840\" href=\"Greater_Essence_of_the_Infinite\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttributeEssence.webp\" height=\"16\"/>强效永恒精华</a>",
+      "Code": "Intelligence6",
+      "ModFamilyList": ["Intelligence"],
+      "str": "<a data-keyword=\"Strength\" href=\"Strength\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/acbbb737f98a5b14129824e83fb3580480b529484920c74bec7f8bdcd6e9c98e\">力量</a>、<a data-keyword=\"Dexterity\" href=\"Dexterity\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/dfdc3d21505dfd792760ede8b0b7798058b658987324d2fff7ea2420e0be613b\">敏捷</a>或<a data-keyword=\"Intelligence\" href=\"Intelligence\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/cc466bac018b8458e77fb638eb02737f7353349b6862b081da86c7cff3a074bc\">智慧</a> <span class='mod-value'>+(25&ndash;27)</span>"
+    },
+    {
+      "type": "essence",
+      "Level": "60",
+      "DropChance": 0,
+      "ModGenerationTypeID": "1",
+      "mod_no": ["<span class='badge bg-primary craftingdamage' data-tag='damage'>伤害</span>"],
+      "fossil_no": ["damage"],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/461a22b0d7b0af25d12817783b4f121cc06cb228746a9861b9a0c4638c7826b3\" href=\"Essence_of_Hysteria\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CorruptedEssenceHysteria.webp\" height=\"16\"/>浮夸精华</a>",
+      "Code": "DamageWithBows5",
+      "ModFamilyList": ["DamageWithWeaponTypeSkill"],
+      "str": "弓类技能伤害提高 <span class='mod-value'>(43&ndash;50)</span>%"
+    },
+    {
+      "type": "essence",
+      "Level": "1",
+      "DropChance": 0,
+      "ModGenerationTypeID": "1",
+      "mod_no": [],
+      "fossil_no": [],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/3151889fa609b71cd82c686d46c2a2ecb025a300fff274fa1b493624625baaa8\" href=\"Essence_of_the_Abyss\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AbyssalEssence.webp\" height=\"16\"/>深渊精华</a>",
+      "Code": "EssenceAbyssPrefix",
+      "ModFamilyList": ["EssenceAbyss"],
+      "str": "<a data-keyword=\"MarkofAbyssalLord\" href=\"Mark_of_the_Abyssal_Lord\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/4fa386c6453d41afaa296f171c3412589c13b63f37abc3c430aa89481ee2a13c\">深渊领主的印记</a>"
+    },
+    {
+      "type": "essence",
+      "Level": "1",
+      "DropChance": 0,
+      "ModGenerationTypeID": "2",
+      "mod_no": [],
+      "fossil_no": [],
+      "Name": "<a class=\"item_currency StackableCurrency\" data-hover=\"/cache2/cn/Poe_Data_BaseItemTypes_hover/3151889fa609b71cd82c686d46c2a2ecb025a300fff274fa1b493624625baaa8\" href=\"Essence_of_the_Abyss\"><img loading=\"lazy\" src=\"https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AbyssalEssence.webp\" height=\"16\"/>深渊精华</a>",
+      "Code": "EssenceAbyssSuffix",
+      "ModFamilyList": ["EssenceAbyss"],
+      "str": "<a data-keyword=\"MarkofAbyssalLord\" href=\"Mark_of_the_Abyssal_Lord\" class=\"KeywordPopups\" data-hover=\"/cache2/cn/Poe_Data_KeywordPopups_hover/4fa386c6453d41afaa296f171c3412589c13b63f37abc3c430aa89481ee2a13c\">深渊领主的印记</a>"
+    }
+  ],
+  "delve": [],
+  "incursion": [],
+  "elder": [],
+  "shaper": [],
+  "crusader": [],
+  "redeemer": [],
+  "hunter": [],
+  "warlord": [],
+  "veiled": [],
+  "scourgeup": [],
+  "scourgedown": [],
+  "bestiary": [],
+  "haunted": [],
+  "sentinel": [],
+  "synthesis": [],
+  "synthesis_corrupted": [],
+  "infamous": [],
+  "searing": [],
+  "eater": [],
+  "enchant": [],
+  "warbands": [],
+  "socketable": []
+}

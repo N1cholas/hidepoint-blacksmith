@@ -2,14 +2,13 @@
 import { Item_Rarity_Options, useItem } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
-import { useData } from '@/stores/modules/useData'
 import type { Affix } from '@/utils/factory/newAffix'
 import { DeleteIcon } from 'tdesign-icons-vue-next'
-import { computed } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
+import { Item_Type_Options } from '@/stores/modules/useItem'
 
 const item = useItem()
-const data = useData()
 
 const removeAffix = (affix: Affix) => {
   item.setState({
@@ -17,10 +16,18 @@ const removeAffix = (affix: Affix) => {
   })
 }
 
-const affixFamiliesPool = computed(() => {
-  if (item.state.affixFamilies.length >= 6) return []
+const affixFamilies = ref(null)
 
-  let pool = generateAddPool(data.bowData, item.state.affixFamilies, {
+watchEffect(async () => {
+  const data = await item.currentAffixFamiliesPool
+  // FileContent类型，取出normal部分
+  affixFamilies.value = data.normal
+})
+
+const affixFamiliesPool = computed(() => {
+  if (item.state.affixFamilies.length >= 6 || !affixFamilies.value) return []
+
+  let pool = generateAddPool(affixFamilies.value, item.state.affixFamilies, {
     deduplication: true,
     onlyPrefix: item.counts.suffixCount >= 3,
     onlySuffix: item.counts.prefixCount >= 3,
@@ -49,10 +56,7 @@ const affixFamiliesPool = computed(() => {
             <t-select
               v-model="item.state.type"
               size="small"
-              :options="[
-                { label: '弓', value: 'Bow' },
-                { label: '箭袋', value: 'Quiver' },
-              ]"
+              :options="Item_Type_Options"
               placeholder="选择"
             />
           </t-form-item>
