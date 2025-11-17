@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Item_Rarity_Options, useItem } from '@/stores/modules/useItem'
+import { Item_Rarity_Options, useItem, type ItemType } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
 import type { Affix } from '@/utils/factory/newAffix'
@@ -7,6 +7,7 @@ import { DeleteIcon } from 'tdesign-icons-vue-next'
 import { computed, ref, watchEffect } from 'vue'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { Item_Type_Options } from '@/stores/modules/useItem'
+import type { SelectValue, SliderValue } from 'tdesign-vue-next'
 
 const item = useItem()
 
@@ -45,6 +46,20 @@ const affixFamiliesPool = computed(() => {
 
   return pool
 })
+
+const handleSlide = (level: SliderValue) => {
+  item.setState({
+    level: level as number,
+    affixFamilies: [],
+  })
+}
+
+const handleSelectType = (value: SelectValue) => {
+  item.setState({
+    type: value as ItemType,
+    affixFamilies: [],
+  })
+}
 </script>
 
 <template>
@@ -54,7 +69,8 @@ const affixFamiliesPool = computed(() => {
         <div class="line">
           <t-form-item label="装备类型" label-width="72">
             <t-select
-              v-model="item.state.type"
+              :value="item.state.type"
+              @change="handleSelectType"
               size="small"
               :options="Item_Type_Options"
               placeholder="选择"
@@ -74,7 +90,13 @@ const affixFamiliesPool = computed(() => {
         </div>
 
         <div class="slider">
-          <t-slider v-model="item.state.level" :min="1" :max="100" :show-tooltip="true" />
+          <t-slider
+            :value="item.state.level"
+            @change-end="handleSlide"
+            :min="1"
+            :max="100"
+            :show-tooltip="true"
+          />
         </div>
 
         <div class="selected-wrap">

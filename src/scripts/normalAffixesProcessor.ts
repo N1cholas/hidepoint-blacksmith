@@ -59,7 +59,9 @@ function transform(raw: RawFile): FileContent {
 
   const grouped: Record<string, Affix[]> = groupBy(affixes, 'id')
 
-  const families: AffixFamily[] = Object.values(grouped).map(newAffixFamily)
+  const families: AffixFamily[] = Object.values(grouped)
+    .map(newAffixFamily)
+    .sort((a) => (a.isPrefix ? -1 : 1))
 
   return { normal: families }
 }

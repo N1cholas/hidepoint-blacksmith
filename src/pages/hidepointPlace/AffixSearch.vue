@@ -3,7 +3,7 @@ import type { AffixFamily } from '@/utils/factory/newAffixFamily'
 import AffixList from './AffixList.vue'
 import { computed, ref, watch } from 'vue'
 import type { Affix } from '@/utils/factory/newAffix'
-import { TaskAdd1Icon } from 'tdesign-icons-vue-next'
+import { AddIcon } from 'tdesign-icons-vue-next'
 import { useItem } from '@/stores/modules/useItem'
 
 export type AffixSearchProps = {
@@ -75,7 +75,7 @@ const addAffix = (affix: Affix) => {
           :options="tierOptionsMap.get(item.id)"
         />
         <t-button size="small" @click="() => addAffix(item)">
-          <task-add-1-icon></task-add-1-icon>
+          <add-icon></add-icon>
         </t-button>
       </template>
     </AffixList>

@@ -3,6 +3,788 @@
     {
       "items": [
         {
+          "name": "催化的",
+          "level": 4,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "注入的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (36&ndash;52)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "赋能的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (53&ndash;62)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "释放的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (63&ndash;72)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "威压的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (73&ndash;86)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "毁灭的",
+          "level": 81,
+          "isPrefix": true,
+          "id": "IncreasedWeaponElementalDamagePercent",
+          "dropChance": 500,
+          "str": "攻击技能的元素伤害提高 (87&ndash;100)%",
+          "tags": ["伤害", "元素", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 3000,
+      "id": "IncreasedWeaponElementalDamagePercent",
+      "isPrefix": true,
+      "tags": ["伤害", "元素", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "精确的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 800,
+          "str": "+(11&ndash;32) 命中值",
+          "tags": ["攻击"],
+          "tier": 10
+        },
+        {
+          "name": "可靠的",
+          "level": 11,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 800,
+          "str": "+(33&ndash;60) 命中值",
+          "tags": ["攻击"],
+          "tier": 9
+        },
+        {
+          "name": "专注的",
+          "level": 18,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 800,
+          "str": "+(61&ndash;84) 命中值",
+          "tags": ["攻击"],
+          "tier": 8
+        },
+        {
+          "name": "从容的",
+          "level": 26,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 800,
+          "str": "+(85&ndash;123) 命中值",
+          "tags": ["攻击"],
+          "tier": 7
+        },
+        {
+          "name": "如一的",
+          "level": 36,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 800,
+          "str": "+(124&ndash;167) 命中值",
+          "tags": ["攻击"],
+          "tier": 6
+        },
+        {
+          "name": "稳健的",
+          "level": 48,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 600,
+          "str": "+(168&ndash;236) 命中值",
+          "tags": ["攻击"],
+          "tier": 5
+        },
+        {
+          "name": "狩猎者的",
+          "level": 58,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 600,
+          "str": "+(237&ndash;346) 命中值",
+          "tags": ["攻击"],
+          "tier": 4
+        },
+        {
+          "name": "游侠的",
+          "level": 67,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 300,
+          "str": "+(347&ndash;450) 命中值",
+          "tags": ["攻击"],
+          "tier": 3
+        },
+        {
+          "name": "亚马逊的",
+          "level": 76,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 200,
+          "str": "+(451&ndash;550) 命中值",
+          "tags": ["攻击"],
+          "tier": 2
+        },
+        {
+          "name": "女武神的",
+          "level": 82,
+          "isPrefix": true,
+          "id": "IncreasedAccuracy",
+          "dropChance": 100,
+          "str": "+(551&ndash;650) 命中值",
+          "tags": ["攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 5800,
+      "id": "IncreasedAccuracy",
+      "isPrefix": true,
+      "tags": ["攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "侍从的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "旅人的",
+          "level": 11,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (20&ndash;24)%<br>+(21&ndash;46) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "掠夺者的",
+          "level": 23,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (25&ndash;34)%<br>+(47&ndash;72) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "佣兵的",
+          "level": 38,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (35&ndash;44)%<br>+(73&ndash;97) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "冠军的",
+          "level": 54,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 600,
+          "str": "物理伤害提高 (45&ndash;54)%<br>+(98&ndash;123) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "征服者的",
+          "level": 65,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 400,
+          "str": "物理伤害提高 (55&ndash;64)%<br>+(124&ndash;149) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "帝王的",
+          "level": 70,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 200,
+          "str": "物理伤害提高 (65&ndash;74)%<br>+(150&ndash;174) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "独裁者的",
+          "level": 81,
+          "isPrefix": true,
+          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+          "dropChance": 100,
+          "str": "物理伤害提高 (75&ndash;79)%<br>+(175&ndash;200) 命中值",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 5300,
+      "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
+      "isPrefix": true,
+      "tags": ["伤害", "物理", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "重量的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (40&ndash;49)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "锯齿的",
+          "level": 8,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (50&ndash;64)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "邪恶的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 1000,
+          "str": "物理伤害提高 (65&ndash;84)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "狠毒的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 400,
+          "str": "物理伤害提高 (85&ndash;109)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "嗜血的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 200,
+          "str": "物理伤害提高 (110&ndash;134)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "残酷的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 100,
+          "str": "物理伤害提高 (135&ndash;154)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "强横的",
+          "level": 75,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 50,
+          "str": "物理伤害提高 (155&ndash;169)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "无情的",
+          "level": 82,
+          "isPrefix": true,
+          "id": "LocalPhysicalDamagePercent",
+          "dropChance": 25,
+          "str": "物理伤害提高 (170&ndash;179)%",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 3775,
+      "id": "LocalPhysicalDamagePercent",
+      "isPrefix": true,
+      "tags": ["伤害", "物理", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "低鸣的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 1 - (4&ndash;6) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 10
+        },
+        {
+          "name": "嗡嗡的",
+          "level": 8,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 1 - (13&ndash;19) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 9
+        },
+        {
+          "name": "捕捉的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 (1&ndash;2) - (20&ndash;30) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "劈哩啪啦的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 (1&ndash;2) - (36&ndash;52) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "火花的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "电弧的",
+          "level": 54,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 1200,
+          "str": "附加 (1&ndash;4) - (63&ndash;82) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "电震的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 720,
+          "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "放电的",
+          "level": 65,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 480,
+          "str": "附加 (1&ndash;8) - (111&ndash;152) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "电极的",
+          "level": 75,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 300,
+          "str": "附加 (1&ndash;10) - (157&ndash;196) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "汽化的",
+          "level": 81,
+          "isPrefix": true,
+          "id": "LightningDamage",
+          "dropChance": 120,
+          "str": "附加 (1&ndash;12) - (202&ndash;234) 闪电伤害",
+          "tags": ["伤害", "元素", "闪电", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 8820,
+      "id": "LightningDamage",
+      "isPrefix": true,
+      "tags": ["伤害", "元素", "闪电", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "结霜的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 10
+        },
+        {
+          "name": "冷冻的",
+          "level": 8,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 9
+        },
+        {
+          "name": "结冰的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (6&ndash;9) - (10&ndash;16) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "寒风的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (11&ndash;15) - (17&ndash;24) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "急冻的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "冻结的",
+          "level": 54,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 800,
+          "str": "附加 (22&ndash;29) - (34&ndash;44) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "冰河的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 480,
+          "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "极地的",
+          "level": 65,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 320,
+          "str": "附加 (40&ndash;53) - (62&ndash;80) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "埋葬的",
+          "level": 75,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 200,
+          "str": "附加 (55&ndash;69) - (83&ndash;106) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "晶化的",
+          "level": 81,
+          "isPrefix": true,
+          "id": "ColdDamage",
+          "dropChance": 80,
+          "str": "附加 (72&ndash;81) - (110&ndash;123) 冰霜伤害",
+          "tags": ["伤害", "元素", "冰霜", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 5880,
+      "id": "ColdDamage",
+      "isPrefix": true,
+      "tags": ["伤害", "元素", "冰霜", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "加热的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 10
+        },
+        {
+          "name": "闷烧的",
+          "level": 8,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 9
+        },
+        {
+          "name": "冒烟的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (7&ndash;11) - (13&ndash;19) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "燃烧的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (13&ndash;19) - (21&ndash;29) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "火焰的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "酷热的",
+          "level": 54,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 800,
+          "str": "附加 (25&ndash;33) - (38&ndash;54) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "焚烧的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 480,
+          "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "爆破的",
+          "level": 65,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 320,
+          "str": "附加 (47&ndash;59) - (74&ndash;97) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "火化的",
+          "level": 75,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 200,
+          "str": "附加 (62&ndash;85) - (101&ndash;129) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "焦化的",
+          "level": 81,
+          "isPrefix": true,
+          "id": "FireDamage",
+          "dropChance": 80,
+          "str": "附加 (88&ndash;101) - (133&ndash;154) 火焰伤害",
+          "tags": ["伤害", "元素", "火焰", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 5880,
+      "id": "FireDamage",
+      "isPrefix": true,
+      "tags": ["伤害", "元素", "火焰", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
+          "name": "反光的",
+          "level": 1,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 1000,
+          "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 9
+        },
+        {
+          "name": "磨光的",
+          "level": 8,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 1000,
+          "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 8
+        },
+        {
+          "name": "抛光的",
+          "level": 16,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 1000,
+          "str": "附加 (6&ndash;9) - (11&ndash;16) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 7
+        },
+        {
+          "name": "砥砺的",
+          "level": 33,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 1000,
+          "str": "附加 (8&ndash;12) - (14&ndash;21) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 6
+        },
+        {
+          "name": "熠熠的",
+          "level": 46,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 1000,
+          "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 5
+        },
+        {
+          "name": "韧炼的",
+          "level": 54,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 600,
+          "str": "附加 (13&ndash;20) - (23&ndash;35) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 4
+        },
+        {
+          "name": "锋利的",
+          "level": 60,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 400,
+          "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 3
+        },
+        {
+          "name": "锻炼的",
+          "level": 65,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 200,
+          "str": "附加 (21&ndash;31) - (36&ndash;53) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 2
+        },
+        {
+          "name": "迸出的",
+          "level": 75,
+          "isPrefix": true,
+          "id": "PhysicalDamage",
+          "dropChance": 100,
+          "str": "附加 (26&ndash;39) - (44&ndash;66) 物理伤害",
+          "tags": ["伤害", "物理", "攻击"],
+          "tier": 1
+        }
+      ],
+      "weight": 6300,
+      "id": "PhysicalDamage",
+      "isPrefix": true,
+      "tags": ["伤害", "物理", "攻击"],
+      "hitAffix": null
+    },
+    {
+      "items": [
+        {
           "name": "猫鼬之",
           "level": 1,
           "isPrefix": false,
@@ -146,610 +928,6 @@
       "id": "LocalAttributeRequirements",
       "isPrefix": false,
       "tags": [],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "反光的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 1000,
-          "str": "附加 (1&ndash;2) - (4&ndash;5) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 9
-        },
-        {
-          "name": "磨光的",
-          "level": 8,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 1000,
-          "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "抛光的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 1000,
-          "str": "附加 (6&ndash;9) - (11&ndash;16) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "砥砺的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 1000,
-          "str": "附加 (8&ndash;12) - (14&ndash;21) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "熠熠的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 1000,
-          "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "韧炼的",
-          "level": 54,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 600,
-          "str": "附加 (13&ndash;20) - (23&ndash;35) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "锋利的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 400,
-          "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "锻炼的",
-          "level": 65,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 200,
-          "str": "附加 (21&ndash;31) - (36&ndash;53) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "迸出的",
-          "level": 75,
-          "isPrefix": true,
-          "id": "PhysicalDamage",
-          "dropChance": 100,
-          "str": "附加 (26&ndash;39) - (44&ndash;66) 物理伤害",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 6300,
-      "id": "PhysicalDamage",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "加热的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (1&ndash;2) - (3&ndash;5) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 10
-        },
-        {
-          "name": "闷烧的",
-          "level": 8,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 9
-        },
-        {
-          "name": "冒烟的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (7&ndash;11) - (13&ndash;19) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "燃烧的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (13&ndash;19) - (21&ndash;29) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "火焰的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "酷热的",
-          "level": 54,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 800,
-          "str": "附加 (25&ndash;33) - (38&ndash;54) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "焚烧的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 480,
-          "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "爆破的",
-          "level": 65,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 320,
-          "str": "附加 (47&ndash;59) - (74&ndash;97) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "火化的",
-          "level": 75,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 200,
-          "str": "附加 (62&ndash;85) - (101&ndash;129) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "焦化的",
-          "level": 81,
-          "isPrefix": true,
-          "id": "FireDamage",
-          "dropChance": 80,
-          "str": "附加 (88&ndash;101) - (133&ndash;154) 火焰伤害",
-          "tags": ["伤害", "元素", "火焰", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 5880,
-      "id": "FireDamage",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "火焰", "攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "结霜的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (1&ndash;2) - (3&ndash;4) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 10
-        },
-        {
-          "name": "冷冻的",
-          "level": 8,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 9
-        },
-        {
-          "name": "结冰的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (6&ndash;9) - (10&ndash;16) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "寒风的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (11&ndash;15) - (17&ndash;24) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "急冻的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "冻结的",
-          "level": 54,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 800,
-          "str": "附加 (22&ndash;29) - (34&ndash;44) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "冰河的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 480,
-          "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "极地的",
-          "level": 65,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 320,
-          "str": "附加 (40&ndash;53) - (62&ndash;80) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "埋葬的",
-          "level": 75,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 200,
-          "str": "附加 (55&ndash;69) - (83&ndash;106) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "晶化的",
-          "level": 81,
-          "isPrefix": true,
-          "id": "ColdDamage",
-          "dropChance": 80,
-          "str": "附加 (72&ndash;81) - (110&ndash;123) 冰霜伤害",
-          "tags": ["伤害", "元素", "冰霜", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 5880,
-      "id": "ColdDamage",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "低鸣的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 1 - (4&ndash;6) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 10
-        },
-        {
-          "name": "嗡嗡的",
-          "level": 8,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 1 - (13&ndash;19) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 9
-        },
-        {
-          "name": "捕捉的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 (1&ndash;2) - (20&ndash;30) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "劈哩啪啦的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 (1&ndash;2) - (36&ndash;52) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "火花的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "电弧的",
-          "level": 54,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 1200,
-          "str": "附加 (1&ndash;4) - (63&ndash;82) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "电震的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 720,
-          "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "放电的",
-          "level": 65,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 480,
-          "str": "附加 (1&ndash;8) - (111&ndash;152) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "电极的",
-          "level": 75,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 300,
-          "str": "附加 (1&ndash;10) - (157&ndash;196) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "汽化的",
-          "level": 81,
-          "isPrefix": true,
-          "id": "LightningDamage",
-          "dropChance": 120,
-          "str": "附加 (1&ndash;12) - (202&ndash;234) 闪电伤害",
-          "tags": ["伤害", "元素", "闪电", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 8820,
-      "id": "LightningDamage",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "闪电", "攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "重量的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (40&ndash;49)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "锯齿的",
-          "level": 8,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (50&ndash;64)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "邪恶的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (65&ndash;84)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "狠毒的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 400,
-          "str": "物理伤害提高 (85&ndash;109)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "嗜血的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 200,
-          "str": "物理伤害提高 (110&ndash;134)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "残酷的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 100,
-          "str": "物理伤害提高 (135&ndash;154)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "强横的",
-          "level": 75,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 50,
-          "str": "物理伤害提高 (155&ndash;169)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "无情的",
-          "level": 82,
-          "isPrefix": true,
-          "id": "LocalPhysicalDamagePercent",
-          "dropChance": 25,
-          "str": "物理伤害提高 (170&ndash;179)%",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 3775,
-      "id": "LocalPhysicalDamagePercent",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "侍从的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (15&ndash;19)%<br>+(16&ndash;20) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 8
-        },
-        {
-          "name": "旅人的",
-          "level": 11,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (20&ndash;24)%<br>+(21&ndash;46) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 7
-        },
-        {
-          "name": "掠夺者的",
-          "level": 23,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (25&ndash;34)%<br>+(47&ndash;72) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "佣兵的",
-          "level": 38,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 1000,
-          "str": "物理伤害提高 (35&ndash;44)%<br>+(73&ndash;97) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "冠军的",
-          "level": 54,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 600,
-          "str": "物理伤害提高 (45&ndash;54)%<br>+(98&ndash;123) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "征服者的",
-          "level": 65,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 400,
-          "str": "物理伤害提高 (55&ndash;64)%<br>+(124&ndash;149) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "帝王的",
-          "level": 70,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 200,
-          "str": "物理伤害提高 (65&ndash;74)%<br>+(150&ndash;174) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "独裁者的",
-          "level": 81,
-          "isPrefix": true,
-          "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-          "dropChance": 100,
-          "str": "物理伤害提高 (75&ndash;79)%<br>+(175&ndash;200) 命中值",
-          "tags": ["伤害", "物理", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 5300,
-      "id": "LocalIncreasedPhysicalDamagePercentAndAccuracyRating",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
       "hitAffix": null
     },
     {
@@ -1198,115 +1376,6 @@
     {
       "items": [
         {
-          "name": "精确的",
-          "level": 1,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 800,
-          "str": "+(11&ndash;32) 命中值",
-          "tags": ["攻击"],
-          "tier": 10
-        },
-        {
-          "name": "可靠的",
-          "level": 11,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 800,
-          "str": "+(33&ndash;60) 命中值",
-          "tags": ["攻击"],
-          "tier": 9
-        },
-        {
-          "name": "专注的",
-          "level": 18,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 800,
-          "str": "+(61&ndash;84) 命中值",
-          "tags": ["攻击"],
-          "tier": 8
-        },
-        {
-          "name": "从容的",
-          "level": 26,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 800,
-          "str": "+(85&ndash;123) 命中值",
-          "tags": ["攻击"],
-          "tier": 7
-        },
-        {
-          "name": "如一的",
-          "level": 36,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 800,
-          "str": "+(124&ndash;167) 命中值",
-          "tags": ["攻击"],
-          "tier": 6
-        },
-        {
-          "name": "稳健的",
-          "level": 48,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 600,
-          "str": "+(168&ndash;236) 命中值",
-          "tags": ["攻击"],
-          "tier": 5
-        },
-        {
-          "name": "狩猎者的",
-          "level": 58,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 600,
-          "str": "+(237&ndash;346) 命中值",
-          "tags": ["攻击"],
-          "tier": 4
-        },
-        {
-          "name": "游侠的",
-          "level": 67,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 300,
-          "str": "+(347&ndash;450) 命中值",
-          "tags": ["攻击"],
-          "tier": 3
-        },
-        {
-          "name": "亚马逊的",
-          "level": 76,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 200,
-          "str": "+(451&ndash;550) 命中值",
-          "tags": ["攻击"],
-          "tier": 2
-        },
-        {
-          "name": "女武神的",
-          "level": 82,
-          "isPrefix": true,
-          "id": "IncreasedAccuracy",
-          "dropChance": 100,
-          "str": "+(551&ndash;650) 命中值",
-          "tags": ["攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 5800,
-      "id": "IncreasedAccuracy",
-      "isPrefix": true,
-      "tags": ["攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
           "name": "威胁之",
           "level": 1,
           "isPrefix": false,
@@ -1508,75 +1577,6 @@
       "id": "AdditionalArrows",
       "isPrefix": false,
       "tags": ["攻击"],
-      "hitAffix": null
-    },
-    {
-      "items": [
-        {
-          "name": "催化的",
-          "level": 4,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (19&ndash;35)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 6
-        },
-        {
-          "name": "注入的",
-          "level": 16,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (36&ndash;52)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 5
-        },
-        {
-          "name": "赋能的",
-          "level": 33,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (53&ndash;62)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 4
-        },
-        {
-          "name": "释放的",
-          "level": 46,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (63&ndash;72)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 3
-        },
-        {
-          "name": "威压的",
-          "level": 60,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (73&ndash;86)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 2
-        },
-        {
-          "name": "毁灭的",
-          "level": 81,
-          "isPrefix": true,
-          "id": "IncreasedWeaponElementalDamagePercent",
-          "dropChance": 500,
-          "str": "攻击技能的元素伤害提高 (87&ndash;100)%",
-          "tags": ["伤害", "元素", "攻击"],
-          "tier": 1
-        }
-      ],
-      "weight": 3000,
-      "id": "IncreasedWeaponElementalDamagePercent",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "攻击"],
       "hitAffix": null
     }
   ]
