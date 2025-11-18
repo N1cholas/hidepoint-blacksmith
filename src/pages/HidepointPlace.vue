@@ -1,25 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import HidepointPlaceLayout from '@/layout/HidepointPlaceLayout'
 import InitItem from './hidepointPlace/InitItem.vue'
+import { ref } from 'vue'
 
-const current = ref(0)
+const currentStep = ref(0)
 
 const onFinish = () => {
-  alert('完成')
+  console.log('完成做装，导出结果')
 }
 </script>
 
 <template>
   <main class="hp">
-    <HidepointPlaceLayout
-      v-model:modelValue="current"
-      :titles="['做装初始化', '模拟做装', '结果归档']"
-      prev-text="返回上一步"
-      next-text="继续"
-      finish-text="导出"
-      @finish="onFinish"
-    >
+    <HidepointPlaceLayout v-model="currentStep" @finish="onFinish">
       <template #step-0>
         <InitItem />
       </template>
@@ -28,7 +21,6 @@ const onFinish = () => {
         <t-card header="步骤二 · 执行做装">
           <p class="desc">在这里进行做装操作与模拟。</p>
           <div class="body">
-            <!-- 操作区 -->
             <t-space>
               <t-button size="small">蜕变石</t-button>
               <t-button size="small">增幅石</t-button>

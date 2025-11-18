@@ -9,6 +9,10 @@ import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { Item_Type_Options } from '@/stores/modules/useItem'
 import type { SelectValue, SliderValue } from 'tdesign-vue-next'
 
+const { inited } = defineProps<{
+  inited?: boolean
+}>()
+
 const item = useItem()
 
 const removeAffix = (affix: Affix) => {
@@ -74,6 +78,7 @@ const handleSelectType = (value: SelectValue) => {
               size="small"
               :options="Item_Type_Options"
               placeholder="选择"
+              :disabled="inited"
             />
           </t-form-item>
           <t-form-item label="稀有度" label-width="60">
@@ -82,10 +87,17 @@ const handleSelectType = (value: SelectValue) => {
               size="small"
               :options="Item_Rarity_Options"
               placeholder="选择"
+              :disabled="inited"
             />
           </t-form-item>
           <t-form-item label="等级" label-width="48">
-            <t-input-number v-model="item.state.level" size="small" :min="1" :max="100" />
+            <t-input-number
+              v-model="item.state.level"
+              size="small"
+              :min="1"
+              :max="100"
+              :disabled="inited"
+            />
           </t-form-item>
         </div>
 
@@ -96,13 +108,14 @@ const handleSelectType = (value: SelectValue) => {
             :min="1"
             :max="100"
             :show-tooltip="true"
+            :disabled="inited"
           />
         </div>
 
         <div class="selected-wrap">
           <div class="selected-title">已选择（{{ item.hitAffixes.length }}）</div>
           <AffixList :items="item.hitAffixes" :itemKey="(a) => `${a.id}-${a.tier}`" showTier>
-            <template #actions="{ item }">
+            <template v-if="!inited" #actions="{ item }">
               <t-button size="small" theme="danger" @click="() => removeAffix(item)">
                 <delete-icon></delete-icon>
               </t-button>
@@ -114,9 +127,12 @@ const handleSelectType = (value: SelectValue) => {
 
     <!-- 右 -->
     <div class="side right">
-      <t-card header="词缀搜索与目录">
+      <t-card v-if="!inited" header="词缀搜索与目录">
         <AffixSearch :affixFamiliesPool="affixFamiliesPool"> </AffixSearch>
       </t-card>
+      <template v-else>
+        <slot></slot>
+      </template>
     </div>
   </section>
 </template>

@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { computed, ref, watch, useSlots, defineExpose } from 'vue'
+import { computed, ref, useSlots, watch } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    /* v-model:step 当前步骤索引 */
-    modelValue?: number
     /* 初始步骤（未使用 v-model 时） */
     initial?: number
     /* 步骤标题 */
@@ -15,6 +13,8 @@ const props = withDefaults(
     finishText?: string
     /* 底部工具条吸底 */
     stickyFooter?: boolean
+    /* 当前步骤（受控模式） */
+    modelValue?: number
   }>(),
   {
     initial: 0,
@@ -27,87 +27,100 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', v: number): void
+  (e: 'update:modelValue', value: number): void
   (e: 'finish'): void
-  (e: 'change', v: number): void
 }>()
 
-// 步骤状态（受控/非受控）
+// 步骤状态（支持受控模式）
 const step = ref<number>(props.modelValue ?? props.initial)
 watch(
   () => props.modelValue,
-  (v) => {
-    if (v !== undefined) step.value = v!
+  (newVal) => {
+    if (newVal != null) step.value = newVal
   },
 )
-watch(step, (v) => {
-  if (props.modelValue !== undefined) emit('update:modelValue', v)
-  emit('change', v)
-})
 
-const maxIndex = 2
+// 最大步骤索引
+const maxIndex = computed(() => props.titles.length - 1)
+
+// 是否为第一步/最后一步
 const isFirst = computed(() => step.value === 0)
-const isLast = computed(() => step.value === maxIndex)
+const isLast = computed(() => step.value === maxIndex.value)
 
+// 步骤切换逻辑
 function prev() {
-  if (!isFirst.value) step.value--
+  if (step.value > 0) updateStep(step.value - 1)
 }
 function next() {
-  if (!isLast.value) step.value++
+  if (step.value < maxIndex.value) updateStep(step.value + 1)
+  else emit('finish') // 最后一步触发完成事件
 }
-function finish() {
-  emit('finish')
+function updateStep(newStep: number) {
+  step.value = newStep
+  emit('update:modelValue', newStep)
 }
 
-defineExpose({ prev, next, finish, step })
-
-// 插槽存在性检测（命名插槽：step-0/1/2）
+// 插槽管理
 const slots = useSlots()
-const namedExists = (name: string) => Boolean(slots[name])
+function namedExists(name: string) {
+  return !!slots[name]
+}
 </script>
 
 <template>
-  <main class="hp-layout">
-    <!-- 步骤条 -->
+  <div class="hidepoint-layout">
+    <!-- 步骤标题 -->
     <t-steps :current="step" theme="default" class="steps">
       <t-step-item :title="titles[0]" />
       <t-step-item :title="titles[1]" />
       <t-step-item :title="titles[2]" />
     </t-steps>
 
-    <!-- 步骤内容：命名插槽优先，未提供则用默认插槽（传 step） -->
-    <section v-for="i in 3" :key="i" v-show="step === i - 1" class="step">
-      <slot v-if="namedExists(`step-${i - 1}`)" :name="`step-${i - 1}`" :step="step" />
-      <slot v-else :step="step"></slot>
+    <!-- 步骤内容 -->
+    <section class="content">
+      <slot v-if="!namedExists(`step-${step}`)" />
+      <slot v-else :name="`step-${step}`" />
     </section>
 
-    <!-- 底部控制 -->
-    <footer class="footer" :class="{ 'footer--sticky': stickyFooter }">
+    <!-- 底部工具栏 -->
+    <footer class="footer" :class="{ sticky: props.stickyFooter }">
       <t-space>
-        <t-button variant="outline" :disabled="isFirst" @click="prev">{{ prevText }}</t-button>
-        <t-button v-if="!isLast" theme="primary" @click="next">{{ nextText }}</t-button>
-        <t-button v-else theme="primary" @click="finish">{{ finishText }}</t-button>
+        <t-button v-if="!isFirst" variant="outline" @click="prev">
+          {{ props.prevText }}
+        </t-button>
+        <t-button v-if="!isLast" theme="primary" @click="next">
+          {{ props.nextText }}
+        </t-button>
+        <t-button v-else theme="success" @click="next">
+          {{ props.finishText }}
+        </t-button>
       </t-space>
     </footer>
-  </main>
+  </div>
 </template>
 
 <style scoped>
-.steps {
-  margin-bottom: 16px;
+.hidepoint-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.step {
-  margin-bottom: 16px;
+
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
 }
+
 .footer {
-  padding: 10px 12px;
+  padding: 16px;
+  border-top: 1px solid var(--td-border-level-1-color);
   background: var(--td-bg-color-container);
-  border: 1px solid var(--td-border-level-1-color);
-  border-radius: var(--td-radius-extraLarge);
 }
-.footer--sticky {
+
+.footer.sticky {
   position: sticky;
-  bottom: 12px;
-  z-index: 5;
+  bottom: 0;
+  z-index: 10;
 }
 </style>
