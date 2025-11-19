@@ -7,6 +7,7 @@ export type AffixListProps = {
   items: Affix[]
   itemKey: keyof Affix | ((a: Affix, i: number) => Key)
   showTier?: boolean
+  lockedAffix?: Affix
 }
 
 const { items, itemKey, showTier } = defineProps<AffixListProps>()
@@ -24,7 +25,7 @@ function keyOf(a: Affix, i: number): Key {
         {{ a.isPrefix ? '前缀' : '后缀' }}
       </span>
 
-      <span class="text" v-html="a.str"></span>
+      <span class="text" :class="{ locked: a.id === lockedAffix?.id }" v-html="a.str"></span>
 
       <span v-show="showTier" class="tier">T{{ a.tier }} </span>
 
@@ -87,6 +88,10 @@ function keyOf(a: Affix, i: number): Key {
   min-width: 0;
   color: var(--td-text-color-primary);
   font-size: 13px;
+}
+
+.text.locked {
+  color: #d2870f;
 }
 
 .tier {

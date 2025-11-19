@@ -3,7 +3,7 @@ import type { AffixFamily } from '@/utils/factory/newAffixFamily'
 import AffixList from './AffixList.vue'
 import { computed, ref, watch } from 'vue'
 import type { Affix } from '@/utils/factory/newAffix'
-import { AddIcon } from 'tdesign-icons-vue-next'
+import { AddIcon, LockOnIcon } from 'tdesign-icons-vue-next'
 import { useItem } from '@/stores/modules/useItem'
 
 export type AffixSearchProps = {
@@ -12,7 +12,7 @@ export type AffixSearchProps = {
 
 const { affixFamiliesPool } = defineProps<AffixSearchProps>()
 
-const item = useItem()
+const _item = useItem()
 
 const selectedTiers = ref<Record<string, number>>({})
 
@@ -58,9 +58,16 @@ const addAffix = (affix: Affix) => {
 
   hitAffixFamily.hitAffix = affix
 
-  item.setState({
-    affixFamilies: [...item.state.affixFamilies, hitAffixFamily],
+  _item.setState({
+    affixFamilies: [..._item.state.affixFamilies, hitAffixFamily],
   })
+}
+
+const lockAffix = (affix: Affix) => {
+  _item.setState({
+    lockedAffix: affix,
+  })
+  addAffix(affix)
 }
 </script>
 
@@ -76,6 +83,9 @@ const addAffix = (affix: Affix) => {
         />
         <t-button size="small" @click="() => addAffix(item)">
           <add-icon></add-icon>
+        </t-button>
+        <t-button size="small" @click="() => lockAffix(item)" v-show="!_item.state.lockedAffix">
+          <lock-on-icon></lock-on-icon>
         </t-button>
       </template>
     </AffixList>

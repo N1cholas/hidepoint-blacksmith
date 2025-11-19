@@ -8,37 +8,38 @@ import { computed, ref, watchEffect } from 'vue'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { Item_Type_Options } from '@/stores/modules/useItem'
 import type { SelectValue, SliderValue } from 'tdesign-vue-next'
+import { LockOffIcon } from 'tdesign-icons-vue-next'
 
 const { inited } = defineProps<{
   inited?: boolean
 }>()
 
-const item = useItem()
+const _item = useItem()
 
 const removeAffix = (affix: Affix) => {
-  item.setState({
-    affixFamilies: item.state.affixFamilies.filter((af) => af.id !== affix.id),
+  _item.setState({
+    affixFamilies: _item.state.affixFamilies.filter((af) => af.id !== affix.id),
   })
 }
 
 const affixFamilies = ref(null)
 
 watchEffect(async () => {
-  const data = await item.currentAffixFamiliesPool
+  const data = await _item.currentAffixFamiliesPool
   // FileContent类型，取出normal部分
   affixFamilies.value = data.normal
 })
 
 const affixFamiliesPool = computed(() => {
-  if (item.state.affixFamilies.length >= 6 || !affixFamilies.value) return []
+  if (_item.state.affixFamilies.length >= 6 || !affixFamilies.value) return []
 
-  let pool = generateAddPool(affixFamilies.value, item.state.affixFamilies, {
+  let pool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
-    onlyPrefix: item.counts.suffixCount >= 3,
-    onlySuffix: item.counts.prefixCount >= 3,
+    onlyPrefix: _item.counts.suffixCount >= 3,
+    onlySuffix: _item.counts.prefixCount >= 3,
   })
 
-  const itemLevel = item.state.level
+  const itemLevel = _item.state.level
 
   pool = pool
     .map((af) => ({
@@ -52,17 +53,21 @@ const affixFamiliesPool = computed(() => {
 })
 
 const handleSlide = (level: SliderValue) => {
-  item.setState({
+  _item.setState({
     level: level as number,
     affixFamilies: [],
   })
 }
 
 const handleSelectType = (value: SelectValue) => {
-  item.setState({
+  _item.setState({
     type: value as ItemType,
     affixFamilies: [],
   })
+}
+
+const toggleLock = (affix: Affix) => {
+  _item.state.lockedAffix = affix
 }
 </script>
 
@@ -73,7 +78,7 @@ const handleSelectType = (value: SelectValue) => {
         <div class="line">
           <t-form-item label="装备类型" label-width="72">
             <t-select
-              :value="item.state.type"
+              :value="_item.state.type"
               @change="handleSelectType"
               size="small"
               :options="Item_Type_Options"
@@ -83,7 +88,7 @@ const handleSelectType = (value: SelectValue) => {
           </t-form-item>
           <t-form-item label="稀有度" label-width="60">
             <t-select
-              v-model="item.state.rarity"
+              v-model="_item.state.rarity"
               size="small"
               :options="Item_Rarity_Options"
               placeholder="选择"
@@ -92,7 +97,7 @@ const handleSelectType = (value: SelectValue) => {
           </t-form-item>
           <t-form-item label="等级" label-width="48">
             <t-input-number
-              v-model="item.state.level"
+              v-model="_item.state.level"
               size="small"
               :min="1"
               :max="100"
@@ -103,7 +108,7 @@ const handleSelectType = (value: SelectValue) => {
 
         <div class="slider">
           <t-slider
-            :value="item.state.level"
+            :value="_item.state.level"
             @change-end="handleSlide"
             :min="1"
             :max="100"
@@ -113,11 +118,19 @@ const handleSelectType = (value: SelectValue) => {
         </div>
 
         <div class="selected-wrap">
-          <div class="selected-title">已选择（{{ item.hitAffixes.length }}）</div>
-          <AffixList :items="item.hitAffixes" :itemKey="(a) => `${a.id}-${a.tier}`" showTier>
+          <div class="selected-title">已选择（{{ _item.hitAffixes.length }}）</div>
+          <AffixList
+            :items="_item.hitAffixes"
+            :lockedAffix="_item.state.lockedAffix"
+            :itemKey="(a) => `${a.id}-${a.tier}`"
+            showTier
+          >
             <template v-if="!inited" #actions="{ item }">
               <t-button size="small" theme="danger" @click="() => removeAffix(item)">
                 <delete-icon></delete-icon>
+              </t-button>
+              <t-button size="small" @click="() => toggleLock(item)">
+                <lock-off-icon></lock-off-icon>
               </t-button>
             </template>
           </AffixList>
