@@ -2,6 +2,7 @@
 import HidepointPlaceLayout from '@/layout/HidepointPlaceLayout'
 import InitItem from './hidepointPlace/InitItem.vue'
 import { ref } from 'vue'
+import CraftingItem from './hidepointPlace/CraftingItem.vue'
 
 const currentStep = ref(0)
 
@@ -18,16 +19,7 @@ const onFinish = () => {
       </template>
 
       <template #step-1>
-        <t-card header="步骤二 · 执行做装">
-          <p class="desc">在这里进行做装操作与模拟。</p>
-          <div class="body">
-            <t-space>
-              <t-button size="small">蜕变石</t-button>
-              <t-button size="small">增幅石</t-button>
-              <t-button size="small" theme="primary">崇高石</t-button>
-            </t-space>
-          </div>
-        </t-card>
+        <CraftingItem />
       </template>
 
       <template #step-2>

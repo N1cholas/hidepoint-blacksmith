@@ -74,7 +74,7 @@ const toggleLock = (affix: Affix) => {
 <template>
   <section class="init-item">
     <div class="side left">
-      <t-card header="基础信息与已选词缀">
+      <t-card header="初始化装备基底">
         <div class="line">
           <t-form-item label="装备类型" label-width="72">
             <t-select
