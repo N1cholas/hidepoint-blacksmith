@@ -67,6 +67,10 @@ const handleSelectType = (value: SelectValue) => {
 }
 
 const toggleLock = (affix: Affix) => {
+  if (affix.id === _item.state.lockedAffix?.id) {
+    _item.state.lockedAffix = undefined
+    return
+  }
   _item.state.lockedAffix = affix
 }
 </script>
@@ -120,7 +124,7 @@ const toggleLock = (affix: Affix) => {
         <div class="selected-wrap">
           <div class="selected-title">已选择（{{ _item.hitAffixes.length }}）</div>
           <AffixList
-            :items="_item.hitAffixes"
+            :items="_item.hitAffixes.sort((a) => (a.isPrefix ? -1 : 1))"
             :lockedAffix="_item.state.lockedAffix"
             :itemKey="(a) => `${a.id}-${a.tier}`"
             showTier
