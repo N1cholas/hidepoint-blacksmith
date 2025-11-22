@@ -16,6 +16,8 @@ const _item = useItem()
 
 const selectedTiers = ref<Record<string, number>>({})
 
+const searchQuery = ref('')
+
 watch(
   () => affixFamiliesPool,
   (affixFamilies) => {
@@ -31,10 +33,15 @@ watch(
 )
 
 const generateAffixesByTier = computed(() => {
-  return affixFamiliesPool.map((af) => {
-    const t = selectedTiers.value?.[af.id]
-    return af.items.find((a) => a.tier === t) ?? af.items[0]
-  }) as Affix[]
+  return (
+    affixFamiliesPool.map((af) => {
+      const t = selectedTiers.value?.[af.id]
+      return af.items.find((a) => a.tier === t) ?? af.items[0]
+    }) as Affix[]
+  ).filter((a) => {
+    if (!searchQuery.value) return true
+    return a.name.includes(searchQuery.value) || a.str.includes(searchQuery.value)
+  })
 })
 
 const tierOptionsMap = computed(() => {
@@ -73,6 +80,8 @@ const lockAffix = (affix: Affix) => {
 
 <template>
   <div class="affix-search">
+    <t-input v-model="searchQuery" placeholder="搜索词缀" class="affix-search-input" />
+    <!-- todo: tag搜索 -->
     <AffixList :items="generateAffixesByTier" :itemKey="(a) => `${a.id}-${a.tier}`">
       <template #actions="{ item }">
         <t-select
@@ -99,5 +108,8 @@ const lockAffix = (affix: Affix) => {
 }
 .tier-select {
   width: 70px;
+}
+.affix-search-input {
+  margin-bottom: 12px;
 }
 </style>

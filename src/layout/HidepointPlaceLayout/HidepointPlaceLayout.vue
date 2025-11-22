@@ -109,7 +109,6 @@ function namedExists(name: string) {
 .content {
   flex: 1;
   padding: 16px;
-  overflow: auto;
 }
 
 .footer {
