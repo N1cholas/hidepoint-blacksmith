@@ -80,16 +80,6 @@ const toggleLock = (affix: Affix) => {
     <div class="side left">
       <t-card header="初始化装备基底">
         <div class="line">
-          <t-form-item label="装备类型" label-width="72">
-            <t-select
-              :value="_item.state.type"
-              @change="handleSelectType"
-              size="small"
-              :options="Item_Type_Options"
-              placeholder="选择"
-              :disabled="inited"
-            />
-          </t-form-item>
           <t-form-item label="稀有度" label-width="60">
             <t-select
               v-model="_item.state.rarity"
@@ -105,6 +95,16 @@ const toggleLock = (affix: Affix) => {
               size="small"
               :min="1"
               :max="100"
+              :disabled="inited"
+            />
+          </t-form-item>
+          <t-form-item label="装备类型" label-width="72">
+            <t-select
+              :value="_item.state.type"
+              @change="handleSelectType"
+              size="small"
+              :options="Item_Type_Options"
+              placeholder="选择"
               :disabled="inited"
             />
           </t-form-item>
@@ -124,7 +124,7 @@ const toggleLock = (affix: Affix) => {
         <div class="selected-wrap">
           <div class="selected-title">已选择（{{ _item.hitAffixes.length }}）</div>
           <AffixList
-            :items="_item.hitAffixes.sort((a) => (a.isPrefix ? -1 : 1))"
+            :items="_item.hitAffixes"
             :lockedAffix="_item.state.lockedAffix"
             :itemKey="(a) => `${a.id}-${a.tier}`"
             showTier
