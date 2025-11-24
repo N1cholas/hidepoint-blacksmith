@@ -11,9 +11,9 @@ const itemRarity = computed(() => _item.state.rarity)
 </script>
 
 <template>
-  <t-card header="模拟做装">
-    <div class="crafting-item">
-      <div class="side left">
+  <div class="crafting-item">
+    <div class="side left">
+      <t-card>
         <div class="info-row">
           <span>{{ itemRarity }}</span>
           <span>{{ itemLevel }}</span>
@@ -26,10 +26,12 @@ const itemRarity = computed(() => _item.state.rarity)
           showTier
         >
         </AffixList>
-      </div>
+      </t-card>
+    </div>
 
-      <!-- 右侧显示分类的道具 -->
-      <div class="side right">
+    <!-- 右侧显示分类的道具 -->
+    <div class="side right">
+      <t-card>
         <h3>分类道具</h3>
         <div class="category">
           <h4>category.name</h4>
@@ -37,9 +39,9 @@ const itemRarity = computed(() => _item.state.rarity)
             <li>item.name</li>
           </ul>
         </div>
-      </div>
+      </t-card>
     </div>
-  </t-card>
+  </div>
 </template>
 
 <style scoped>
