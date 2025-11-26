@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
+import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AffixList from './AffixList.vue'
 
 const _item = useItem()
@@ -32,12 +33,11 @@ const itemRarity = computed(() => _item.state.rarity)
     <!-- 右侧显示分类的道具 -->
     <div class="side right">
       <t-card>
-        <h3>分类道具</h3>
         <div class="category">
-          <h4>category.name</h4>
-          <ul>
-            <li>item.name</li>
-          </ul>
+          <h3>通货</h3>
+          <div>
+            <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+          </div>
         </div>
       </t-card>
     </div>

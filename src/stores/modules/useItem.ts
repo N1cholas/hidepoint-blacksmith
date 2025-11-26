@@ -105,6 +105,13 @@ export const useItem = defineStore('item', () => {
     }
   })
 
+  const addAffix = (newAffixFamily: AffixFamily, newAffix: Affix) => {
+    if (!newAffixFamily || !newAffix)
+      return console.error('addMods: newModsFamily or newMods is null')
+
+    state.value.affixFamilies.push({ ...newAffixFamily, hitAffix: newAffix })
+  }
+
   return {
     state,
     setState,
@@ -113,5 +120,6 @@ export const useItem = defineStore('item', () => {
     withoutLocked,
     hitAffixes,
     currentAffixFamiliesPool,
+    addAffix,
   }
 })
