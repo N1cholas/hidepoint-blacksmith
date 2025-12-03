@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
 import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AugmentationOrb from '@/components/AugmentationOrb.vue'
+import OmenOf from '@/components/OmenOf.vue'
 import AffixList from './AffixList.vue'
 
 const _item = useItem()
@@ -36,9 +37,31 @@ const itemRarity = computed(() => _item.state.rarity)
       <t-card>
         <div class="category">
           <h3>通货</h3>
-          <div>
+          <div class="props-wrapper">
             <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
             <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+          </div>
+        </div>
+      </t-card>
+      <t-card>
+        <div class="category">
+          <h3>预兆</h3>
+          <div class="props-wrapper">
+            <!-- 崇高石 -->
+            <OmenOf name="同质化崇高预兆" omenConfigKey="homogenisingExaltaion" />
+            <OmenOf name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
+            <OmenOf name="右旋崇高预兆" omenConfigKey="dextralExaltation" />
+            <OmenOf name="强效崇高预兆" omenConfigKey="greaterExaltation" />
+            <!-- <Button class="tools">催化崇高预兆</Button> -->
+            <!-- 富豪石 -->
+            <OmenOf name="同质化加冕预兆" omenConfigKey="homogenisingCoronation" />
+            <!-- 混沌石 -->
+            <OmenOf name="消减预兆" omenConfigKey="whittling" />
+            <OmenOf name="左旋消抹预兆" omenConfigKey="sinistralErasure" />
+            <OmenOf name="右旋消抹预兆" omenConfigKey="dextralErasure" />
+            <!-- 剥离石 -->
+            <OmenOf name="左旋剥离预兆" omenConfigKey="sinistralAnnulment" />
+            <OmenOf name="右旋剥离预兆" omenConfigKey="dextralAnnulment" />
           </div>
         </div>
       </t-card>
@@ -56,6 +79,11 @@ const itemRarity = computed(() => _item.state.rarity)
 .side {
   flex: 1 1 480px;
   min-width: 0;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .left {
   position: sticky;
@@ -77,5 +105,16 @@ const itemRarity = computed(() => _item.state.rarity)
 
 .category {
   margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.props-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 </style>
