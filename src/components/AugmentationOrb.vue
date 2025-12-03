@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import _ from 'lodash'
-import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_RARITY, type Affix } from '@/types/types'
-import { useItemState } from '@/stores/itemState'
-import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
-import { generateAddPool } from '@/utils/generatePool'
-import { computed } from 'vue'
+import { useItem } from '@/stores/modules/useItem'
+import { generateAddPool } from '@/utils/pool/generateAddPool'
+import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
+import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
+import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
   name: string
@@ -13,40 +11,48 @@ const { maximumLevel, minimumLevel } = defineProps<{
   maximumLevel: number
 }>()
 
-const normalMods = useBowNormalModsFamily()
-const itemState = useItemState()
+const _item = useItem()
 
 const disable = computed(() => {
   return !(
-    itemState.itemRarity === ITEM_RARITY.MAGIC &&
-    itemState.propsHistory.transmutationOrb &&
-    !itemState.propsHistory.augmentationOrb &&
+    _item.state.rarity === 'magic' &&
+    _item.state.usedProps.transmutationOrb &&
+    !_item.state.usedProps.augmentationOrb &&
     maximumLevel >= minimumLevel
   )
 })
 
+const affixFamilies = ref()
+
+watchEffect(async () => {
+  const data = await _item.currentAffixFamiliesPool
+  // FileContent类型，取出normal部分
+  affixFamilies.value = data.normal
+})
+
 // 增幅石
 const addModifier = () => {
-  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+  const newAffixFamily = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
   })
 
   if (newAffixFamily.length) {
-    const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
-    const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
+    const hitAffixFamily = randomlyGetAffixFamily(newAffixFamily)
+    const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
     if (hitAffix) {
-      itemState.addAffix(hitAffixFamily, hitAffix)
+      _item.addAffix(hitAffixFamily, hitAffix)
 
-      itemState.setItemRarity(ITEM_RARITY.MAGIC)
-
-      itemState.setPropsHistory({ augmentationOrb: true })
+      _item.setState({
+        rarity: 'magic',
+        usedProps: { ..._item.state.usedProps, augmentationOrb: true },
+      })
     }
   }
 }
 </script>
 <template>
-  <button @click="addModifier()" :disabled="disable">{{ name }}</button>
+  <t-button @click="addModifier()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>

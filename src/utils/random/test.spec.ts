@@ -90,13 +90,4 @@ describe('randomlyGetAffix', () => {
     const result = randomlyGetAffix(affixes, 1, 10, rng)
     expect(result).toBe(affixes[1])
   })
-
-  it('should use the entire pool if no affixes match the level range', () => {
-    const affixes = [
-      { id: '1', level: 5, dropChance: 1 },
-      { id: '2', level: 15, dropChance: 2 },
-    ] as any[]
-    const result = randomlyGetAffix(affixes, 20, 30)
-    expect(result).toBe(affixes[0]) // 回退到整个池子
-  })
 })

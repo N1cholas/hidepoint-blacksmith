@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
 import TransmutationOrb from '@/components/TransmutationOrb.vue'
+import AugmentationOrb from '@/components/AugmentationOrb.vue'
 import AffixList from './AffixList.vue'
 
 const _item = useItem()
@@ -37,6 +38,7 @@ const itemRarity = computed(() => _item.state.rarity)
           <h3>通货</h3>
           <div>
             <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
           </div>
         </div>
       </t-card>

@@ -40,7 +40,7 @@ const addModifier = () => {
 }
 </script>
 <template>
-  <t-button variant="outline" @click="addModifier()" :disabled="disable">{{ name }}</t-button>
+  <t-button @click="addModifier()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>
