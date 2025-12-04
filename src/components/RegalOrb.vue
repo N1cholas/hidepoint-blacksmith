@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { generateAddPool } from '@/utils/generatePool'
-import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_RARITY, type Affix } from '@/types/types'
-import { useItemState } from '@/stores/itemState'
-import { useOmenState } from '@/stores/omenState'
-import { computed } from 'vue'
-import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
+import { useItem } from '@/stores/modules/useItem'
+import { useOmen } from '@/stores/modules/useOmen'
+import { generateAddPool } from '@/utils/pool/generateAddPool'
+import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
+import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
+import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
   name: string
@@ -13,43 +12,52 @@ const { maximumLevel, minimumLevel } = defineProps<{
   maximumLevel: number
 }>()
 
-const normalMods = useBowNormalModsFamily()
-const itemState = useItemState()
-const omenState = useOmenState()
+const _item = useItem()
+const _omen = useOmen()
 
 const disable = computed(() => {
   return !(
-    itemState.itemRarity === ITEM_RARITY.MAGIC &&
-    itemState.propsHistory.augmentationOrb &&
-    !itemState.propsHistory.regalOrb &&
+    _item.state.rarity === 'magic' &&
+    _item.state.usedProps.augmentationOrb &&
+    !_item.state.usedProps.regalOrb &&
     maximumLevel >= minimumLevel
   )
 })
 
+const affixFamilies = ref()
+
+watchEffect(async () => {
+  const data = await _item.currentAffixFamiliesPool
+  // FileContent类型，取出normal部分
+  affixFamilies.value = data.normal
+})
+
 // 富豪石
 const addModifier = () => {
-  const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+  const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
-    filterByTags: omenState.omenConfig.homogenisingCoronation,
+    filterByTags: _omen.config.homogenisingCoronation,
   })
 
-  if (newAffixFamily.length) {
-    const hitModsFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
+  if (affixFamiliesPool.length) {
+    const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
+    const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
-    const hitMod = randomlyObtainAffix(hitModsFamily.items, minimumLevel, maximumLevel)
+    if (hitAffix) {
+      _item.addAffix(hitAffixFamily, hitAffix)
 
-    itemState.addAffix(hitModsFamily, hitMod)
-
-    itemState.setItemRarity(ITEM_RARITY.RARE)
-
-    itemState.setPropsHistory({ regalOrb: true })
+      _item.setState({
+        rarity: 'rare',
+        usedProps: { ..._item.state.usedProps, regalOrb: true },
+      })
+    }
   }
 }
 </script>
 <template>
-  <button :class="{ disable }" @click="addModifier()" :disabled="disable">
+  <t-button :class="{ disable }" @click="addModifier()" :disabled="disable">
     {{ name }}
-  </button>
+  </t-button>
 </template>
 
 <style scoped></style>
