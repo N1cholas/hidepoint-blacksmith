@@ -1,3 +1,5 @@
+import omen from './modules/omen'
+
 export default {
   common: {
     title: 'Title',
@@ -6,4 +8,5 @@ export default {
     home: 'Home',
     hidepointPlace: 'Hidepoint Place',
   },
+  omen,
 }

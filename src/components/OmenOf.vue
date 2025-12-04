@@ -10,13 +10,7 @@ const _omen = useOmen()
 </script>
 <template>
   <div class="omen-wrapper">
-    <t-switch
-      v-modle="_omen.config[omenConfigKey]"
-      :label="[omenConfigKey, omenConfigKey]"
-      size="large"
-    >
-    </t-switch>
-    <label>{{ name }}</label>
+    <t-switch v-modle="_omen.config[omenConfigKey]" :label="[name, name]" size="large"> </t-switch>
   </div>
 </template>
 

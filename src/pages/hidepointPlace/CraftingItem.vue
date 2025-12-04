@@ -5,6 +5,7 @@ import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AugmentationOrb from '@/components/AugmentationOrb.vue'
 import OmenOf from '@/components/OmenOf.vue'
 import AffixList from './AffixList.vue'
+import { t } from '@/locales'
 
 const _item = useItem()
 
@@ -48,20 +49,23 @@ const itemRarity = computed(() => _item.state.rarity)
           <h3>预兆</h3>
           <div class="props-wrapper">
             <!-- 崇高石 -->
-            <OmenOf name="同质化崇高预兆" omenConfigKey="homogenisingExaltaion" />
-            <OmenOf name="左旋崇高预兆" omenConfigKey="sinistralExaltation" />
-            <OmenOf name="右旋崇高预兆" omenConfigKey="dextralExaltation" />
-            <OmenOf name="强效崇高预兆" omenConfigKey="greaterExaltation" />
+            <OmenOf :name="t('omen.homogenisingExaltaion')" omenConfigKey="homogenisingExaltaion" />
+            <OmenOf :name="t('omen.sinistralExaltation')" omenConfigKey="sinistralExaltation" />
+            <OmenOf :name="t('omen.dextralExaltation')" omenConfigKey="dextralExaltation" />
+            <OmenOf :name="t('omen.greaterExaltation')" omenConfigKey="greaterExaltation" />
             <!-- <Button class="tools">催化崇高预兆</Button> -->
             <!-- 富豪石 -->
-            <OmenOf name="同质化加冕预兆" omenConfigKey="homogenisingCoronation" />
+            <OmenOf
+              :name="t('omen.homogenisingCoronation')"
+              omenConfigKey="homogenisingCoronation"
+            />
             <!-- 混沌石 -->
-            <OmenOf name="消减预兆" omenConfigKey="whittling" />
-            <OmenOf name="左旋消抹预兆" omenConfigKey="sinistralErasure" />
-            <OmenOf name="右旋消抹预兆" omenConfigKey="dextralErasure" />
+            <OmenOf :name="t('omen.whittling')" omenConfigKey="whittling" />
+            <OmenOf :name="t('omen.sinistralErasure')" omenConfigKey="sinistralErasure" />
+            <OmenOf :name="t('omen.dextralErasure')" omenConfigKey="dextralErasure" />
             <!-- 剥离石 -->
-            <OmenOf name="左旋剥离预兆" omenConfigKey="sinistralAnnulment" />
-            <OmenOf name="右旋剥离预兆" omenConfigKey="dextralAnnulment" />
+            <OmenOf :name="t('omen.sinistralAnnulment')" omenConfigKey="sinistralAnnulment" />
+            <OmenOf :name="t('omen.dextralAnnulment')" omenConfigKey="dextralAnnulment" />
           </div>
         </div>
       </t-card>
