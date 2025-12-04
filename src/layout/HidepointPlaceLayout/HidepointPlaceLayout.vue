@@ -4,61 +4,45 @@ import { computed, ref, useSlots } from 'vue'
 const props = withDefaults(
   defineProps<{
     initial?: number
-    /* 步骤标题 */
     titles?: [string, string, string]
-    /* 按钮文案 */
-    prevText?: string
-    nextText?: string
-    finishText?: string
-    /* 底部工具条吸底 */
+    btnTexts?: string[]
     stickyFooter?: boolean
   }>(),
   {
     initial: 0,
     titles: () => ['设置初始状态', '开始做装', '做装过程'],
-    prevText: '上一步',
-    nextText: '下一步',
-    finishText: '完成',
+    btnTexts: () => ['上一步', '下一步', '完成'],
     stickyFooter: true,
   },
 )
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: number): void
   (e: 'finish'): void
   (e: 'next', value: number): void
   (e: 'prev', value: number): void
 }>()
 
-// 步骤状态（支持受控模式）
 const step = ref<number>(props.initial)
 
-// 最大步骤索引
 const maxIndex = computed(() => props.titles.length - 1)
 
-// 是否为第一步/最后一步
 const isFirst = computed(() => step.value === 0)
 const isLast = computed(() => step.value === maxIndex.value)
 
-// 步骤切换逻辑
-function prev() {
-  if (step.value > 0) {
-    updateStep(step.value - 1)
-    emit('prev', step.value - 1)
-  }
-}
-function next() {
-  if (step.value < maxIndex.value) {
-    updateStep(step.value + 1)
-    emit('next', step.value + 1)
-  } else emit('finish') // 最后一步触发完成事件
-}
-function updateStep(newStep: number) {
-  step.value = newStep
-  emit('update:modelValue', newStep)
+const handlePrev = () => {
+  step.value--
+  emit('prev', step.value)
 }
 
-// 插槽管理
+const handleNext = () => {
+  step.value++
+  emit('next', step.value)
+}
+
+const handleFinish = () => {
+  emit('finish')
+}
+
 const slots = useSlots()
 function namedExists(name: string) {
   return !!slots[name]
@@ -67,30 +51,27 @@ function namedExists(name: string) {
 
 <template>
   <div class="hidepoint-layout">
-    <!-- 步骤标题 -->
     <t-steps :current="step" theme="default" class="steps">
       <t-step-item :title="titles[0]" />
       <t-step-item :title="titles[1]" />
       <t-step-item :title="titles[2]" />
     </t-steps>
 
-    <!-- 步骤内容 -->
     <section class="content">
       <slot v-if="!namedExists(`step-${step}`)"></slot>
       <slot v-else :name="`step-${step}`"></slot>
     </section>
 
-    <!-- 底部工具栏 -->
     <footer class="footer" :class="{ sticky: props.stickyFooter }">
       <t-space>
-        <t-button v-if="!isFirst" variant="outline" @click="prev">
-          {{ props.prevText }}
+        <t-button v-if="!isFirst" variant="outline" @click="handlePrev">
+          {{ props.btnTexts[0] }}
         </t-button>
-        <t-button v-if="!isLast" theme="primary" @click="next">
-          {{ props.nextText }}
+        <t-button v-if="!isLast" theme="primary" @click="handleNext">
+          {{ props.btnTexts[1] }}
         </t-button>
-        <t-button v-else theme="success" @click="next">
-          {{ props.finishText }}
+        <t-button v-else theme="success" @click="handleFinish">
+          {{ props.btnTexts[2] }}
         </t-button>
       </t-space>
     </footer>

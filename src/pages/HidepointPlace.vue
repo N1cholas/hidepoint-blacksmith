@@ -15,7 +15,7 @@ const handleNextStep = (step: number) => {
   const affixCount = _item.state.affixFamilies.length
   const rarity = _item.state.rarity
 
-  if (step === 2) {
+  if (step === 1) {
     // 0 词条 normal => normal 蜕变
     // 0 词条 magic  => magic  增幅
     // 0 词条 magic  => magic  富豪 (极端case 暂未处理)
@@ -87,6 +87,12 @@ const handleNextStep = (step: number) => {
   }
 }
 
+const handlePrevStep = (step: number) => {
+  if (step === 0) {
+    _item.$reset()
+  }
+}
+
 const handleFinish = () => {
   console.log('完成做装，导出结果')
 }
@@ -94,7 +100,7 @@ const handleFinish = () => {
 
 <template>
   <main class="hp">
-    <HidepointPlaceLayout @finish="handleFinish" @next="handleNextStep">
+    <HidepointPlaceLayout @finish="handleFinish" @next="handleNextStep" @prev="handlePrevStep">
       <template #step-0>
         <InitItem />
       </template>

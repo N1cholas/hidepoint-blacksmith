@@ -45,10 +45,10 @@ export const useItem = defineStore('item', () => {
     rarity: 'normal',
     level: 82,
     usedProps: {
-      transmutationOrb: false, // 蜕变石
-      augmentationOrb: false, // 增幅石
-      regalOrb: false, // 富豪石
-      exaltedOrb: false, // 崇高石
+      transmutationOrb: false,
+      augmentationOrb: false,
+      regalOrb: false,
+      exaltedOrb: false,
     },
     affixFamilies: [],
     config: {
@@ -62,7 +62,7 @@ export const useItem = defineStore('item', () => {
     state.value = { ...state.value, ...newState }
   }
 
-  const $reset = () => (state.value = { ...initState })
+  const $reset = () => (state.value = initState)
 
   const counts = computed(() => {
     let prefixCount = 0
