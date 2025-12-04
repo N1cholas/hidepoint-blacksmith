@@ -42,9 +42,33 @@ const itemRarity = computed(() => _item.state.rarity)
           <h3>通货</h3>
           <div class="props-wrapper">
             <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <TransmutationOrb
+              name="高级蜕变石"
+              :minimumLevel="55"
+              :maximumLevel="_item.state.level"
+            />
+            <TransmutationOrb
+              name="完美蜕变石"
+              :minimumLevel="70"
+              :maximumLevel="_item.state.level"
+            />
             <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <AugmentationOrb
+              name="高级增幅石"
+              :minimumLevel="55"
+              :maximumLevel="_item.state.level"
+            />
+            <AugmentationOrb
+              name="完美增幅石"
+              :minimumLevel="70"
+              :maximumLevel="_item.state.level"
+            />
             <RegalOrb name="富豪石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <RegalOrb name="高级富豪石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+            <RegalOrb name="完美富豪石" :minimumLevel="50" :maximumLevel="_item.state.level" />
             <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <ExaltedOrb name="高级崇高石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+            <ExaltedOrb name="完美崇高石" :minimumLevel="50" :maximumLevel="_item.state.level" />
           </div>
         </div>
       </t-card>
