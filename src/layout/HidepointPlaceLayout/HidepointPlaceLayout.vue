@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, ref, useSlots, watch } from 'vue'
+import { computed, ref, useSlots } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    /* 初始步骤（未使用 v-model 时） */
     initial?: number
     /* 步骤标题 */
     titles?: [string, string, string]
@@ -13,8 +12,6 @@ const props = withDefaults(
     finishText?: string
     /* 底部工具条吸底 */
     stickyFooter?: boolean
-    /* 当前步骤（受控模式） */
-    modelValue?: number
   }>(),
   {
     initial: 0,
@@ -29,16 +26,12 @@ const props = withDefaults(
 const emit = defineEmits<{
   (e: 'update:modelValue', value: number): void
   (e: 'finish'): void
+  (e: 'next', value: number): void
+  (e: 'prev', value: number): void
 }>()
 
 // 步骤状态（支持受控模式）
-const step = ref<number>(props.modelValue ?? props.initial)
-watch(
-  () => props.modelValue,
-  (newVal) => {
-    if (newVal != null) step.value = newVal
-  },
-)
+const step = ref<number>(props.initial)
 
 // 最大步骤索引
 const maxIndex = computed(() => props.titles.length - 1)
@@ -49,11 +42,16 @@ const isLast = computed(() => step.value === maxIndex.value)
 
 // 步骤切换逻辑
 function prev() {
-  if (step.value > 0) updateStep(step.value - 1)
+  if (step.value > 0) {
+    updateStep(step.value - 1)
+    emit('prev', step.value - 1)
+  }
 }
 function next() {
-  if (step.value < maxIndex.value) updateStep(step.value + 1)
-  else emit('finish') // 最后一步触发完成事件
+  if (step.value < maxIndex.value) {
+    updateStep(step.value + 1)
+    emit('next', step.value + 1)
+  } else emit('finish') // 最后一步触发完成事件
 }
 function updateStep(newStep: number) {
   step.value = newStep
@@ -78,8 +76,8 @@ function namedExists(name: string) {
 
     <!-- 步骤内容 -->
     <section class="content">
-      <slot v-if="!namedExists(`step-${step}`)" />
-      <slot v-else :name="`step-${step}`" />
+      <slot v-if="!namedExists(`step-${step}`)"></slot>
+      <slot v-else :name="`step-${step}`"></slot>
     </section>
 
     <!-- 底部工具栏 -->

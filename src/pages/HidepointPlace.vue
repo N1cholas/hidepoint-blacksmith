@@ -1,19 +1,28 @@
 <script setup lang="ts">
 import HidepointPlaceLayout from '@/layout/HidepointPlaceLayout'
 import InitItem from './hidepointPlace/InitItem.vue'
-import { ref } from 'vue'
 import CraftingItem from './hidepointPlace/CraftingItem.vue'
+import { useItem } from '@/stores/modules/useItem'
 
-const currentStep = ref(0)
+const _item = useItem()
 
-const onFinish = () => {
+const handleNextStep = (step: number) => {
+  alert(step)
+  if (step === 2) {
+    if (_item.state.affixFamilies.length === 1 && _item.state.rarity === 'normal') {
+      // todo: 根据当前词缀数量，自动选择装备稀有度
+    }
+  }
+}
+
+const handleFinish = () => {
   console.log('完成做装，导出结果')
 }
 </script>
 
 <template>
   <main class="hp">
-    <HidepointPlaceLayout v-model="currentStep" @finish="onFinish">
+    <HidepointPlaceLayout @finish="handleFinish" @next="handleNextStep">
       <template #step-0>
         <InitItem />
       </template>

@@ -1,5 +1,7 @@
 import type { Affix } from '@/utils/factory/newAffix'
 import type { AffixFamily } from '@/utils/factory/newAffixFamily'
+import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
+import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
@@ -111,11 +113,27 @@ export const useItem = defineStore('item', () => {
     }
   })
 
-  const addAffix = (newAffixFamily: AffixFamily, newAffix: Affix) => {
-    if (!newAffixFamily || !newAffix)
-      return console.error('addMods: newModsFamily or newMods is null')
+  const addAffix = (
+    affixFamiliesPool: AffixFamily[],
+    minimumLevel: number,
+    maximumLevel: number,
+    nextRarity: ItemRarity,
+    usedProp: keyof UsedProps,
+  ) => {
+    const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
+    const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
-    state.value.affixFamilies.push({ ...newAffixFamily, hitAffix: newAffix })
+    if (hitAffix) {
+      if (!hitAffixFamily || !hitAffix)
+        return console.error('addMods: newModsFamily or newMods is null')
+
+      state.value.affixFamilies.push({ ...hitAffixFamily, hitAffix })
+
+      setState({
+        rarity: nextRarity,
+        usedProps: { ...state.value.usedProps, [usedProp]: true },
+      })
+    }
   }
 
   return {

@@ -2,8 +2,6 @@
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
-import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
-import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
@@ -33,29 +31,17 @@ watchEffect(async () => {
 })
 
 // 富豪石
-const addModifier = () => {
+const addAffix = () => {
   const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
     filterByTags: _omen.config.homogenisingCoronation,
   })
 
-  if (affixFamiliesPool.length) {
-    const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
-    const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
-
-    if (hitAffix) {
-      _item.addAffix(hitAffixFamily, hitAffix)
-
-      _item.setState({
-        rarity: 'rare',
-        usedProps: { ..._item.state.usedProps, regalOrb: true },
-      })
-    }
-  }
+  _item.addAffix(affixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'regalOrb')
 }
 </script>
 <template>
-  <t-button :class="{ disable }" @click="addModifier()" :disabled="disable">
+  <t-button :class="{ disable }" @click="addAffix()" :disabled="disable">
     {{ name }}
   </t-button>
 </template>

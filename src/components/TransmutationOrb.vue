@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
-import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
-import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { computed, ref, watchEffect } from 'vue'
 
 const { minimumLevel, maximumLevel } = defineProps<{
@@ -25,22 +23,12 @@ const disable = computed(() => {
 })
 
 // 蜕变石
-const addModifier = () => {
-  const hitAffixFamily = randomlyGetAffixFamily(affixFamilies.value)
-  const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
-
-  if (hitAffix) {
-    _item.addAffix(hitAffixFamily, hitAffix)
-
-    _item.setState({
-      rarity: 'magic',
-      usedProps: { ..._item.state.usedProps, transmutationOrb: true },
-    })
-  }
+const addAffix = () => {
+  _item.addAffix(affixFamilies.value, minimumLevel, maximumLevel, 'magic', 'transmutationOrb')
 }
 </script>
 <template>
-  <t-button @click="addModifier()" :disabled="disable">{{ name }}</t-button>
+  <t-button @click="addAffix()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>

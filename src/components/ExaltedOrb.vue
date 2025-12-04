@@ -2,8 +2,6 @@
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
-import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
-import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
@@ -34,7 +32,7 @@ watchEffect(async () => {
 })
 
 // 添加词缀规则：去重 前3 后3 共6
-const addModifier = () => {
+const addAffix = () => {
   const iterations = _omen.config.greaterExaltation ? 2 : 1
 
   for (let i = 0; i < iterations; i++) {
@@ -45,19 +43,7 @@ const addModifier = () => {
       onlySuffix: shouldOnlySuffix(),
     })
 
-    if (affixFamiliesPool.length) {
-      const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
-      const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
-
-      if (hitAffix) {
-        _item.addAffix(hitAffixFamily, hitAffix)
-
-        _item.setState({
-          rarity: 'rare',
-          usedProps: { ..._item.state.usedProps, exaltedOrb: true },
-        })
-      }
-    }
+    _item.addAffix(affixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'exaltedOrb')
   }
 }
 
@@ -70,7 +56,7 @@ const shouldOnlySuffix = (): boolean => {
 }
 </script>
 <template>
-  <t-button @click="addModifier()" :disabled="disable">{{ name }}</t-button>
+  <t-button @click="addAffix()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>
