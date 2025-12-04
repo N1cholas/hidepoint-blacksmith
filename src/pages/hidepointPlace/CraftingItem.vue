@@ -7,6 +7,7 @@ import OmenOf from '@/components/OmenOf.vue'
 import AffixList from './AffixList.vue'
 import { t } from '@/locales'
 import RegalOrb from '@/components/RegalOrb.vue'
+import ExaltedOrb from '@/components/ExaltedOrb.vue'
 
 const _item = useItem()
 
@@ -43,6 +44,7 @@ const itemRarity = computed(() => _item.state.rarity)
             <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
             <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
             <RegalOrb name="富豪石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="_item.state.level" />
           </div>
         </div>
       </t-card>

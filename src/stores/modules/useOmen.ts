@@ -37,5 +37,9 @@ export const useOmen = defineStore('OmenState', () => {
 
   const config = ref<OmenConfig>(initConfig)
 
-  return { config }
+  const setConfig = (newConfig: Partial<OmenConfig>) => {
+    config.value = { ...config.value, ...newConfig }
+  }
+
+  return { config, setConfig }
 })

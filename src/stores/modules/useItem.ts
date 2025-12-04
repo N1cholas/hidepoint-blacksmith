@@ -32,6 +32,9 @@ export type ItemState = {
   usedProps: UsedProps
   affixFamilies: AffixFamily[]
   lockedAffix?: Affix
+  config: {
+    affixCounts: [number, number] // [prefixCount, suffixCount]
+  }
 }
 
 export const useItem = defineStore('item', () => {
@@ -46,6 +49,9 @@ export const useItem = defineStore('item', () => {
       exaltedOrb: false, // 崇高石
     },
     affixFamilies: [],
+    config: {
+      affixCounts: [3, 3],
+    },
   }
 
   const state = ref<ItemState>(initState)

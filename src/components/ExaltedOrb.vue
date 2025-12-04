@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import _ from 'lodash'
-import { useBowNormalModsFamily } from '@/stores/bowNormalMods'
-import { ITEM_RARITY, type Affix } from '@/types/types'
-import { useItemState } from '@/stores/itemState'
-import { useOmenState } from '@/stores/omenState'
-import { randomlyObtainAffixFamily, randomlyObtainAffix } from '@/utils/randomlyObtain'
-import { generateAddPool } from '@/utils/generatePool'
-import { computed } from 'vue'
-import { ITEM_CONFIG } from '@/config/itemConfig'
+import { useItem } from '@/stores/modules/useItem'
+import { useOmen } from '@/stores/modules/useOmen'
+import { generateAddPool } from '@/utils/pool/generateAddPool'
+import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
+import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
+import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
   name: string
@@ -15,55 +12,65 @@ const { maximumLevel, minimumLevel } = defineProps<{
   maximumLevel: number
 }>()
 
-const normalMods = useBowNormalModsFamily()
-const itemState = useItemState()
-const omenState = useOmenState()
+const _item = useItem()
+const _omen = useOmen()
+
+const [PREFIX_COUNT, SUFFIX_COUNT] = _item.state.config.affixCounts
 
 const disable = computed(() => {
   return !(
-    itemState.affixes.length < ITEM_CONFIG.PREFIX + ITEM_CONFIG.SUFFIX &&
-    itemState.itemRarity === ITEM_RARITY.RARE &&
+    _item.state.affixFamilies.length < PREFIX_COUNT + SUFFIX_COUNT &&
+    _item.state.rarity === 'rare' &&
     maximumLevel >= minimumLevel
   )
 })
 
+const affixFamilies = ref()
+
+watchEffect(async () => {
+  const data = await _item.currentAffixFamiliesPool
+  // FileContent类型，取出normal部分
+  affixFamilies.value = data.normal
+})
+
 // 添加词缀规则：去重 前3 后3 共6
 const addModifier = () => {
-  const iterations = omenState.omenConfig.greaterExaltation ? 2 : 1
+  const iterations = _omen.config.greaterExaltation ? 2 : 1
 
   for (let i = 0; i < iterations; i++) {
-    const newAffixFamily = generateAddPool(normalMods.normalModsFamily, itemState.affixFamilies, {
+    const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
       deduplication: true,
-      filterByTags: omenState.omenConfig.homogenisingExaltaion,
+      filterByTags: _omen.config.homogenisingExaltaion,
       onlyPrefix: shouldOnlyPrefix(),
       onlySuffix: shouldOnlySuffix(),
     })
 
-    if (newAffixFamily.length) {
-      const hitAffixFamily = randomlyObtainAffixFamily<Affix[]>(newAffixFamily)
-      const hitAffix = randomlyObtainAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
+    if (affixFamiliesPool.length) {
+      const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
+      const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
 
       if (hitAffix) {
-        itemState.addAffix(hitAffixFamily, hitAffix)
+        _item.addAffix(hitAffixFamily, hitAffix)
 
-        itemState.setItemRarity(ITEM_RARITY.RARE)
-
-        itemState.setPropsHistory({ exaltedOrb: true })
+        _item.setState({
+          rarity: 'rare',
+          usedProps: { ..._item.state.usedProps, exaltedOrb: true },
+        })
       }
     }
   }
 }
 
 const shouldOnlyPrefix = (): boolean => {
-  return omenState.omenConfig.sinistralExaltation || itemState.suffixCounts >= ITEM_CONFIG.SUFFIX
+  return _omen.config.sinistralExaltation || _item.counts.suffixCount >= SUFFIX_COUNT
 }
 
 const shouldOnlySuffix = (): boolean => {
-  return omenState.omenConfig.dextralExaltation || itemState.prefixCounts >= ITEM_CONFIG.PREFIX
+  return _omen.config.dextralExaltation || _item.counts.prefixCount >= PREFIX_COUNT
 }
 </script>
 <template>
-  <button @click="addModifier()" :disabled="disable">{{ name }}</button>
+  <t-button @click="addModifier()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>

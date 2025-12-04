@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useOmen } from '@/stores/modules/useOmen'
+import type { SelectValue } from 'tdesign-vue-next'
 
 defineProps<{
   name: string
@@ -10,7 +11,17 @@ const _omen = useOmen()
 </script>
 <template>
   <div class="omen-wrapper">
-    <t-switch v-modle="_omen.config[omenConfigKey]" :label="[name, name]" size="large"> </t-switch>
+    <t-switch
+      :value="_omen.config[omenConfigKey]"
+      :label="[name, name]"
+      size="large"
+      @change="
+        (value: SelectValue) => {
+          _omen.setConfig({ [omenConfigKey]: value })
+        }
+      "
+    >
+    </t-switch>
   </div>
 </template>
 
