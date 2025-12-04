@@ -6,11 +6,83 @@ import { useItem } from '@/stores/modules/useItem'
 
 const _item = useItem()
 
+// todo: 添加e2e测试
+// 0词条 normal magic rare
+// 1词条 magic rare
+// 2词条 magic rare
+// 3词条 rare
 const handleNextStep = (step: number) => {
-  alert(step)
+  const affixCount = _item.state.affixFamilies.length
+  const rarity = _item.state.rarity
+
   if (step === 2) {
-    if (_item.state.affixFamilies.length === 1 && _item.state.rarity === 'normal') {
-      // todo: 根据当前词缀数量，自动选择装备稀有度
+    // 0 词条 normal => normal 蜕变
+    // 0 词条 magic  => magic  增幅
+    // 0 词条 magic  => magic  富豪 (极端case 暂未处理)
+    // 0 词条 rare   => rare   崇高
+    if (affixCount === 0) {
+      _item.setState({
+        usedProps: {
+          ..._item.state.usedProps,
+          transmutationOrb: rarity === 'magic',
+          regalOrb: rarity === 'rare',
+        },
+      })
+    }
+
+    // 1 词条 normal => magic 增幅
+    // 1 词条 magic  => magic 增幅
+    // 1 词条 magic  => magic 富豪 (极端case 暂未处理)
+    // 1 词条 rare   => rare  崇高
+    if (affixCount === 1) {
+      if (rarity === 'normal') {
+        _item.setState({
+          rarity: 'magic',
+        })
+      }
+      _item.setState({
+        usedProps: {
+          ..._item.state.usedProps,
+          transmutationOrb: true,
+        },
+      })
+    }
+
+    // 2 词条 normal => magic 富豪
+    // 2 词条 magin  => magic 富豪
+    // 2 词条 rare   => rare  崇高
+    if (affixCount === 2) {
+      if (rarity === 'normal') {
+        _item.setState({
+          rarity: 'magic',
+        })
+      }
+      _item.setState({
+        usedProps: {
+          ..._item.state.usedProps,
+          transmutationOrb: true,
+          augmentationOrb: true,
+        },
+      })
+    }
+
+    // 3 词条 normal => rare 崇高
+    // 3 词条 magic  => rare 崇高
+    // 3 词条 rare   => rare 崇高
+    if (affixCount >= 3) {
+      if (rarity !== 'rare') {
+        _item.setState({
+          rarity: 'rare',
+        })
+      }
+      _item.setState({
+        usedProps: {
+          ..._item.state.usedProps,
+          transmutationOrb: true,
+          augmentationOrb: true,
+          regalOrb: true,
+        },
+      })
     }
   }
 }
