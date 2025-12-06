@@ -48,15 +48,13 @@ const changeModifier = () => {
 
   const is6Mods = _item.state.affixFamilies.length === 6
 
-  const [PREFIX_COUNTS, SUFFIX_COUNTS] = _item.state.config.affixCounts
-
   const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
     onlyPrefix:
-      (!is6Mods && _item.counts.suffixCount === PREFIX_COUNTS) ||
+      (!is6Mods && shouldRemoveAffixFamily.isPrefix && _item.isSuffixFull) ||
       (is6Mods && shouldRemoveAffixFamily.isPrefix),
     onlySuffix:
-      (!is6Mods && _item.counts.prefixCount === SUFFIX_COUNTS) ||
+      (!is6Mods && !shouldRemoveAffixFamily.isPrefix && _item.isPrefixFull) ||
       (is6Mods && !shouldRemoveAffixFamily.isPrefix),
   })
 

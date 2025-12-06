@@ -35,8 +35,8 @@ const affixFamiliesPool = computed(() => {
 
   let pool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
-    onlyPrefix: _item.counts.suffixCount >= 3,
-    onlySuffix: _item.counts.prefixCount >= 3,
+    onlyPrefix: _item.isSuffixFull,
+    onlySuffix: _item.isPrefixFull,
   })
 
   const itemLevel = _item.state.level

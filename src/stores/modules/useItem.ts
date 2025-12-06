@@ -34,9 +34,11 @@ export type ItemState = {
   usedProps: UsedProps
   affixFamilies: AffixFamily[]
   lockedAffix?: Affix
-  config: {
-    affixCounts: [number, number] // [prefixCount, suffixCount]
-  }
+}
+
+export const ITEM_CONFIG = {
+  PREFIX_COUNT_LIMIT: 3,
+  SUFFIX_COUNT_LIMIT: 3,
 }
 
 export const useItem = defineStore('item', () => {
@@ -51,9 +53,6 @@ export const useItem = defineStore('item', () => {
       exaltedOrb: false,
     },
     affixFamilies: [],
-    config: {
-      affixCounts: [3, 3],
-    },
   }
 
   const state = ref<ItemState>(initState)
@@ -64,17 +63,18 @@ export const useItem = defineStore('item', () => {
 
   const $reset = () => (state.value = initState)
 
-  const counts = computed(() => {
-    let prefixCount = 0
-    let suffixCount = 0
-    state.value.affixFamilies.forEach((family) => {
-      if (family.isPrefix) {
-        prefixCount += 1
-      } else {
-        suffixCount += 1
-      }
-    })
-    return { prefixCount, suffixCount }
+  const isPrefixFull = computed(() => {
+    const prefixCount = state.value.affixFamilies.filter(
+      (af) => af.hitAffix && af.hitAffix.isPrefix,
+    ).length
+    return prefixCount >= ITEM_CONFIG.PREFIX_COUNT_LIMIT
+  })
+
+  const isSuffixFull = computed(() => {
+    const suffixCount = state.value.affixFamilies.filter(
+      (af) => af.hitAffix && !af.hitAffix.isPrefix,
+    ).length
+    return suffixCount >= ITEM_CONFIG.SUFFIX_COUNT_LIMIT
   })
 
   const withoutLocked = computed(() => {
@@ -149,7 +149,8 @@ export const useItem = defineStore('item', () => {
     state,
     setState,
     $reset,
-    counts,
+    isPrefixFull,
+    isSuffixFull,
     withoutLocked,
     hitAffixes,
     currentAffixFamiliesPool,

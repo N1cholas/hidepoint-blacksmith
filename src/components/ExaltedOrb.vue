@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useItem } from '@/stores/modules/useItem'
+import { ITEM_CONFIG, useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { computed, ref, watchEffect } from 'vue'
@@ -13,11 +13,10 @@ const { maximumLevel, minimumLevel } = defineProps<{
 const _item = useItem()
 const _omen = useOmen()
 
-const [PREFIX_COUNT, SUFFIX_COUNT] = _item.state.config.affixCounts
-
 const disable = computed(() => {
   return !(
-    _item.state.affixFamilies.length < PREFIX_COUNT + SUFFIX_COUNT &&
+    _item.state.affixFamilies.length <
+      ITEM_CONFIG.PREFIX_COUNT_LIMIT + ITEM_CONFIG.SUFFIX_COUNT_LIMIT &&
     _item.state.rarity === 'rare' &&
     maximumLevel >= minimumLevel
   )
@@ -48,11 +47,11 @@ const addAffix = () => {
 }
 
 const shouldOnlyPrefix = (): boolean => {
-  return _omen.config.sinistralExaltation || _item.counts.suffixCount >= SUFFIX_COUNT
+  return _omen.config.sinistralExaltation || _item.isSuffixFull
 }
 
 const shouldOnlySuffix = (): boolean => {
-  return _omen.config.dextralExaltation || _item.counts.prefixCount >= PREFIX_COUNT
+  return _omen.config.dextralExaltation || _item.isPrefixFull
 }
 </script>
 <template>
