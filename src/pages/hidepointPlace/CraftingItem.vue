@@ -10,6 +10,7 @@ import RegalOrb from '@/components/RegalOrb.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import ChaosOrb from '@/components/ChaosOrb.vue'
 import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
+import FracturingOrb from '@/components/FracturingOrb.vue'
 
 const _item = useItem()
 
@@ -74,6 +75,7 @@ const itemRarity = computed(() => _item.state.rarity)
             <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="_item.state.level" />
             <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
             <AnnulmentOrb name="剥离石" />
+            <FracturingOrb name="破溃宝珠" />
           </div>
         </div>
       </t-card>

@@ -1,6 +1,6 @@
 import type { AffixFamily } from '../factory/newAffixFamily'
 
-export const reverseRandomlyObtainAffixFamily = (
+export const reverseRandomlyGetAffixFamily = (
   affixFamilies: AffixFamily[],
   rng: () => number = Math.random,
   epsilon = 1e-4,

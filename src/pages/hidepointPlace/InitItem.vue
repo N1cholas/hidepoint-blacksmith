@@ -68,7 +68,7 @@ const handleSelectType = (value: SelectValue) => {
 
 const toggleLock = (affix: Affix) => {
   if (affix.id === _item.state.lockedAffix?.id) {
-    _item.state.lockedAffix = undefined
+    _item.state.lockedAffix = null
     return
   }
   _item.state.lockedAffix = affix

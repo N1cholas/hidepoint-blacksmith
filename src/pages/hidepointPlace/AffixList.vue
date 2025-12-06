@@ -7,7 +7,7 @@ export type AffixListProps = {
   items: Affix[]
   itemKey: keyof Affix | ((a: Affix, i: number) => Key)
   showTier?: boolean
-  lockedAffix?: Affix
+  lockedAffix: Affix | null
 }
 
 const { items, itemKey, showTier } = defineProps<AffixListProps>()

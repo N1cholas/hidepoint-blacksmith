@@ -2,7 +2,7 @@
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateRemovePool } from '@/utils/pool/generateRemovePool'
-import { reverseRandomlyObtainAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
+import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
 import { computed } from 'vue'
 
 defineProps<{
@@ -22,7 +22,7 @@ const removeAffix = () => {
     onlyAbyssal: _omen.config.light,
   })
 
-  const shouldRemoveAffixFamily = reverseRandomlyObtainAffixFamily(removeAffixFamiliesPool)
+  const shouldRemoveAffixFamily = reverseRandomlyGetAffixFamily(removeAffixFamiliesPool)
 
   _item.removeAffix(shouldRemoveAffixFamily)
 }

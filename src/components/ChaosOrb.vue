@@ -3,7 +3,7 @@ import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { generateReplacePool } from '@/utils/pool/generateReplacePool'
-import { reverseRandomlyObtainAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
+import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
 import { computed, ref, watchEffect } from 'vue'
 
 const { maximumLevel, minimumLevel } = defineProps<{
@@ -44,7 +44,7 @@ const changeModifier = () => {
 
   if (!replaceAffixFamiliesPool.length) return
 
-  const shouldRemoveAffixFamily = reverseRandomlyObtainAffixFamily(replaceAffixFamiliesPool)
+  const shouldRemoveAffixFamily = reverseRandomlyGetAffixFamily(replaceAffixFamiliesPool)
 
   const is6Mods = _item.state.affixFamilies.length === 6
 

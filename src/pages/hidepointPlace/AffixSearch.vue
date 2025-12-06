@@ -82,7 +82,11 @@ const lockAffix = (affix: Affix) => {
   <div class="affix-search">
     <t-input v-model="searchQuery" placeholder="搜索词缀" class="affix-search-input" />
     <!-- todo: tag搜索 -->
-    <AffixList :items="generateAffixesByTier" :itemKey="(a) => `${a.id}-${a.tier}`">
+    <AffixList
+      :items="generateAffixesByTier"
+      :itemKey="(a) => `${a.id}-${a.tier}`"
+      :lockedAffix="null"
+    >
       <template #actions="{ item }">
         <t-select
           class="tier-select"

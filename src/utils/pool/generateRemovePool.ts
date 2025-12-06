@@ -18,7 +18,7 @@ export const generateRemovePool = (
   if (onlyAbyssal) {
     return _affixFamiliesPool.filter(
       // todo 两个条件应该可以合成一个
-      (affixFamily) => affixFamily.desecrated || affixFamily.id === 'Abyssal',
+      (affixFamily) => affixFamily.desecrated || affixFamily.id === 'ABYSSAL_ID',
     )
   }
 
