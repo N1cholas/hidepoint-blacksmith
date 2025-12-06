@@ -36,7 +36,7 @@ watchEffect(async () => {
 // 混沌石替换的词条可以是前缀或者后缀
 // 但是要处理6词条的情况，如果替换的是前缀，那么生成的也是前缀.如果替换的是后缀，那么生成的也是后缀。
 const changeModifier = () => {
-  const replaceAffixFamiliesPool = generateReplacePool(_item.state.affixFamilies, {
+  const replaceAffixFamiliesPool = generateReplacePool(_item.withoutLocked, {
     lowestValue: _omen.config.whittling,
     onlyPrefix: _omen.config.sinistralErasure,
     onlySuffix: _omen.config.dextralErasure,
