@@ -118,7 +118,7 @@ export const useItem = defineStore('item', () => {
     minimumLevel: number,
     maximumLevel: number,
     nextRarity: ItemRarity,
-    usedProp: keyof UsedProps,
+    usedProp?: keyof UsedProps,
   ) => {
     const hitAffixFamily = randomlyGetAffixFamily(affixFamiliesPool)
     const hitAffix = randomlyGetAffix(hitAffixFamily.items, minimumLevel, maximumLevel)
@@ -127,13 +127,22 @@ export const useItem = defineStore('item', () => {
       if (!hitAffixFamily || !hitAffix)
         return console.error('addMods: newModsFamily or newMods is null')
 
-      state.value.affixFamilies.push({ ...hitAffixFamily, hitAffix })
-
       setState({
+        affixFamilies: state.value.affixFamilies.concat({ ...hitAffixFamily, hitAffix }),
         rarity: nextRarity,
-        usedProps: { ...state.value.usedProps, [usedProp]: true },
+        usedProps: usedProp
+          ? { ...state.value.usedProps, [usedProp]: true }
+          : state.value.usedProps,
       })
     }
+  }
+
+  const removeAffix = (removeAffixFamily: AffixFamily) => {
+    setState({
+      affixFamilies: state.value.affixFamilies.filter(
+        (affixFamily) => affixFamily.id !== removeAffixFamily.id,
+      ),
+    })
   }
 
   return {
@@ -145,5 +154,6 @@ export const useItem = defineStore('item', () => {
     hitAffixes,
     currentAffixFamiliesPool,
     addAffix,
+    removeAffix,
   }
 })

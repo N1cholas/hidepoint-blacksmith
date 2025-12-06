@@ -32,12 +32,12 @@ watchEffect(async () => {
 
 // 富豪石
 const addAffix = () => {
-  const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
+  const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
     filterByTags: _omen.config.homogenisingCoronation,
   })
 
-  _item.addAffix(affixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'regalOrb')
+  _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'regalOrb')
 }
 </script>
 <template>

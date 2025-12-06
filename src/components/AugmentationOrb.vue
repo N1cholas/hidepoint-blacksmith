@@ -30,11 +30,11 @@ watchEffect(async () => {
 
 // 增幅石
 const addAffix = () => {
-  const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
+  const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
     deduplication: true,
   })
 
-  _item.addAffix(affixFamiliesPool, minimumLevel, maximumLevel, 'magic', 'augmentationOrb')
+  _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'magic', 'augmentationOrb')
 }
 </script>
 <template>

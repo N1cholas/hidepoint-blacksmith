@@ -36,14 +36,14 @@ const addAffix = () => {
   const iterations = _omen.config.greaterExaltation ? 2 : 1
 
   for (let i = 0; i < iterations; i++) {
-    const affixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
+    const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
       deduplication: true,
       filterByTags: _omen.config.homogenisingExaltaion,
       onlyPrefix: shouldOnlyPrefix(),
       onlySuffix: shouldOnlySuffix(),
     })
 
-    _item.addAffix(affixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'exaltedOrb')
+    _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'exaltedOrb')
   }
 }
 

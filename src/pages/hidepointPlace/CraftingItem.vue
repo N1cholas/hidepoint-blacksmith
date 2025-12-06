@@ -8,6 +8,7 @@ import AffixList from './AffixList.vue'
 import { t } from '@/locales'
 import RegalOrb from '@/components/RegalOrb.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
+import ChaosOrb from '@/components/ChaosOrb.vue'
 
 const _item = useItem()
 
@@ -69,6 +70,9 @@ const itemRarity = computed(() => _item.state.rarity)
             <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="_item.state.level" />
             <ExaltedOrb name="高级崇高石" :minimumLevel="35" :maximumLevel="_item.state.level" />
             <ExaltedOrb name="完美崇高石" :minimumLevel="50" :maximumLevel="_item.state.level" />
+            <ChaosOrb name="混沌石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+            <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
           </div>
         </div>
       </t-card>
