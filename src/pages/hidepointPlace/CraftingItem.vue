@@ -9,6 +9,7 @@ import { t } from '@/locales'
 import RegalOrb from '@/components/RegalOrb.vue'
 import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import ChaosOrb from '@/components/ChaosOrb.vue'
+import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
 
 const _item = useItem()
 
@@ -36,7 +37,6 @@ const itemRarity = computed(() => _item.state.rarity)
       </t-card>
     </div>
 
-    <!-- 右侧显示分类的道具 -->
     <div class="side right">
       <t-card>
         <div class="category">
@@ -73,6 +73,7 @@ const itemRarity = computed(() => _item.state.rarity)
             <ChaosOrb name="混沌石" :minimumLevel="0" :maximumLevel="_item.state.level" />
             <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="_item.state.level" />
             <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
+            <AnnulmentOrb name="剥离石" />
           </div>
         </div>
       </t-card>
@@ -80,24 +81,35 @@ const itemRarity = computed(() => _item.state.rarity)
         <div class="category">
           <h3>预兆</h3>
           <div class="props-wrapper">
-            <!-- 崇高石 -->
-            <OmenOf :name="t('omen.homogenisingExaltaion')" omenConfigKey="homogenisingExaltaion" />
-            <OmenOf :name="t('omen.sinistralExaltation')" omenConfigKey="sinistralExaltation" />
-            <OmenOf :name="t('omen.dextralExaltation')" omenConfigKey="dextralExaltation" />
-            <OmenOf :name="t('omen.greaterExaltation')" omenConfigKey="greaterExaltation" />
+            <div class="sub-category">
+              <h4>崇高石相关预兆</h4>
+              <OmenOf
+                :name="t('omen.homogenisingExaltaion')"
+                omenConfigKey="homogenisingExaltaion"
+              />
+              <OmenOf :name="t('omen.sinistralExaltation')" omenConfigKey="sinistralExaltation" />
+              <OmenOf :name="t('omen.dextralExaltation')" omenConfigKey="dextralExaltation" />
+              <OmenOf :name="t('omen.greaterExaltation')" omenConfigKey="greaterExaltation" />
+            </div>
             <!-- <Button class="tools">催化崇高预兆</Button> -->
-            <!-- 富豪石 -->
-            <OmenOf
-              :name="t('omen.homogenisingCoronation')"
-              omenConfigKey="homogenisingCoronation"
-            />
-            <!-- 混沌石 -->
-            <OmenOf :name="t('omen.whittling')" omenConfigKey="whittling" />
-            <OmenOf :name="t('omen.sinistralErasure')" omenConfigKey="sinistralErasure" />
-            <OmenOf :name="t('omen.dextralErasure')" omenConfigKey="dextralErasure" />
-            <!-- 剥离石 -->
-            <OmenOf :name="t('omen.sinistralAnnulment')" omenConfigKey="sinistralAnnulment" />
-            <OmenOf :name="t('omen.dextralAnnulment')" omenConfigKey="dextralAnnulment" />
+            <div class="sub-category">
+              <h4>富豪石相关预兆</h4>
+              <OmenOf
+                :name="t('omen.homogenisingCoronation')"
+                omenConfigKey="homogenisingCoronation"
+              />
+            </div>
+            <div class="sub-category">
+              <h4>混沌石相关预兆</h4>
+              <OmenOf :name="t('omen.whittling')" omenConfigKey="whittling" />
+              <OmenOf :name="t('omen.sinistralErasure')" omenConfigKey="sinistralErasure" />
+              <OmenOf :name="t('omen.dextralErasure')" omenConfigKey="dextralErasure" />
+            </div>
+            <div class="sub-category">
+              <h4>剥离石相关预兆</h4>
+              <OmenOf :name="t('omen.sinistralAnnulment')" omenConfigKey="sinistralAnnulment" />
+              <OmenOf :name="t('omen.dextralAnnulment')" omenConfigKey="dextralAnnulment" />
+            </div>
           </div>
         </div>
       </t-card>
@@ -123,7 +135,7 @@ const itemRarity = computed(() => _item.state.rarity)
 }
 .left {
   position: sticky;
-  top: 16px; /* 固定在页面顶部 16px */
+  top: 16px;
   align-self: flex-start;
 }
 .info-row {
@@ -152,5 +164,11 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.sub-category {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 </style>

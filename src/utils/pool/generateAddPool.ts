@@ -40,32 +40,3 @@ export const generateAddPool = (
 
   return _affixFamiliesPool
 }
-
-// export const generateRemovePool = (
-//   curAffixFamilies: AffixFamily[],
-//   options: GenerateRemovePoolOptions,
-// ): AffixFamily[] => {
-//   const { onlyAbyssal, onlyPrefix, onlySuffix } = options
-
-//   let affixFamiliesPool = curAffixFamilies
-
-//   if (onlyAbyssal) {
-//     return affixFamiliesPool.filter(
-//       (affixFamily) => affixFamily.desecrated || affixFamily.id === SESSION3_CONFIG.PLACEHOLDER_ID,
-//     )
-//   }
-
-//   if (onlyPrefix) {
-//     affixFamiliesPool = affixFamiliesPool.filter(
-//       (affixFamily) => affixFamily.modGenerationTypeID === MOD_GENERATION_TYPE.PREFIX,
-//     )
-//   }
-
-//   if (onlySuffix) {
-//     affixFamiliesPool = affixFamiliesPool.filter(
-//       (affixFamily) => affixFamily.modGenerationTypeID === MOD_GENERATION_TYPE.SUFFIX,
-//     )
-//   }
-
-//   return affixFamiliesPool
-// }

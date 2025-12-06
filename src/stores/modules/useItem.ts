@@ -81,7 +81,7 @@ export const useItem = defineStore('item', () => {
     if (!state.value.lockedAffix) {
       return state.value.affixFamilies
     }
-    return state.value.affixFamilies.filter((family) => family.id !== state.value.lockedAffix?.id)
+    return state.value.affixFamilies.filter((af) => af.id !== state.value.lockedAffix?.id)
   })
 
   const affixDataPool = new Map<ItemType, Promise<any>>([
@@ -138,10 +138,15 @@ export const useItem = defineStore('item', () => {
   }
 
   const removeAffix = (removeAffixFamily: AffixFamily) => {
+    const affixFamilies = state.value.affixFamilies.filter(
+      (affixFamily) => affixFamily.id !== removeAffixFamily.id,
+    )
+    const lockedAffix =
+      state.value.lockedAffix?.id === removeAffixFamily.id ? undefined : state.value.lockedAffix
+
     setState({
-      affixFamilies: state.value.affixFamilies.filter(
-        (affixFamily) => affixFamily.id !== removeAffixFamily.id,
-      ),
+      affixFamilies,
+      lockedAffix,
     })
   }
 
