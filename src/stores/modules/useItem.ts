@@ -151,6 +151,18 @@ export const useItem = defineStore('item', () => {
     })
   }
 
+  const AFFIX_COUNTS = computed(() => {
+    return ITEM_CONFIG.PREFIX_COUNT_LIMIT + ITEM_CONFIG.SUFFIX_COUNT_LIMIT
+  })
+
+  const placeholder = computed(() => {
+    return state.value.affixFamilies.find((af) => af.id === 'ABYSSAL_ID') || null
+  })
+
+  const desecrated = computed(() => {
+    return state.value.affixFamilies.find((af) => af.desecrated) || null
+  })
+
   return {
     state,
     setState,
@@ -162,5 +174,8 @@ export const useItem = defineStore('item', () => {
     currentAffixFamiliesPool,
     addAffix,
     removeAffix,
+    AFFIX_COUNTS,
+    placeholder,
+    desecrated,
   }
 })

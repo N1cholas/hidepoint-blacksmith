@@ -112,6 +112,13 @@ const itemRarity = computed(() => _item.state.rarity)
               <OmenOf :name="t('omen.sinistralAnnulment')" omenConfigKey="sinistralAnnulment" />
               <OmenOf :name="t('omen.dextralAnnulment')" omenConfigKey="dextralAnnulment" />
             </div>
+            <div class="sub-category">
+              <h4>深渊相关预兆</h4>
+              <OmenOf name="深渊回响预兆" omenConfigKey="abyssalEchoes" />
+              <OmenOf name="光明预兆" omenConfigKey="light" />
+              <OmenOf name="左旋死灵预兆" omenConfigKey="sinistralNecromancy" />
+              <OmenOf name="右旋死灵预兆" omenConfigKey="dextralNecromancy" />
+            </div>
           </div>
         </div>
       </t-card>

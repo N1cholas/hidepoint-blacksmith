@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ITEM_CONFIG, useItem } from '@/stores/modules/useItem'
+import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { generateAddPool } from '@/utils/pool/generateAddPool'
 import { computed, ref, watchEffect } from 'vue'
@@ -15,8 +15,7 @@ const _omen = useOmen()
 
 const disable = computed(() => {
   return !(
-    _item.state.affixFamilies.length <
-      ITEM_CONFIG.PREFIX_COUNT_LIMIT + ITEM_CONFIG.SUFFIX_COUNT_LIMIT &&
+    _item.state.affixFamilies.length < _item.AFFIX_COUNTS &&
     _item.state.rarity === 'rare' &&
     maximumLevel >= minimumLevel
   )

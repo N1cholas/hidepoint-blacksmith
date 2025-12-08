@@ -24,21 +24,40 @@ const extractChinese = (text: string): string => {
   return matches ? matches.join('') : ''
 }
 
-export const newAffix = (rawAffix: RawNormalAffix): Affix => {
-  if (!rawAffix.ModFamilyList[0]) {
+const initRawNormalAffix: RawNormalAffix = {
+  Name: 'init',
+  Level: '0',
+  ModGenerationTypeID: '0',
+  ModFamilyList: [],
+  DropChance: '0',
+  str: '',
+  fossil_no: [],
+  mod_no: [],
+  mod_fossil_item: [],
+  hover: '',
+}
+
+export const newAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
+  if (!rawAffix?.ModFamilyList?.[0]) {
     throw new Error(`ModFamilyList is empty for affix: ${rawAffix.Name}`)
   }
 
+  if (!rawAffix?.ModFamilyList.length) {
+    throw new Error(`ModFamilyList is empty for affix: ${rawAffix.ModFamilyList}`)
+  }
+
+  const _rawAffix = { ...initRawNormalAffix, ...rawAffix }
+
   return {
-    name: rawAffix.Name,
-    level: Number(rawAffix.Level),
+    name: _rawAffix.Name,
+    level: Number(_rawAffix.Level),
     // todo: 测试数据 -> 只有前缀和后缀区分
-    isPrefix: rawAffix.ModGenerationTypeID === '1',
+    isPrefix: _rawAffix.ModGenerationTypeID === '1',
     // todo: 测试数据 -> ModFamilyList 只有一个元素
-    id: rawAffix.ModFamilyList[0],
-    dropChance: Number(rawAffix.DropChance),
-    str: handleHTMLString(rawAffix.str),
-    tags: rawAffix.mod_no.map((tag) => extractChinese(tag)),
+    id: _rawAffix.ModFamilyList[0] || '',
+    dropChance: Number(_rawAffix.DropChance),
+    str: handleHTMLString(_rawAffix.str),
+    tags: _rawAffix.mod_no.map((tag) => extractChinese(tag)),
     tier: -1,
   }
 }
