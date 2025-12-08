@@ -20,7 +20,9 @@ const disable = computed(() => {
     maximumLevel >= minimumLevel &&
     _item.state.affixFamilies.length < _item.AFFIX_COUNTS &&
     !_item.placeholder &&
-    !_item.desecrated
+    !_item.desecrated &&
+    (_item.state.type === 'bow' ||
+    _item.state.type === 'quiver')
   )
 })
 

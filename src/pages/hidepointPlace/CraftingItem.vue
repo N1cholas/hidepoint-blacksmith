@@ -104,6 +104,7 @@ const itemRarity = computed(() => _item.state.rarity)
           <div class="props-wrapper">
             <div class="sub-category">
               <h4>崇高石相关预兆</h4>
+            <!-- <Button class="tools">催化崇高预兆</Button> -->
               <OmenOf
                 :name="t('omen.homogenisingExaltaion')"
                 omenConfigKey="homogenisingExaltaion"
@@ -112,19 +113,18 @@ const itemRarity = computed(() => _item.state.rarity)
               <OmenOf :name="t('omen.dextralExaltation')" omenConfigKey="dextralExaltation" />
               <OmenOf :name="t('omen.greaterExaltation')" omenConfigKey="greaterExaltation" />
             </div>
-            <!-- <Button class="tools">催化崇高预兆</Button> -->
-            <div class="sub-category">
-              <h4>富豪石相关预兆</h4>
-              <OmenOf
-                :name="t('omen.homogenisingCoronation')"
-                omenConfigKey="homogenisingCoronation"
-              />
-            </div>
             <div class="sub-category">
               <h4>混沌石相关预兆</h4>
               <OmenOf :name="t('omen.whittling')" omenConfigKey="whittling" />
               <OmenOf :name="t('omen.sinistralErasure')" omenConfigKey="sinistralErasure" />
               <OmenOf :name="t('omen.dextralErasure')" omenConfigKey="dextralErasure" />
+            </div>
+             <div class="sub-category">
+              <h4>深渊相关预兆</h4>
+              <OmenOf name="深渊回响预兆" omenConfigKey="abyssalEchoes" />
+              <OmenOf name="光明预兆" omenConfigKey="light" />
+              <OmenOf name="左旋死灵预兆" omenConfigKey="sinistralNecromancy" />
+              <OmenOf name="右旋死灵预兆" omenConfigKey="dextralNecromancy" />
             </div>
             <div class="sub-category">
               <h4>剥离石相关预兆</h4>
@@ -132,11 +132,11 @@ const itemRarity = computed(() => _item.state.rarity)
               <OmenOf :name="t('omen.dextralAnnulment')" omenConfigKey="dextralAnnulment" />
             </div>
             <div class="sub-category">
-              <h4>深渊相关预兆</h4>
-              <OmenOf name="深渊回响预兆" omenConfigKey="abyssalEchoes" />
-              <OmenOf name="光明预兆" omenConfigKey="light" />
-              <OmenOf name="左旋死灵预兆" omenConfigKey="sinistralNecromancy" />
-              <OmenOf name="右旋死灵预兆" omenConfigKey="dextralNecromancy" />
+              <h4>富豪石相关预兆</h4>
+              <OmenOf
+                :name="t('omen.homogenisingCoronation')"
+                omenConfigKey="homogenisingCoronation"
+              />
             </div>
           </div>
         </div>
