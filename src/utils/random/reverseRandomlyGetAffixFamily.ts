@@ -1,4 +1,4 @@
-import type { AffixFamily } from '../factory/newAffixFamily'
+import type { AffixFamily } from '../factory/createAffixFamily'
 
 export const reverseRandomlyGetAffixFamily = (
   affixFamilies: AffixFamily[],

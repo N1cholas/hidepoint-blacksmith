@@ -1,8 +1,8 @@
 import { resolve } from 'node:path'
 import jsonfile from 'jsonfile'
 import { groupBy } from 'lodash-es'
-import { newAffix, type Affix } from '../utils/factory/newAffix'
-import { newAffixFamily, type AffixFamily } from '../utils/factory/newAffixFamily'
+import { createAffix, type Affix } from '../utils/factory/createAffix'
+import { createAffixFamily, type AffixFamily } from '../utils/factory/createAffixFamily'
 import { fileURLToPath } from 'node:url'
 import { resolve as r, normalize } from 'node:path'
 
@@ -55,12 +55,12 @@ function transform(raw: RawFile): FileContent {
     throw new Error('Invalid input file: missing "normal" array')
   }
 
-  const affixes: Affix[] = raw.normal.map(newAffix)
+  const affixes: Affix[] = raw.normal.map(createAffix)
 
   const grouped: Record<string, Affix[]> = groupBy(affixes, 'id')
 
   const families: AffixFamily[] = Object.values(grouped)
-    .map(newAffixFamily)
+    .map(createAffixFamily)
     .sort((a) => (a.isPrefix ? -1 : 1))
 
   return { normal: families }

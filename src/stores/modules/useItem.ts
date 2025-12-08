@@ -1,5 +1,5 @@
-import type { Affix } from '@/utils/factory/newAffix'
-import type { AffixFamily } from '@/utils/factory/newAffixFamily'
+import type { Affix } from '@/utils/factory/createAffix'
+import type { AffixFamily } from '@/utils/factory/createAffixFamily'
 import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
 import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { defineStore } from 'pinia'

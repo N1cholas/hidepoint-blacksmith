@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
-import { newAffix } from '@/utils/factory/newAffix'
-import { newAffixFamily } from '@/utils/factory/newAffixFamily'
+import { createAffix } from '@/utils/factory/createAffix'
+import { createAffixFamily } from '@/utils/factory/createAffixFamily'
 import { computed } from 'vue'
 
 const { minimumLevel, maximumLevel } = defineProps<{
@@ -26,7 +26,7 @@ const disable = computed(() => {
 
 // 颚骨，为武器或弓添加亵渎占位符
 const addPlaceholder = () => {
-  const placeholderAffix = newAffix({
+  const placeholderAffix = createAffix({
     Name: '亵渎占位符',
     str: '此词条已被亵渎需点击解密',
     ModFamilyList: ['ABYSSAL_ID'],
@@ -35,7 +35,7 @@ const addPlaceholder = () => {
     DropChance: getAverageAffixFamilyWeight() + '',
   })
 
-  const placeholderAffixFamily = newAffixFamily([placeholderAffix])
+  const placeholderAffixFamily = createAffixFamily([placeholderAffix])
 
   _item.addAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
 }

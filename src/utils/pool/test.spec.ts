@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { generateAddPool } from './generateAddPool'
-import type { AffixFamily } from '../factory/newAffixFamily'
+import type { AffixFamily } from '../factory/createAffixFamily'
 
 describe('generateAddPool', () => {
   const mockAffixFamilies: AffixFamily[] = [

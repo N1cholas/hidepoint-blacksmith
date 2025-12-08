@@ -2,7 +2,7 @@
 import { Item_Rarity_Options, useItem, type ItemType } from '@/stores/modules/useItem'
 import AffixList from './AffixList.vue'
 import AffixSearch from './AffixSearch.vue'
-import type { Affix } from '@/utils/factory/newAffix'
+import type { Affix } from '@/utils/factory/createAffix'
 import { DeleteIcon } from 'tdesign-icons-vue-next'
 import { computed, ref, watchEffect } from 'vue'
 import { generateAddPool } from '@/utils/pool/generateAddPool'

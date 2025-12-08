@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Affix } from '@/utils/factory/newAffix'
+import type { Affix } from '@/utils/factory/createAffix'
 
 type Key = string | number
 
@@ -25,7 +25,7 @@ function keyOf(a: Affix, i: number): Key {
         {{ a.isPrefix ? '前缀' : '后缀' }}
       </span>
 
-      <span class="text" :class="{ locked: a.id === lockedAffix?.id }" v-html="a.str"></span>
+      <span class="text" :class="{ locked: a.id === lockedAffix?.id,  }" v-html="a.str"></span>
 
       <span v-show="showTier" class="tier">T{{ a.tier }} </span>
 

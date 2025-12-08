@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { AffixFamily } from '@/utils/factory/newAffixFamily'
+import type { AffixFamily } from '@/utils/factory/createAffixFamily'
 import AffixList from './AffixList.vue'
 import { computed, ref, watch } from 'vue'
-import type { Affix } from '@/utils/factory/newAffix'
+import type { Affix } from '@/utils/factory/createAffix'
 import { AddIcon, LockOnIcon } from 'tdesign-icons-vue-next'
 import { useItem } from '@/stores/modules/useItem'
 

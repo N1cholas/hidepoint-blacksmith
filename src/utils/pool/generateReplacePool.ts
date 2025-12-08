@@ -1,5 +1,5 @@
-import type { Affix } from '../factory/newAffix'
-import type { AffixFamily } from '../factory/newAffixFamily'
+import type { Affix } from '../factory/createAffix'
+import type { AffixFamily } from '../factory/createAffixFamily'
 import { onlyPrefixAffixFamilies, onlySuffixAffixFamilies } from './utils'
 
 export type GenerateReplacePoolOptions = {

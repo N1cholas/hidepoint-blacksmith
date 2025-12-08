@@ -1,4 +1,4 @@
-import type { Affix } from '../factory/newAffix'
+import type { Affix } from '../factory/createAffix'
 
 export const randomlyGetAffix = (
   affixes: Affix[],

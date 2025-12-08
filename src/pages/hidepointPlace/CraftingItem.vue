@@ -12,7 +12,7 @@ import ChaosOrb from '@/components/ChaosOrb.vue'
 import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
 import FracturingOrb from '@/components/FracturingOrb.vue'
 import JawBone from '@/components/JawBone.vue'
-import type { Affix } from '@/utils/factory/newAffix'
+import type { Affix } from '@/utils/factory/createAffix'
 
 const _item = useItem()
 

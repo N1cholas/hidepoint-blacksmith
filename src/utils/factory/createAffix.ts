@@ -37,7 +37,7 @@ const initRawNormalAffix: RawNormalAffix = {
   hover: '',
 }
 
-export const newAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
+export const createAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
   if (!rawAffix?.ModFamilyList?.[0]) {
     throw new Error(`ModFamilyList is empty for affix: ${rawAffix.Name}`)
   }

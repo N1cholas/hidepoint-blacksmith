@@ -1,11 +1,11 @@
-import type { Affix } from './newAffix'
+import type { Affix } from './createAffix'
 
 export type AffixFamily = WeightWrapper<Affix[]> & {
   desecrated?: boolean
   hitAffix: Affix | null
 }
 
-export const newAffixFamily = (affixes: Affix[]): AffixFamily => {
+export const createAffixFamily = (affixes: Affix[]): AffixFamily => {
   if (!affixes[0]) {
     throw new Error('Affixes is empty')
   }
