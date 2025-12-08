@@ -28,52 +28,39 @@ const disable = computed(() => {
 const addPlaceholder = () => {
   const placeholderAffix = newAffix({
     Name: '亵渎占位符',
-    str: '在武器或弓上附加一个亵渎词缀。',
+    str: '此词条已被亵渎需点击解密',
     ModFamilyList: ['ABYSSAL_ID'],
     ModGenerationTypeID: getModGenerationType(),
     Level: '82',
     DropChance: getAverageAffixFamilyWeight() + '',
   })
 
-  const placeholderAffixFamily = newAffixFamily({
-    items: [placeholderAffix],
-    id: SESSION3_CONFIG.PLACEHOLDER_ID,
-    modGenerationTypeID: hitAffix.ModGenerationTypeID,
-    weight: getAverageAffixFamilyWeight(),
-  })
+  const placeholderAffixFamily = newAffixFamily([placeholderAffix])
 
-  if (hitAffix) {
-    itemState.addAffix(placeholderAffixFamily, hitAffix)
-
-    itemState.setItemRarity(ITEM_RARITY.RARE)
-
-    session3State.setAffixLevelRange([minimumLevel, maximumLevel])
-  }
+  _item.addAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
 }
 
-const getModGenerationType = (): MOD_GENERATION_TYPE => {
-  const prefixCounts = itemState.prefixCounts
-  const suffixCounts = itemState.suffixCounts
-
-  if (suffixCounts >= ITEM_CONFIG.SUFFIX || omenState.omenConfig.sinistralNecromancy) {
-    return MOD_GENERATION_TYPE.PREFIX
+const getModGenerationType = (): '1' | '2' => {
+  // 1 前缀 2 后缀
+  if (_item.isSuffixFull || _omen.config.sinistralNecromancy) {
+    return '1'
   }
 
-  if (prefixCounts >= ITEM_CONFIG.PREFIX || omenState.omenConfig.dextralNecromancy) {
-    return MOD_GENERATION_TYPE.SUFFIX
+  if (_item.isPrefixFull || _omen.config.dextralNecromancy) {
+    return '2'
   }
 
-  return Math.random() < 0.5 ? MOD_GENERATION_TYPE.PREFIX : MOD_GENERATION_TYPE.SUFFIX
+  return Math.random() < 0.5 ? '1' : '2'
 }
 
 const getAverageAffixFamilyWeight = (): number =>
   Math.round(
-    itemState.affixFamilies.reduce((sum, affixFamily) => sum + affixFamily.weight, 0) /
-      itemState.affixFamilies.length,
+    _item.state.affixFamilies.reduce((sum, affixFamily) => sum + affixFamily.weight, 0) /
+      _item.state.affixFamilies.length,
   )
 </script>
 <template>
-  <button @click="addPlaceholder()" :disabled="disable">{{ name }}</button>
+  <t-button @click="addPlaceholder()" :disabled="disable">{{ name }}</t-button>
 </template>
 
 <style scoped></style>

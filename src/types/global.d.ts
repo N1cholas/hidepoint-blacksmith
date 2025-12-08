@@ -23,7 +23,7 @@ declare type OmenConfig = {
   // 剥离
   sinistralAnnulment: boolean
   dextralAnnulment: boolean
-  // session3
+  // 深渊
   abyssalEchoes: boolean
   sinistralNecromancy: boolean
   dextralNecromancy: boolean

@@ -11,6 +11,8 @@ import ExaltedOrb from '@/components/ExaltedOrb.vue'
 import ChaosOrb from '@/components/ChaosOrb.vue'
 import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
 import FracturingOrb from '@/components/FracturingOrb.vue'
+import JawBone from '@/components/JawBone.vue'
+import type { Affix } from '@/utils/factory/newAffix'
 
 const _item = useItem()
 
@@ -31,7 +33,7 @@ const itemRarity = computed(() => _item.state.rarity)
         <AffixList
           :items="_item.hitAffixes"
           :lockedAffix="_item.state.lockedAffix"
-          :itemKey="(a) => `${a.id}-${a.tier}`"
+          :itemKey="(a: Affix) => `${a.id}-${a.tier}`"
           showTier
         >
         </AffixList>
@@ -76,6 +78,9 @@ const itemRarity = computed(() => _item.state.rarity)
             <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
             <AnnulmentOrb name="剥离石" />
             <FracturingOrb name="破溃宝珠" />
+            <JawBone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
+            <JawBone name="遗存颚骨" :minimumLevel="0" :maximumLevel="_item.state.level" />
+            <JawBone name="远古颚骨" :minimumLevel="40" :maximumLevel="_item.state.level" />
           </div>
         </div>
       </t-card>
