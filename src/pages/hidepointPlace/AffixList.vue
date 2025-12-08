@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Affix } from '@/utils/factory/createAffix'
+import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
 
 type Key = string | number
 
@@ -25,7 +26,15 @@ function keyOf(a: Affix, i: number): Key {
         {{ a.isPrefix ? '前缀' : '后缀' }}
       </span>
 
-      <span class="text" :class="{ locked: a.id === lockedAffix?.id,  }" v-html="a.str"></span>
+      <span
+        class="text"
+        :class="{
+          locked: a.id === lockedAffix?.id,
+          desecrated: a.id === DESECRATED_ID,
+        }"
+        v-html="a.str"
+      >
+      </span>
 
       <span v-show="showTier" class="tier">T{{ a.tier }} </span>
 
@@ -92,6 +101,10 @@ function keyOf(a: Affix, i: number): Key {
 
 .text.locked {
   color: #d2870f;
+}
+
+.text.desecrated {
+  color: #0a6a01;
 }
 
 .tier {

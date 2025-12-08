@@ -22,6 +22,10 @@ const removeAffix = () => {
     onlyAbyssal: _omen.config.light,
   })
 
+  if (removeAffixFamiliesPool.length === 0) {
+    return
+  }
+
   const shouldRemoveAffixFamily = reverseRandomlyGetAffixFamily(removeAffixFamiliesPool)
 
   _item.removeAffix(shouldRemoveAffixFamily)

@@ -45,42 +45,56 @@ const itemRarity = computed(() => _item.state.rarity)
         <div class="category">
           <h3>通货</h3>
           <div class="props-wrapper">
-            <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <TransmutationOrb
-              name="高级蜕变石"
-              :minimumLevel="55"
-              :maximumLevel="_item.state.level"
-            />
-            <TransmutationOrb
-              name="完美蜕变石"
-              :minimumLevel="70"
-              :maximumLevel="_item.state.level"
-            />
-            <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <AugmentationOrb
-              name="高级增幅石"
-              :minimumLevel="55"
-              :maximumLevel="_item.state.level"
-            />
-            <AugmentationOrb
-              name="完美增幅石"
-              :minimumLevel="70"
-              :maximumLevel="_item.state.level"
-            />
-            <RegalOrb name="富豪石" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <RegalOrb name="高级富豪石" :minimumLevel="35" :maximumLevel="_item.state.level" />
-            <RegalOrb name="完美富豪石" :minimumLevel="50" :maximumLevel="_item.state.level" />
-            <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <ExaltedOrb name="高级崇高石" :minimumLevel="35" :maximumLevel="_item.state.level" />
-            <ExaltedOrb name="完美崇高石" :minimumLevel="50" :maximumLevel="_item.state.level" />
-            <ChaosOrb name="混沌石" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="_item.state.level" />
-            <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
-            <AnnulmentOrb name="剥离石" />
-            <FracturingOrb name="破溃宝珠" />
-            <JawBone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
-            <JawBone name="遗存颚骨" :minimumLevel="0" :maximumLevel="_item.state.level" />
-            <JawBone name="远古颚骨" :minimumLevel="40" :maximumLevel="_item.state.level" />
+            <div class="sub-category">
+              <TransmutationOrb name="蜕变石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <TransmutationOrb
+                name="高级蜕变石"
+                :minimumLevel="55"
+                :maximumLevel="_item.state.level"
+              />
+              <TransmutationOrb
+                name="完美蜕变石"
+                :minimumLevel="70"
+                :maximumLevel="_item.state.level"
+              />
+            </div>
+            <div class="sub-category">
+              <AugmentationOrb name="增幅石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <AugmentationOrb
+                name="高级增幅石"
+                :minimumLevel="55"
+                :maximumLevel="_item.state.level"
+              />
+              <AugmentationOrb
+                name="完美增幅石"
+                :minimumLevel="70"
+                :maximumLevel="_item.state.level"
+              />
+            </div>
+            <div class="sub-category">
+              <RegalOrb name="富豪石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <RegalOrb name="高级富豪石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+              <RegalOrb name="完美富豪石" :minimumLevel="50" :maximumLevel="_item.state.level" />
+            </div>
+            <div class="sub-category">
+              <ExaltedOrb name="崇高石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <ExaltedOrb name="高级崇高石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+              <ExaltedOrb name="完美崇高石" :minimumLevel="50" :maximumLevel="_item.state.level" />
+            </div>
+            <div class="sub-category">
+              <ChaosOrb name="混沌石" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <ChaosOrb name="高级混沌石" :minimumLevel="35" :maximumLevel="_item.state.level" />
+              <ChaosOrb name="完美混沌石" :minimumLevel="50" :maximumLevel="_item.state.level" />
+            </div>
+            <div class="sub-category">
+              <JawBone name="啃噬颚骨" :minimumLevel="0" :maximumLevel="64" />
+              <JawBone name="遗存颚骨" :minimumLevel="0" :maximumLevel="_item.state.level" />
+              <JawBone name="远古颚骨" :minimumLevel="40" :maximumLevel="_item.state.level" />
+            </div>
+            <div class="sub-category">
+              <AnnulmentOrb name="剥离石" />
+              <FracturingOrb name="破溃宝珠" />
+            </div>
           </div>
         </div>
       </t-card>

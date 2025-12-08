@@ -30,7 +30,7 @@ const initRawNormalAffix: RawNormalAffix = {
   ModGenerationTypeID: '0',
   ModFamilyList: [],
   DropChance: '0',
-  str: '',
+  str: 'init',
   fossil_no: [],
   mod_no: [],
   mod_fossil_item: [],
