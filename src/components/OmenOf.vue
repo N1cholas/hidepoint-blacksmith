@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useOmen } from '@/stores/modules/useOmen'
+import { useOmen, type OmenConfig } from '@/stores/modules/useOmen'
 import type { SelectValue } from 'tdesign-vue-next'
 
 defineProps<{

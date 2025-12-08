@@ -6,7 +6,7 @@ export const reverseRandomlyGetAffixFamily = (
   epsilon = 1e-4,
 ): AffixFamily => {
   if (!Array.isArray(affixFamilies) || affixFamilies.length === 0) {
-    throw new Error('reverseRandomlyObtainAffixFamily: weightedItems is empty')
+    throw new Error('reverseRandomlyGetAffixFamily: affixFamilies is empty')
   }
 
   const invWeights = affixFamilies.map((w) => {

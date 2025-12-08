@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { createAffixFamily } from '@/utils/factory/createAffixFamily'
 import { createDesecratedAffix, DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
 import { computed } from 'vue'
+import DecryptModal from '@/pages/hidepointPlace/DecryptModal.vue'
 
 const { minimumLevel, maximumLevel } = defineProps<{
   name: string
@@ -13,6 +15,7 @@ const { minimumLevel, maximumLevel } = defineProps<{
 
 const _item = useItem()
 const _omen = useOmen()
+const _desecrated = useDesecrated()
 
 const disable = computed(() => {
   return !(
@@ -21,8 +24,7 @@ const disable = computed(() => {
     _item.state.affixFamilies.length < _item.AFFIX_COUNTS &&
     !_item.placeholder &&
     !_item.desecrated &&
-    (_item.state.type === 'bow' ||
-    _item.state.type === 'quiver')
+    (_item.state.type === 'bow' || _item.state.type === 'quiver')
   )
 })
 
@@ -41,6 +43,11 @@ const addPlaceholder = () => {
   const placeholderAffixFamily = createAffixFamily([placeholderAffix])
 
   _item.addAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
+
+  _desecrated.setState({
+    minimumLevel,
+    maximumLevel,
+  })
 }
 
 // todo: test
@@ -71,6 +78,7 @@ const getAverageAffixFamilyWeight = (): number => {
 </script>
 <template>
   <t-button @click="addPlaceholder()" :disabled="disable">{{ name }}</t-button>
+  <DecryptModal title="解密亵渎词条" />
 </template>
 
 <style scoped></style>

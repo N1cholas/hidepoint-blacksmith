@@ -10,12 +10,12 @@ const { minimumLevel, maximumLevel } = defineProps<{
 
 const _item = useItem()
 
-const affixFamilies = ref()
+const affixFamiliesPool = ref()
 
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
   // FileContent类型，取出normal部分
-  affixFamilies.value = data.normal
+  affixFamiliesPool.value = data.normal
 })
 
 const disable = computed(() => {
@@ -24,7 +24,7 @@ const disable = computed(() => {
 
 // 蜕变石
 const addAffix = () => {
-  _item.addAffix(affixFamilies.value, minimumLevel, maximumLevel, 'magic', 'transmutationOrb')
+  _item.addAffix(affixFamiliesPool.value, minimumLevel, maximumLevel, 'magic', 'transmutationOrb')
 }
 </script>
 <template>

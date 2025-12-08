@@ -24,12 +24,12 @@ const disable = computed(
     ),
 )
 
-const affixFamilies = ref()
+const affixFamiliesPool = ref()
 
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
   // FileContent类型，取出normal部分
-  affixFamilies.value = data.normal
+  affixFamiliesPool.value = data.normal
 })
 
 // todo: test
@@ -48,7 +48,7 @@ const changeModifier = () => {
 
   const is6Mods = _item.state.affixFamilies.length === 6
 
-  const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
+  const addAffixFamiliesPool = generateAddPool(affixFamiliesPool.value, _item.state.affixFamilies, {
     deduplication: true,
     onlyPrefix:
       (!is6Mods && shouldRemoveAffixFamily.isPrefix && _item.isSuffixFull) ||

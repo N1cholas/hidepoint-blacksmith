@@ -5,7 +5,7 @@ export const randomlyGetAffixFamily = (
   rng: () => number = Math.random,
 ): AffixFamily => {
   if (!Array.isArray(affixFamilies) || affixFamilies.length === 0) {
-    throw new Error('randomlyObtainAffixFamily: weightedItems is empty')
+    throw new Error('randomlyGetAffixFamily: affixFamilies is empty')
   }
 
   const weights = affixFamilies.map((w) => Math.max(0, Number(w.weight) || 0))
@@ -24,7 +24,7 @@ export const randomlyGetAffixFamily = (
     r -= w
   }
 
-  console.error('randomlyObtainAffixFamily: should not reach here')
+  console.error('randomlyGetAffixFamily: should not reach here')
 
   return affixFamilies[0] as AffixFamily
 }

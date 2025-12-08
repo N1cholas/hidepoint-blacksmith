@@ -22,17 +22,17 @@ const disable = computed(() => {
   )
 })
 
-const affixFamilies = ref()
+const affixFamiliesPool = ref()
 
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
   // FileContent类型，取出normal部分
-  affixFamilies.value = data.normal
+  affixFamiliesPool.value = data.normal
 })
 
 // 富豪石
 const addAffix = () => {
-  const addAffixFamiliesPool = generateAddPool(affixFamilies.value, _item.state.affixFamilies, {
+  const addAffixFamiliesPool = generateAddPool(affixFamiliesPool.value, _item.state.affixFamilies, {
     deduplication: true,
     filterByTags: _omen.config.homogenisingCoronation,
   })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
 import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AugmentationOrb from '@/components/AugmentationOrb.vue'
@@ -13,12 +13,45 @@ import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
 import FracturingOrb from '@/components/FracturingOrb.vue'
 import JawBone from '@/components/JawBone.vue'
 import type { Affix } from '@/utils/factory/createAffix'
+import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { useDesecrated } from '@/stores/modules/useDesecrated'
+import { useOmen } from '@/stores/modules/useOmen'
+import { generateDecryptAffix } from '@/utils/pool/generateDecryptPool'
 
 const _item = useItem()
+const _omen = useOmen()
+const _desecrated = useDesecrated()
 
 const itemType = computed(() => _item.state.type)
 const itemLevel = computed(() => _item.state.level)
 const itemRarity = computed(() => _item.state.rarity)
+
+const affixFamiliesPool = ref()
+
+watchEffect(async () => {
+  const data = await _item.currentAffixFamiliesPool
+  affixFamiliesPool.value = data.normal
+})
+
+const handleDecrypt = (affix: Affix) => {
+  if (affix.id === DESECRATED_ID) {
+    _desecrated.setState({
+      showModal: true,
+      echoesCounts: _omen.config.abyssalEchoes ? 1 : 0,
+      decryptingAffixFamilies: generateDecryptAffix(
+        affixFamiliesPool.value,
+        _item.state.affixFamilies.filter(af => af.id !== DESECRATED_ID),
+        {
+          deduplication: true,
+          onlyPrefix: _item.placeholder?.isPrefix,
+          onlySuffix: !_item.placeholder?.isPrefix,
+        },
+        [_desecrated.state.minimumLevel, _desecrated.state.maximumLevel],
+        3,
+      ),
+    })
+  }
+}
 </script>
 
 <template>
@@ -35,6 +68,7 @@ const itemRarity = computed(() => _item.state.rarity)
           :lockedAffix="_item.state.lockedAffix"
           :itemKey="(a: Affix) => `${a.id}-${a.tier}`"
           showTier
+          @decrypt="handleDecrypt"
         >
         </AffixList>
       </t-card>
@@ -104,7 +138,7 @@ const itemRarity = computed(() => _item.state.rarity)
           <div class="props-wrapper">
             <div class="sub-category">
               <h4>崇高石相关预兆</h4>
-            <!-- <Button class="tools">催化崇高预兆</Button> -->
+              <!-- <Button class="tools">催化崇高预兆</Button> -->
               <OmenOf
                 :name="t('omen.homogenisingExaltaion')"
                 omenConfigKey="homogenisingExaltaion"
@@ -119,7 +153,7 @@ const itemRarity = computed(() => _item.state.rarity)
               <OmenOf :name="t('omen.sinistralErasure')" omenConfigKey="sinistralErasure" />
               <OmenOf :name="t('omen.dextralErasure')" omenConfigKey="dextralErasure" />
             </div>
-             <div class="sub-category">
+            <div class="sub-category">
               <h4>深渊相关预兆</h4>
               <OmenOf name="深渊回响预兆" omenConfigKey="abyssalEchoes" />
               <OmenOf name="光明预兆" omenConfigKey="light" />

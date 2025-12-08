@@ -5,7 +5,7 @@ import { randomlyGetAffix } from './randomlyGetAffix'
 describe('randomlyGetAffixFamily', () => {
   it('should throw an error if affixFamilies is empty', () => {
     expect(() => randomlyGetAffixFamily([])).toThrow(
-      'randomlyObtainAffixFamily: weightedItems is empty',
+      'randomlyGetAffixFamily: affixFamilies is empty',
     )
   })
 

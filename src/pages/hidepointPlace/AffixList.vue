@@ -17,26 +17,31 @@ function keyOf(a: Affix, i: number): Key {
   const k = itemKey
   return typeof k === 'function' ? k(a, i) : (a[k] as unknown as Key)
 }
+
+const emit = defineEmits<{
+  (e: 'decrypt', value: Affix): void
+}>()
 </script>
 
 <template>
   <TransitionGroup tag="ul" name="affix-fade" class="affix-list">
-    <li v-for="(a, i) in items" :key="keyOf(a, i)" class="affix-item">
+    <li
+      v-for="(a, i) in items"
+      :key="keyOf(a, i)"
+      class="affix-item"
+      :class="{
+        locked: a.id === lockedAffix?.id,
+        desecrated: a.id === DESECRATED_ID,
+      }"
+      @click="emit('decrypt', a)"
+    >
       <span class="badge" :class="a.isPrefix ? 'badge--prefix' : 'badge--suffix'">
         {{ a.isPrefix ? '前缀' : '后缀' }}
       </span>
 
-      <span
-        class="text"
-        :class="{
-          locked: a.id === lockedAffix?.id,
-          desecrated: a.id === DESECRATED_ID,
-        }"
-        v-html="a.str"
-      >
-      </span>
+      <span class="text" v-html="a.str"> </span>
 
-      <span v-show="showTier" class="tier">T{{ a.tier }} </span>
+      <span v-show="showTier" class="tier"> T{{ a.tier }} </span>
 
       <div class="ops">
         <slot name="actions" :item="a" :index="i"></slot>
@@ -99,12 +104,16 @@ function keyOf(a: Affix, i: number): Key {
   font-size: 13px;
 }
 
-.text.locked {
+.affix-item.locked .text {
   color: #d2870f;
 }
 
-.text.desecrated {
+.affix-item.desecrated .text {
   color: #0a6a01;
+}
+
+.affix-item.desecrated .tier {
+  opacity: 0;
 }
 
 .tier {
