@@ -9,6 +9,7 @@ export type AffixListProps = {
   itemKey: keyof Affix | ((a: Affix, i: number) => Key)
   showTier?: boolean
   lockedAffix: Affix | null
+  isSelectAffix?: boolean
 }
 
 const { items, itemKey, showTier } = defineProps<AffixListProps>()
@@ -31,7 +32,9 @@ const emit = defineEmits<{
       class="affix-item"
       :class="{
         locked: a.id === lockedAffix?.id,
-        desecrated: a.id === DESECRATED_ID,
+        desecrated: a.desecrated,
+        'is-select': isSelectAffix,
+        pointer: a.id === DESECRATED_ID
       }"
       @click="emit('decrypt', a)"
     >
@@ -41,7 +44,8 @@ const emit = defineEmits<{
 
       <span class="text" v-html="a.str"> </span>
 
-      <span v-show="showTier" class="tier"> T{{ a.tier }} </span>
+      <span v-if="showTier && a.id !== DESECRATED_ID" class="tier"> T{{ a.tier }} </span>
+      <span v-else class="unvisiable">T9</span>
 
       <div class="ops">
         <slot name="actions" :item="a" :index="i"></slot>
@@ -104,6 +108,11 @@ const emit = defineEmits<{
   font-size: 13px;
 }
 
+.pointer,
+.is-select {
+  cursor: pointer;
+}
+
 .affix-item.locked .text {
   color: #d2870f;
 }
@@ -112,7 +121,7 @@ const emit = defineEmits<{
   color: #0a6a01;
 }
 
-.affix-item.desecrated .tier {
+.unvisiable {
   opacity: 0;
 }
 

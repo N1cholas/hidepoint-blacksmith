@@ -5,7 +5,7 @@ export type AffixFamily = WeightWrapper<Affix[]> & {
   hitAffix: Affix | null
 }
 
-export const createAffixFamily = (affixes: Affix[]): AffixFamily => {
+export const createAffixFamily = (affixes: Affix[], desecrated?: boolean): AffixFamily => {
   if (!affixes[0]) {
     throw new Error('Affixes is empty')
   }
@@ -17,5 +17,6 @@ export const createAffixFamily = (affixes: Affix[]): AffixFamily => {
     isPrefix: affixes[0].isPrefix,
     tags: affixes[0].tags,
     hitAffix: null,
+    desecrated
   }
 }

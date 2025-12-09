@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { onUnmounted, watch } from 'vue'
-
-const props = defineProps({
-  show: Boolean
+defineProps({
+  show: Boolean,
 })
 
 const emit = defineEmits(['close'])
@@ -10,32 +8,11 @@ const emit = defineEmits(['close'])
 function close() {
   emit('close')
 }
-
-const onKeydown = (e: KeyboardEvent) => {
-  if (e.key === 'Escape') {
-    close()
-  }
-}
-
-watch(
-  () => props.show,
-  (show) => {
-    if (show) {
-      document.addEventListener('keydown', onKeydown)
-    } else {
-      document.removeEventListener('keydown', onKeydown)
-    }
-  }
-)
-
-onUnmounted(() => {
-  document.removeEventListener('keydown', onKeydown)
-})
 </script>
 
 <template>
   <Transition name="modal">
-    <div v-if="show" class="modal-mask" @click="close">
+    <div v-if="show" class="modal-mask">
       <div class="modal-container" @click.stop>
         <div class="modal-header">
           <slot name="header">default header</slot>

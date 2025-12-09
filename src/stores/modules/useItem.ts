@@ -93,9 +93,9 @@ export const useItem = defineStore('item', () => {
 
   const hitAffixes = computed(() => {
     return state.value.affixFamilies
-      .map((family) => family.hitAffix)
-      .filter((affix): affix is Affix => affix !== null)
-      .sort((a) => (a.isPrefix ? -1 : 1))
+      .map((af) => ({ ...af.hitAffix, desecrated: af.desecrated }))
+      .filter(Boolean)
+      .sort((a) => (a.isPrefix ? -1 : 1)) as Affix[]
   })
 
   const currentAffixFamiliesPool = computed(async () => {

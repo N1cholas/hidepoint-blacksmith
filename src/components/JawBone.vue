@@ -40,7 +40,7 @@ const addPlaceholder = () => {
     dropChance: getAverageAffixFamilyWeight(),
   })
 
-  const placeholderAffixFamily = createAffixFamily([placeholderAffix])
+  const placeholderAffixFamily = createAffixFamily([placeholderAffix], true)
 
   _item.addAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
 

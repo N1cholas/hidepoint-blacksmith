@@ -13,7 +13,11 @@ export const generateDecryptAffix = (
   const result: AffixFamily[] = []
 
   for (let i = 0; i < counts; i++) {
-    const newAffixFamilies = generateAddPool(affixFamiliesPool, currentAffixFamilies.concat(result), config)
+    const newAffixFamilies = generateAddPool(
+      affixFamiliesPool,
+      currentAffixFamilies.concat(result),
+      config,
+    )
 
     if (newAffixFamilies.length === 0) {
       break
@@ -25,7 +29,7 @@ export const generateDecryptAffix = (
     if (hitAffix) {
       const newFamily: AffixFamily = {
         ...hitAffixFamily,
-        hitAffix
+        hitAffix,
       }
       result.push(newFamily)
     }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watchEffect } from 'vue'
+import { computed } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
 import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AugmentationOrb from '@/components/AugmentationOrb.vue'
@@ -16,7 +16,6 @@ import type { Affix } from '@/utils/factory/createAffix'
 import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
 import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useOmen } from '@/stores/modules/useOmen'
-import { generateDecryptAffix } from '@/utils/pool/generateDecryptPool'
 
 const _item = useItem()
 const _omen = useOmen()
@@ -26,29 +25,12 @@ const itemType = computed(() => _item.state.type)
 const itemLevel = computed(() => _item.state.level)
 const itemRarity = computed(() => _item.state.rarity)
 
-const affixFamiliesPool = ref()
-
-watchEffect(async () => {
-  const data = await _item.currentAffixFamiliesPool
-  affixFamiliesPool.value = data.normal
-})
-
 const handleDecrypt = (affix: Affix) => {
   if (affix.id === DESECRATED_ID) {
+    _desecrated.reSelect()
     _desecrated.setState({
       showModal: true,
       echoesCounts: _omen.config.abyssalEchoes ? 1 : 0,
-      decryptingAffixFamilies: generateDecryptAffix(
-        affixFamiliesPool.value,
-        _item.state.affixFamilies.filter(af => af.id !== DESECRATED_ID),
-        {
-          deduplication: true,
-          onlyPrefix: _item.placeholder?.isPrefix,
-          onlySuffix: !_item.placeholder?.isPrefix,
-        },
-        [_desecrated.state.minimumLevel, _desecrated.state.maximumLevel],
-        3,
-      ),
     })
   }
 }
@@ -66,7 +48,7 @@ const handleDecrypt = (affix: Affix) => {
         <AffixList
           :items="_item.hitAffixes"
           :lockedAffix="_item.state.lockedAffix"
-          :itemKey="(a: Affix) => `${a.id}-${a.tier}`"
+          :itemKey="(a: Affix) => `${a.id}-${a.tier}-${a.desecrated}`"
           showTier
           @decrypt="handleDecrypt"
         >
