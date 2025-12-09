@@ -1,4 +1,4 @@
-import type { FileContent } from '@/scripts/normalAffixesProcessor'
+import type { FileContent } from '@/scripts/dataTransform'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import bowNormalData from '@/scripts/data/bow.json'

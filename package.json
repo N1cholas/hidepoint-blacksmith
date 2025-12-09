@@ -16,7 +16,7 @@
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix --cache",
     "format": "prettier --write src/",
-    "build:bow": "tsx src/scripts/normalAffixesProcessor.ts"
+    "build:data": "tsx src/scripts/index.ts"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.12",

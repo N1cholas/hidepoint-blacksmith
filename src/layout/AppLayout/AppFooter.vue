@@ -8,6 +8,7 @@
       <p>版权声明</p>
       <p>响应式适配</p>
       <p>e2e测试</p>
+      <p>类型 => 精华 => 领主预兆</p>
     </section>
   </footer>
 </template>

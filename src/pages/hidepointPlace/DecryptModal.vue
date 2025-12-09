@@ -55,9 +55,14 @@ const handleReselect = () => {
       </template>
       <template #footer>
         <div>
-          <t-button :disabled="_desecrated.state.echoesCounts <= 0" v-show="_omen.config.abyssalEchoes" class="mr-20" @click="handleReselect"
-            >重新选择</t-button
+          <t-button
+            :disabled="_desecrated.state.echoesCounts <= 0"
+            v-show="_omen.config.abyssalEchoes"
+            class="mr-20"
+            @click="handleReselect"
           >
+            重新选择
+          </t-button>
           <t-button :disabled="!_desecrated.isSelect" @click="handleConfirm">确认解密</t-button>
         </div>
       </template>

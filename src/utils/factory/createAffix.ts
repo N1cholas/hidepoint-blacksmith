@@ -1,4 +1,4 @@
-import type { RawNormalAffix } from '@/scripts/normalAffixesProcessor'
+import type { RawNormalAffix } from '@/scripts/dataTransform'
 import { handleHTMLString } from '../string/handleHTMLString'
 
 export type Affix = {

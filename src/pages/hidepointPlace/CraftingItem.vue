@@ -40,10 +40,12 @@ const handleDecrypt = (affix: Affix) => {
   <div class="crafting-item">
     <div class="side left">
       <t-card>
-        <div class="info-row">
-          <span>{{ itemRarity }}</span>
-          <span>{{ itemLevel }}</span>
-          <span>{{ itemType }}</span>
+        <div class="item-title-wrapper">
+          <div class="item-title">
+            <span>{{ itemRarity }}</span>
+            <span>{{ itemLevel }}</span>
+            <span>{{ itemType }}</span>
+          </div>
         </div>
         <AffixList
           :items="_item.hitAffixes"
@@ -182,8 +184,11 @@ const handleDecrypt = (affix: Affix) => {
   top: 16px;
   align-self: flex-start;
 }
-.info-row {
-  display: flex;
+.item-title-wrapper {
+  text-align: center;
+}
+.item-title {
+  display: inline-flex;
   justify-content: center;
   gap: 8px;
   font-size: 16px;
@@ -193,6 +198,7 @@ const handleDecrypt = (affix: Affix) => {
   padding: 8px 12px;
   border-radius: var(--td-radius-medium);
   border: 1px solid var(--td-border-level-1-color);
+  margin-bottom: 20px;
 }
 
 .category {

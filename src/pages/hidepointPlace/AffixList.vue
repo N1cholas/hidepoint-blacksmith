@@ -34,7 +34,7 @@ const emit = defineEmits<{
         locked: a.id === lockedAffix?.id,
         desecrated: a.desecrated,
         'is-select': isSelectAffix,
-        pointer: a.id === DESECRATED_ID
+        pointer: a.id === DESECRATED_ID,
       }"
       @click="emit('decrypt', a)"
     >

@@ -17,6 +17,6 @@ export const createAffixFamily = (affixes: Affix[], desecrated?: boolean): Affix
     isPrefix: affixes[0].isPrefix,
     tags: affixes[0].tags,
     hitAffix: null,
-    desecrated
+    desecrated,
   }
 }
