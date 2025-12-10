@@ -25,7 +25,6 @@ const affixFamiliesPool = ref()
 
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
-  // FileContent类型，取出normal部分
   affixFamiliesPool.value = data.normal
 })
 

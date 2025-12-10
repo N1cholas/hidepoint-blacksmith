@@ -1,5 +1,6 @@
 import type { RawEssenceAffix } from '@/scripts/dataTransform'
 import { extractChinese } from './createAffix'
+import { handleHTMLString } from '../string/handleHTMLString'
 
 export type Essence = {
   type: string
@@ -7,6 +8,7 @@ export type Essence = {
   name: string
   id: string
   workOnRare?: boolean
+  str: string
 }
 
 export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
@@ -19,5 +21,6 @@ export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
     name,
     id: rawEssence.ModFamilyList[0] || '',
     workOnRare: workOnRareNames.includes(name.substring(0, 2)),
+    str: handleHTMLString(rawEssence.str),
   }
 }

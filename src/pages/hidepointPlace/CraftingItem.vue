@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { useItem } from '@/stores/modules/useItem'
 import TransmutationOrb from '@/components/TransmutationOrb.vue'
 import AugmentationOrb from '@/components/AugmentationOrb.vue'
@@ -16,6 +16,8 @@ import type { Affix } from '@/utils/factory/createAffix'
 import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
 import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useOmen } from '@/stores/modules/useOmen'
+import EssenceOf from '@/components/EssenceOf.vue'
+import type { Essence } from '@/utils/factory/createEssence'
 
 const _item = useItem()
 const _omen = useOmen()
@@ -24,6 +26,14 @@ const _desecrated = useDesecrated()
 const itemType = computed(() => _item.state.type)
 const itemLevel = computed(() => _item.state.level)
 const itemRarity = computed(() => _item.state.rarity)
+
+const essences = ref<Essence[]>([])
+
+watchEffect(async () => {
+  const data = await _item.currentAffixFamiliesPool
+  essences.value = data.essence
+  console.log(data.essence.length)
+})
 
 const handleDecrypt = (affix: Affix) => {
   if (affix.id === DESECRATED_ID) {
@@ -156,6 +166,21 @@ const handleDecrypt = (affix: Affix) => {
                 omenConfigKey="homogenisingCoronation"
               />
             </div>
+          </div>
+        </div>
+      </t-card>
+      <t-card>
+        <div class="category">
+          <h3>精华</h3>
+          <div class="props-wrapper">
+            <EssenceOf
+              v-for="essence in essences"
+              :key="`${essence.id}-${essence.name}-${essence.level}`"
+              :id="essence.id"
+              :name="essence.name"
+              :level="essence.level"
+              :workOnRare="essence.workOnRare"
+            />
           </div>
         </div>
       </t-card>

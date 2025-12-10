@@ -11,8 +11,8 @@ export default function transformRawEssenceData(raw: RawDataFile): Essence[] {
   const uniqueEssences = Array.from(
     essences
       .reduce((map, essence) => {
-        if (!map.has(essence.id)) {
-          map.set(essence.id, essence)
+        if (!map.has(essence.name)) {
+          map.set(essence.name, essence)
         }
         return map
       }, new Map<string, Essence>())
