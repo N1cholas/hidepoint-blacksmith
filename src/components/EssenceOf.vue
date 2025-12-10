@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
-import type { Affix } from '@/utils/factory/createAffix'
-import type { AffixFamily } from '@/utils/factory/createAffixFamily'
+import { createAffixFamily, type AffixFamily } from '@/utils/factory/createAffixFamily'
+import type { Essence } from '@/utils/factory/createEssence'
 import { generateRemovePool } from '@/utils/pool/generateRemovePool'
 import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
 import { watchEffect, ref, computed } from 'vue'
 
-const { name, level, id, workOnRare } = defineProps<{
-  name: string
-  level: number
-  id: string
-  workOnRare?: boolean
+const { item } = defineProps<{
+  item: Essence
 }>()
+const { name, level, id, workOnRare, isPrefix, str, tags } = item
 
 const _item = useItem()
 
@@ -35,13 +33,28 @@ watchEffect(async () => {
 // 判断添加为前缀还是后缀
 // 升级物品稀有度
 const handleAddEssence = () => {
-  if (_item.state.affixFamilies.some((item: AffixFamily) => item.id === id)) {
-    return
+  // 精华词缀可以从affixFamiliesPool中获取，没有则生成AffixFamily
+  let essenceAffixFamily: AffixFamily = affixFamiliesPool.value.find(
+    (item: AffixFamily) => item.id === id,
+  )
+  if (!essenceAffixFamily) {
+    essenceAffixFamily = createAffixFamily([
+      {
+        name,
+        level,
+        isPrefix,
+        id,
+        str,
+        tags,
+        dropChance: _item.getCurrentAffixesWeights(),
+        // todo: 阶级需要判断
+        tier: -1,
+      },
+    ])
   }
+  const essenceAffix = essenceAffixFamily.items.find((a) => a.id === id)
 
-  const essenceAffixFamily = affixFamiliesPool.value.find((item: AffixFamily) => item.id === id)
-  const essenceAffix = essenceAffixFamily.items.find((item: Affix) => item.level === level)
-
+  // todo
   if (workOnRare) {
     const removeAffixFamiliesPool = generateRemovePool(_item.withoutLocked, {
       onlyPrefix: essenceAffixFamily.isPrefix && _item.isPrefixFull,
@@ -53,13 +66,15 @@ const handleAddEssence = () => {
     _item.removeAffix(shouldRemoveAffixFamily)
   }
 
-  _item.setState({
-    affixFamilies: [
-      ..._item.state.affixFamilies,
-      { ...essenceAffixFamily, hitAffix: essenceAffix },
-    ],
-    rarity: 'rare',
-  })
+  if (essenceAffix) {
+    _item.setState({
+      affixFamilies: [
+        ..._item.state.affixFamilies,
+        { ...essenceAffixFamily, hitAffix: essenceAffix },
+      ],
+      rarity: 'rare',
+    })
+  }
 }
 </script>
 <template>

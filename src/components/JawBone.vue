@@ -37,12 +37,12 @@ const addPlaceholder = () => {
     tags: [DESECRATED_ID],
     level: 82,
     isPrefix: getModGenerationType(),
-    dropChance: getAverageAffixFamilyWeight(),
+    dropChance: _item.getCurrentAffixesWeights(),
   })
 
   const placeholderAffixFamily = createAffixFamily([placeholderAffix], true)
 
-  _item.addAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
+  _item.randomlyAddAffix([placeholderAffixFamily], minimumLevel, maximumLevel, 'rare')
 
   _desecrated.setState({
     minimumLevel,
@@ -61,19 +61,6 @@ const getModGenerationType = (): boolean => {
   }
 
   return Math.random() < 0.5
-}
-
-const getAverageAffixFamilyWeight = (): number => {
-  if (_item.state.affixFamilies.length === 0) {
-    return 0
-  }
-
-  const result = Math.round(
-    _item.state.affixFamilies.reduce((sum, affixFamily) => sum + affixFamily.weight, 0) /
-      _item.state.affixFamilies.length,
-  )
-
-  return result
 }
 </script>
 <template>

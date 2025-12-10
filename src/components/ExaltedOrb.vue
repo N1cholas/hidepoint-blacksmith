@@ -44,7 +44,7 @@ const addAffix = () => {
       },
     )
 
-    _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'exaltedOrb')
+    _item.randomlyAddAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'exaltedOrb')
   }
 }
 

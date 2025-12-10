@@ -59,7 +59,7 @@ const changeModifier = () => {
   })
 
   if (addAffixFamiliesPool.length) {
-    _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare')
+    _item.randomlyAddAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare')
     _item.removeAffix(shouldRemoveAffixFamily)
   }
 }

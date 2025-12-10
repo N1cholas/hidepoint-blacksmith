@@ -9,6 +9,9 @@ export type Essence = {
   id: string
   workOnRare?: boolean
   str: string
+  isPrefix: boolean
+  tags: string[]
+  code: string
 }
 
 export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
@@ -22,5 +25,8 @@ export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
     id: rawEssence.ModFamilyList[0] || '',
     workOnRare: workOnRareNames.includes(name.substring(0, 2)),
     str: handleHTMLString(rawEssence.str),
+    isPrefix: rawEssence.ModGenerationTypeID === '1',
+    tags: rawEssence.mod_no.map((tag) => extractChinese(tag)),
+    code: rawEssence.Code,
   }
 }

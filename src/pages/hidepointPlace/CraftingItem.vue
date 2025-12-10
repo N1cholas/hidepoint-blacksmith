@@ -32,7 +32,6 @@ const essences = ref<Essence[]>([])
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
   essences.value = data.essence
-  console.log(data.essence.length)
 })
 
 const handleDecrypt = (affix: Affix) => {
@@ -176,10 +175,7 @@ const handleDecrypt = (affix: Affix) => {
             <EssenceOf
               v-for="essence in essences"
               :key="`${essence.id}-${essence.name}-${essence.level}`"
-              :id="essence.id"
-              :name="essence.name"
-              :level="essence.level"
-              :workOnRare="essence.workOnRare"
+              :item="essence"
             />
           </div>
         </div>

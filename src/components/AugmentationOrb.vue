@@ -34,7 +34,13 @@ const addAffix = () => {
     deduplication: true,
   })
 
-  _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'magic', 'augmentationOrb')
+  _item.randomlyAddAffix(
+    addAffixFamiliesPool,
+    minimumLevel,
+    maximumLevel,
+    'magic',
+    'augmentationOrb',
+  )
 }
 </script>
 <template>

@@ -37,7 +37,7 @@ const addAffix = () => {
     filterByTags: _omen.config.homogenisingCoronation,
   })
 
-  _item.addAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'regalOrb')
+  _item.randomlyAddAffix(addAffixFamiliesPool, minimumLevel, maximumLevel, 'rare', 'regalOrb')
 }
 </script>
 <template>

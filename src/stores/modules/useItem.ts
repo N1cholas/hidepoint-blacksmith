@@ -115,7 +115,7 @@ export const useItem = defineStore('item', () => {
     }
   })
 
-  const addAffix = (
+  const randomlyAddAffix = (
     affixFamiliesPool: AffixFamily[],
     minimumLevel: number,
     maximumLevel: number,
@@ -164,6 +164,20 @@ export const useItem = defineStore('item', () => {
     return state.value.affixFamilies.find((af) => af.desecrated) || null
   })
 
+  const getCurrentAffixesWeights = (): number => {
+    const currentAffixes = hitAffixes.value
+
+    if (currentAffixes.length === 0) {
+      return 0
+    }
+
+    const result = Math.round(
+      currentAffixes.reduce((sum, af) => sum + af.dropChance, 0) / currentAffixes.length,
+    )
+
+    return result
+  }
+
   return {
     state,
     setState,
@@ -173,10 +187,11 @@ export const useItem = defineStore('item', () => {
     withoutLocked,
     hitAffixes,
     currentAffixFamiliesPool,
-    addAffix,
+    randomlyAddAffix,
     removeAffix,
     AFFIX_COUNTS,
     placeholder,
     desecrated,
+    getCurrentAffixesWeights,
   }
 })

@@ -24,7 +24,13 @@ const disable = computed(() => {
 
 // 蜕变石
 const addAffix = () => {
-  _item.addAffix(affixFamiliesPool.value, minimumLevel, maximumLevel, 'magic', 'transmutationOrb')
+  _item.randomlyAddAffix(
+    affixFamiliesPool.value,
+    minimumLevel,
+    maximumLevel,
+    'magic',
+    'transmutationOrb',
+  )
 }
 </script>
 <template>
