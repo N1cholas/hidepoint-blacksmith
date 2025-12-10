@@ -7,6 +7,7 @@ export type Essence = {
   level: number
   name: string
   id: string
+  affixID: string
   workOnRare?: boolean
   str: string
   isPrefix: boolean
@@ -22,7 +23,10 @@ export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
     type: rawEssence.type,
     level: Number(rawEssence.Level),
     name,
-    id: rawEssence.ModFamilyList[0] || '',
+    id: rawEssence.Code,
+    // 精华的ModFamilyList[0]不唯一，例如弓的额外火焰额外闪电额外冰霜都是同一个
+    // Essence的affixID === Affix的id
+    affixID: rawEssence.ModFamilyList[0] || '',
     workOnRare: workOnRareNames.includes(name.substring(0, 2)),
     str: handleHTMLString(rawEssence.str),
     isPrefix: rawEssence.ModGenerationTypeID === '1',

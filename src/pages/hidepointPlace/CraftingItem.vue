@@ -59,7 +59,7 @@ const handleDecrypt = (affix: Affix) => {
         <AffixList
           :items="_item.hitAffixes"
           :lockedAffix="_item.state.lockedAffix"
-          :itemKey="(a: Affix) => `${a.id}-${a.tier}-${a.desecrated}`"
+          :itemKey="(a: Affix) => `${a.id}-${a.name}-${a.tier}-${a.desecrated}`"
           showTier
           @decrypt="handleDecrypt"
         >

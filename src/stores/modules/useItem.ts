@@ -165,14 +165,14 @@ export const useItem = defineStore('item', () => {
   })
 
   const getCurrentAffixesWeights = (): number => {
-    const currentAffixes = hitAffixes.value
+    const currentAffixFamilies = state.value.affixFamilies
 
-    if (currentAffixes.length === 0) {
+    if (currentAffixFamilies.length === 0) {
       return 0
     }
 
     const result = Math.round(
-      currentAffixes.reduce((sum, af) => sum + af.dropChance, 0) / currentAffixes.length,
+      currentAffixFamilies.reduce((sum, af) => sum + af.weight, 0) / currentAffixFamilies.length,
     )
 
     return result
