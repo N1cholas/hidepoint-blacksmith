@@ -14,7 +14,7 @@ export type Affix = {
   desecrated?: boolean
 }
 
-const extractChinese = (text: string): string => {
+export const extractChinese = (text: string): string => {
   if (typeof text !== 'string') return ''
 
   const chineseRegex = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff\u3100-\u312f\u31a0-\u31bf]/g
@@ -50,6 +50,7 @@ export const createAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
 
   return {
     name: _rawAffix.Name,
+    // todo: 测试数据 -> 能否转换成数字
     level: Number(_rawAffix.Level),
     // todo: 测试数据 -> 只有前缀和后缀区分
     isPrefix: _rawAffix.ModGenerationTypeID === '1',
