@@ -1125,5 +1125,43 @@
       "tags": [],
       "hitAffix": null
     }
+  ],
+  "essence": [
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Strength",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Dexterity",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Intelligence",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 58,
+      "name": "强效激战精华",
+      "id": "IncreasedAccuracy",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 60,
+      "name": "浮夸精华",
+      "id": "DamageWithWeaponTypeSkill",
+      "workOnRare": true
+    },
+    { "type": "essence", "level": 1, "name": "深渊精华", "id": "EssenceAbyss", "workOnRare": true }
   ]
 }

@@ -1579,5 +1579,99 @@
       "tags": ["攻击"],
       "hitAffix": null
     }
+  ],
+  "essence": [
+    {
+      "type": "essence",
+      "level": 8,
+      "name": "次级磨蚀精华",
+      "id": "PhysicalDamage",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 8,
+      "name": "次级烈焰精华",
+      "id": "FireDamage",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 8,
+      "name": "次级冰霜精华",
+      "id": "ColdDamage",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 8,
+      "name": "次级电光精华",
+      "id": "LightningDamage",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 18,
+      "name": "次级激战精华",
+      "id": "IncreasedAccuracy",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 22,
+      "name": "次级急速精华",
+      "id": "IncreasedAttackSpeed",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Strength",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Dexterity",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 11,
+      "name": "次级永恒精华",
+      "id": "Intelligence",
+      "workOnRare": false
+    },
+    {
+      "type": "essence",
+      "level": 72,
+      "name": "完美磨蚀精华",
+      "id": "MartialWeaponGainedDamage",
+      "workOnRare": true
+    },
+    {
+      "type": "essence",
+      "level": 72,
+      "name": "完美激战精华",
+      "id": "IncreaseSocketedGemLevel",
+      "workOnRare": true
+    },
+    {
+      "type": "essence",
+      "level": 72,
+      "name": "完美急速精华",
+      "id": "Onslaught",
+      "workOnRare": true
+    },
+    {
+      "type": "essence",
+      "level": 20,
+      "name": "次级寻觅精华",
+      "id": "CriticalStrikeChanceIncrease",
+      "workOnRare": false
+    },
+    { "type": "essence", "level": 1, "name": "深渊精华", "id": "EssenceAbyss", "workOnRare": true }
   ]
 }

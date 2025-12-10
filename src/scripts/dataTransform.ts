@@ -3,7 +3,9 @@ import jsonfile from 'jsonfile'
 import { type AffixFamily } from '../utils/factory/createAffixFamily'
 import { fileURLToPath } from 'node:url'
 import { resolve as r, normalize } from 'node:path'
-import normalTransform from './normalTransform'
+import transformRawAffixData from './transformRawAffixData'
+import transformRawEssenceData from './transformRawEssenceData'
+import type { Essence } from '@/utils/factory/createEssence'
 
 export type RawNormalAffix = {
   Name: string
@@ -31,13 +33,14 @@ export type RawEssenceAffix = {
   str: string
 }
 
-export type RawFile = {
+export type RawDataFile = {
   normal: RawNormalAffix[]
   essence: RawEssenceAffix[]
 }
 
-export interface FileContent {
+export interface DataFile {
   normal: AffixFamily[]
+  essence: Essence[]
 }
 
 interface Options {
@@ -56,7 +59,7 @@ const errorHandler = (err: unknown) => {
   }
 }
 
-async function writeAtomic(path: string, data: FileContent, spaces = 2) {
+async function writeAtomic(path: string, data: DataFile, spaces = 2) {
   const tmp = `${path}.tmp`
   await jsonfile.writeFile(tmp, data, { spaces })
   await fsPromisesRename(tmp, path)
@@ -73,9 +76,10 @@ export async function processMods(opts: Options = {}) {
   const outputPath = resolve(output!)
 
   try {
-    const raw = (await jsonfile.readFile(inputPath)) as RawFile
-    const fileContent = {
-      normal: normalTransform(raw),
+    const raw = (await jsonfile.readFile(inputPath)) as RawDataFile
+    const fileContent: DataFile = {
+      normal: transformRawAffixData(raw),
+      essence: transformRawEssenceData(raw),
     }
 
     if (atomic) {
