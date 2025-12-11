@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
-import { createAffixFamily } from '@/utils/factory/createAffixFamily'
+import type { Affix } from '@/utils/factory/createAffix'
+import { createAffixFamily, type AffixFamily } from '@/utils/factory/createAffixFamily'
 import type { Essence } from '@/utils/factory/createEssence'
 import { generateRemovePool } from '@/utils/pool/generateRemovePool'
 import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
@@ -9,7 +10,7 @@ import { watchEffect, ref, computed } from 'vue'
 const { item } = defineProps<{
   item: Essence
 }>()
-const { name, level, id, workOnRare, isPrefix, str, tags } = item
+const { name, level, id, workOnRare, isPrefix, str, tags, affixID } = item
 
 const _item = useItem()
 
@@ -39,20 +40,18 @@ const handleAddEssence = () => {
   // const existAffixFamily: AffixFamily = affixFamiliesPool.value.find(
   //   (af: AffixFamily) => af.id === affixID,
   // )
-  const essenceAffixFamily = createAffixFamily([
-    {
-      name,
-      level,
-      isPrefix,
-      id,
-      str,
-      tags,
-      dropChance: _item.getCurrentAffixesWeights(),
-      // todo: 阶级需要判断
-      tier: -1,
-    },
-  ])
-  const essenceAffix = essenceAffixFamily.items.filter((a) => a.level <= level).pop()
+  const essenceAffix: Affix = {
+    name,
+    level,
+    isPrefix,
+    id,
+    str,
+    tags,
+    dropChance: _item.getCurrentAffixesWeights(),
+    // todo: 算出阶级
+    tier: getTier(affixID, level),
+  }
+  const essenceAffixFamily = createAffixFamily([essenceAffix])
 
   if (workOnRare) {
     const removeAffixFamiliesPool = generateRemovePool(_item.withoutLocked, {
@@ -74,6 +73,13 @@ const handleAddEssence = () => {
       rarity: 'rare',
     })
   }
+}
+
+const getTier = (id: string, level: number): number => {
+  const affixFamily = affixFamiliesPool.value.find((af: AffixFamily) => af.id === id)
+  if (!affixFamily) return 1
+  const affix = affixFamily.items.filter((a: Affix) => a.level <= level).pop()
+  return !!affix ? affix.tier : 1
 }
 </script>
 <template>

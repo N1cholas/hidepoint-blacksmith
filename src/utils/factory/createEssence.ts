@@ -15,6 +15,7 @@ export type Essence = {
   code: string
 }
 
+// 测试raw数据
 export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
   const workOnRareNames = ['完美', '浮夸', '谵妄', '极恐', '错乱', '深渊']
   const name = extractChinese(rawEssence.Name)
