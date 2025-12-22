@@ -1,6 +1,6 @@
 import type { Affix } from '@/utils/factory/createAffix'
 import type { AffixFamily } from '@/utils/factory/createAffixFamily'
-import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createPlaceholderAffix'
 import { generateDecryptAffix } from '@/utils/pool/generateDecryptPool'
 import { defineStore } from 'pinia'
 import { computed, ref, watchEffect } from 'vue'

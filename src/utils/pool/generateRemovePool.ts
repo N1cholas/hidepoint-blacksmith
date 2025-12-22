@@ -1,5 +1,5 @@
 import type { AffixFamily } from '../factory/createAffixFamily'
-import { ABYSSAL_PLACEHOLDER_ID } from '../factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '../factory/createPlaceholderAffix'
 import { onlyPrefixAffixFamilies, onlySuffixAffixFamilies } from './utils'
 
 export type GenerateRemovePoolOptions = {

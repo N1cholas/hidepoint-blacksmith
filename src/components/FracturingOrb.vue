@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
-import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createPlaceholderAffix'
 import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
 import { computed } from 'vue'
 

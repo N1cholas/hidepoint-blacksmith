@@ -1,5 +1,5 @@
 import type { RawDataFile } from './dataTransform'
-import { createEssence, type Essence } from '../utils/factory/createEssence'
+import { createEssence, type Essence } from '../utils/factory/createEssenceAffix'
 import { groupBy, values } from 'lodash-es'
 
 export type EssenceGroup = Essence[]

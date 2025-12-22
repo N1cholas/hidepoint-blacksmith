@@ -1,6 +1,6 @@
 import type { Affix } from '@/utils/factory/createAffix'
 import type { AffixFamily } from '@/utils/factory/createAffixFamily'
-import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createPlaceholderAffix'
 import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
 import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { defineStore } from 'pinia'

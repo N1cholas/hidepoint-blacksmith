@@ -6,7 +6,7 @@ import { createAffixFamily } from '@/utils/factory/createAffixFamily'
 import {
   createDesecratedAffix,
   ABYSSAL_PLACEHOLDER_ID,
-} from '@/utils/factory/createDesecratedAffix'
+} from '@/utils/factory/createPlaceholderAffix'
 import { computed } from 'vue'
 import DecryptModal from '@/pages/hidepointPlace/DecryptModal.vue'
 
@@ -56,11 +56,11 @@ const addPlaceholder = () => {
 // todo: test
 const getModGenerationType = (): boolean => {
   if (_item.isSuffixFull || _omen.config.sinistralNecromancy) {
-    return true
+    return true // 前缀
   }
 
   if (_item.isPrefixFull || _omen.config.dextralNecromancy) {
-    return false
+    return false // 后缀
   }
 
   return Math.random() < 0.5

@@ -1,5 +1,5 @@
 import type { Affix } from './createAffix'
-import { ABYSSAL_PLACEHOLDER_ID } from './createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from './createPlaceholderAffix'
 
 export type AffixFamily = WeightWrapper<Affix[]> & {
   desecrated?: boolean

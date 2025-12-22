@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Affix } from '@/utils/factory/createAffix'
-import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createPlaceholderAffix'
 
 type Key = string | number
 
