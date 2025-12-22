@@ -5,12 +5,15 @@ import { groupBy, values } from 'lodash-es'
 export type EssenceGroup = Essence[]
 
 export default function transformRawEssenceData(raw: RawDataFile): EssenceGroup[] {
-  if (!raw || !Array.isArray(raw.essence)) {
+  const rawEssenceData = raw.essence
+
+  if (!raw || !Array.isArray(rawEssenceData)) {
     throw new Error('Invalid input file: missing "essence" array')
   }
 
-  const essences = raw.essence.map(createEssence)
+  const essences = rawEssenceData.map(createEssence)
 
+  // 深渊词缀有两条 一条前缀一条后缀 去重一下
   const uniqueEssences = Array.from(
     essences
       .reduce((map, essence) => {
@@ -22,7 +25,6 @@ export default function transformRawEssenceData(raw: RawDataFile): EssenceGroup[
       .values(),
   )
 
-  // 中文group 英文还没做
   const groupEssences = groupBy(uniqueEssences, (uniqueEssence) => uniqueEssence.essenceGroupID)
 
   return values(groupEssences)

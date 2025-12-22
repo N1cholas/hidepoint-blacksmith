@@ -1997,5 +1997,194 @@
         "essenceGroupID": "EssenceAbyss"
       }
     ]
+  ],
+  "desecrated": [
+    {
+      "name": "阿曼娜姆的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "IncreasedAttackAreaOfEffect",
+      "dropChance": 0,
+      "str": "攻击技能的效果区域提高 (12—23)%",
+      "tags": ["amanamu", "攻击"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "阿曼娜姆的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "CompanionDamage",
+      "dropChance": 0,
+      "str": "伙伴的伤害提高 (40—59)%<br>当你的伙伴在场时，伤害提高 (40—59)%",
+      "tags": ["amanamu"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "阿曼娜姆的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "FireResistancePenetration",
+      "dropChance": 0,
+      "str": "该武器的攻击穿透 (15—25)% 的火焰抗性",
+      "tags": ["amanamu", "伤害", "元素", "火焰", "攻击"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "ChainFromTerrain",
+      "dropChance": 0,
+      "str": "投射物击中地形时有 (25—35)% 的几率额外连锁一次",
+      "tags": ["kurgal"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "EquipmentModifierEffect",
+      "dropChance": 0,
+      "str": "装备箭袋获得的加成提高 (30—40)%",
+      "tags": ["kurgal"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "ColdResistancePenetration",
+      "dropChance": 0,
+      "str": "该武器的攻击穿透 (15—25)% 的冰霜抗性",
+      "tags": ["kurgal", "伤害", "元素", "冰霜", "攻击"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "阿曼娜姆之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "ChanceToPierce",
+      "dropChance": 0,
+      "str": "(40—60)% 的几率穿透一个敌人",
+      "tags": ["amanamu"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "阿曼娜姆之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "CompanionAttackSpeed",
+      "dropChance": 0,
+      "str": "攻击速度提高 (12—18)%<br>伙伴的攻击速度提高 (12—18)%",
+      "tags": ["amanamu"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "阿曼娜姆之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "SpiritReservationEfficiency",
+      "dropChance": 0,
+      "str": "技能的精魂保留效能提高 (5—10)%",
+      "tags": ["amanamu"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "Immobilise",
+      "dropChance": 0,
+      "str": "不可移动积蓄提高 (25—34)%",
+      "tags": ["kurgal"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "CriticalStrikeChanceIncrease",
+      "dropChance": 0,
+      "str": "投射物对 6 米外的敌人的暴击几率提高 (25—34)%",
+      "tags": ["kurgal"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "古加尔之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "ManaCostEfficiency",
+      "dropChance": 0,
+      "str": "攻击的消耗效能提高 (8—15)%",
+      "tags": ["kurgal", "攻击"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "乌拉曼之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "LifeCost",
+      "dropChance": 0,
+      "str": "技能的魔力消耗的 (15—20)% 转化为生命消耗",
+      "tags": ["ulaman", "生命"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "乌拉曼之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "AdditionalProjectiles",
+      "dropChance": 0,
+      "str": "移动时，投射物攻击有 (10—18)% 的几率额外发射两个投射物",
+      "tags": ["ulaman"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "乌拉曼之",
+      "level": 65,
+      "isPrefix": false,
+      "id": "CompanionDamage",
+      "dropChance": 0,
+      "str": "攻击速度提高 (8—13)%<br>当你的伙伴在你在场范围内时，攻击速度提高 (8—13)%",
+      "tags": ["ulaman"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "乌拉曼的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "LightningResistancePenetration",
+      "dropChance": 0,
+      "str": "该武器的攻击穿透 (15—25)% 的闪电抗性",
+      "tags": ["ulaman", "伤害", "元素", "闪电", "攻击"],
+      "tier": -1,
+      "desecrated": true
+    },
+    {
+      "name": "乌拉曼的",
+      "level": 65,
+      "isPrefix": true,
+      "id": "ProjectileDamage",
+      "dropChance": 0,
+      "str": "投射物对 6 米外的敌人造成的击中伤害提高 (60—79)%",
+      "tags": ["ulaman"],
+      "tier": -1,
+      "desecrated": true
+    }
   ]
 }

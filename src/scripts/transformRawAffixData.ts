@@ -4,11 +4,13 @@ import { groupBy } from 'lodash-es'
 import type { RawDataFile } from './dataTransform'
 
 export default function normalTransform(raw: RawDataFile): AffixFamily[] {
-  if (!raw || !Array.isArray(raw.normal)) {
+  const rawNormalData = raw.normal
+
+  if (!raw || !Array.isArray(rawNormalData)) {
     throw new Error('Invalid input file: missing "normal" array')
   }
 
-  const affixes: Affix[] = raw.normal.map(createAffix)
+  const affixes: Affix[] = rawNormalData.map(createAffix)
 
   const grouped: Record<string, Affix[]> = groupBy(affixes, 'id')
 

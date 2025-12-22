@@ -14,6 +14,6 @@ const initAffix: Affix = {
   desecrated: true,
 }
 
-export const createDesecratedAffix = (affix: Partial<Affix>): Affix => {
+export const creatPlaceholderAffix = (affix: Partial<Affix>): Affix => {
   return { ...initAffix, ...affix }
 }

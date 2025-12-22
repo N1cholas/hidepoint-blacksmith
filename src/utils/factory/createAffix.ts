@@ -1,5 +1,17 @@
-import type { RawNormalAffix } from '@/scripts/dataTransform'
 import { handleHTMLString } from '../string/handleHTMLString'
+
+export type RawNormalAffix = {
+  Name: string
+  Level: string
+  ModGenerationTypeID: string
+  ModFamilyList: string[]
+  DropChance: string
+  str: string
+  fossil_no: string[]
+  mod_no: string[]
+  mod_fossil_item: string[]
+  hover: string
+}
 
 export type Affix = {
   name: string
@@ -15,16 +27,6 @@ export type Affix = {
 }
 
 export const HIDE_TIER = -1
-
-export const extractChinese = (text: string): string => {
-  if (typeof text !== 'string') return ''
-
-  const chineseRegex = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff\u3100-\u312f\u31a0-\u31bf]/g
-
-  const matches = text.match(chineseRegex)
-
-  return matches ? matches.join('') : ''
-}
 
 const initRawNormalAffix: RawNormalAffix = {
   Name: 'init',
@@ -60,7 +62,12 @@ export const createAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
     id: _rawAffix.ModFamilyList[0] || '',
     dropChance: Number(_rawAffix.DropChance),
     str: handleHTMLString(_rawAffix.str),
-    tags: _rawAffix.mod_no.map((tag) => extractChinese(tag)),
+    // todo: 使用 handleHTMLString 处理 tags
+    tags: _rawAffix.mod_no.map((tag) =>
+      handleHTMLString(tag, {
+        unwrapTags: ['span', 'i'],
+      }),
+    ),
     tier: HIDE_TIER,
   }
 }

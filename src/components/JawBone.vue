@@ -4,7 +4,7 @@ import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { createAffixFamily } from '@/utils/factory/createAffixFamily'
 import {
-  createDesecratedAffix,
+  creatPlaceholderAffix,
   ABYSSAL_PLACEHOLDER_ID,
 } from '@/utils/factory/createPlaceholderAffix'
 import { computed } from 'vue'
@@ -33,7 +33,7 @@ const disable = computed(() => {
 
 // 颚骨，为武器或弓添加亵渎占位符
 const addPlaceholder = () => {
-  const placeholderAffix = createDesecratedAffix({
+  const placeholderAffix = creatPlaceholderAffix({
     id: ABYSSAL_PLACEHOLDER_ID,
     name: '亵渎占位符',
     str: '此词条已被亵渎需点击解密',

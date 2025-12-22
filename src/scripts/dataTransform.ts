@@ -5,41 +5,21 @@ import { fileURLToPath } from 'node:url'
 import { resolve as r, normalize } from 'node:path'
 import transformRawAffixData from './transformRawAffixData'
 import transformRawEssenceData, { type EssenceGroup } from './transformRawEssenceData'
-
-export type RawNormalAffix = {
-  Name: string
-  Level: string
-  ModGenerationTypeID: string
-  ModFamilyList: string[]
-  DropChance: string
-  str: string
-  fossil_no: string[]
-  mod_no: string[]
-  mod_fossil_item: string[]
-  hover: string
-}
-
-export type RawEssenceAffix = {
-  type: string
-  Level: string
-  DropChance: number
-  ModGenerationTypeID: string
-  mod_no: string[]
-  fossil_no: string[]
-  Name: string
-  Code: string
-  ModFamilyList: string[]
-  str: string
-}
+import type { Affix, RawNormalAffix } from '@/utils/factory/createAffix'
+import type { RawEssenceAffix } from '@/utils/factory/createEssenceAffix'
+import type { RawDesecratedAffix } from '@/utils/factory/createDesecratedAffix'
+import transformRawDesecratedData from './transformRawDesecrated'
 
 export type RawDataFile = {
   normal: RawNormalAffix[]
   essence: RawEssenceAffix[]
+  desecrated: RawDesecratedAffix[]
 }
 
 export interface DataFile {
   normal: AffixFamily[]
   essence: EssenceGroup[]
+  desecrated: Affix[]
 }
 
 interface Options {
@@ -79,6 +59,7 @@ export async function processMods(opts: Options = {}) {
     const fileContent: DataFile = {
       normal: transformRawAffixData(raw),
       essence: transformRawEssenceData(raw),
+      desecrated: transformRawDesecratedData(raw),
     }
 
     if (atomic) {
