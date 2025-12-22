@@ -21,6 +21,9 @@ export type OmenConfig = {
   sinistralNecromancy: boolean
   dextralNecromancy: boolean
   light: boolean
+  // 精华
+  sinistralCrystallisation: boolean
+  dextralCrystallisation: boolean
 }
 
 export const useOmen = defineStore('omen', () => {
@@ -45,7 +48,6 @@ export const useOmen = defineStore('omen', () => {
     sinistralAnnulment: false,
     // 右旋剥离
     dextralAnnulment: false,
-    // session3 ----------------------------------------------------------
     // 深渊回响
     abyssalEchoes: false,
     // 左旋死灵术
@@ -54,7 +56,10 @@ export const useOmen = defineStore('omen', () => {
     dextralNecromancy: false,
     // 光明
     light: false,
-    // session3 ----------------------------------------------------------
+    // 左旋结晶
+    sinistralCrystallisation: false,
+    // 右旋结晶
+    dextralCrystallisation: false,
   }
 
   const config = ref<OmenConfig>(initConfig)

@@ -130,6 +130,11 @@ const handleDecrypt = (affix: Affix) => {
           <h3>预兆</h3>
           <div class="props-wrapper">
             <div class="sub-category">
+              <h4>精华相关预兆</h4>
+              <OmenOf name="左旋结晶预兆" omenConfigKey="sinistralCrystallisation" />
+              <OmenOf name="右旋结晶预兆" omenConfigKey="dextralCrystallisation" />
+            </div>
+            <div class="sub-category">
               <h4>崇高石相关预兆</h4>
               <!-- <Button class="tools">催化崇高预兆</Button> -->
               <OmenOf
