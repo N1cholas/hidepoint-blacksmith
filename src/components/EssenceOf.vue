@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
+import { useOmen } from '@/stores/modules/useOmen'
 import type { Affix } from '@/utils/factory/createAffix'
 import { createAffixFamily, type AffixFamily } from '@/utils/factory/createAffixFamily'
 import type { Essence } from '@/utils/factory/createEssence'
@@ -13,6 +14,7 @@ const { item } = defineProps<{
 const { name, level, id, workOnRare, isPrefix, str, tags, affixID } = item
 
 const _item = useItem()
+const _omen = useOmen()
 
 const disable = computed(() => {
   return !(
@@ -37,9 +39,6 @@ watchEffect(async () => {
 const handleAddEssence = () => {
   // essence词缀id level不与normal的词缀一致
 
-  // const existAffixFamily: AffixFamily = affixFamiliesPool.value.find(
-  //   (af: AffixFamily) => af.id === affixID,
-  // )
   const essenceAffix: Affix = {
     name,
     level,
@@ -48,16 +47,22 @@ const handleAddEssence = () => {
     str,
     tags,
     dropChance: _item.getCurrentAffixesWeights(),
-    // todo: 算出阶级
+    // todo: 精华可以没有阶级
     tier: getTier(affixID, level),
   }
   const essenceAffixFamily = createAffixFamily([essenceAffix])
 
+  // todo: 测试
   if (workOnRare) {
     const removeAffixFamiliesPool = generateRemovePool(_item.withoutLocked, {
-      onlyPrefix: essenceAffixFamily.isPrefix && _item.isPrefixFull,
-      onlySuffix: !essenceAffixFamily.isPrefix && _item.isSuffixFull,
+      onlyPrefix:
+        (essenceAffixFamily.isPrefix && _item.isPrefixFull) ||
+        _omen.config.sinistralCrystallisation,
+      onlySuffix:
+        (!essenceAffixFamily.isPrefix && _item.isSuffixFull) || _omen.config.dextralCrystallisation,
     })
+
+    if (removeAffixFamiliesPool.length === 0) return
 
     const shouldRemoveAffixFamily = reverseRandomlyGetAffixFamily(removeAffixFamiliesPool)
 
