@@ -1,5 +1,5 @@
 import type { RawEssenceAffix } from '@/scripts/dataTransform'
-import { extractChinese } from './createAffix'
+import { extractChinese, HIDE_TIER } from './createAffix'
 import { handleHTMLString } from '../string/handleHTMLString'
 
 export type Essence = {
@@ -7,16 +7,17 @@ export type Essence = {
   level: number
   name: string
   id: string
-  affixID: string
-  workOnRare?: boolean
+  workOnRare: boolean
   str: string
   isPrefix: boolean
   tags: string[]
-  code: string
+  tier: number
+  essenceGroupID: string
 }
 
 // 测试raw数据
 export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
+  // todo: 硬编码
   const workOnRareNames = ['完美', '浮夸', '谵妄', '极恐', '错乱', '深渊']
   const name = extractChinese(rawEssence.Name)
 
@@ -25,13 +26,11 @@ export const createEssence = (rawEssence: RawEssenceAffix): Essence => {
     level: Number(rawEssence.Level),
     name,
     id: rawEssence.Code,
-    // 精华的ModFamilyList[0]不唯一，例如弓的额外火焰额外闪电额外冰霜都是同一个
-    // Essence的affixID === Affix的id
-    affixID: rawEssence.ModFamilyList[0] || '',
     workOnRare: workOnRareNames.includes(name.substring(0, 2)),
     str: handleHTMLString(rawEssence.str),
     isPrefix: rawEssence.ModGenerationTypeID === '1',
     tags: rawEssence.mod_no.map((tag) => extractChinese(tag)),
-    code: rawEssence.Code,
+    tier: HIDE_TIER,
+    essenceGroupID: rawEssence.ModFamilyList[0] || '',
   }
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
-import type { Affix } from '@/utils/factory/createAffix'
-import { createAffixFamily, type AffixFamily } from '@/utils/factory/createAffixFamily'
+import { HIDE_TIER, type Affix } from '@/utils/factory/createAffix'
+import { createAffixFamily } from '@/utils/factory/createAffixFamily'
 import type { Essence } from '@/utils/factory/createEssence'
 import { generateRemovePool } from '@/utils/pool/generateRemovePool'
 import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
@@ -11,7 +11,7 @@ import { watchEffect, ref, computed } from 'vue'
 const { item } = defineProps<{
   item: Essence
 }>()
-const { name, level, id, workOnRare, isPrefix, str, tags, affixID } = item
+const { name, level, id, workOnRare, isPrefix, str, tags } = item
 
 const _item = useItem()
 const _omen = useOmen()
@@ -37,8 +37,6 @@ watchEffect(async () => {
 // 判断添加为前缀还是后缀
 // 升级物品稀有度
 const handleAddEssence = () => {
-  // essence词缀id level不与normal的词缀一致
-
   const essenceAffix: Affix = {
     name,
     level,
@@ -48,7 +46,7 @@ const handleAddEssence = () => {
     tags,
     dropChance: _item.getCurrentAffixesWeights(),
     // todo: 精华可以没有阶级
-    tier: getTier(affixID, level),
+    tier: HIDE_TIER,
   }
   const essenceAffixFamily = createAffixFamily([essenceAffix])
 
@@ -78,13 +76,6 @@ const handleAddEssence = () => {
       rarity: 'rare',
     })
   }
-}
-
-const getTier = (id: string, level: number): number => {
-  const affixFamily = affixFamiliesPool.value.find((af: AffixFamily) => af.id === id)
-  if (!affixFamily) return 1
-  const affix = affixFamily.items.filter((a: Affix) => a.level <= level).pop()
-  return !!affix ? affix.tier : 1
 }
 </script>
 <template>

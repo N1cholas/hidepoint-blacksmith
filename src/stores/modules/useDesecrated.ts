@@ -1,6 +1,6 @@
 import type { Affix } from '@/utils/factory/createAffix'
 import type { AffixFamily } from '@/utils/factory/createAffixFamily'
-import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
 import { generateDecryptAffix } from '@/utils/pool/generateDecryptPool'
 import { defineStore } from 'pinia'
 import { computed, ref, watchEffect } from 'vue'
@@ -52,7 +52,7 @@ export const useDesecrated = defineStore('desecrated', () => {
 
     state.value.decryptingAffixFamilies = generateDecryptAffix(
       affixFamiliesPool.value,
-      _item.state.affixFamilies.filter((af) => af.id !== DESECRATED_ID),
+      _item.state.affixFamilies.filter((af) => af.id !== ABYSSAL_PLACEHOLDER_ID),
       {
         deduplication: true,
         onlyPrefix: _item.placeholder?.isPrefix,

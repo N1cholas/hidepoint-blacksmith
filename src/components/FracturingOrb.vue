@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useItem } from '@/stores/modules/useItem'
-import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
 import { reverseRandomlyGetAffixFamily } from '@/utils/random/reverseRandomlyGetAffixFamily'
 import { computed } from 'vue'
 
@@ -20,7 +20,7 @@ const disable = computed(() => {
 
 // 可被锁定：排除占位与亵渎
 const eligibleAffixFamilies = computed(() =>
-  _item.state.affixFamilies.filter((af) => af.id !== DESECRATED_ID && !af.desecrated),
+  _item.state.affixFamilies.filter((af) => af.id !== ABYSSAL_PLACEHOLDER_ID && !af.desecrated),
 )
 
 // 破溃宝珠：锁定一个随机词缀家族

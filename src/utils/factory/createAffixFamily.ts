@@ -1,4 +1,5 @@
 import type { Affix } from './createAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from './createDesecratedAffix'
 
 export type AffixFamily = WeightWrapper<Affix[]> & {
   desecrated?: boolean
@@ -10,8 +11,13 @@ export const createAffixFamily = (affixes: Affix[], desecrated?: boolean): Affix
     throw new Error('Affixes is empty')
   }
 
+  const items = affixes.map((affix, i): Affix => {
+    const tier = affix.id === ABYSSAL_PLACEHOLDER_ID ? affix.tier : affixes.length - i
+    return { ...affix, tier }
+  })
+
   return {
-    items: affixes.map((affix, i): Affix => ({ ...affix, tier: affixes.length - i })),
+    items,
     weight: affixes.reduce((acc, mod) => acc + mod.dropChance, 0),
     id: affixes[0].id,
     isPrefix: affixes[0].isPrefix,

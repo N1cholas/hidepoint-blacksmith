@@ -14,6 +14,8 @@ export type Affix = {
   desecrated?: boolean
 }
 
+export const HIDE_TIER = -1
+
 export const extractChinese = (text: string): string => {
   if (typeof text !== 'string') return ''
 
@@ -59,6 +61,6 @@ export const createAffix = (rawAffix: Partial<RawNormalAffix>): Affix => {
     dropChance: Number(_rawAffix.DropChance),
     str: handleHTMLString(_rawAffix.str),
     tags: _rawAffix.mod_no.map((tag) => extractChinese(tag)),
-    tier: -1,
+    tier: HIDE_TIER,
   }
 }

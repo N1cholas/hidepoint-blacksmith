@@ -1,5 +1,5 @@
 import type { AffixFamily } from '../factory/createAffixFamily'
-import { DESECRATED_ID } from '../factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '../factory/createDesecratedAffix'
 import { onlyPrefixAffixFamilies, onlySuffixAffixFamilies } from './utils'
 
 export type GenerateRemovePoolOptions = {
@@ -19,7 +19,7 @@ export const generateRemovePool = (
   if (onlyAbyssal) {
     return _affixFamiliesPool.filter(
       // todo 两个条件应该可以合成一个
-      (affixFamily) => affixFamily.desecrated || affixFamily.id === DESECRATED_ID,
+      (affixFamily) => affixFamily.desecrated || affixFamily.id === ABYSSAL_PLACEHOLDER_ID,
     )
   }
 

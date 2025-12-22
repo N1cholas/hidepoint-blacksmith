@@ -3,7 +3,10 @@ import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useItem } from '@/stores/modules/useItem'
 import { useOmen } from '@/stores/modules/useOmen'
 import { createAffixFamily } from '@/utils/factory/createAffixFamily'
-import { createDesecratedAffix, DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import {
+  createDesecratedAffix,
+  ABYSSAL_PLACEHOLDER_ID,
+} from '@/utils/factory/createDesecratedAffix'
 import { computed } from 'vue'
 import DecryptModal from '@/pages/hidepointPlace/DecryptModal.vue'
 
@@ -31,10 +34,10 @@ const disable = computed(() => {
 // 颚骨，为武器或弓添加亵渎占位符
 const addPlaceholder = () => {
   const placeholderAffix = createDesecratedAffix({
-    id: DESECRATED_ID,
+    id: ABYSSAL_PLACEHOLDER_ID,
     name: '亵渎占位符',
     str: '此词条已被亵渎需点击解密',
-    tags: [DESECRATED_ID],
+    tags: [ABYSSAL_PLACEHOLDER_ID],
     level: 82,
     isPrefix: getModGenerationType(),
     dropChance: _item.getCurrentAffixesWeights(),

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Affix } from '@/utils/factory/createAffix'
-import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
 
 type Key = string | number
 
@@ -34,7 +34,7 @@ const emit = defineEmits<{
         locked: a.id === lockedAffix?.id,
         desecrated: a.desecrated,
         'is-select': isSelectAffix,
-        pointer: a.id === DESECRATED_ID,
+        pointer: a.id === ABYSSAL_PLACEHOLDER_ID,
       }"
       @click="emit('decrypt', a)"
     >
@@ -44,8 +44,9 @@ const emit = defineEmits<{
 
       <span class="text" v-html="a.str"> </span>
 
-      <span v-if="showTier && a.id !== DESECRATED_ID" class="tier"> T{{ a.tier }} </span>
-      <span v-else class="unvisiable">T9</span>
+      <span v-if="showTier" class="tier" :class="{ unvisiable: a.tier === -1 }">
+        T{{ a.tier }}
+      </span>
 
       <div class="ops">
         <slot name="actions" :item="a" :index="i"></slot>

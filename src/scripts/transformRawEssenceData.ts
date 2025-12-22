@@ -23,7 +23,7 @@ export default function transformRawEssenceData(raw: RawDataFile): EssenceGroup[
   )
 
   // 中文group 英文还没做
-  const groupEssences = groupBy(uniqueEssences, (uniqueEssence) => uniqueEssence.affixID)
+  const groupEssences = groupBy(uniqueEssences, (uniqueEssence) => uniqueEssence.essenceGroupID)
 
   return values(groupEssences)
 }

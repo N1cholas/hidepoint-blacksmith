@@ -9,6 +9,7 @@
       <p>响应式适配</p>
       <p>e2e测试</p>
       <p>类型 done => 精华 done => 领主预兆 doing</p>
+      <p>实现AffixFamilyList</p>
     </section>
   </footer>
 </template>

@@ -13,7 +13,7 @@ import AnnulmentOrb from '@/components/AnnulmentOrb.vue'
 import FracturingOrb from '@/components/FracturingOrb.vue'
 import JawBone from '@/components/JawBone.vue'
 import type { Affix } from '@/utils/factory/createAffix'
-import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
 import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useOmen } from '@/stores/modules/useOmen'
 import EssenceOf from '@/components/EssenceOf.vue'
@@ -35,7 +35,7 @@ watchEffect(async () => {
 })
 
 const handleDecrypt = (affix: Affix) => {
-  if (affix.id === DESECRATED_ID) {
+  if (affix.id === ABYSSAL_PLACEHOLDER_ID) {
     _desecrated.reSelect()
     _desecrated.setState({
       showModal: true,
@@ -180,7 +180,7 @@ const handleDecrypt = (affix: Affix) => {
             <div
               v-for="essenceGroup in essenceGroups"
               class="sub-category essence-group"
-              :key="essenceGroup[0]?.affixID"
+              :key="essenceGroup[0]?.essenceGroupID"
             >
               <EssenceOf
                 v-for="essence in essenceGroup"

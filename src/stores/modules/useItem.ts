@@ -1,6 +1,6 @@
 import type { Affix } from '@/utils/factory/createAffix'
 import type { AffixFamily } from '@/utils/factory/createAffixFamily'
-import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
+import { ABYSSAL_PLACEHOLDER_ID } from '@/utils/factory/createDesecratedAffix'
 import { randomlyGetAffix } from '@/utils/random/randomlyGetAffix'
 import { randomlyGetAffixFamily } from '@/utils/random/randomlyGetAffixFamily'
 import { defineStore } from 'pinia'
@@ -143,6 +143,7 @@ export const useItem = defineStore('item', () => {
     const affixFamilies = state.value.affixFamilies.filter(
       (affixFamily) => affixFamily.id !== removeAffixFamily.id,
     )
+    // 移除锁定的词缀仅在初始化基底时使用
     const lockedAffix =
       state.value.lockedAffix?.id === removeAffixFamily.id ? undefined : state.value.lockedAffix
 
@@ -157,7 +158,7 @@ export const useItem = defineStore('item', () => {
   })
 
   const placeholder = computed(() => {
-    return state.value.affixFamilies.find((af) => af.id === DESECRATED_ID) || null
+    return state.value.affixFamilies.find((af) => af.id === ABYSSAL_PLACEHOLDER_ID) || null
   })
 
   const desecrated = computed(() => {
