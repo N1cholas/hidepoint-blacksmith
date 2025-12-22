@@ -1127,77 +1127,85 @@
     }
   ],
   "essence": [
-    {
-      "type": "essence",
-      "level": 11,
-      "name": "次级永恒精华",
-      "id": "Strength2",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(9&ndash;12)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength2"
-    },
-    {
-      "type": "essence",
-      "level": 33,
-      "name": "永恒精华",
-      "id": "Strength4",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(17&ndash;20)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength4"
-    },
-    {
-      "type": "essence",
-      "level": 58,
-      "name": "强效激战精华",
-      "id": "LocalIncreasedAccuracy7",
-      "affixID": "IncreasedAccuracy",
-      "workOnRare": false,
-      "str": "+(237&ndash;346) 命中值",
-      "isPrefix": true,
-      "tags": ["攻击"],
-      "code": "LocalIncreasedAccuracy7"
-    },
-    {
-      "type": "essence",
-      "level": 55,
-      "name": "强效永恒精华",
-      "id": "Strength6",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(25&ndash;27)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength6"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "浮夸精华",
-      "id": "DamageWithBows5",
-      "affixID": "DamageWithWeaponTypeSkill",
-      "workOnRare": true,
-      "str": "弓类技能伤害提高 (43&ndash;50)%",
-      "isPrefix": true,
-      "tags": ["伤害"],
-      "code": "DamageWithBows5"
-    },
-    {
-      "type": "essence",
-      "level": 1,
-      "name": "深渊精华",
-      "id": "EssenceAbyssPrefix",
-      "affixID": "EssenceAbyss",
-      "workOnRare": true,
-      "str": "深渊领主的印记",
-      "isPrefix": true,
-      "tags": [],
-      "code": "EssenceAbyssPrefix"
-    }
+    [
+      {
+        "type": "essence",
+        "level": 11,
+        "name": "次级永恒精华",
+        "id": "Strength2",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(9&ndash;12)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength2"
+      },
+      {
+        "type": "essence",
+        "level": 33,
+        "name": "永恒精华",
+        "id": "Strength4",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(17&ndash;20)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength4"
+      },
+      {
+        "type": "essence",
+        "level": 55,
+        "name": "强效永恒精华",
+        "id": "Strength6",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(25&ndash;27)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength6"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 58,
+        "name": "强效激战精华",
+        "id": "LocalIncreasedAccuracy7",
+        "affixID": "IncreasedAccuracy",
+        "workOnRare": false,
+        "str": "+(237&ndash;346) 命中值",
+        "isPrefix": true,
+        "tags": ["攻击"],
+        "code": "LocalIncreasedAccuracy7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "浮夸精华",
+        "id": "DamageWithBows5",
+        "affixID": "DamageWithWeaponTypeSkill",
+        "workOnRare": true,
+        "str": "弓类技能伤害提高 (43&ndash;50)%",
+        "isPrefix": true,
+        "tags": ["伤害"],
+        "code": "DamageWithBows5"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 1,
+        "name": "深渊精华",
+        "id": "EssenceAbyssPrefix",
+        "affixID": "EssenceAbyss",
+        "workOnRare": true,
+        "str": "深渊领主的印记",
+        "isPrefix": true,
+        "tags": [],
+        "code": "EssenceAbyssPrefix"
+      }
+    ]
   ]
 }

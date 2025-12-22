@@ -4,8 +4,7 @@ import { type AffixFamily } from '../utils/factory/createAffixFamily'
 import { fileURLToPath } from 'node:url'
 import { resolve as r, normalize } from 'node:path'
 import transformRawAffixData from './transformRawAffixData'
-import transformRawEssenceData from './transformRawEssenceData'
-import type { Essence } from '@/utils/factory/createEssence'
+import transformRawEssenceData, { type EssenceGroup } from './transformRawEssenceData'
 
 export type RawNormalAffix = {
   Name: string
@@ -40,7 +39,7 @@ export type RawDataFile = {
 
 export interface DataFile {
   normal: AffixFamily[]
-  essence: Essence[]
+  essence: EssenceGroup[]
 }
 
 interface Options {

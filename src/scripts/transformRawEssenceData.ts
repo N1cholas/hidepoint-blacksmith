@@ -1,7 +1,10 @@
 import type { RawDataFile } from './dataTransform'
 import { createEssence, type Essence } from '../utils/factory/createEssence'
+import { groupBy, values } from 'lodash-es'
 
-export default function transformRawEssenceData(raw: RawDataFile): Essence[] {
+export type EssenceGroup = Essence[]
+
+export default function transformRawEssenceData(raw: RawDataFile): EssenceGroup[] {
   if (!raw || !Array.isArray(raw.essence)) {
     throw new Error('Invalid input file: missing "essence" array')
   }
@@ -19,5 +22,8 @@ export default function transformRawEssenceData(raw: RawDataFile): Essence[] {
       .values(),
   )
 
-  return uniqueEssences
+  // 中文group 英文还没做
+  const groupEssences = groupBy(uniqueEssences, (uniqueEssence) => uniqueEssence.affixID)
+
+  return values(groupEssences)
 }

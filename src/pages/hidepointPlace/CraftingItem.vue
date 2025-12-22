@@ -17,7 +17,7 @@ import { DESECRATED_ID } from '@/utils/factory/createDesecratedAffix'
 import { useDesecrated } from '@/stores/modules/useDesecrated'
 import { useOmen } from '@/stores/modules/useOmen'
 import EssenceOf from '@/components/EssenceOf.vue'
-import type { Essence } from '@/utils/factory/createEssence'
+import type { EssenceGroup } from '@/scripts/transformRawEssenceData'
 
 const _item = useItem()
 const _omen = useOmen()
@@ -27,11 +27,11 @@ const itemType = computed(() => _item.state.type)
 const itemLevel = computed(() => _item.state.level)
 const itemRarity = computed(() => _item.state.rarity)
 
-const essences = ref<Essence[]>([])
+const essenceGroups = ref<EssenceGroup[]>([])
 
 watchEffect(async () => {
   const data = await _item.currentAffixFamiliesPool
-  essences.value = data.essence
+  essenceGroups.value = data.essence
 })
 
 const handleDecrypt = (affix: Affix) => {
@@ -176,12 +176,18 @@ const handleDecrypt = (affix: Affix) => {
       <t-card>
         <div class="category">
           <h3>精华</h3>
-          <div class="props-wrapper">
-            <EssenceOf
-              v-for="essence in essences"
-              :key="`${essence.id}-${essence.name}-${essence.level}`"
-              :item="essence"
-            />
+          <div class="props-wrapper essence-wrapper">
+            <div
+              v-for="essenceGroup in essenceGroups"
+              class="sub-category essence-group"
+              :key="essenceGroup[0]?.affixID"
+            >
+              <EssenceOf
+                v-for="essence in essenceGroup"
+                :key="`${essence.id}-${essence.name}-${essence.level}`"
+                :item="essence"
+              />
+            </div>
           </div>
         </div>
       </t-card>
@@ -246,5 +252,14 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.essence-wrapper {
+  margin-bottom: -16px;
+}
+
+.essence-group {
+  flex: 1;
+  margin-bottom: 16px;
 }
 </style>

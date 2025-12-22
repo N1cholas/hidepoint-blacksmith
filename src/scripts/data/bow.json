@@ -1581,377 +1581,401 @@
     }
   ],
   "essence": [
-    {
-      "type": "essence",
-      "level": 8,
-      "name": "次级磨蚀精华",
-      "id": "LocalAddedPhysicalDamage2",
-      "affixID": "PhysicalDamage",
-      "workOnRare": false,
-      "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
-      "code": "LocalAddedPhysicalDamage2"
-    },
-    {
-      "type": "essence",
-      "level": 8,
-      "name": "次级烈焰精华",
-      "id": "LocalAddedFireDamage2",
-      "affixID": "FireDamage",
-      "workOnRare": false,
-      "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "火焰", "攻击"],
-      "code": "LocalAddedFireDamage2"
-    },
-    {
-      "type": "essence",
-      "level": 8,
-      "name": "次级冰霜精华",
-      "id": "LocalAddedColdDamage2",
-      "affixID": "ColdDamage",
-      "workOnRare": false,
-      "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "code": "LocalAddedColdDamage2"
-    },
-    {
-      "type": "essence",
-      "level": 8,
-      "name": "次级电光精华",
-      "id": "LocalAddedLightningDamage2",
-      "affixID": "LightningDamage",
-      "workOnRare": false,
-      "str": "附加 1 - (13&ndash;19) 闪电伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "闪电", "攻击"],
-      "code": "LocalAddedLightningDamage2"
-    },
-    {
-      "type": "essence",
-      "level": 18,
-      "name": "次级激战精华",
-      "id": "LocalIncreasedAccuracy3",
-      "affixID": "IncreasedAccuracy",
-      "workOnRare": false,
-      "str": "+(61&ndash;84) 命中值",
-      "isPrefix": true,
-      "tags": ["攻击"],
-      "code": "LocalIncreasedAccuracy3"
-    },
-    {
-      "type": "essence",
-      "level": 22,
-      "name": "次级急速精华",
-      "id": "LocalIncreasedAttackSpeed3",
-      "affixID": "IncreasedAttackSpeed",
-      "workOnRare": false,
-      "str": "攻击速度加快 (11&ndash;13)%",
-      "isPrefix": false,
-      "tags": ["攻击", "速度"],
-      "code": "LocalIncreasedAttackSpeed3"
-    },
-    {
-      "type": "essence",
-      "level": 11,
-      "name": "次级永恒精华",
-      "id": "Strength2",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(9&ndash;12)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength2"
-    },
-    {
-      "type": "essence",
-      "level": 46,
-      "name": "磨蚀精华",
-      "id": "LocalAddedPhysicalDamage5",
-      "affixID": "PhysicalDamage",
-      "workOnRare": false,
-      "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
-      "code": "LocalAddedPhysicalDamage5"
-    },
-    {
-      "type": "essence",
-      "level": 46,
-      "name": "烈焰精华",
-      "id": "LocalAddedFireDamage5",
-      "affixID": "FireDamage",
-      "workOnRare": false,
-      "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "火焰", "攻击"],
-      "code": "LocalAddedFireDamage5"
-    },
-    {
-      "type": "essence",
-      "level": 46,
-      "name": "冰霜精华",
-      "id": "LocalAddedColdDamage5",
-      "affixID": "ColdDamage",
-      "workOnRare": false,
-      "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "code": "LocalAddedColdDamage5"
-    },
-    {
-      "type": "essence",
-      "level": 46,
-      "name": "电光精华",
-      "id": "LocalAddedLightningDamage5",
-      "affixID": "LightningDamage",
-      "workOnRare": false,
-      "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "闪电", "攻击"],
-      "code": "LocalAddedLightningDamage5"
-    },
-    {
-      "type": "essence",
-      "level": 36,
-      "name": "激战精华",
-      "id": "LocalIncreasedAccuracy5",
-      "affixID": "IncreasedAccuracy",
-      "workOnRare": false,
-      "str": "+(124&ndash;167) 命中值",
-      "isPrefix": true,
-      "tags": ["攻击"],
-      "code": "LocalIncreasedAccuracy5"
-    },
-    {
-      "type": "essence",
-      "level": 37,
-      "name": "急速精华",
-      "id": "LocalIncreasedAttackSpeed5",
-      "affixID": "IncreasedAttackSpeed",
-      "workOnRare": false,
-      "str": "攻击速度加快 (17&ndash;19)%",
-      "isPrefix": false,
-      "tags": ["攻击", "速度"],
-      "code": "LocalIncreasedAttackSpeed5"
-    },
-    {
-      "type": "essence",
-      "level": 33,
-      "name": "永恒精华",
-      "id": "Strength4",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(17&ndash;20)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength4"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "强效磨蚀精华",
-      "id": "LocalAddedPhysicalDamage7",
-      "affixID": "PhysicalDamage",
-      "workOnRare": false,
-      "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "物理", "攻击"],
-      "code": "LocalAddedPhysicalDamage7"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "强效火焰精华",
-      "id": "LocalAddedFireDamage7",
-      "affixID": "FireDamage",
-      "workOnRare": false,
-      "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "火焰", "攻击"],
-      "code": "LocalAddedFireDamage7"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "强效冰霜精华",
-      "id": "LocalAddedColdDamage7",
-      "affixID": "ColdDamage",
-      "workOnRare": false,
-      "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "冰霜", "攻击"],
-      "code": "LocalAddedColdDamage7"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "强效电光精华",
-      "id": "LocalAddedLightningDamage7",
-      "affixID": "LightningDamage",
-      "workOnRare": false,
-      "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "闪电", "攻击"],
-      "code": "LocalAddedLightningDamage7"
-    },
-    {
-      "type": "essence",
-      "level": 58,
-      "name": "强效激战精华",
-      "id": "LocalIncreasedAccuracy7",
-      "affixID": "IncreasedAccuracy",
-      "workOnRare": false,
-      "str": "+(237&ndash;346) 命中值",
-      "isPrefix": true,
-      "tags": ["攻击"],
-      "code": "LocalIncreasedAccuracy7"
-    },
-    {
-      "type": "essence",
-      "level": 60,
-      "name": "强效急速精华",
-      "id": "LocalIncreasedAttackSpeed7",
-      "affixID": "IncreasedAttackSpeed",
-      "workOnRare": false,
-      "str": "攻击速度加快 (23&ndash;25)%",
-      "isPrefix": false,
-      "tags": ["攻击", "速度"],
-      "code": "LocalIncreasedAttackSpeed7"
-    },
-    {
-      "type": "essence",
-      "level": 55,
-      "name": "强效永恒精华",
-      "id": "Strength6",
-      "affixID": "Strength",
-      "workOnRare": false,
-      "str": "力量、敏捷或智慧 +(25&ndash;27)",
-      "isPrefix": false,
-      "tags": ["属性"],
-      "code": "Strength6"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美磨蚀精华",
-      "id": "EssenceDamageasExtraPhysical1",
-      "affixID": "MartialWeaponGainedDamage",
-      "workOnRare": true,
-      "str": "获得相当于伤害 (15&ndash;20)% 的额外物理伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "物理"],
-      "code": "EssenceDamageasExtraPhysical1"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美烈焰精华",
-      "id": "EssenceDamageasExtraFire1",
-      "affixID": "MartialWeaponGainedDamage",
-      "workOnRare": true,
-      "str": "获得相当于伤害 (15&ndash;20)% 的额外火焰伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "火焰"],
-      "code": "EssenceDamageasExtraFire1"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美冰霜精华",
-      "id": "EssenceDamageasExtraCold1",
-      "affixID": "MartialWeaponGainedDamage",
-      "workOnRare": true,
-      "str": "获得相当于伤害 (15&ndash;20)% 的额外冰霜伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "冰霜"],
-      "code": "EssenceDamageasExtraCold1"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美电光精华",
-      "id": "EssenceDamageasExtraLightning1",
-      "affixID": "MartialWeaponGainedDamage",
-      "workOnRare": true,
-      "str": "获得相当于伤害 (15&ndash;20)% 的额外闪电伤害",
-      "isPrefix": true,
-      "tags": ["伤害", "元素", "闪电"],
-      "code": "EssenceDamageasExtraLightning1"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美激战精华",
-      "id": "EssenceAttackSkillLevel1H1",
-      "affixID": "IncreaseSocketedGemLevel",
-      "workOnRare": true,
-      "str": "所有攻击技能等级 +4",
-      "isPrefix": false,
-      "tags": ["攻击"],
-      "code": "EssenceAttackSkillLevel1H1"
-    },
-    {
-      "type": "essence",
-      "level": 72,
-      "name": "完美急速精华",
-      "id": "EssenceOnslaughtonKill1",
-      "affixID": "Onslaught",
-      "workOnRare": true,
-      "str": "此武器进行造成最后一击时有 (20&ndash;25)% 的几率获得猛攻",
-      "isPrefix": false,
-      "tags": ["速度"],
-      "code": "EssenceOnslaughtonKill1"
-    },
-    {
-      "type": "essence",
-      "level": 20,
-      "name": "次级寻觅精华",
-      "id": "LocalCriticalStrikeChance2",
-      "affixID": "CriticalStrikeChanceIncrease",
-      "workOnRare": false,
-      "str": "暴击几率 +(1.51&ndash;2.1)%",
-      "isPrefix": false,
-      "tags": ["攻击", "暴击"],
-      "code": "LocalCriticalStrikeChance2"
-    },
-    {
-      "type": "essence",
-      "level": 30,
-      "name": "寻觅精华",
-      "id": "LocalCriticalStrikeChance3",
-      "affixID": "CriticalStrikeChanceIncrease",
-      "workOnRare": false,
-      "str": "暴击几率 +(2.11&ndash;2.7)%",
-      "isPrefix": false,
-      "tags": ["攻击", "暴击"],
-      "code": "LocalCriticalStrikeChance3"
-    },
-    {
-      "type": "essence",
-      "level": 44,
-      "name": "强效寻觅精华",
-      "id": "LocalCriticalStrikeChance4",
-      "affixID": "CriticalStrikeChanceIncrease",
-      "workOnRare": false,
-      "str": "暴击几率 +(3.11&ndash;3.8)%",
-      "isPrefix": false,
-      "tags": ["攻击", "暴击"],
-      "code": "LocalCriticalStrikeChance4"
-    },
-    {
-      "type": "essence",
-      "level": 1,
-      "name": "深渊精华",
-      "id": "EssenceAbyssPrefix",
-      "affixID": "EssenceAbyss",
-      "workOnRare": true,
-      "str": "深渊领主的印记",
-      "isPrefix": true,
-      "tags": [],
-      "code": "EssenceAbyssPrefix"
-    }
+    [
+      {
+        "type": "essence",
+        "level": 8,
+        "name": "次级磨蚀精华",
+        "id": "LocalAddedPhysicalDamage2",
+        "affixID": "PhysicalDamage",
+        "workOnRare": false,
+        "str": "附加 (4&ndash;6) - (7&ndash;11) 物理伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "物理", "攻击"],
+        "code": "LocalAddedPhysicalDamage2"
+      },
+      {
+        "type": "essence",
+        "level": 46,
+        "name": "磨蚀精华",
+        "id": "LocalAddedPhysicalDamage5",
+        "affixID": "PhysicalDamage",
+        "workOnRare": false,
+        "str": "附加 (10&ndash;15) - (18&ndash;26) 物理伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "物理", "攻击"],
+        "code": "LocalAddedPhysicalDamage5"
+      },
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "强效磨蚀精华",
+        "id": "LocalAddedPhysicalDamage7",
+        "affixID": "PhysicalDamage",
+        "workOnRare": false,
+        "str": "附加 (16&ndash;24) - (28&ndash;42) 物理伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "物理", "攻击"],
+        "code": "LocalAddedPhysicalDamage7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 8,
+        "name": "次级烈焰精华",
+        "id": "LocalAddedFireDamage2",
+        "affixID": "FireDamage",
+        "workOnRare": false,
+        "str": "附加 (4&ndash;6) - (7&ndash;10) 火焰伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "火焰", "攻击"],
+        "code": "LocalAddedFireDamage2"
+      },
+      {
+        "type": "essence",
+        "level": 46,
+        "name": "烈焰精华",
+        "id": "LocalAddedFireDamage5",
+        "affixID": "FireDamage",
+        "workOnRare": false,
+        "str": "附加 (20&ndash;24) - (32&ndash;37) 火焰伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "火焰", "攻击"],
+        "code": "LocalAddedFireDamage5"
+      },
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "强效火焰精华",
+        "id": "LocalAddedFireDamage7",
+        "affixID": "FireDamage",
+        "workOnRare": false,
+        "str": "附加 (35&ndash;44) - (56&ndash;71) 火焰伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "火焰", "攻击"],
+        "code": "LocalAddedFireDamage7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 8,
+        "name": "次级冰霜精华",
+        "id": "LocalAddedColdDamage2",
+        "affixID": "ColdDamage",
+        "workOnRare": false,
+        "str": "附加 (3&ndash;5) - (6&ndash;9) 冰霜伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "冰霜", "攻击"],
+        "code": "LocalAddedColdDamage2"
+      },
+      {
+        "type": "essence",
+        "level": 46,
+        "name": "冰霜精华",
+        "id": "LocalAddedColdDamage5",
+        "affixID": "ColdDamage",
+        "workOnRare": false,
+        "str": "附加 (17&ndash;20) - (26&ndash;32) 冰霜伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "冰霜", "攻击"],
+        "code": "LocalAddedColdDamage5"
+      },
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "强效冰霜精华",
+        "id": "LocalAddedColdDamage7",
+        "affixID": "ColdDamage",
+        "workOnRare": false,
+        "str": "附加 (31&ndash;38) - (47&ndash;59) 冰霜伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "冰霜", "攻击"],
+        "code": "LocalAddedColdDamage7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 8,
+        "name": "次级电光精华",
+        "id": "LocalAddedLightningDamage2",
+        "affixID": "LightningDamage",
+        "workOnRare": false,
+        "str": "附加 1 - (13&ndash;19) 闪电伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "闪电", "攻击"],
+        "code": "LocalAddedLightningDamage2"
+      },
+      {
+        "type": "essence",
+        "level": 46,
+        "name": "电光精华",
+        "id": "LocalAddedLightningDamage5",
+        "affixID": "LightningDamage",
+        "workOnRare": false,
+        "str": "附加 (1&ndash;3) - (55&ndash;60) 闪电伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "闪电", "攻击"],
+        "code": "LocalAddedLightningDamage5"
+      },
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "强效电光精华",
+        "id": "LocalAddedLightningDamage7",
+        "affixID": "LightningDamage",
+        "workOnRare": false,
+        "str": "附加 (1&ndash;6) - (85&ndash;107) 闪电伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "闪电", "攻击"],
+        "code": "LocalAddedLightningDamage7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 18,
+        "name": "次级激战精华",
+        "id": "LocalIncreasedAccuracy3",
+        "affixID": "IncreasedAccuracy",
+        "workOnRare": false,
+        "str": "+(61&ndash;84) 命中值",
+        "isPrefix": true,
+        "tags": ["攻击"],
+        "code": "LocalIncreasedAccuracy3"
+      },
+      {
+        "type": "essence",
+        "level": 36,
+        "name": "激战精华",
+        "id": "LocalIncreasedAccuracy5",
+        "affixID": "IncreasedAccuracy",
+        "workOnRare": false,
+        "str": "+(124&ndash;167) 命中值",
+        "isPrefix": true,
+        "tags": ["攻击"],
+        "code": "LocalIncreasedAccuracy5"
+      },
+      {
+        "type": "essence",
+        "level": 58,
+        "name": "强效激战精华",
+        "id": "LocalIncreasedAccuracy7",
+        "affixID": "IncreasedAccuracy",
+        "workOnRare": false,
+        "str": "+(237&ndash;346) 命中值",
+        "isPrefix": true,
+        "tags": ["攻击"],
+        "code": "LocalIncreasedAccuracy7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 22,
+        "name": "次级急速精华",
+        "id": "LocalIncreasedAttackSpeed3",
+        "affixID": "IncreasedAttackSpeed",
+        "workOnRare": false,
+        "str": "攻击速度加快 (11&ndash;13)%",
+        "isPrefix": false,
+        "tags": ["攻击", "速度"],
+        "code": "LocalIncreasedAttackSpeed3"
+      },
+      {
+        "type": "essence",
+        "level": 37,
+        "name": "急速精华",
+        "id": "LocalIncreasedAttackSpeed5",
+        "affixID": "IncreasedAttackSpeed",
+        "workOnRare": false,
+        "str": "攻击速度加快 (17&ndash;19)%",
+        "isPrefix": false,
+        "tags": ["攻击", "速度"],
+        "code": "LocalIncreasedAttackSpeed5"
+      },
+      {
+        "type": "essence",
+        "level": 60,
+        "name": "强效急速精华",
+        "id": "LocalIncreasedAttackSpeed7",
+        "affixID": "IncreasedAttackSpeed",
+        "workOnRare": false,
+        "str": "攻击速度加快 (23&ndash;25)%",
+        "isPrefix": false,
+        "tags": ["攻击", "速度"],
+        "code": "LocalIncreasedAttackSpeed7"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 11,
+        "name": "次级永恒精华",
+        "id": "Strength2",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(9&ndash;12)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength2"
+      },
+      {
+        "type": "essence",
+        "level": 33,
+        "name": "永恒精华",
+        "id": "Strength4",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(17&ndash;20)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength4"
+      },
+      {
+        "type": "essence",
+        "level": 55,
+        "name": "强效永恒精华",
+        "id": "Strength6",
+        "affixID": "Strength",
+        "workOnRare": false,
+        "str": "力量、敏捷或智慧 +(25&ndash;27)",
+        "isPrefix": false,
+        "tags": ["属性"],
+        "code": "Strength6"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美磨蚀精华",
+        "id": "EssenceDamageasExtraPhysical1",
+        "affixID": "MartialWeaponGainedDamage",
+        "workOnRare": true,
+        "str": "获得相当于伤害 (15&ndash;20)% 的额外物理伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "物理"],
+        "code": "EssenceDamageasExtraPhysical1"
+      },
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美烈焰精华",
+        "id": "EssenceDamageasExtraFire1",
+        "affixID": "MartialWeaponGainedDamage",
+        "workOnRare": true,
+        "str": "获得相当于伤害 (15&ndash;20)% 的额外火焰伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "火焰"],
+        "code": "EssenceDamageasExtraFire1"
+      },
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美冰霜精华",
+        "id": "EssenceDamageasExtraCold1",
+        "affixID": "MartialWeaponGainedDamage",
+        "workOnRare": true,
+        "str": "获得相当于伤害 (15&ndash;20)% 的额外冰霜伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "冰霜"],
+        "code": "EssenceDamageasExtraCold1"
+      },
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美电光精华",
+        "id": "EssenceDamageasExtraLightning1",
+        "affixID": "MartialWeaponGainedDamage",
+        "workOnRare": true,
+        "str": "获得相当于伤害 (15&ndash;20)% 的额外闪电伤害",
+        "isPrefix": true,
+        "tags": ["伤害", "元素", "闪电"],
+        "code": "EssenceDamageasExtraLightning1"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美激战精华",
+        "id": "EssenceAttackSkillLevel1H1",
+        "affixID": "IncreaseSocketedGemLevel",
+        "workOnRare": true,
+        "str": "所有攻击技能等级 +4",
+        "isPrefix": false,
+        "tags": ["攻击"],
+        "code": "EssenceAttackSkillLevel1H1"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 72,
+        "name": "完美急速精华",
+        "id": "EssenceOnslaughtonKill1",
+        "affixID": "Onslaught",
+        "workOnRare": true,
+        "str": "此武器进行造成最后一击时有 (20&ndash;25)% 的几率获得猛攻",
+        "isPrefix": false,
+        "tags": ["速度"],
+        "code": "EssenceOnslaughtonKill1"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 20,
+        "name": "次级寻觅精华",
+        "id": "LocalCriticalStrikeChance2",
+        "affixID": "CriticalStrikeChanceIncrease",
+        "workOnRare": false,
+        "str": "暴击几率 +(1.51&ndash;2.1)%",
+        "isPrefix": false,
+        "tags": ["攻击", "暴击"],
+        "code": "LocalCriticalStrikeChance2"
+      },
+      {
+        "type": "essence",
+        "level": 30,
+        "name": "寻觅精华",
+        "id": "LocalCriticalStrikeChance3",
+        "affixID": "CriticalStrikeChanceIncrease",
+        "workOnRare": false,
+        "str": "暴击几率 +(2.11&ndash;2.7)%",
+        "isPrefix": false,
+        "tags": ["攻击", "暴击"],
+        "code": "LocalCriticalStrikeChance3"
+      },
+      {
+        "type": "essence",
+        "level": 44,
+        "name": "强效寻觅精华",
+        "id": "LocalCriticalStrikeChance4",
+        "affixID": "CriticalStrikeChanceIncrease",
+        "workOnRare": false,
+        "str": "暴击几率 +(3.11&ndash;3.8)%",
+        "isPrefix": false,
+        "tags": ["攻击", "暴击"],
+        "code": "LocalCriticalStrikeChance4"
+      }
+    ],
+    [
+      {
+        "type": "essence",
+        "level": 1,
+        "name": "深渊精华",
+        "id": "EssenceAbyssPrefix",
+        "affixID": "EssenceAbyss",
+        "workOnRare": true,
+        "str": "深渊领主的印记",
+        "isPrefix": true,
+        "tags": [],
+        "code": "EssenceAbyssPrefix"
+      }
+    ]
   ]
 }
